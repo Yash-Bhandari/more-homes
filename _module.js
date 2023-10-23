@@ -1004,15 +1004,15 @@ function create_fragment(ctx) {
 		c() {
 			meta = element("meta");
 			style = element("style");
-			t = text("@import url(\"https://unpkg.com/@primo-app/primo@1.3.64/reset.css\");\n@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');\n\n#page {\n  --max-width: 740px;\n  --color-accent: rebeccapurple;\n  font-family: lexend, system-ui, sans-serif;\n  color: var(--color);\n  line-height: 1.6; \n  font-size: 1rem;\n  background: var(--background);\n}\n\n.section-container {\n  max-width: var(--max-width, 1000px);\n  margin: 0 auto;\n  padding: 3rem var(--padding, 1rem); \n}\n\n.heading {\n  font-size: 3rem;\n  line-height: 1;\n  font-weight: 700;\n  margin: 0;\n}\n\n.button {\n  color: white;\n  background: var(--color-accent);\n  border-radius: 5px;\n  padding: 8px 20px;\n  transition: var(--transition);\n\n  /* vertically center */\n  display: inline-flex;\n  align-items: center;\n}\n\n.button:hover {\n    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);\n  }\n\n.button.inverted {\n    background: transparent; \n    color: var(--color-accent); \n    border: 2px solid var(--color-accent);\n  }\n\n/* Markdown styling */\n.content :global(img) {\n    width: 100%;\n    margin: 2rem 0;\n    box-shadow: var(--box-shadow);\n    border-radius: var(--border-radius);\n  }\n.content :global(p) {\n    padding: 0.5rem 0;\n    line-height: 1.5;\n  }\n.content :global(a) {\n    text-decoration: underline;\n  }\n.content :global(h1) {\n    font-size: 2.5rem;\n    font-weight: 600;\n    line-height: 1.2;\n    margin-bottom: 0.5rem;\n  }\n.content :global(h2) {\n    font-size: 2rem;\n    font-weight: 600;\n    margin-bottom: 0.25rem;\n    line-height: 1.2;\n  }\n.content :global(h3) {\n    font-size: 1.5rem;\n    font-weight: 600;\n    line-height: 1.2;\n    margin-top: .5rem;\n  }\n.content :global(ul) {\n    list-style: disc;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content :global(ol) {\n    list-style: decimal;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content :global(blockquote) {\n    padding: 2rem;\n    box-shadow: var(--box-shadow);\n    border-radius: var(--border-radius);\n  }");
+			t = text("@import url(\"https://unpkg.com/@primo-app/primo@1.3.64/reset.css\");\n@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');\n\n#page {\n  --max-width: 740px;\n  --color-accent: rebeccapurple;\n  font-family: lexend, system-ui, sans-serif;\n  color: var(--color);\n  line-height: 1.6; \n  font-size: 1rem;\n  background: var(--background);\n}\n\n.section-container {\n  max-width: var(--max-width, 1000px);\n  margin: 0 auto;\n  padding: 3rem var(--padding, 1rem); \n}\n\n.heading {\n  font-size: 3rem;\n  line-height: 1;\n  font-weight: 700;\n  margin: 0;\n}\n\na {\n  color: rebeccapurple;\n}\n\n.link {\n  color: var(--color-accent);\n}\n\na:hover {\n  text-decoration: underline;\n  font-weight: bold;\n}\n\n.button {\n  color: white;\n  background: var(--color-accent);\n  border-radius: 5px;\n  padding: 8px 20px;\n  transition: var(--transition);\n\n  /* vertically center */\n  display: inline-flex;\n  align-items: center;\n}\n\n.button:hover {\n    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);\n  }\n\n.button.inverted {\n    background: transparent; \n    color: var(--color-accent); \n    border: 2px solid var(--color-accent);\n  }\n\n/* Markdown styling */\n.content :global(img) {\n    width: 100%;\n    margin: 2rem 0;\n    box-shadow: var(--box-shadow);\n    border-radius: var(--border-radius);\n  }\n.content :global(p) {\n    padding: 0.5rem 0;\n    line-height: 1.5;\n  }\n.content :global(a) {\n    text-decoration: underline;\n  }\n.content :global(h1) {\n    font-size: 2.5rem;\n    font-weight: 600;\n    line-height: 1.2;\n    margin-bottom: 0.5rem;\n  }\n.content :global(h2) {\n    font-size: 2rem;\n    font-weight: 600;\n    margin-bottom: 0.25rem;\n    line-height: 1.2;\n  }\n.content :global(h3) {\n    font-size: 1.5rem;\n    font-weight: 600;\n    line-height: 1.2;\n    margin-top: .5rem;\n  }\n.content :global(ul) {\n    list-style: disc;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content :global(ol) {\n    list-style: decimal;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content :global(blockquote) {\n    padding: 2rem;\n    box-shadow: var(--box-shadow);\n    border-radius: var(--border-radius);\n  }");
 			this.h();
 		},
 		l(nodes) {
-			const head_nodes = head_selector('svelte-i462oa', document.head);
+			const head_nodes = head_selector('svelte-qhsugq', document.head);
 			meta = claim_element(head_nodes, "META", { name: true, content: true });
 			style = claim_element(head_nodes, "STYLE", {});
 			var style_nodes = children(style);
-			t = claim_text(style_nodes, "@import url(\"https://unpkg.com/@primo-app/primo@1.3.64/reset.css\");\n@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');\n\n#page {\n  --max-width: 740px;\n  --color-accent: rebeccapurple;\n  font-family: lexend, system-ui, sans-serif;\n  color: var(--color);\n  line-height: 1.6; \n  font-size: 1rem;\n  background: var(--background);\n}\n\n.section-container {\n  max-width: var(--max-width, 1000px);\n  margin: 0 auto;\n  padding: 3rem var(--padding, 1rem); \n}\n\n.heading {\n  font-size: 3rem;\n  line-height: 1;\n  font-weight: 700;\n  margin: 0;\n}\n\n.button {\n  color: white;\n  background: var(--color-accent);\n  border-radius: 5px;\n  padding: 8px 20px;\n  transition: var(--transition);\n\n  /* vertically center */\n  display: inline-flex;\n  align-items: center;\n}\n\n.button:hover {\n    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);\n  }\n\n.button.inverted {\n    background: transparent; \n    color: var(--color-accent); \n    border: 2px solid var(--color-accent);\n  }\n\n/* Markdown styling */\n.content :global(img) {\n    width: 100%;\n    margin: 2rem 0;\n    box-shadow: var(--box-shadow);\n    border-radius: var(--border-radius);\n  }\n.content :global(p) {\n    padding: 0.5rem 0;\n    line-height: 1.5;\n  }\n.content :global(a) {\n    text-decoration: underline;\n  }\n.content :global(h1) {\n    font-size: 2.5rem;\n    font-weight: 600;\n    line-height: 1.2;\n    margin-bottom: 0.5rem;\n  }\n.content :global(h2) {\n    font-size: 2rem;\n    font-weight: 600;\n    margin-bottom: 0.25rem;\n    line-height: 1.2;\n  }\n.content :global(h3) {\n    font-size: 1.5rem;\n    font-weight: 600;\n    line-height: 1.2;\n    margin-top: .5rem;\n  }\n.content :global(ul) {\n    list-style: disc;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content :global(ol) {\n    list-style: decimal;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content :global(blockquote) {\n    padding: 2rem;\n    box-shadow: var(--box-shadow);\n    border-radius: var(--border-radius);\n  }");
+			t = claim_text(style_nodes, "@import url(\"https://unpkg.com/@primo-app/primo@1.3.64/reset.css\");\n@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');\n\n#page {\n  --max-width: 740px;\n  --color-accent: rebeccapurple;\n  font-family: lexend, system-ui, sans-serif;\n  color: var(--color);\n  line-height: 1.6; \n  font-size: 1rem;\n  background: var(--background);\n}\n\n.section-container {\n  max-width: var(--max-width, 1000px);\n  margin: 0 auto;\n  padding: 3rem var(--padding, 1rem); \n}\n\n.heading {\n  font-size: 3rem;\n  line-height: 1;\n  font-weight: 700;\n  margin: 0;\n}\n\na {\n  color: rebeccapurple;\n}\n\n.link {\n  color: var(--color-accent);\n}\n\na:hover {\n  text-decoration: underline;\n  font-weight: bold;\n}\n\n.button {\n  color: white;\n  background: var(--color-accent);\n  border-radius: 5px;\n  padding: 8px 20px;\n  transition: var(--transition);\n\n  /* vertically center */\n  display: inline-flex;\n  align-items: center;\n}\n\n.button:hover {\n    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);\n  }\n\n.button.inverted {\n    background: transparent; \n    color: var(--color-accent); \n    border: 2px solid var(--color-accent);\n  }\n\n/* Markdown styling */\n.content :global(img) {\n    width: 100%;\n    margin: 2rem 0;\n    box-shadow: var(--box-shadow);\n    border-radius: var(--border-radius);\n  }\n.content :global(p) {\n    padding: 0.5rem 0;\n    line-height: 1.5;\n  }\n.content :global(a) {\n    text-decoration: underline;\n  }\n.content :global(h1) {\n    font-size: 2.5rem;\n    font-weight: 600;\n    line-height: 1.2;\n    margin-bottom: 0.5rem;\n  }\n.content :global(h2) {\n    font-size: 2rem;\n    font-weight: 600;\n    margin-bottom: 0.25rem;\n    line-height: 1.2;\n  }\n.content :global(h3) {\n    font-size: 1.5rem;\n    font-weight: 600;\n    line-height: 1.2;\n    margin-top: .5rem;\n  }\n.content :global(ul) {\n    list-style: disc;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content :global(ol) {\n    list-style: decimal;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content :global(blockquote) {\n    padding: 2rem;\n    box-shadow: var(--box-shadow);\n    border-radius: var(--border-radius);\n  }");
 			style_nodes.forEach(detach);
 			head_nodes.forEach(detach);
 			this.h();
@@ -3771,6 +3771,271 @@ class Component$3 extends SvelteComponent {
 
 function get_each_context$2(ctx, list, i) {
 	const child_ctx = ctx.slice();
+	child_ctx[2] = list[i];
+	return child_ctx;
+}
+
+// (50:4) {#each cards as card}
+function create_each_block$2(ctx) {
+	let li;
+	let h3;
+	let span0;
+	let icon;
+	let t0;
+	let span1;
+	let t1_value = /*card*/ ctx[2].title + "";
+	let t1;
+	let t2;
+	let div;
+	let raw_value = /*card*/ ctx[2].description.html + "";
+	let t3;
+	let current;
+
+	icon = new Component$1({
+			props: {
+				icon: /*card*/ ctx[2].icon,
+				width: "22",
+				height: "22",
+				style: "color: var(--color-accent, rebeccapurple)"
+			}
+		});
+
+	return {
+		c() {
+			li = element("li");
+			h3 = element("h3");
+			span0 = element("span");
+			create_component(icon.$$.fragment);
+			t0 = space();
+			span1 = element("span");
+			t1 = text(t1_value);
+			t2 = space();
+			div = element("div");
+			t3 = space();
+			this.h();
+		},
+		l(nodes) {
+			li = claim_element(nodes, "LI", { class: true });
+			var li_nodes = children(li);
+			h3 = claim_element(li_nodes, "H3", { class: true });
+			var h3_nodes = children(h3);
+			span0 = claim_element(h3_nodes, "SPAN", {});
+			var span0_nodes = children(span0);
+			claim_component(icon.$$.fragment, span0_nodes);
+			span0_nodes.forEach(detach);
+			t0 = claim_space(h3_nodes);
+			span1 = claim_element(h3_nodes, "SPAN", { class: true });
+			var span1_nodes = children(span1);
+			t1 = claim_text(span1_nodes, t1_value);
+			span1_nodes.forEach(detach);
+			h3_nodes.forEach(detach);
+			t2 = claim_space(li_nodes);
+			div = claim_element(li_nodes, "DIV", { class: true });
+			var div_nodes = children(div);
+			div_nodes.forEach(detach);
+			t3 = claim_space(li_nodes);
+			li_nodes.forEach(detach);
+			this.h();
+		},
+		h() {
+			attr(span1, "class", "label svelte-13ipoh0");
+			attr(h3, "class", "title svelte-13ipoh0");
+			attr(div, "class", "description");
+			attr(li, "class", "svelte-13ipoh0");
+		},
+		m(target, anchor) {
+			insert_hydration(target, li, anchor);
+			append_hydration(li, h3);
+			append_hydration(h3, span0);
+			mount_component(icon, span0, null);
+			append_hydration(h3, t0);
+			append_hydration(h3, span1);
+			append_hydration(span1, t1);
+			append_hydration(li, t2);
+			append_hydration(li, div);
+			div.innerHTML = raw_value;
+			append_hydration(li, t3);
+			current = true;
+		},
+		p(ctx, dirty) {
+			const icon_changes = {};
+			if (dirty & /*cards*/ 2) icon_changes.icon = /*card*/ ctx[2].icon;
+			icon.$set(icon_changes);
+			if ((!current || dirty & /*cards*/ 2) && t1_value !== (t1_value = /*card*/ ctx[2].title + "")) set_data(t1, t1_value);
+			if ((!current || dirty & /*cards*/ 2) && raw_value !== (raw_value = /*card*/ ctx[2].description.html + "")) div.innerHTML = raw_value;		},
+		i(local) {
+			if (current) return;
+			transition_in(icon.$$.fragment, local);
+			current = true;
+		},
+		o(local) {
+			transition_out(icon.$$.fragment, local);
+			current = false;
+		},
+		d(detaching) {
+			if (detaching) detach(li);
+			destroy_component(icon);
+		}
+	};
+}
+
+function create_fragment$4(ctx) {
+	let div;
+	let section;
+	let h2;
+	let t0;
+	let t1;
+	let ul;
+	let current;
+	let each_value = /*cards*/ ctx[1];
+	let each_blocks = [];
+
+	for (let i = 0; i < each_value.length; i += 1) {
+		each_blocks[i] = create_each_block$2(get_each_context$2(ctx, each_value, i));
+	}
+
+	const out = i => transition_out(each_blocks[i], 1, 1, () => {
+		each_blocks[i] = null;
+	});
+
+	return {
+		c() {
+			div = element("div");
+			section = element("section");
+			h2 = element("h2");
+			t0 = text(/*heading*/ ctx[0]);
+			t1 = space();
+			ul = element("ul");
+
+			for (let i = 0; i < each_blocks.length; i += 1) {
+				each_blocks[i].c();
+			}
+
+			this.h();
+		},
+		l(nodes) {
+			div = claim_element(nodes, "DIV", { class: true, id: true });
+			var div_nodes = children(div);
+			section = claim_element(div_nodes, "SECTION", { class: true });
+			var section_nodes = children(section);
+			h2 = claim_element(section_nodes, "H2", { class: true });
+			var h2_nodes = children(h2);
+			t0 = claim_text(h2_nodes, /*heading*/ ctx[0]);
+			h2_nodes.forEach(detach);
+			t1 = claim_space(section_nodes);
+			ul = claim_element(section_nodes, "UL", { class: true });
+			var ul_nodes = children(ul);
+
+			for (let i = 0; i < each_blocks.length; i += 1) {
+				each_blocks[i].l(ul_nodes);
+			}
+
+			ul_nodes.forEach(detach);
+			section_nodes.forEach(detach);
+			div_nodes.forEach(detach);
+			this.h();
+		},
+		h() {
+			attr(h2, "class", "heading svelte-13ipoh0");
+			attr(ul, "class", "svelte-13ipoh0");
+			attr(section, "class", "section-container svelte-13ipoh0");
+			attr(div, "class", "section");
+			attr(div, "id", "section-a106f23c");
+		},
+		m(target, anchor) {
+			insert_hydration(target, div, anchor);
+			append_hydration(div, section);
+			append_hydration(section, h2);
+			append_hydration(h2, t0);
+			append_hydration(section, t1);
+			append_hydration(section, ul);
+
+			for (let i = 0; i < each_blocks.length; i += 1) {
+				if (each_blocks[i]) {
+					each_blocks[i].m(ul, null);
+				}
+			}
+
+			current = true;
+		},
+		p(ctx, [dirty]) {
+			if (!current || dirty & /*heading*/ 1) set_data(t0, /*heading*/ ctx[0]);
+
+			if (dirty & /*cards*/ 2) {
+				each_value = /*cards*/ ctx[1];
+				let i;
+
+				for (i = 0; i < each_value.length; i += 1) {
+					const child_ctx = get_each_context$2(ctx, each_value, i);
+
+					if (each_blocks[i]) {
+						each_blocks[i].p(child_ctx, dirty);
+						transition_in(each_blocks[i], 1);
+					} else {
+						each_blocks[i] = create_each_block$2(child_ctx);
+						each_blocks[i].c();
+						transition_in(each_blocks[i], 1);
+						each_blocks[i].m(ul, null);
+					}
+				}
+
+				group_outros();
+
+				for (i = each_value.length; i < each_blocks.length; i += 1) {
+					out(i);
+				}
+
+				check_outros();
+			}
+		},
+		i(local) {
+			if (current) return;
+
+			for (let i = 0; i < each_value.length; i += 1) {
+				transition_in(each_blocks[i]);
+			}
+
+			current = true;
+		},
+		o(local) {
+			each_blocks = each_blocks.filter(Boolean);
+
+			for (let i = 0; i < each_blocks.length; i += 1) {
+				transition_out(each_blocks[i]);
+			}
+
+			current = false;
+		},
+		d(detaching) {
+			if (detaching) detach(div);
+			destroy_each(each_blocks, detaching);
+		}
+	};
+}
+
+function instance$3($$self, $$props, $$invalidate) {
+	let { heading } = $$props;
+	let { cards } = $$props;
+
+	$$self.$$set = $$props => {
+		if ('heading' in $$props) $$invalidate(0, heading = $$props.heading);
+		if ('cards' in $$props) $$invalidate(1, cards = $$props.cards);
+	};
+
+	return [heading, cards];
+}
+
+class Component$4 extends SvelteComponent {
+	constructor(options) {
+		super();
+		init(this, options, instance$3, create_fragment$4, safe_not_equal, { heading: 0, cards: 1 });
+	}
+}
+
+/* generated by Svelte v3.58.0 */
+
+function get_each_context$3(ctx, list, i) {
+	const child_ctx = ctx.slice();
 	child_ctx[3] = list[i];
 	return child_ctx;
 }
@@ -3898,7 +4163,7 @@ function create_each_block_1$1(ctx) {
 }
 
 // (103:4) {#each orgs as org}
-function create_each_block$2(ctx) {
+function create_each_block$3(ctx) {
 	let li;
 	let t0;
 	let div2;
@@ -4065,7 +4330,7 @@ function create_each_block$2(ctx) {
 	};
 }
 
-function create_fragment$4(ctx) {
+function create_fragment$5(ctx) {
 	let div;
 	let section;
 	let h2;
@@ -4080,7 +4345,7 @@ function create_fragment$4(ctx) {
 	let each_blocks = [];
 
 	for (let i = 0; i < each_value.length; i += 1) {
-		each_blocks[i] = create_each_block$2(get_each_context$2(ctx, each_value, i));
+		each_blocks[i] = create_each_block$3(get_each_context$3(ctx, each_value, i));
 	}
 
 	const out = i => transition_out(each_blocks[i], 1, 1, () => {
@@ -4168,13 +4433,13 @@ function create_fragment$4(ctx) {
 				let i;
 
 				for (i = 0; i < each_value.length; i += 1) {
-					const child_ctx = get_each_context$2(ctx, each_value, i);
+					const child_ctx = get_each_context$3(ctx, each_value, i);
 
 					if (each_blocks[i]) {
 						each_blocks[i].p(child_ctx, dirty);
 						transition_in(each_blocks[i], 1);
 					} else {
-						each_blocks[i] = create_each_block$2(child_ctx);
+						each_blocks[i] = create_each_block$3(child_ctx);
 						each_blocks[i].c();
 						transition_in(each_blocks[i], 1);
 						each_blocks[i].m(ul, null);
@@ -4215,7 +4480,7 @@ function create_fragment$4(ctx) {
 	};
 }
 
-function instance$3($$self, $$props, $$invalidate) {
+function instance$4($$self, $$props, $$invalidate) {
 	let { heading } = $$props;
 	let { subheading } = $$props;
 	let { orgs } = $$props;
@@ -4229,16 +4494,327 @@ function instance$3($$self, $$props, $$invalidate) {
 	return [heading, subheading, orgs];
 }
 
-class Component$4 extends SvelteComponent {
+class Component$5 extends SvelteComponent {
 	constructor(options) {
 		super();
-		init(this, options, instance$3, create_fragment$4, safe_not_equal, { heading: 0, subheading: 1, orgs: 2 });
+		init(this, options, instance$4, create_fragment$5, safe_not_equal, { heading: 0, subheading: 1, orgs: 2 });
 	}
 }
 
 /* generated by Svelte v3.58.0 */
 
-function get_each_context$3(ctx, list, i) {
+function get_each_context$4(ctx, list, i) {
+	const child_ctx = ctx.slice();
+	child_ctx[3] = list[i].link;
+	child_ctx[4] = list[i].icon;
+	return child_ctx;
+}
+
+// (89:4) {#if email}
+function create_if_block$4(ctx) {
+	let a;
+	let t;
+	let a_href_value;
+
+	return {
+		c() {
+			a = element("a");
+			t = text(/*email*/ ctx[1]);
+			this.h();
+		},
+		l(nodes) {
+			a = claim_element(nodes, "A", { class: true, href: true });
+			var a_nodes = children(a);
+			t = claim_text(a_nodes, /*email*/ ctx[1]);
+			a_nodes.forEach(detach);
+			this.h();
+		},
+		h() {
+			attr(a, "class", "link svelte-14i3sqd");
+			attr(a, "href", a_href_value = "mailto:" + /*email*/ ctx[1]);
+		},
+		m(target, anchor) {
+			insert_hydration(target, a, anchor);
+			append_hydration(a, t);
+		},
+		p(ctx, dirty) {
+			if (dirty & /*email*/ 2) set_data(t, /*email*/ ctx[1]);
+
+			if (dirty & /*email*/ 2 && a_href_value !== (a_href_value = "mailto:" + /*email*/ ctx[1])) {
+				attr(a, "href", a_href_value);
+			}
+		},
+		d(detaching) {
+			if (detaching) detach(a);
+		}
+	};
+}
+
+// (93:6) {#each social as {link, icon}}
+function create_each_block$4(ctx) {
+	let li;
+	let a;
+	let icon;
+	let a_href_value;
+	let a_aria_label_value;
+	let t;
+	let current;
+	icon = new Component$1({ props: { icon: /*icon*/ ctx[4] } });
+
+	return {
+		c() {
+			li = element("li");
+			a = element("a");
+			create_component(icon.$$.fragment);
+			t = space();
+			this.h();
+		},
+		l(nodes) {
+			li = claim_element(nodes, "LI", { class: true });
+			var li_nodes = children(li);
+
+			a = claim_element(li_nodes, "A", {
+				href: true,
+				"aria-label": true,
+				class: true
+			});
+
+			var a_nodes = children(a);
+			claim_component(icon.$$.fragment, a_nodes);
+			a_nodes.forEach(detach);
+			t = claim_space(li_nodes);
+			li_nodes.forEach(detach);
+			this.h();
+		},
+		h() {
+			attr(a, "href", a_href_value = /*link*/ ctx[3].url);
+			attr(a, "aria-label", a_aria_label_value = /*link*/ ctx[3].label);
+			attr(a, "class", "svelte-14i3sqd");
+			attr(li, "class", "svelte-14i3sqd");
+		},
+		m(target, anchor) {
+			insert_hydration(target, li, anchor);
+			append_hydration(li, a);
+			mount_component(icon, a, null);
+			append_hydration(li, t);
+			current = true;
+		},
+		p(ctx, dirty) {
+			const icon_changes = {};
+			if (dirty & /*social*/ 4) icon_changes.icon = /*icon*/ ctx[4];
+			icon.$set(icon_changes);
+
+			if (!current || dirty & /*social*/ 4 && a_href_value !== (a_href_value = /*link*/ ctx[3].url)) {
+				attr(a, "href", a_href_value);
+			}
+
+			if (!current || dirty & /*social*/ 4 && a_aria_label_value !== (a_aria_label_value = /*link*/ ctx[3].label)) {
+				attr(a, "aria-label", a_aria_label_value);
+			}
+		},
+		i(local) {
+			if (current) return;
+			transition_in(icon.$$.fragment, local);
+			current = true;
+		},
+		o(local) {
+			transition_out(icon.$$.fragment, local);
+			current = false;
+		},
+		d(detaching) {
+			if (detaching) detach(li);
+			destroy_component(icon);
+		}
+	};
+}
+
+function create_fragment$6(ctx) {
+	let div1;
+	let section;
+	let div0;
+	let h2;
+	let t0;
+	let t1;
+	let t2;
+	let ul;
+	let current;
+	let if_block = /*email*/ ctx[1] && create_if_block$4(ctx);
+	let each_value = /*social*/ ctx[2];
+	let each_blocks = [];
+
+	for (let i = 0; i < each_value.length; i += 1) {
+		each_blocks[i] = create_each_block$4(get_each_context$4(ctx, each_value, i));
+	}
+
+	const out = i => transition_out(each_blocks[i], 1, 1, () => {
+		each_blocks[i] = null;
+	});
+
+	return {
+		c() {
+			div1 = element("div");
+			section = element("section");
+			div0 = element("div");
+			h2 = element("h2");
+			t0 = text(/*heading*/ ctx[0]);
+			t1 = space();
+			if (if_block) if_block.c();
+			t2 = space();
+			ul = element("ul");
+
+			for (let i = 0; i < each_blocks.length; i += 1) {
+				each_blocks[i].c();
+			}
+
+			this.h();
+		},
+		l(nodes) {
+			div1 = claim_element(nodes, "DIV", { class: true, id: true });
+			var div1_nodes = children(div1);
+			section = claim_element(div1_nodes, "SECTION", { class: true });
+			var section_nodes = children(section);
+			div0 = claim_element(section_nodes, "DIV", { class: true });
+			var div0_nodes = children(div0);
+			h2 = claim_element(div0_nodes, "H2", { class: true });
+			var h2_nodes = children(h2);
+			t0 = claim_text(h2_nodes, /*heading*/ ctx[0]);
+			h2_nodes.forEach(detach);
+			t1 = claim_space(div0_nodes);
+			if (if_block) if_block.l(div0_nodes);
+			t2 = claim_space(div0_nodes);
+			ul = claim_element(div0_nodes, "UL", { class: true });
+			var ul_nodes = children(ul);
+
+			for (let i = 0; i < each_blocks.length; i += 1) {
+				each_blocks[i].l(ul_nodes);
+			}
+
+			ul_nodes.forEach(detach);
+			div0_nodes.forEach(detach);
+			section_nodes.forEach(detach);
+			div1_nodes.forEach(detach);
+			this.h();
+		},
+		h() {
+			attr(h2, "class", "heading svelte-14i3sqd");
+			attr(ul, "class", "svelte-14i3sqd");
+			attr(div0, "class", "card svelte-14i3sqd");
+			attr(section, "class", "section-container svelte-14i3sqd");
+			attr(div1, "class", "section");
+			attr(div1, "id", "section-bc4f81c6");
+		},
+		m(target, anchor) {
+			insert_hydration(target, div1, anchor);
+			append_hydration(div1, section);
+			append_hydration(section, div0);
+			append_hydration(div0, h2);
+			append_hydration(h2, t0);
+			append_hydration(div0, t1);
+			if (if_block) if_block.m(div0, null);
+			append_hydration(div0, t2);
+			append_hydration(div0, ul);
+
+			for (let i = 0; i < each_blocks.length; i += 1) {
+				if (each_blocks[i]) {
+					each_blocks[i].m(ul, null);
+				}
+			}
+
+			current = true;
+		},
+		p(ctx, [dirty]) {
+			if (!current || dirty & /*heading*/ 1) set_data(t0, /*heading*/ ctx[0]);
+
+			if (/*email*/ ctx[1]) {
+				if (if_block) {
+					if_block.p(ctx, dirty);
+				} else {
+					if_block = create_if_block$4(ctx);
+					if_block.c();
+					if_block.m(div0, t2);
+				}
+			} else if (if_block) {
+				if_block.d(1);
+				if_block = null;
+			}
+
+			if (dirty & /*social*/ 4) {
+				each_value = /*social*/ ctx[2];
+				let i;
+
+				for (i = 0; i < each_value.length; i += 1) {
+					const child_ctx = get_each_context$4(ctx, each_value, i);
+
+					if (each_blocks[i]) {
+						each_blocks[i].p(child_ctx, dirty);
+						transition_in(each_blocks[i], 1);
+					} else {
+						each_blocks[i] = create_each_block$4(child_ctx);
+						each_blocks[i].c();
+						transition_in(each_blocks[i], 1);
+						each_blocks[i].m(ul, null);
+					}
+				}
+
+				group_outros();
+
+				for (i = each_value.length; i < each_blocks.length; i += 1) {
+					out(i);
+				}
+
+				check_outros();
+			}
+		},
+		i(local) {
+			if (current) return;
+
+			for (let i = 0; i < each_value.length; i += 1) {
+				transition_in(each_blocks[i]);
+			}
+
+			current = true;
+		},
+		o(local) {
+			each_blocks = each_blocks.filter(Boolean);
+
+			for (let i = 0; i < each_blocks.length; i += 1) {
+				transition_out(each_blocks[i]);
+			}
+
+			current = false;
+		},
+		d(detaching) {
+			if (detaching) detach(div1);
+			if (if_block) if_block.d();
+			destroy_each(each_blocks, detaching);
+		}
+	};
+}
+
+function instance$5($$self, $$props, $$invalidate) {
+	let { heading } = $$props;
+	let { email } = $$props;
+	let { social } = $$props;
+
+	$$self.$$set = $$props => {
+		if ('heading' in $$props) $$invalidate(0, heading = $$props.heading);
+		if ('email' in $$props) $$invalidate(1, email = $$props.email);
+		if ('social' in $$props) $$invalidate(2, social = $$props.social);
+	};
+
+	return [heading, email, social];
+}
+
+class Component$6 extends SvelteComponent {
+	constructor(options) {
+		super();
+		init(this, options, instance$5, create_fragment$6, safe_not_equal, { heading: 0, email: 1, social: 2 });
+	}
+}
+
+/* generated by Svelte v3.58.0 */
+
+function get_each_context$5(ctx, list, i) {
 	const child_ctx = ctx.slice();
 	child_ctx[2] = list[i].link;
 	child_ctx[3] = list[i].icon;
@@ -4293,7 +4869,7 @@ function create_each_block_1$2(ctx) {
 }
 
 // (69:4) {#each social as { link, icon }}
-function create_each_block$3(ctx) {
+function create_each_block$5(ctx) {
 	let a;
 	let icon;
 	let t;
@@ -4362,7 +4938,7 @@ function create_each_block$3(ctx) {
 	};
 }
 
-function create_fragment$5(ctx) {
+function create_fragment$7(ctx) {
 	let div1;
 	let footer;
 	let nav_1;
@@ -4380,7 +4956,7 @@ function create_fragment$5(ctx) {
 	let each_blocks = [];
 
 	for (let i = 0; i < each_value.length; i += 1) {
-		each_blocks[i] = create_each_block$3(get_each_context$3(ctx, each_value, i));
+		each_blocks[i] = create_each_block$5(get_each_context$5(ctx, each_value, i));
 	}
 
 	const out = i => transition_out(each_blocks[i], 1, 1, () => {
@@ -4490,13 +5066,13 @@ function create_fragment$5(ctx) {
 				let i;
 
 				for (i = 0; i < each_value.length; i += 1) {
-					const child_ctx = get_each_context$3(ctx, each_value, i);
+					const child_ctx = get_each_context$5(ctx, each_value, i);
 
 					if (each_blocks[i]) {
 						each_blocks[i].p(child_ctx, dirty);
 						transition_in(each_blocks[i], 1);
 					} else {
-						each_blocks[i] = create_each_block$3(child_ctx);
+						each_blocks[i] = create_each_block$5(child_ctx);
 						each_blocks[i].c();
 						transition_in(each_blocks[i], 1);
 						each_blocks[i].m(div0, null);
@@ -4538,7 +5114,7 @@ function create_fragment$5(ctx) {
 	};
 }
 
-function instance$4($$self, $$props, $$invalidate) {
+function instance$6($$self, $$props, $$invalidate) {
 	let { nav } = $$props;
 	let { social } = $$props;
 
@@ -4550,16 +5126,16 @@ function instance$4($$self, $$props, $$invalidate) {
 	return [nav, social];
 }
 
-class Component$5 extends SvelteComponent {
+class Component$7 extends SvelteComponent {
 	constructor(options) {
 		super();
-		init(this, options, instance$4, create_fragment$5, safe_not_equal, { nav: 0, social: 1 });
+		init(this, options, instance$6, create_fragment$7, safe_not_equal, { nav: 0, social: 1 });
 	}
 }
 
 /* generated by Svelte v3.58.0 */
 
-class Component$6 extends SvelteComponent {
+class Component$8 extends SvelteComponent {
 	constructor(options) {
 		super();
 		init(this, options, null, null, safe_not_equal, {});
@@ -4568,7 +5144,7 @@ class Component$6 extends SvelteComponent {
 
 /* generated by Svelte v3.58.0 */
 
-function create_fragment$6(ctx) {
+function create_fragment$8(ctx) {
 	let component_0;
 	let t0;
 	let component_1;
@@ -4580,6 +5156,10 @@ function create_fragment$6(ctx) {
 	let component_4;
 	let t4;
 	let component_5;
+	let t5;
+	let component_6;
+	let t6;
+	let component_7;
 	let current;
 	component_0 = new Component({});
 
@@ -4597,12 +5177,17 @@ function create_fragment$6(ctx) {
 				site_nav: [
 					{
 						"link": {
-							"url": "",
-							"label": "Home",
+							"url": "/",
+							"label": "About Us",
 							"active": false
 						}
 					},
-					{ "link": { "url": "/", "label": "About" } },
+					{
+						"link": {
+							"url": "/manifesto",
+							"label": "Manifesto"
+						}
+					},
 					{
 						"link": { "url": "/", "label": "Contact" }
 					}
@@ -4614,12 +5199,15 @@ function create_fragment$6(ctx) {
 			props: {
 				heading: "It's time to legalize housing.",
 				subheading: {
-					"html": "<p>Across Canada, municipalities have strangled our housing supply by making higher density housing extremely difficult to build.&nbsp;</p>",
-					"markdown": "Across Canada, municipalities have strangled our housing supply by making higher density housing extremely difficult to build.\n\n"
+					"html": "<p>Across Canada, municipal governments have made it incredibly difficult to build higher density housing. We'll need a lot of new homes to build our way out of the housing crisis, and the first step is to get out of our own way.</p>",
+					"markdown": "Across Canada, municipal governments have made it incredibly difficult to build higher density housing. We'll need a lot of new homes to build our way out of the housing crisis, and the first step is to get out of our own way.\n\n"
 				},
 				buttons: [
 					{
-						"link": { "url": "/", "label": "Learn More" }
+						"link": {
+							"url": "/manifesto",
+							"label": "Learn More"
+						}
 					},
 					{
 						"link": {
@@ -4632,6 +5220,46 @@ function create_fragment$6(ctx) {
 		});
 
 	component_3 = new Component$4({
+			props: {
+				heading: "What We Want",
+				cards: [
+					{
+						"icon": "material-symbols:check-circle-rounded",
+						"title": "Density as-of-right",
+						"description": {
+							"html": "<p>Homes are a necessity, not a nuisance. Townhouses, multiplexes and apartments should be allowed in more places and the approval process should not be a gauntlet. </p>",
+							"markdown": "Homes are a necessity, not a nuisance. Townhouses, multiplexes and apartments should be allowed in more places and the approval process should not be a gauntlet.\n\n"
+						}
+					},
+					{
+						"icon": "material-symbols:cut",
+						"title": "Cut red tape",
+						"description": {
+							"html": "<p>Setbacks, floorplate restrictions and parking minimums drive up building costs and kill new housing projects. Market, subsidized and co-op housing are all impacted.</p>",
+							"markdown": "Setbacks, floorplate restrictions and parking minimums drive up building costs and kill new housing projects. Market, subsidized and co-op housing are all impacted.\n\n"
+						}
+					},
+					{
+						"icon": "material-symbols:gavel",
+						"title": "Reform consultation and appeals",
+						"description": {
+							"html": "<p>There are too many veto rights on new housing. Local concerns should be heard but they do not trump the need for housing.</p>",
+							"markdown": "There are too many veto rights on new housing. Local concerns should be heard but they do not trump the need for housing.\n\n"
+						}
+					},
+					{
+						"icon": "material-symbols:payments",
+						"title": "Funding for subsidized housing",
+						"description": {
+							"html": "<p>Federal and provincial governments need to step and fund deeply affordable housing.</p>",
+							"markdown": "Federal and provincial governments need to step and fund deeply affordable housing.\n\n"
+						}
+					}
+				]
+			}
+		});
+
+	component_4 = new Component$5({
 			props: {
 				heading: "Who We Are",
 				subheading: "More Homes Canada is a coalition of local housing advocacy groups. Together, we are fighting to end Canada’s housing shortage. ",
@@ -4797,7 +5425,28 @@ function create_fragment$6(ctx) {
 			}
 		});
 
-	component_4 = new Component$5({
+	component_5 = new Component$6({
+			props: {
+				heading: "Contact Us",
+				email: "info@morehomescanada.ca",
+				social: [
+					{
+						"icon": "mdi:twitter",
+						"link": { "url": "/", "label": "Twitter" }
+					},
+					{
+						"icon": "mdi:instagram",
+						"link": { "url": "/", "label": "Instagram" }
+					},
+					{
+						"icon": "mdi:discord",
+						"link": { "url": "/", "label": "Discord" }
+					}
+				]
+			}
+		});
+
+	component_6 = new Component$7({
 			props: {
 				nav: [
 					{
@@ -4806,24 +5455,24 @@ function create_fragment$6(ctx) {
 				],
 				social: [
 					{
+						"icon": "mdi:twitter",
 						"link": {
 							"url": "https://twitter.com/MoreHomesCanada",
 							"label": "Twitter"
-						},
-						"icon": "mdi:twitter"
+						}
 					},
 					{
+						"icon": "mdi:instagram",
 						"link": {
 							"url": "https://www.instagram.com/morehomescanada/",
 							"label": "Instagram"
-						},
-						"icon": "mdi:instagram"
+						}
 					}
 				]
 			}
 		});
 
-	component_5 = new Component$6({});
+	component_7 = new Component$8({});
 
 	return {
 		c() {
@@ -4838,6 +5487,10 @@ function create_fragment$6(ctx) {
 			create_component(component_4.$$.fragment);
 			t4 = space();
 			create_component(component_5.$$.fragment);
+			t5 = space();
+			create_component(component_6.$$.fragment);
+			t6 = space();
+			create_component(component_7.$$.fragment);
 		},
 		l(nodes) {
 			claim_component(component_0.$$.fragment, nodes);
@@ -4851,6 +5504,10 @@ function create_fragment$6(ctx) {
 			claim_component(component_4.$$.fragment, nodes);
 			t4 = claim_space(nodes);
 			claim_component(component_5.$$.fragment, nodes);
+			t5 = claim_space(nodes);
+			claim_component(component_6.$$.fragment, nodes);
+			t6 = claim_space(nodes);
+			claim_component(component_7.$$.fragment, nodes);
 		},
 		m(target, anchor) {
 			mount_component(component_0, target, anchor);
@@ -4864,6 +5521,10 @@ function create_fragment$6(ctx) {
 			mount_component(component_4, target, anchor);
 			insert_hydration(target, t4, anchor);
 			mount_component(component_5, target, anchor);
+			insert_hydration(target, t5, anchor);
+			mount_component(component_6, target, anchor);
+			insert_hydration(target, t6, anchor);
+			mount_component(component_7, target, anchor);
 			current = true;
 		},
 		p: noop,
@@ -4875,6 +5536,8 @@ function create_fragment$6(ctx) {
 			transition_in(component_3.$$.fragment, local);
 			transition_in(component_4.$$.fragment, local);
 			transition_in(component_5.$$.fragment, local);
+			transition_in(component_6.$$.fragment, local);
+			transition_in(component_7.$$.fragment, local);
 			current = true;
 		},
 		o(local) {
@@ -4884,6 +5547,8 @@ function create_fragment$6(ctx) {
 			transition_out(component_3.$$.fragment, local);
 			transition_out(component_4.$$.fragment, local);
 			transition_out(component_5.$$.fragment, local);
+			transition_out(component_6.$$.fragment, local);
+			transition_out(component_7.$$.fragment, local);
 			current = false;
 		},
 		d(detaching) {
@@ -4898,15 +5563,19 @@ function create_fragment$6(ctx) {
 			destroy_component(component_4, detaching);
 			if (detaching) detach(t4);
 			destroy_component(component_5, detaching);
+			if (detaching) detach(t5);
+			destroy_component(component_6, detaching);
+			if (detaching) detach(t6);
+			destroy_component(component_7, detaching);
 		}
 	};
 }
 
-class Component$7 extends SvelteComponent {
+class Component$9 extends SvelteComponent {
 	constructor(options) {
 		super();
-		init(this, options, null, create_fragment$6, safe_not_equal, {});
+		init(this, options, null, create_fragment$8, safe_not_equal, {});
 	}
 }
 
-export default Component$7;
+export default Component$9;

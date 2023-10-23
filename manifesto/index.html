@@ -3,7 +3,7 @@
 
 <head>
     <meta name="generator" content="Primo" />
-    <!-- HEAD_svelte-i462oa_START -->
+    <!-- HEAD_svelte-qhsugq_START -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         @import url("https://unpkg.com/@primo-app/primo@1.3.64/reset.css");
@@ -30,6 +30,19 @@
             line-height: 1;
             font-weight: 700;
             margin: 0;
+        }
+
+        a {
+            color: rebeccapurple;
+        }
+
+        .link {
+            color: var(--color-accent);
+        }
+
+        a:hover {
+            text-decoration: underline;
+            font-weight: bold;
         }
 
         .button {
@@ -109,7 +122,7 @@
             box-shadow: var(--box-shadow);
             border-radius: var(--border-radius);
         }
-    </style><!-- HEAD_svelte-i462oa_END -->
+    </style><!-- HEAD_svelte-qhsugq_END -->
     <style>
         .section-container.svelte-1grguq5.svelte-1grguq5 {
             display: flex;
@@ -242,6 +255,60 @@
             padding-right: 2rem
         }
 
+        .section-container.svelte-kan08r.svelte-kan08r.svelte-kan08r {
+            display: grid;
+            place-items: center
+        }
+
+        .heading.svelte-kan08r.svelte-kan08r.svelte-kan08r {
+            text-align: center;
+            margin-bottom: 1.5rem
+        }
+
+        .accordion.svelte-kan08r.svelte-kan08r.svelte-kan08r {
+            width: 100%;
+            max-width: 900px
+        }
+
+        .accordion.svelte-kan08r .item.svelte-kan08r.svelte-kan08r {
+            padding: 1.5rem 0
+        }
+
+        .accordion.svelte-kan08r .item.svelte-kan08r.svelte-kan08r:not(:last-child) {
+            border-bottom: 1px solid var(--border-color, #eee)
+        }
+
+        .accordion.svelte-kan08r .item.active button .icon.svelte-kan08r.svelte-kan08r {
+            transform: scaleY(-1)
+        }
+
+        .accordion.svelte-kan08r .item button.svelte-kan08r.svelte-kan08r {
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%
+        }
+
+        .accordion.svelte-kan08r .item button span.svelte-kan08r.svelte-kan08r {
+            font-size: 1.25rem;
+            font-weight: 600
+        }
+
+        .accordion.svelte-kan08r .item button .icon.svelte-kan08r.svelte-kan08r {
+            font-size: 1.25rem;
+            color: var(--color-accent, rebeccapurple);
+            transition: transform 0.2s
+        }
+
+        .accordion.svelte-kan08r .item button.svelte-kan08r+.description.svelte-kan08r {
+            padding-top: 0.5rem
+        }
+
+        .accordion.svelte-kan08r .item .description.svelte-kan08r.svelte-kan08r {
+            padding-right: 2rem
+        }
+
         .section-container.svelte-i9k4w2.svelte-i9k4w2 {
             display: flex;
             justify-content: space-between;
@@ -294,10 +361,20 @@
     <div class="section" id="section-63c48e67">
         <header class="section-container svelte-1grguq5">
             <div class="desktop-nav svelte-1grguq5"><a href="/" class="logo svelte-1grguq5">MORE HOMES CANADA</a>
-                <nav class="svelte-1grguq5"><a class="link svelte-1grguq5" href="">Home</a><a class="link svelte-1grguq5" href="/">About</a><a class="link svelte-1grguq5" href="/">Contact</a></nav>
+                <nav class="svelte-1grguq5"><a class="link svelte-1grguq5" href="/">About Us</a><a class="link svelte-1grguq5" href="/manifesto">Manifesto</a><a class="link svelte-1grguq5" href="/">Contact</a></nav>
             </div>
             <div class="mobile-nav svelte-1grguq5"><a href="/" class="logo svelte-1grguq5">MORE HOMES CANADA</a>
-                <button id="open" aria-label="Open mobile navigation"></button>
+                <button id="open" aria-label="Open mobile navigation"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="30" height="30" viewBox="0 0 24 24" class="iconify iconify--eva"><!-- HTML_TAG_START -->
+                        <g id="iconifySvelte0">
+                            <g id="iconifySvelte1">
+                                <g id="iconifySvelte2" fill="currentColor">
+                                    <rect width="18" height="2" x="3" y="11" rx=".95" ry=".95" />
+                                    <rect width="18" height="2" x="3" y="16" rx=".95" ry=".95" />
+                                    <rect width="18" height="2" x="3" y="6" rx=".95" ry=".95" />
+                                </g>
+                            </g>
+                        </g><!-- HTML_TAG_END -->
+                    </svg></button>
             </div>
         </header>
     </div>
@@ -311,15 +388,15 @@
                             </svg>
                         </span></button>
                     <div class="description content svelte-kan08r"><!-- HTML_TAG_START -->
-                        <p>Canada built more homes in the mid 1970s than it has <em>any</em> time <strong>since</strong>, even though our population has <a target="_blank" rel="noopener noreferrer nofollow" class="link link link" href="https://dashboard.mailerlite.com/dashboard">doubled</a>.</p><!-- HTML_TAG_END -->
+                        <p>Canada built more homes in the mid 1970s than it has <em>any</em> time <strong>since</strong>, even though our population has <a href="https://dashboard.mailerlite.com/dashboard">doubled</a>.</p><!-- HTML_TAG_END -->
                     </div>
                     <noscript>
                         <div class="description content svelte-kan08r"><!-- HTML_TAG_START -->
-                            <p>Canada built more homes in the mid 1970s than it has <em>any</em> time <strong>since</strong>, even though our population has <a target="_blank" rel="noopener noreferrer nofollow" class="link link link" href="https://dashboard.mailerlite.com/dashboard">doubled</a>.</p><!-- HTML_TAG_END -->
+                            <p>Canada built more homes in the mid 1970s than it has <em>any</em> time <strong>since</strong>, even though our population has <a href="https://dashboard.mailerlite.com/dashboard">doubled</a>.</p><!-- HTML_TAG_END -->
                         </div>
                     </noscript>
                 </div>
-                <div class="item svelte-kan08r"><button class="svelte-kan08r"><span class="svelte-kan08r">2. Municipal regulations have strangled Canada’s housing supply</span>
+                <div class="item svelte-kan08r"><button class="svelte-kan08r"><span class="svelte-kan08r">2. Municipal regulations have strangled Canada’s housing supply.</span>
                         <span class="icon svelte-kan08r"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 256 256" class="iconify iconify--ph"><!-- HTML_TAG_START -->
                                 <path fill="currentColor" d="m216.49 104.49l-80 80a12 12 0 0 1-17 0l-80-80a12 12 0 0 1 17-17L128 159l71.51-71.52a12 12 0 0 1 17 17Z" /><!-- HTML_TAG_END -->
                             </svg>
@@ -327,7 +404,10 @@
 
                     <noscript>
                         <div class="description content svelte-kan08r"><!-- HTML_TAG_START -->
-                            <p>Generally our services range from $100-500 depending on your needs.</p><!-- HTML_TAG_END -->
+                            <p>Our housing shortage is the result of undemocratic regulatory capture by the few against the interests of the many.</p>
+                            <p>In most Canadian cities, apartments are illegal on most residential land. Construction of apartment buildings used to expand organically from our downtowns as cities grew. Since the introduction of zoning about 100 years ago, the boundaries between predominantly single-family detached house-only zones and apartment zones have barely changed.</p>
+                            <p>Subjective, discretionary approval processes inhibit housing production, reduce transparency and increase perceived corruption in local government.
+                                Public consultation is not representative of populations, nor does it deal holistically in addressing our housing shortage (it is often focused on individual buildings), nor does it weight the needs of the many appropriately versus the aesthetic preferences of the few.</p><!-- HTML_TAG_END -->
                         </div>
                     </noscript>
                 </div>
@@ -347,14 +427,130 @@
                         </div>
                     </noscript>
                 </div>
+                <div class="item svelte-kan08r"><button class="svelte-kan08r"><span class="svelte-kan08r">4. Urban sprawl is harmful to the environment and our long term fiscal sustainability.</span>
+                        <span class="icon svelte-kan08r"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 256 256" class="iconify iconify--ph"><!-- HTML_TAG_START -->
+                                <path fill="currentColor" d="m216.49 104.49l-80 80a12 12 0 0 1-17 0l-80-80a12 12 0 0 1 17-17L128 159l71.51-71.52a12 12 0 0 1 17 17Z" /><!-- HTML_TAG_END -->
+                            </svg>
+                        </span></button>
+
+                    <noscript>
+                        <div class="description content svelte-kan08r"><!-- HTML_TAG_START -->
+                            <p>Big metros have been getting less dense on average and growing in car-dependent suburbs and exurbs.
+                                Apartment buildings are inherently more energy-efficient than houses and are a key part of reducing car-dependence and the overall energy intensity of our cities.</p><!-- HTML_TAG_END -->
+                        </div>
+                    </noscript>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="section" id="section-c5cea428">
+        <section class="section-container svelte-kan08r">
+            <h2 class="heading svelte-kan08r">Our Goals </h2>
+            <div class="accordion svelte-kan08r">
+                <div class="item svelte-kan08r active"><button class="svelte-kan08r"><span class="svelte-kan08r">1. Row houses, multiplexes, lodging homes and low-rise apartments should be permitted in all neighbourhoods as of right.</span>
+                        <span class="icon svelte-kan08r"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 256 256" class="iconify iconify--ph"><!-- HTML_TAG_START -->
+                                <path fill="currentColor" d="m216.49 104.49l-80 80a12 12 0 0 1-17 0l-80-80a12 12 0 0 1 17-17L128 159l71.51-71.52a12 12 0 0 1 17 17Z" /><!-- HTML_TAG_END -->
+                            </svg>
+                        </span></button>
+                    <div class="description content svelte-kan08r"><!-- HTML_TAG_START -->
+                        <p>Canada built more homes in the mid 1970s than it has any time since, even though our population has doubled.</p><!-- HTML_TAG_END -->
+                    </div>
+                    <noscript>
+                        <div class="description content svelte-kan08r"><!-- HTML_TAG_START -->
+                            <p>Canada built more homes in the mid 1970s than it has any time since, even though our population has doubled.</p><!-- HTML_TAG_END -->
+                        </div>
+                    </noscript>
+                </div>
+                <div class="item svelte-kan08r"><button class="svelte-kan08r"><span class="svelte-kan08r">2. Mid-rise and high-rise apartments should be permitted as of right within walking distance of frequent transit and within active transit-distance of major job centres.</span>
+                        <span class="icon svelte-kan08r"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 256 256" class="iconify iconify--ph"><!-- HTML_TAG_START -->
+                                <path fill="currentColor" d="m216.49 104.49l-80 80a12 12 0 0 1-17 0l-80-80a12 12 0 0 1 17-17L128 159l71.51-71.52a12 12 0 0 1 17 17Z" /><!-- HTML_TAG_END -->
+                            </svg>
+                        </span></button>
+
+                    <noscript>
+                        <div class="description content svelte-kan08r"><!-- HTML_TAG_START -->
+                            <p>Requiring long and arduous rezoning processes inflates land costs and adds significant delays to building new housing projects.</p>
+                            <p>It is unjust to restrict multifamily housing to land adjacent to major roads with poor air quality and harmful levels of noise pollution.</p><!-- HTML_TAG_END -->
+                        </div>
+                    </noscript>
+                </div>
+                <div class="item svelte-kan08r"><button class="svelte-kan08r"><span class="svelte-kan08r">3. Restrictions on setbacks, floorplate need to be relaxed and parking minimums abolished.</span>
+                        <span class="icon svelte-kan08r"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 256 256" class="iconify iconify--ph"><!-- HTML_TAG_START -->
+                                <path fill="currentColor" d="m216.49 104.49l-80 80a12 12 0 0 1-17 0l-80-80a12 12 0 0 1 17-17L128 159l71.51-71.52a12 12 0 0 1 17 17Z" /><!-- HTML_TAG_END -->
+                            </svg>
+                        </span></button>
+
+                    <noscript>
+                        <div class="description content svelte-kan08r"><!-- HTML_TAG_START -->
+                            <p>Parking minimums increase costs substantially since <a href="https://www.canadianrealestatemagazine.ca/news/greenlighting-new-toronto-parking-space-requirement-policy-was-right-move-334978.aspx">each underground stall can add upwards of $100k to construction costs</a>. </p>
+                            <p>Setbacks, floor space maximums and angular plane requirements make dense housing unfeasible even when it’s nominally permitted.</p><!-- HTML_TAG_END -->
+                        </div>
+                    </noscript>
+                </div>
+                <div class="item svelte-kan08r"><button class="svelte-kan08r"><span class="svelte-kan08r">4. Municipalities should not charge onerous fees on new high-density housing.</span>
+                        <span class="icon svelte-kan08r"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 256 256" class="iconify iconify--ph"><!-- HTML_TAG_START -->
+                                <path fill="currentColor" d="m216.49 104.49l-80 80a12 12 0 0 1-17 0l-80-80a12 12 0 0 1 17-17L128 159l71.51-71.52a12 12 0 0 1 17 17Z" /><!-- HTML_TAG_END -->
+                            </svg>
+                        </span></button>
+
+                    <noscript>
+                        <div class="description content svelte-kan08r"><!-- HTML_TAG_START -->
+                            <p>New, dense housing generates disproportionately more tax revenue and will cost less to maintain in the long run.; As suchas such, it is not reasonable or fair to make new housing pay for increased public infrastructure and services up-front when they will be paying full property taxes thereafter.</p>
+                            <p>Fees should be consistent and predictable, both between similar projects within a specific city but also across cities within a province.</p><!-- HTML_TAG_END -->
+                        </div>
+                    </noscript>
+                </div>
+                <div class="item svelte-kan08r"><button class="svelte-kan08r"><span class="svelte-kan08r">5. Higher orders of government need to step in and intervene as municipalities are not making necessary reforms in a timely manner.</span>
+                        <span class="icon svelte-kan08r"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 256 256" class="iconify iconify--ph"><!-- HTML_TAG_START -->
+                                <path fill="currentColor" d="m216.49 104.49l-80 80a12 12 0 0 1-17 0l-80-80a12 12 0 0 1 17-17L128 159l71.51-71.52a12 12 0 0 1 17 17Z" /><!-- HTML_TAG_END -->
+                            </svg>
+                        </span></button>
+
+                    <noscript>
+                        <div class="description content svelte-kan08r"><!-- HTML_TAG_START -->
+                            <p>Federal and Provincial governments must set adequate targets for adding net housing and divide these targets among municipalities.</p><!-- HTML_TAG_END -->
+                        </div>
+                    </noscript>
+                </div>
+                <div class="item svelte-kan08r"><button class="svelte-kan08r"><span class="svelte-kan08r">6. We need more deeply affordable housing, but to achieve sufficient scale requires funding from provincial and federal governments. </span>
+                        <span class="icon svelte-kan08r"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 256 256" class="iconify iconify--ph"><!-- HTML_TAG_START -->
+                                <path fill="currentColor" d="m216.49 104.49l-80 80a12 12 0 0 1-17 0l-80-80a12 12 0 0 1 17-17L128 159l71.51-71.52a12 12 0 0 1 17 17Z" /><!-- HTML_TAG_END -->
+                            </svg>
+                        </span></button>
+
+                    <noscript>
+                        <div class="description content svelte-kan08r"><!-- HTML_TAG_START -->
+                            <p>It is unlikely that the private market will provide adequate housing for all needs, even with (realistic) subsidies. </p>
+                            <p>Housing is becoming unaffordable even for professionals making median salaries. Building subsidized housing for middle income earners is not scalable and will most likely function as a lottery for a few lucky winners.</p>
+                            <p>The need for social housing does not arise from building market-rate housing; it is a societal responsibility and should be paid for from general revenues, such as property taxes, not pushed onto newcomers and the young.</p><!-- HTML_TAG_END -->
+                        </div>
+                    </noscript>
+                </div>
+                <div class="item svelte-kan08r"><button class="svelte-kan08r"><span class="svelte-kan08r">7. Reform public consultation. </span>
+                        <span class="icon svelte-kan08r"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 256 256" class="iconify iconify--ph"><!-- HTML_TAG_START -->
+                                <path fill="currentColor" d="m216.49 104.49l-80 80a12 12 0 0 1-17 0l-80-80a12 12 0 0 1 17-17L128 159l71.51-71.52a12 12 0 0 1 17 17Z" /><!-- HTML_TAG_END -->
+                            </svg>
+                        </span></button>
+
+                    <noscript>
+                        <div class="description content svelte-kan08r"><!-- HTML_TAG_START -->
+                            <p>Aim for strong, clear rules to reduce the need for long negotiations about individual sites and arbitrary decision-making. </p>
+                            <p>The vast majority of consultation should be part of proactive community planning. Resulting community plans should provide clear, reliable requirements for anyone who wants to build, with no arbitrary decision-making and as few discretionary parameters as possible. The consultation process should be additive, with less focus on density and more on quality placemaking, services and infrastructure. Where consultation is needed, governments should assess demographics and adjust methods to ensure that the voices being heard represent the whole community and future residents.</p><!-- HTML_TAG_END -->
+                        </div>
+                    </noscript>
+                </div>
             </div>
         </section>
     </div>
     <div class="section" id="section-f3b9f58f">
         <footer class="section-container svelte-i9k4w2">
             <nav class="svelte-i9k4w2"><a class="link svelte-i9k4w2" href="/">More Homes Canada</a></nav>
-            <div class="social-links svelte-i9k4w2"><a href="https://twitter.com/MoreHomesCanada" aria-label="Twitter" class="svelte-i9k4w2">
-                </a><a href="https://www.instagram.com/morehomescanada/" aria-label="Instagram" class="svelte-i9k4w2">
+            <div class="social-links svelte-i9k4w2"><a href="https://twitter.com/MoreHomesCanada" aria-label="Twitter" class="svelte-i9k4w2"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 24 24" class="iconify iconify--mdi"><!-- HTML_TAG_START -->
+                        <path fill="currentColor" d="M22.46 6c-.77.35-1.6.58-2.46.69c.88-.53 1.56-1.37 1.88-2.38c-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29c0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15c0 1.49.75 2.81 1.91 3.56c-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07a4.28 4.28 0 0 0 4 2.98a8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21C16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56c.84-.6 1.56-1.36 2.14-2.23Z" /><!-- HTML_TAG_END -->
+                    </svg>
+                </a><a href="https://www.instagram.com/morehomescanada/" aria-label="Instagram" class="svelte-i9k4w2"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 24 24" class="iconify iconify--mdi"><!-- HTML_TAG_START -->
+                        <path fill="currentColor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3Z" /><!-- HTML_TAG_END -->
+                    </svg>
                 </a></div>
         </footer>
     </div>

@@ -1090,15 +1090,15 @@ function create_fragment(ctx) {
 		c() {
 			meta = element("meta");
 			style = element("style");
-			t = text("@import url(\"https://unpkg.com/@primo-app/primo@1.3.64/reset.css\");\n@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');\n\n#page {\n  --max-width: 740px;\n  --color-accent: rebeccapurple;\n  font-family: lexend, system-ui, sans-serif;\n  color: var(--color);\n  line-height: 1.6; \n  font-size: 1rem;\n  background: var(--background);\n}\n\n.section-container {\n  max-width: var(--max-width, 1000px);\n  margin: 0 auto;\n  padding: 3rem var(--padding, 1rem); \n}\n\n.heading {\n  font-size: 3rem;\n  line-height: 1;\n  font-weight: 700;\n  margin: 0;\n}\n\n.button {\n  color: white;\n  background: var(--color-accent);\n  border-radius: 5px;\n  padding: 8px 20px;\n  transition: var(--transition);\n\n  /* vertically center */\n  display: inline-flex;\n  align-items: center;\n}\n\n.button:hover {\n    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);\n  }\n\n.button.inverted {\n    background: transparent; \n    color: var(--color-accent); \n    border: 2px solid var(--color-accent);\n  }\n\n/* Markdown styling */\n.content :global(img) {\n    width: 100%;\n    margin: 2rem 0;\n    box-shadow: var(--box-shadow);\n    border-radius: var(--border-radius);\n  }\n.content :global(p) {\n    padding: 0.5rem 0;\n    line-height: 1.5;\n  }\n.content :global(a) {\n    text-decoration: underline;\n  }\n.content :global(h1) {\n    font-size: 2.5rem;\n    font-weight: 600;\n    line-height: 1.2;\n    margin-bottom: 0.5rem;\n  }\n.content :global(h2) {\n    font-size: 2rem;\n    font-weight: 600;\n    margin-bottom: 0.25rem;\n    line-height: 1.2;\n  }\n.content :global(h3) {\n    font-size: 1.5rem;\n    font-weight: 600;\n    line-height: 1.2;\n    margin-top: .5rem;\n  }\n.content :global(ul) {\n    list-style: disc;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content :global(ol) {\n    list-style: decimal;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content :global(blockquote) {\n    padding: 2rem;\n    box-shadow: var(--box-shadow);\n    border-radius: var(--border-radius);\n  }");
+			t = text("@import url(\"https://unpkg.com/@primo-app/primo@1.3.64/reset.css\");\n@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');\n\n#page {\n  --max-width: 740px;\n  --color-accent: rebeccapurple;\n  font-family: lexend, system-ui, sans-serif;\n  color: var(--color);\n  line-height: 1.6; \n  font-size: 1rem;\n  background: var(--background);\n}\n\n.section-container {\n  max-width: var(--max-width, 1000px);\n  margin: 0 auto;\n  padding: 3rem var(--padding, 1rem); \n}\n\n.heading {\n  font-size: 3rem;\n  line-height: 1;\n  font-weight: 700;\n  margin: 0;\n}\n\na {\n  color: rebeccapurple;\n}\n\n.link {\n  color: var(--color-accent);\n}\n\na:hover {\n  text-decoration: underline;\n  font-weight: bold;\n}\n\n.button {\n  color: white;\n  background: var(--color-accent);\n  border-radius: 5px;\n  padding: 8px 20px;\n  transition: var(--transition);\n\n  /* vertically center */\n  display: inline-flex;\n  align-items: center;\n}\n\n.button:hover {\n    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);\n  }\n\n.button.inverted {\n    background: transparent; \n    color: var(--color-accent); \n    border: 2px solid var(--color-accent);\n  }\n\n/* Markdown styling */\n.content :global(img) {\n    width: 100%;\n    margin: 2rem 0;\n    box-shadow: var(--box-shadow);\n    border-radius: var(--border-radius);\n  }\n.content :global(p) {\n    padding: 0.5rem 0;\n    line-height: 1.5;\n  }\n.content :global(a) {\n    text-decoration: underline;\n  }\n.content :global(h1) {\n    font-size: 2.5rem;\n    font-weight: 600;\n    line-height: 1.2;\n    margin-bottom: 0.5rem;\n  }\n.content :global(h2) {\n    font-size: 2rem;\n    font-weight: 600;\n    margin-bottom: 0.25rem;\n    line-height: 1.2;\n  }\n.content :global(h3) {\n    font-size: 1.5rem;\n    font-weight: 600;\n    line-height: 1.2;\n    margin-top: .5rem;\n  }\n.content :global(ul) {\n    list-style: disc;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content :global(ol) {\n    list-style: decimal;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content :global(blockquote) {\n    padding: 2rem;\n    box-shadow: var(--box-shadow);\n    border-radius: var(--border-radius);\n  }");
 			this.h();
 		},
 		l(nodes) {
-			const head_nodes = head_selector('svelte-i462oa', document.head);
+			const head_nodes = head_selector('svelte-qhsugq', document.head);
 			meta = claim_element(head_nodes, "META", { name: true, content: true });
 			style = claim_element(head_nodes, "STYLE", {});
 			var style_nodes = children(style);
-			t = claim_text(style_nodes, "@import url(\"https://unpkg.com/@primo-app/primo@1.3.64/reset.css\");\n@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');\n\n#page {\n  --max-width: 740px;\n  --color-accent: rebeccapurple;\n  font-family: lexend, system-ui, sans-serif;\n  color: var(--color);\n  line-height: 1.6; \n  font-size: 1rem;\n  background: var(--background);\n}\n\n.section-container {\n  max-width: var(--max-width, 1000px);\n  margin: 0 auto;\n  padding: 3rem var(--padding, 1rem); \n}\n\n.heading {\n  font-size: 3rem;\n  line-height: 1;\n  font-weight: 700;\n  margin: 0;\n}\n\n.button {\n  color: white;\n  background: var(--color-accent);\n  border-radius: 5px;\n  padding: 8px 20px;\n  transition: var(--transition);\n\n  /* vertically center */\n  display: inline-flex;\n  align-items: center;\n}\n\n.button:hover {\n    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);\n  }\n\n.button.inverted {\n    background: transparent; \n    color: var(--color-accent); \n    border: 2px solid var(--color-accent);\n  }\n\n/* Markdown styling */\n.content :global(img) {\n    width: 100%;\n    margin: 2rem 0;\n    box-shadow: var(--box-shadow);\n    border-radius: var(--border-radius);\n  }\n.content :global(p) {\n    padding: 0.5rem 0;\n    line-height: 1.5;\n  }\n.content :global(a) {\n    text-decoration: underline;\n  }\n.content :global(h1) {\n    font-size: 2.5rem;\n    font-weight: 600;\n    line-height: 1.2;\n    margin-bottom: 0.5rem;\n  }\n.content :global(h2) {\n    font-size: 2rem;\n    font-weight: 600;\n    margin-bottom: 0.25rem;\n    line-height: 1.2;\n  }\n.content :global(h3) {\n    font-size: 1.5rem;\n    font-weight: 600;\n    line-height: 1.2;\n    margin-top: .5rem;\n  }\n.content :global(ul) {\n    list-style: disc;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content :global(ol) {\n    list-style: decimal;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content :global(blockquote) {\n    padding: 2rem;\n    box-shadow: var(--box-shadow);\n    border-radius: var(--border-radius);\n  }");
+			t = claim_text(style_nodes, "@import url(\"https://unpkg.com/@primo-app/primo@1.3.64/reset.css\");\n@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');\n\n#page {\n  --max-width: 740px;\n  --color-accent: rebeccapurple;\n  font-family: lexend, system-ui, sans-serif;\n  color: var(--color);\n  line-height: 1.6; \n  font-size: 1rem;\n  background: var(--background);\n}\n\n.section-container {\n  max-width: var(--max-width, 1000px);\n  margin: 0 auto;\n  padding: 3rem var(--padding, 1rem); \n}\n\n.heading {\n  font-size: 3rem;\n  line-height: 1;\n  font-weight: 700;\n  margin: 0;\n}\n\na {\n  color: rebeccapurple;\n}\n\n.link {\n  color: var(--color-accent);\n}\n\na:hover {\n  text-decoration: underline;\n  font-weight: bold;\n}\n\n.button {\n  color: white;\n  background: var(--color-accent);\n  border-radius: 5px;\n  padding: 8px 20px;\n  transition: var(--transition);\n\n  /* vertically center */\n  display: inline-flex;\n  align-items: center;\n}\n\n.button:hover {\n    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);\n  }\n\n.button.inverted {\n    background: transparent; \n    color: var(--color-accent); \n    border: 2px solid var(--color-accent);\n  }\n\n/* Markdown styling */\n.content :global(img) {\n    width: 100%;\n    margin: 2rem 0;\n    box-shadow: var(--box-shadow);\n    border-radius: var(--border-radius);\n  }\n.content :global(p) {\n    padding: 0.5rem 0;\n    line-height: 1.5;\n  }\n.content :global(a) {\n    text-decoration: underline;\n  }\n.content :global(h1) {\n    font-size: 2.5rem;\n    font-weight: 600;\n    line-height: 1.2;\n    margin-bottom: 0.5rem;\n  }\n.content :global(h2) {\n    font-size: 2rem;\n    font-weight: 600;\n    margin-bottom: 0.25rem;\n    line-height: 1.2;\n  }\n.content :global(h3) {\n    font-size: 1.5rem;\n    font-weight: 600;\n    line-height: 1.2;\n    margin-top: .5rem;\n  }\n.content :global(ul) {\n    list-style: disc;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content :global(ol) {\n    list-style: decimal;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content :global(blockquote) {\n    padding: 2rem;\n    box-shadow: var(--box-shadow);\n    border-radius: var(--border-radius);\n  }");
 			style_nodes.forEach(detach);
 			head_nodes.forEach(detach);
 			this.h();
@@ -4012,6 +4012,359 @@ class Component$3 extends SvelteComponent {
 
 function get_each_context$2(ctx, list, i) {
 	const child_ctx = ctx.slice();
+	child_ctx[5] = list[i];
+	child_ctx[7] = i;
+	return child_ctx;
+}
+
+// (86:6) {#if activeItem === i}
+function create_if_block$3(ctx) {
+	let div;
+	let raw_value = /*item*/ ctx[5].description.html + "";
+	let div_transition;
+	let current;
+
+	return {
+		c() {
+			div = element("div");
+			this.h();
+		},
+		l(nodes) {
+			div = claim_element(nodes, "DIV", { class: true });
+			var div_nodes = children(div);
+			div_nodes.forEach(detach);
+			this.h();
+		},
+		h() {
+			attr(div, "class", "description content svelte-kan08r");
+		},
+		m(target, anchor) {
+			insert_hydration(target, div, anchor);
+			div.innerHTML = raw_value;
+			current = true;
+		},
+		p(ctx, dirty) {
+			if ((!current || dirty & /*items*/ 2) && raw_value !== (raw_value = /*item*/ ctx[5].description.html + "")) div.innerHTML = raw_value;		},
+		i(local) {
+			if (current) return;
+
+			add_render_callback(() => {
+				if (!current) return;
+				if (!div_transition) div_transition = create_bidirectional_transition(div, slide, {}, true);
+				div_transition.run(1);
+			});
+
+			current = true;
+		},
+		o(local) {
+			if (!div_transition) div_transition = create_bidirectional_transition(div, slide, {}, false);
+			div_transition.run(0);
+			current = false;
+		},
+		d(detaching) {
+			if (detaching) detach(div);
+			if (detaching && div_transition) div_transition.end();
+		}
+	};
+}
+
+// (78:4) {#each items as item, i (i)}
+function create_each_block$2(key_1, ctx) {
+	let div1;
+	let button;
+	let span0;
+	let t0_value = /*i*/ ctx[7] + 1 + "";
+	let t0;
+	let t1;
+	let t2_value = /*item*/ ctx[5].title + "";
+	let t2;
+	let t3;
+	let span1;
+	let icon;
+	let t4;
+	let t5;
+	let t6;
+	let current;
+	let mounted;
+	let dispose;
+	icon = new Component$1({ props: { icon: "ph:caret-down-bold" } });
+
+	function click_handler() {
+		return /*click_handler*/ ctx[4](/*i*/ ctx[7]);
+	}
+
+	let if_block = /*activeItem*/ ctx[2] === /*i*/ ctx[7] && create_if_block$3(ctx);
+
+	return {
+		key: key_1,
+		first: null,
+		c() {
+			div1 = element("div");
+			button = element("button");
+			span0 = element("span");
+			t0 = text(t0_value);
+			t1 = text(". ");
+			t2 = text(t2_value);
+			t3 = space();
+			span1 = element("span");
+			create_component(icon.$$.fragment);
+			t4 = space();
+			if (if_block) if_block.c();
+			t5 = space();
+			t6 = space();
+			this.h();
+		},
+		l(nodes) {
+			div1 = claim_element(nodes, "DIV", { class: true });
+			var div1_nodes = children(div1);
+			button = claim_element(div1_nodes, "BUTTON", { class: true });
+			var button_nodes = children(button);
+			span0 = claim_element(button_nodes, "SPAN", { class: true });
+			var span0_nodes = children(span0);
+			t0 = claim_text(span0_nodes, t0_value);
+			t1 = claim_text(span0_nodes, ". ");
+			t2 = claim_text(span0_nodes, t2_value);
+			span0_nodes.forEach(detach);
+			t3 = claim_space(button_nodes);
+			span1 = claim_element(button_nodes, "SPAN", { class: true });
+			var span1_nodes = children(span1);
+			claim_component(icon.$$.fragment, span1_nodes);
+			span1_nodes.forEach(detach);
+			button_nodes.forEach(detach);
+			t4 = claim_space(div1_nodes);
+			if (if_block) if_block.l(div1_nodes);
+			t5 = claim_space(div1_nodes);
+			t6 = claim_space(div1_nodes);
+			div1_nodes.forEach(detach);
+			this.h();
+		},
+		h() {
+			attr(span0, "class", "svelte-kan08r");
+			attr(span1, "class", "icon svelte-kan08r");
+			attr(button, "class", "svelte-kan08r");
+			attr(div1, "class", "item svelte-kan08r");
+			toggle_class(div1, "active", /*activeItem*/ ctx[2] === /*i*/ ctx[7]);
+			this.first = div1;
+		},
+		m(target, anchor) {
+			insert_hydration(target, div1, anchor);
+			append_hydration(div1, button);
+			append_hydration(button, span0);
+			append_hydration(span0, t0);
+			append_hydration(span0, t1);
+			append_hydration(span0, t2);
+			append_hydration(button, t3);
+			append_hydration(button, span1);
+			mount_component(icon, span1, null);
+			append_hydration(div1, t4);
+			if (if_block) if_block.m(div1, null);
+			append_hydration(div1, t5);
+			append_hydration(div1, t6);
+			current = true;
+
+			if (!mounted) {
+				dispose = listen(button, "click", click_handler);
+				mounted = true;
+			}
+		},
+		p(new_ctx, dirty) {
+			ctx = new_ctx;
+			if ((!current || dirty & /*items*/ 2) && t0_value !== (t0_value = /*i*/ ctx[7] + 1 + "")) set_data(t0, t0_value);
+			if ((!current || dirty & /*items*/ 2) && t2_value !== (t2_value = /*item*/ ctx[5].title + "")) set_data(t2, t2_value);
+
+			if (/*activeItem*/ ctx[2] === /*i*/ ctx[7]) {
+				if (if_block) {
+					if_block.p(ctx, dirty);
+
+					if (dirty & /*activeItem, items*/ 6) {
+						transition_in(if_block, 1);
+					}
+				} else {
+					if_block = create_if_block$3(ctx);
+					if_block.c();
+					transition_in(if_block, 1);
+					if_block.m(div1, t5);
+				}
+			} else if (if_block) {
+				group_outros();
+
+				transition_out(if_block, 1, 1, () => {
+					if_block = null;
+				});
+
+				check_outros();
+			}
+
+			if (!current || dirty & /*activeItem, items*/ 6) {
+				toggle_class(div1, "active", /*activeItem*/ ctx[2] === /*i*/ ctx[7]);
+			}
+		},
+		i(local) {
+			if (current) return;
+			transition_in(icon.$$.fragment, local);
+			transition_in(if_block);
+			current = true;
+		},
+		o(local) {
+			transition_out(icon.$$.fragment, local);
+			transition_out(if_block);
+			current = false;
+		},
+		d(detaching) {
+			if (detaching) detach(div1);
+			destroy_component(icon);
+			if (if_block) if_block.d();
+			mounted = false;
+			dispose();
+		}
+	};
+}
+
+function create_fragment$4(ctx) {
+	let div1;
+	let section;
+	let h2;
+	let t0;
+	let t1;
+	let div0;
+	let each_blocks = [];
+	let each_1_lookup = new Map();
+	let current;
+	let each_value = /*items*/ ctx[1];
+	const get_key = ctx => /*i*/ ctx[7];
+
+	for (let i = 0; i < each_value.length; i += 1) {
+		let child_ctx = get_each_context$2(ctx, each_value, i);
+		let key = get_key(child_ctx);
+		each_1_lookup.set(key, each_blocks[i] = create_each_block$2(key, child_ctx));
+	}
+
+	return {
+		c() {
+			div1 = element("div");
+			section = element("section");
+			h2 = element("h2");
+			t0 = text(/*heading*/ ctx[0]);
+			t1 = space();
+			div0 = element("div");
+
+			for (let i = 0; i < each_blocks.length; i += 1) {
+				each_blocks[i].c();
+			}
+
+			this.h();
+		},
+		l(nodes) {
+			div1 = claim_element(nodes, "DIV", { class: true, id: true });
+			var div1_nodes = children(div1);
+			section = claim_element(div1_nodes, "SECTION", { class: true });
+			var section_nodes = children(section);
+			h2 = claim_element(section_nodes, "H2", { class: true });
+			var h2_nodes = children(h2);
+			t0 = claim_text(h2_nodes, /*heading*/ ctx[0]);
+			h2_nodes.forEach(detach);
+			t1 = claim_space(section_nodes);
+			div0 = claim_element(section_nodes, "DIV", { class: true });
+			var div0_nodes = children(div0);
+
+			for (let i = 0; i < each_blocks.length; i += 1) {
+				each_blocks[i].l(div0_nodes);
+			}
+
+			div0_nodes.forEach(detach);
+			section_nodes.forEach(detach);
+			div1_nodes.forEach(detach);
+			this.h();
+		},
+		h() {
+			attr(h2, "class", "heading svelte-kan08r");
+			attr(div0, "class", "accordion svelte-kan08r");
+			attr(section, "class", "section-container svelte-kan08r");
+			attr(div1, "class", "section");
+			attr(div1, "id", "section-c5cea428");
+		},
+		m(target, anchor) {
+			insert_hydration(target, div1, anchor);
+			append_hydration(div1, section);
+			append_hydration(section, h2);
+			append_hydration(h2, t0);
+			append_hydration(section, t1);
+			append_hydration(section, div0);
+
+			for (let i = 0; i < each_blocks.length; i += 1) {
+				if (each_blocks[i]) {
+					each_blocks[i].m(div0, null);
+				}
+			}
+
+			current = true;
+		},
+		p(ctx, [dirty]) {
+			if (!current || dirty & /*heading*/ 1) set_data(t0, /*heading*/ ctx[0]);
+
+			if (dirty & /*activeItem, items, setActiveItem*/ 14) {
+				each_value = /*items*/ ctx[1];
+				group_outros();
+				each_blocks = update_keyed_each(each_blocks, dirty, get_key, 1, ctx, each_value, each_1_lookup, div0, outro_and_destroy_block, create_each_block$2, null, get_each_context$2);
+				check_outros();
+			}
+		},
+		i(local) {
+			if (current) return;
+
+			for (let i = 0; i < each_value.length; i += 1) {
+				transition_in(each_blocks[i]);
+			}
+
+			current = true;
+		},
+		o(local) {
+			for (let i = 0; i < each_blocks.length; i += 1) {
+				transition_out(each_blocks[i]);
+			}
+
+			current = false;
+		},
+		d(detaching) {
+			if (detaching) detach(div1);
+
+			for (let i = 0; i < each_blocks.length; i += 1) {
+				each_blocks[i].d();
+			}
+		}
+	};
+}
+
+function instance$3($$self, $$props, $$invalidate) {
+	let { heading } = $$props;
+	let { items } = $$props;
+	let activeItem = 0;
+
+	function setActiveItem(i) {
+		$$invalidate(2, activeItem = activeItem === i ? null : i);
+	}
+
+	const click_handler = i => setActiveItem(i);
+
+	$$self.$$set = $$props => {
+		if ('heading' in $$props) $$invalidate(0, heading = $$props.heading);
+		if ('items' in $$props) $$invalidate(1, items = $$props.items);
+	};
+
+	return [heading, items, activeItem, setActiveItem, click_handler];
+}
+
+class Component$4 extends SvelteComponent {
+	constructor(options) {
+		super();
+		init(this, options, instance$3, create_fragment$4, safe_not_equal, { heading: 0, items: 1 });
+	}
+}
+
+/* generated by Svelte v3.58.0 */
+
+function get_each_context$3(ctx, list, i) {
+	const child_ctx = ctx.slice();
 	child_ctx[2] = list[i].link;
 	child_ctx[3] = list[i].icon;
 	return child_ctx;
@@ -4065,7 +4418,7 @@ function create_each_block_1$1(ctx) {
 }
 
 // (69:4) {#each social as { link, icon }}
-function create_each_block$2(ctx) {
+function create_each_block$3(ctx) {
 	let a;
 	let icon;
 	let t;
@@ -4134,7 +4487,7 @@ function create_each_block$2(ctx) {
 	};
 }
 
-function create_fragment$4(ctx) {
+function create_fragment$5(ctx) {
 	let div1;
 	let footer;
 	let nav_1;
@@ -4152,7 +4505,7 @@ function create_fragment$4(ctx) {
 	let each_blocks = [];
 
 	for (let i = 0; i < each_value.length; i += 1) {
-		each_blocks[i] = create_each_block$2(get_each_context$2(ctx, each_value, i));
+		each_blocks[i] = create_each_block$3(get_each_context$3(ctx, each_value, i));
 	}
 
 	const out = i => transition_out(each_blocks[i], 1, 1, () => {
@@ -4262,13 +4615,13 @@ function create_fragment$4(ctx) {
 				let i;
 
 				for (i = 0; i < each_value.length; i += 1) {
-					const child_ctx = get_each_context$2(ctx, each_value, i);
+					const child_ctx = get_each_context$3(ctx, each_value, i);
 
 					if (each_blocks[i]) {
 						each_blocks[i].p(child_ctx, dirty);
 						transition_in(each_blocks[i], 1);
 					} else {
-						each_blocks[i] = create_each_block$2(child_ctx);
+						each_blocks[i] = create_each_block$3(child_ctx);
 						each_blocks[i].c();
 						transition_in(each_blocks[i], 1);
 						each_blocks[i].m(div0, null);
@@ -4310,7 +4663,7 @@ function create_fragment$4(ctx) {
 	};
 }
 
-function instance$3($$self, $$props, $$invalidate) {
+function instance$4($$self, $$props, $$invalidate) {
 	let { nav } = $$props;
 	let { social } = $$props;
 
@@ -4322,16 +4675,16 @@ function instance$3($$self, $$props, $$invalidate) {
 	return [nav, social];
 }
 
-class Component$4 extends SvelteComponent {
+class Component$5 extends SvelteComponent {
 	constructor(options) {
 		super();
-		init(this, options, instance$3, create_fragment$4, safe_not_equal, { nav: 0, social: 1 });
+		init(this, options, instance$4, create_fragment$5, safe_not_equal, { nav: 0, social: 1 });
 	}
 }
 
 /* generated by Svelte v3.58.0 */
 
-class Component$5 extends SvelteComponent {
+class Component$6 extends SvelteComponent {
 	constructor(options) {
 		super();
 		init(this, options, null, null, safe_not_equal, {});
@@ -4340,7 +4693,7 @@ class Component$5 extends SvelteComponent {
 
 /* generated by Svelte v3.58.0 */
 
-function create_fragment$5(ctx) {
+function create_fragment$6(ctx) {
 	let component_0;
 	let t0;
 	let component_1;
@@ -4350,6 +4703,8 @@ function create_fragment$5(ctx) {
 	let component_3;
 	let t3;
 	let component_4;
+	let t4;
+	let component_5;
 	let current;
 	component_0 = new Component({});
 
@@ -4367,12 +4722,17 @@ function create_fragment$5(ctx) {
 				site_nav: [
 					{
 						"link": {
-							"url": "",
-							"label": "Home",
+							"url": "/",
+							"label": "About Us",
 							"active": false
 						}
 					},
-					{ "link": { "url": "/", "label": "About" } },
+					{
+						"link": {
+							"url": "/manifesto",
+							"label": "Manifesto"
+						}
+					},
 					{
 						"link": { "url": "/", "label": "Contact" }
 					}
@@ -4387,15 +4747,15 @@ function create_fragment$5(ctx) {
 					{
 						"title": "Canada's housing shortage is a leading cause of our affordability crisis.",
 						"description": {
-							"html": "<p>Canada built more homes in the mid 1970s than it has <em>any</em> time <strong>since</strong>, even though our population has <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" class=\"link link link\" href=\"https://dashboard.mailerlite.com/dashboard\">doubled</a>.</p>",
+							"html": "<p>Canada built more homes in the mid 1970s than it has <em>any</em> time <strong>since</strong>, even though our population has <a href=\"https://dashboard.mailerlite.com/dashboard\">doubled</a>.</p>",
 							"markdown": "Canada built more homes in the mid 1970s than it has *any* time **since**, even though our population has [doubled](<https://dashboard.mailerlite.com/dashboard>).\n\n"
 						}
 					},
 					{
-						"title": "Municipal regulations have strangled Canada’s housing supply",
+						"title": "Municipal regulations have strangled Canada’s housing supply.",
 						"description": {
-							"html": "<p>Generally our services range from $100-500 depending on your needs.</p>",
-							"markdown": "Generally our services range from $100-500 depending on your needs."
+							"html": "<p>Our housing shortage is the result of undemocratic regulatory capture by the few against the interests of the many.</p>\n<p>In most Canadian cities, apartments are illegal on most residential land. Construction of apartment buildings used to expand organically from our downtowns as cities grew. Since the introduction of zoning about 100 years ago, the boundaries between predominantly single-family detached house-only zones and apartment zones have barely changed.</p>\n<p>Subjective, discretionary approval processes inhibit housing production, reduce transparency and increase perceived corruption in local government.\nPublic consultation is not representative of populations, nor does it deal holistically in addressing our housing shortage (it is often focused on individual buildings), nor does it weight the needs of the many appropriately versus the aesthetic preferences of the few.</p>",
+							"markdown": " Our housing shortage is the result of undemocratic regulatory capture by the few against the interests of the many.\n\nIn most Canadian cities, apartments are illegal on most residential land. Construction of apartment buildings used to expand organically from our downtowns as cities grew. Since the introduction of zoning about 100 years ago, the boundaries between predominantly single-family detached house-only zones and apartment zones have barely changed.\n\nSubjective, discretionary approval processes inhibit housing production, reduce transparency and increase perceived corruption in local government.\nPublic consultation is not representative of populations, nor does it deal holistically in addressing our housing shortage (it is often focused on individual buildings), nor does it weight the needs of the many appropriately versus the aesthetic preferences of the few.\n"
 						}
 					},
 					{
@@ -4404,12 +4764,76 @@ function create_fragment$5(ctx) {
 							"html": "<p>Today’s new “luxury” housing will form our future affordable housing stock.\nThrough filtering, even expensive new homes reduce housing costs across the spectrum, both in the near term and in the future.</p>\n<p>According to studies of vacancy chains, new market-rate housing helps lower income households as higher income households move from existing homes to new homes.  (Example: previously affordable used car prices exploded during Covid supply chain disruptions, and fell after supply chains for new cars were restored)</p>\n<p>This is not trickle-down. Allowing more market housing does not cost municipalities anything and creates physical vacancies.\nExamples from Auckland and Minnesota</p>",
 							"markdown": "Today’s new “luxury” housing will form our future affordable housing stock.\nThrough filtering, even expensive new homes reduce housing costs across the spectrum, both in the near term and in the future.\n\n According to studies of vacancy chains, new market-rate housing helps lower income households as higher income households move from existing homes to new homes.  (Example: previously affordable used car prices exploded during Covid supply chain disruptions, and fell after supply chains for new cars were restored)\n\nThis is not trickle-down. Allowing more market housing does not cost municipalities anything and creates physical vacancies.\nExamples from Auckland and Minnesota"
 						}
+					},
+					{
+						"title": "Urban sprawl is harmful to the environment and our long term fiscal sustainability.",
+						"description": {
+							"html": "<p>Big metros have been getting less dense on average and growing in car-dependent suburbs and exurbs.\nApartment buildings are inherently more energy-efficient than houses and are a key part of reducing car-dependence and the overall energy intensity of our cities.</p>",
+							"markdown": " Big metros have been getting less dense on average and growing in car-dependent suburbs and exurbs.\nApartment buildings are inherently more energy-efficient than houses and are a key part of reducing car-dependence and the overall energy intensity of our cities.\n"
+						}
 					}
 				]
 			}
 		});
 
 	component_3 = new Component$4({
+			props: {
+				heading: "Our Goals ",
+				items: [
+					{
+						"title": "Row houses, multiplexes, lodging homes and low-rise apartments should be permitted in all neighbourhoods as of right.",
+						"description": {
+							"html": "<p>Canada built more homes in the mid 1970s than it has any time since, even though our population has doubled.</p>",
+							"markdown": "Canada built more homes in the mid 1970s than it has any time since, even though our population has doubled.\n\n"
+						}
+					},
+					{
+						"title": "Mid-rise and high-rise apartments should be permitted as of right within walking distance of frequent transit and within active transit-distance of major job centres.",
+						"description": {
+							"html": "<p>Requiring long and arduous rezoning processes inflates land costs and adds significant delays to building new housing projects.</p>\n<p>It is unjust to restrict multifamily housing to land adjacent to major roads with poor air quality and harmful levels of noise pollution.</p>",
+							"markdown": "Requiring long and arduous rezoning processes inflates land costs and adds significant delays to building new housing projects.\n\nIt is unjust to restrict multifamily housing to land adjacent to major roads with poor air quality and harmful levels of noise pollution.\n"
+						}
+					},
+					{
+						"title": "Restrictions on setbacks, floorplate need to be relaxed and parking minimums abolished.",
+						"description": {
+							"html": "<p>Parking minimums increase costs substantially since <a href=\"https://www.canadianrealestatemagazine.ca/news/greenlighting-new-toronto-parking-space-requirement-policy-was-right-move-334978.aspx\">each underground stall can add upwards of $100k to construction costs</a>. </p>\n<p>Setbacks, floor space maximums and angular plane requirements make dense housing unfeasible even when it’s nominally permitted.</p>",
+							"markdown": "Parking minimums increase costs substantially since [each underground stall can add upwards of $100k to construction costs](https://www.canadianrealestatemagazine.ca/news/greenlighting-new-toronto-parking-space-requirement-policy-was-right-move-334978.aspx). \n\nSetbacks, floor space maximums and angular plane requirements make dense housing unfeasible even when it’s nominally permitted."
+						}
+					},
+					{
+						"title": "Municipalities should not charge onerous fees on new high-density housing.",
+						"description": {
+							"html": "<p>New, dense housing generates disproportionately more tax revenue and will cost less to maintain in the long run.; As suchas such, it is not reasonable or fair to make new housing pay for increased public infrastructure and services up-front when they will be paying full property taxes thereafter.</p>\n<p>Fees should be consistent and predictable, both between similar projects within a specific city but also across cities within a province.</p>",
+							"markdown": "New, dense housing generates disproportionately more tax revenue and will cost less to maintain in the long run.; As suchas such, it is not reasonable or fair to make new housing pay for increased public infrastructure and services up-front when they will be paying full property taxes thereafter.\n\n Fees should be consistent and predictable, both between similar projects within a specific city but also across cities within a province.\n"
+						}
+					},
+					{
+						"title": "Higher orders of government need to step in and intervene as municipalities are not making necessary reforms in a timely manner.",
+						"description": {
+							"html": "<p>Federal and Provincial governments must set adequate targets for adding net housing and divide these targets among municipalities.</p>",
+							"markdown": "Federal and Provincial governments must set adequate targets for adding net housing and divide these targets among municipalities."
+						}
+					},
+					{
+						"title": "We need more deeply affordable housing, but to achieve sufficient scale requires funding from provincial and federal governments. ",
+						"description": {
+							"html": "<p>It is unlikely that the private market will provide adequate housing for all needs, even with (realistic) subsidies. </p>\n<p>Housing is becoming unaffordable even for professionals making median salaries. Building subsidized housing for middle income earners is not scalable and will most likely function as a lottery for a few lucky winners.</p>\n<p>The need for social housing does not arise from building market-rate housing; it is a societal responsibility and should be paid for from general revenues, such as property taxes, not pushed onto newcomers and the young.</p>",
+							"markdown": "It is unlikely that the private market will provide adequate housing for all needs, even with (realistic) subsidies. \n\nHousing is becoming unaffordable even for professionals making median salaries. Building subsidized housing for middle income earners is not scalable and will most likely function as a lottery for a few lucky winners.\n\nThe need for social housing does not arise from building market-rate housing; it is a societal responsibility and should be paid for from general revenues, such as property taxes, not pushed onto newcomers and the young."
+						}
+					},
+					{
+						"title": "Reform public consultation. ",
+						"description": {
+							"html": "<p>Aim for strong, clear rules to reduce the need for long negotiations about individual sites and arbitrary decision-making. </p>\n<p>The vast majority of consultation should be part of proactive community planning. Resulting community plans should provide clear, reliable requirements for anyone who wants to build, with no arbitrary decision-making and as few discretionary parameters as possible. The consultation process should be additive, with less focus on density and more on quality placemaking, services and infrastructure. Where consultation is needed, governments should assess demographics and adjust methods to ensure that the voices being heard represent the whole community and future residents.</p>",
+							"markdown": "Aim for strong, clear rules to reduce the need for long negotiations about individual sites and arbitrary decision-making. \n\nThe vast majority of consultation should be part of proactive community planning. Resulting community plans should provide clear, reliable requirements for anyone who wants to build, with no arbitrary decision-making and as few discretionary parameters as possible. The consultation process should be additive, with less focus on density and more on quality placemaking, services and infrastructure. Where consultation is needed, governments should assess demographics and adjust methods to ensure that the voices being heard represent the whole community and future residents."
+						}
+					}
+				]
+			}
+		});
+
+	component_4 = new Component$5({
 			props: {
 				nav: [
 					{
@@ -4418,24 +4842,24 @@ function create_fragment$5(ctx) {
 				],
 				social: [
 					{
+						"icon": "mdi:twitter",
 						"link": {
 							"url": "https://twitter.com/MoreHomesCanada",
 							"label": "Twitter"
-						},
-						"icon": "mdi:twitter"
+						}
 					},
 					{
+						"icon": "mdi:instagram",
 						"link": {
 							"url": "https://www.instagram.com/morehomescanada/",
 							"label": "Instagram"
-						},
-						"icon": "mdi:instagram"
+						}
 					}
 				]
 			}
 		});
 
-	component_4 = new Component$5({});
+	component_5 = new Component$6({});
 
 	return {
 		c() {
@@ -4448,6 +4872,8 @@ function create_fragment$5(ctx) {
 			create_component(component_3.$$.fragment);
 			t3 = space();
 			create_component(component_4.$$.fragment);
+			t4 = space();
+			create_component(component_5.$$.fragment);
 		},
 		l(nodes) {
 			claim_component(component_0.$$.fragment, nodes);
@@ -4459,6 +4885,8 @@ function create_fragment$5(ctx) {
 			claim_component(component_3.$$.fragment, nodes);
 			t3 = claim_space(nodes);
 			claim_component(component_4.$$.fragment, nodes);
+			t4 = claim_space(nodes);
+			claim_component(component_5.$$.fragment, nodes);
 		},
 		m(target, anchor) {
 			mount_component(component_0, target, anchor);
@@ -4470,6 +4898,8 @@ function create_fragment$5(ctx) {
 			mount_component(component_3, target, anchor);
 			insert_hydration(target, t3, anchor);
 			mount_component(component_4, target, anchor);
+			insert_hydration(target, t4, anchor);
+			mount_component(component_5, target, anchor);
 			current = true;
 		},
 		p: noop,
@@ -4480,6 +4910,7 @@ function create_fragment$5(ctx) {
 			transition_in(component_2.$$.fragment, local);
 			transition_in(component_3.$$.fragment, local);
 			transition_in(component_4.$$.fragment, local);
+			transition_in(component_5.$$.fragment, local);
 			current = true;
 		},
 		o(local) {
@@ -4488,6 +4919,7 @@ function create_fragment$5(ctx) {
 			transition_out(component_2.$$.fragment, local);
 			transition_out(component_3.$$.fragment, local);
 			transition_out(component_4.$$.fragment, local);
+			transition_out(component_5.$$.fragment, local);
 			current = false;
 		},
 		d(detaching) {
@@ -4500,15 +4932,17 @@ function create_fragment$5(ctx) {
 			destroy_component(component_3, detaching);
 			if (detaching) detach(t3);
 			destroy_component(component_4, detaching);
+			if (detaching) detach(t4);
+			destroy_component(component_5, detaching);
 		}
 	};
 }
 
-class Component$6 extends SvelteComponent {
+class Component$7 extends SvelteComponent {
 	constructor(options) {
 		super();
-		init(this, options, null, create_fragment$5, safe_not_equal, {});
+		init(this, options, null, create_fragment$6, safe_not_equal, {});
 	}
 }
 
-export default Component$6;
+export default Component$7;
