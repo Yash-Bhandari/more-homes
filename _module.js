@@ -5199,8 +5199,8 @@ function create_fragment$8(ctx) {
 			props: {
 				heading: "It's time to legalize housing.",
 				subheading: {
-					"html": "<p>Across Canada, municipal governments have made it incredibly difficult to build higher density housing. We'll need a lot of new homes to build our way out of the housing crisis, and the first step is to get out of our own way.</p>",
-					"markdown": "Across Canada, municipal governments have made it incredibly difficult to build higher density housing. We'll need a lot of new homes to build our way out of the housing crisis, and the first step is to get out of our own way.\n\n"
+					"html": "<p>Across Canada, municipal governments have made it incredibly difficult to build higher density housing. We'll need a lot of new homes to end the housing crisis, and the first step is to get out of our own way.</p>",
+					"markdown": "Across Canada, municipal governments have made it incredibly difficult to build higher density housing. We'll need a lot of new homes to end the housing crisis, and the first step is to get out of our own way.\n\n"
 				},
 				buttons: [
 					{
@@ -5227,13 +5227,13 @@ function create_fragment$8(ctx) {
 						"icon": "material-symbols:check-circle-rounded",
 						"title": "Density as-of-right",
 						"description": {
-							"html": "<p>Homes are a necessity, not a nuisance. Townhouses, multiplexes and apartments should be allowed in more places and the approval process should not be a gauntlet. </p>",
+							"html": "<p>Homes are a necessity, not a nuisance. Townhouses, multiplexes and apartments should be allowed in more places and the approval process should not be a gauntlet.</p>",
 							"markdown": "Homes are a necessity, not a nuisance. Townhouses, multiplexes and apartments should be allowed in more places and the approval process should not be a gauntlet.\n\n"
 						}
 					},
 					{
 						"icon": "material-symbols:cut",
-						"title": "Cut red tape",
+						"title": "Less red tape",
 						"description": {
 							"html": "<p>Setbacks, floorplate restrictions and parking minimums drive up building costs and kill new housing projects. Market, subsidized and co-op housing are all impacted.</p>",
 							"markdown": "Setbacks, floorplate restrictions and parking minimums drive up building costs and kill new housing projects. Market, subsidized and co-op housing are all impacted.\n\n"
