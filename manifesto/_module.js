@@ -3659,339 +3659,241 @@ class Component$2 extends SvelteComponent {
 
 function get_each_context$1(ctx, list, i) {
 	const child_ctx = ctx.slice();
-	child_ctx[3] = list[i];
+	child_ctx[5] = list[i];
+	child_ctx[7] = i;
 	return child_ctx;
 }
 
-function get_each_context_1$1(ctx, list, i) {
-	const child_ctx = ctx.slice();
-	child_ctx[6] = list[i].link;
-	child_ctx[7] = list[i].icon;
-	return child_ctx;
-}
-
-// (105:6) {#if org.image.url}
+// (86:6) {#if activeItem === i}
 function create_if_block$2(ctx) {
-	let figure;
-	let img;
-	let img_alt_value;
-	let img_src_value;
+	let div;
+	let raw_value = /*item*/ ctx[5].description.html + "";
+	let div_transition;
+	let current;
 
 	return {
 		c() {
-			figure = element("figure");
-			img = element("img");
+			div = element("div");
 			this.h();
 		},
 		l(nodes) {
-			figure = claim_element(nodes, "FIGURE", { class: true });
-			var figure_nodes = children(figure);
-			img = claim_element(figure_nodes, "IMG", { alt: true, src: true, class: true });
-			figure_nodes.forEach(detach);
+			div = claim_element(nodes, "DIV", { class: true });
+			var div_nodes = children(div);
+			div_nodes.forEach(detach);
 			this.h();
 		},
 		h() {
-			attr(img, "alt", img_alt_value = /*org*/ ctx[3].image.alt);
-			if (!src_url_equal(img.src, img_src_value = /*org*/ ctx[3].image.url)) attr(img, "src", img_src_value);
-			attr(img, "class", "svelte-1eqlbb8");
-			attr(figure, "class", "svelte-1eqlbb8");
+			attr(div, "class", "description content svelte-kan08r");
 		},
 		m(target, anchor) {
-			insert_hydration(target, figure, anchor);
-			append_hydration(figure, img);
+			insert_hydration(target, div, anchor);
+			div.innerHTML = raw_value;
+			current = true;
 		},
 		p(ctx, dirty) {
-			if (dirty & /*orgs*/ 4 && img_alt_value !== (img_alt_value = /*org*/ ctx[3].image.alt)) {
-				attr(img, "alt", img_alt_value);
-			}
+			if ((!current || dirty & /*items*/ 2) && raw_value !== (raw_value = /*item*/ ctx[5].description.html + "")) div.innerHTML = raw_value;		},
+		i(local) {
+			if (current) return;
 
-			if (dirty & /*orgs*/ 4 && !src_url_equal(img.src, img_src_value = /*org*/ ctx[3].image.url)) {
-				attr(img, "src", img_src_value);
-			}
+			add_render_callback(() => {
+				if (!current) return;
+				if (!div_transition) div_transition = create_bidirectional_transition(div, slide, {}, true);
+				div_transition.run(1);
+			});
+
+			current = true;
+		},
+		o(local) {
+			if (!div_transition) div_transition = create_bidirectional_transition(div, slide, {}, false);
+			div_transition.run(0);
+			current = false;
 		},
 		d(detaching) {
-			if (detaching) detach(figure);
+			if (detaching) detach(div);
+			if (detaching && div_transition) div_transition.end();
 		}
 	};
 }
 
-// (115:10) {#each org.social_links as {link, icon}}
-function create_each_block_1$1(ctx) {
-	let a;
+// (78:4) {#each items as item, i (i)}
+function create_each_block$1(key_1, ctx) {
+	let div1;
+	let button;
+	let span0;
+	let t0_value = /*i*/ ctx[7] + 1 + "";
+	let t0;
+	let t1;
+	let t2_value = /*item*/ ctx[5].title + "";
+	let t2;
+	let t3;
+	let span1;
 	let icon;
-	let t;
-	let a_href_value;
-	let a_aria_label_value;
+	let t4;
+	let t5;
+	let t6;
 	let current;
-	icon = new Component$1({ props: { icon: /*icon*/ ctx[7] } });
+	let mounted;
+	let dispose;
+	icon = new Component$1({ props: { icon: "ph:caret-down-bold" } });
+
+	function click_handler() {
+		return /*click_handler*/ ctx[4](/*i*/ ctx[7]);
+	}
+
+	let if_block = /*activeItem*/ ctx[2] === /*i*/ ctx[7] && create_if_block$2(ctx);
 
 	return {
+		key: key_1,
+		first: null,
 		c() {
-			a = element("a");
+			div1 = element("div");
+			button = element("button");
+			span0 = element("span");
+			t0 = text(t0_value);
+			t1 = text(". ");
+			t2 = text(t2_value);
+			t3 = space();
+			span1 = element("span");
 			create_component(icon.$$.fragment);
-			t = space();
+			t4 = space();
+			if (if_block) if_block.c();
+			t5 = space();
+			t6 = space();
 			this.h();
 		},
 		l(nodes) {
-			a = claim_element(nodes, "A", {
-				href: true,
-				"aria-label": true,
-				class: true
-			});
-
-			var a_nodes = children(a);
-			claim_component(icon.$$.fragment, a_nodes);
-			t = claim_space(a_nodes);
-			a_nodes.forEach(detach);
+			div1 = claim_element(nodes, "DIV", { class: true });
+			var div1_nodes = children(div1);
+			button = claim_element(div1_nodes, "BUTTON", { class: true });
+			var button_nodes = children(button);
+			span0 = claim_element(button_nodes, "SPAN", { class: true });
+			var span0_nodes = children(span0);
+			t0 = claim_text(span0_nodes, t0_value);
+			t1 = claim_text(span0_nodes, ". ");
+			t2 = claim_text(span0_nodes, t2_value);
+			span0_nodes.forEach(detach);
+			t3 = claim_space(button_nodes);
+			span1 = claim_element(button_nodes, "SPAN", { class: true });
+			var span1_nodes = children(span1);
+			claim_component(icon.$$.fragment, span1_nodes);
+			span1_nodes.forEach(detach);
+			button_nodes.forEach(detach);
+			t4 = claim_space(div1_nodes);
+			if (if_block) if_block.l(div1_nodes);
+			t5 = claim_space(div1_nodes);
+			t6 = claim_space(div1_nodes);
+			div1_nodes.forEach(detach);
 			this.h();
 		},
 		h() {
-			attr(a, "href", a_href_value = /*link*/ ctx[6].url);
-			attr(a, "aria-label", a_aria_label_value = /*link*/ ctx[6].label);
-			attr(a, "class", "svelte-1eqlbb8");
+			attr(span0, "class", "svelte-kan08r");
+			attr(span1, "class", "icon svelte-kan08r");
+			attr(button, "class", "svelte-kan08r");
+			attr(div1, "class", "item svelte-kan08r");
+			toggle_class(div1, "active", /*activeItem*/ ctx[2] === /*i*/ ctx[7]);
+			this.first = div1;
 		},
 		m(target, anchor) {
-			insert_hydration(target, a, anchor);
-			mount_component(icon, a, null);
-			append_hydration(a, t);
+			insert_hydration(target, div1, anchor);
+			append_hydration(div1, button);
+			append_hydration(button, span0);
+			append_hydration(span0, t0);
+			append_hydration(span0, t1);
+			append_hydration(span0, t2);
+			append_hydration(button, t3);
+			append_hydration(button, span1);
+			mount_component(icon, span1, null);
+			append_hydration(div1, t4);
+			if (if_block) if_block.m(div1, null);
+			append_hydration(div1, t5);
+			append_hydration(div1, t6);
 			current = true;
-		},
-		p(ctx, dirty) {
-			const icon_changes = {};
-			if (dirty & /*orgs*/ 4) icon_changes.icon = /*icon*/ ctx[7];
-			icon.$set(icon_changes);
 
-			if (!current || dirty & /*orgs*/ 4 && a_href_value !== (a_href_value = /*link*/ ctx[6].url)) {
-				attr(a, "href", a_href_value);
+			if (!mounted) {
+				dispose = listen(button, "click", click_handler);
+				mounted = true;
+			}
+		},
+		p(new_ctx, dirty) {
+			ctx = new_ctx;
+			if ((!current || dirty & /*items*/ 2) && t0_value !== (t0_value = /*i*/ ctx[7] + 1 + "")) set_data(t0, t0_value);
+			if ((!current || dirty & /*items*/ 2) && t2_value !== (t2_value = /*item*/ ctx[5].title + "")) set_data(t2, t2_value);
+
+			if (/*activeItem*/ ctx[2] === /*i*/ ctx[7]) {
+				if (if_block) {
+					if_block.p(ctx, dirty);
+
+					if (dirty & /*activeItem, items*/ 6) {
+						transition_in(if_block, 1);
+					}
+				} else {
+					if_block = create_if_block$2(ctx);
+					if_block.c();
+					transition_in(if_block, 1);
+					if_block.m(div1, t5);
+				}
+			} else if (if_block) {
+				group_outros();
+
+				transition_out(if_block, 1, 1, () => {
+					if_block = null;
+				});
+
+				check_outros();
 			}
 
-			if (!current || dirty & /*orgs*/ 4 && a_aria_label_value !== (a_aria_label_value = /*link*/ ctx[6].label)) {
-				attr(a, "aria-label", a_aria_label_value);
+			if (!current || dirty & /*activeItem, items*/ 6) {
+				toggle_class(div1, "active", /*activeItem*/ ctx[2] === /*i*/ ctx[7]);
 			}
 		},
 		i(local) {
 			if (current) return;
 			transition_in(icon.$$.fragment, local);
+			transition_in(if_block);
 			current = true;
 		},
 		o(local) {
 			transition_out(icon.$$.fragment, local);
+			transition_out(if_block);
 			current = false;
 		},
 		d(detaching) {
-			if (detaching) detach(a);
+			if (detaching) detach(div1);
 			destroy_component(icon);
-		}
-	};
-}
-
-// (103:4) {#each orgs as org}
-function create_each_block$1(ctx) {
-	let li;
-	let t0;
-	let div2;
-	let div0;
-	let span;
-	let t1_value = /*org*/ ctx[3].name + "";
-	let t1;
-	let t2;
-	let div1;
-	let t3;
-	let li_onclick_value;
-	let current;
-	let if_block = /*org*/ ctx[3].image.url && create_if_block$2(ctx);
-	let each_value_1 = /*org*/ ctx[3].social_links;
-	let each_blocks = [];
-
-	for (let i = 0; i < each_value_1.length; i += 1) {
-		each_blocks[i] = create_each_block_1$1(get_each_context_1$1(ctx, each_value_1, i));
-	}
-
-	const out = i => transition_out(each_blocks[i], 1, 1, () => {
-		each_blocks[i] = null;
-	});
-
-	return {
-		c() {
-			li = element("li");
-			if (if_block) if_block.c();
-			t0 = space();
-			div2 = element("div");
-			div0 = element("div");
-			span = element("span");
-			t1 = text(t1_value);
-			t2 = space();
-			div1 = element("div");
-
-			for (let i = 0; i < each_blocks.length; i += 1) {
-				each_blocks[i].c();
-			}
-
-			t3 = space();
-			this.h();
-		},
-		l(nodes) {
-			li = claim_element(nodes, "LI", { onclick: true, class: true });
-			var li_nodes = children(li);
-			if (if_block) if_block.l(li_nodes);
-			t0 = claim_space(li_nodes);
-			div2 = claim_element(li_nodes, "DIV", { class: true });
-			var div2_nodes = children(div2);
-			div0 = claim_element(div2_nodes, "DIV", { class: true });
-			var div0_nodes = children(div0);
-			span = claim_element(div0_nodes, "SPAN", { class: true });
-			var span_nodes = children(span);
-			t1 = claim_text(span_nodes, t1_value);
-			span_nodes.forEach(detach);
-			div0_nodes.forEach(detach);
-			t2 = claim_space(div2_nodes);
-			div1 = claim_element(div2_nodes, "DIV", { class: true });
-			var div1_nodes = children(div1);
-
-			for (let i = 0; i < each_blocks.length; i += 1) {
-				each_blocks[i].l(div1_nodes);
-			}
-
-			div1_nodes.forEach(detach);
-			div2_nodes.forEach(detach);
-			t3 = claim_space(li_nodes);
-			li_nodes.forEach(detach);
-			this.h();
-		},
-		h() {
-			attr(span, "class", "name svelte-1eqlbb8");
-			attr(div0, "class", "details svelte-1eqlbb8");
-			attr(div1, "class", "social svelte-1eqlbb8");
-			attr(div2, "class", "info");
-			attr(li, "onclick", li_onclick_value = "window.open('" + /*org*/ ctx[3].link + "', '_blank')");
-			attr(li, "class", "svelte-1eqlbb8");
-		},
-		m(target, anchor) {
-			insert_hydration(target, li, anchor);
-			if (if_block) if_block.m(li, null);
-			append_hydration(li, t0);
-			append_hydration(li, div2);
-			append_hydration(div2, div0);
-			append_hydration(div0, span);
-			append_hydration(span, t1);
-			append_hydration(div2, t2);
-			append_hydration(div2, div1);
-
-			for (let i = 0; i < each_blocks.length; i += 1) {
-				if (each_blocks[i]) {
-					each_blocks[i].m(div1, null);
-				}
-			}
-
-			append_hydration(li, t3);
-			current = true;
-		},
-		p(ctx, dirty) {
-			if (/*org*/ ctx[3].image.url) {
-				if (if_block) {
-					if_block.p(ctx, dirty);
-				} else {
-					if_block = create_if_block$2(ctx);
-					if_block.c();
-					if_block.m(li, t0);
-				}
-			} else if (if_block) {
-				if_block.d(1);
-				if_block = null;
-			}
-
-			if ((!current || dirty & /*orgs*/ 4) && t1_value !== (t1_value = /*org*/ ctx[3].name + "")) set_data(t1, t1_value);
-
-			if (dirty & /*orgs*/ 4) {
-				each_value_1 = /*org*/ ctx[3].social_links;
-				let i;
-
-				for (i = 0; i < each_value_1.length; i += 1) {
-					const child_ctx = get_each_context_1$1(ctx, each_value_1, i);
-
-					if (each_blocks[i]) {
-						each_blocks[i].p(child_ctx, dirty);
-						transition_in(each_blocks[i], 1);
-					} else {
-						each_blocks[i] = create_each_block_1$1(child_ctx);
-						each_blocks[i].c();
-						transition_in(each_blocks[i], 1);
-						each_blocks[i].m(div1, null);
-					}
-				}
-
-				group_outros();
-
-				for (i = each_value_1.length; i < each_blocks.length; i += 1) {
-					out(i);
-				}
-
-				check_outros();
-			}
-
-			if (!current || dirty & /*orgs*/ 4 && li_onclick_value !== (li_onclick_value = "window.open('" + /*org*/ ctx[3].link + "', '_blank')")) {
-				attr(li, "onclick", li_onclick_value);
-			}
-		},
-		i(local) {
-			if (current) return;
-
-			for (let i = 0; i < each_value_1.length; i += 1) {
-				transition_in(each_blocks[i]);
-			}
-
-			current = true;
-		},
-		o(local) {
-			each_blocks = each_blocks.filter(Boolean);
-
-			for (let i = 0; i < each_blocks.length; i += 1) {
-				transition_out(each_blocks[i]);
-			}
-
-			current = false;
-		},
-		d(detaching) {
-			if (detaching) detach(li);
 			if (if_block) if_block.d();
-			destroy_each(each_blocks, detaching);
+			mounted = false;
+			dispose();
 		}
 	};
 }
 
 function create_fragment$3(ctx) {
-	let div;
+	let div1;
 	let section;
 	let h2;
 	let t0;
 	let t1;
-	let span;
-	let t2;
-	let t3;
-	let ul;
-	let current;
-	let each_value = /*orgs*/ ctx[2];
+	let div0;
 	let each_blocks = [];
+	let each_1_lookup = new Map();
+	let current;
+	let each_value = /*items*/ ctx[1];
+	const get_key = ctx => /*i*/ ctx[7];
 
 	for (let i = 0; i < each_value.length; i += 1) {
-		each_blocks[i] = create_each_block$1(get_each_context$1(ctx, each_value, i));
+		let child_ctx = get_each_context$1(ctx, each_value, i);
+		let key = get_key(child_ctx);
+		each_1_lookup.set(key, each_blocks[i] = create_each_block$1(key, child_ctx));
 	}
-
-	const out = i => transition_out(each_blocks[i], 1, 1, () => {
-		each_blocks[i] = null;
-	});
 
 	return {
 		c() {
-			div = element("div");
+			div1 = element("div");
 			section = element("section");
 			h2 = element("h2");
 			t0 = text(/*heading*/ ctx[0]);
 			t1 = space();
-			span = element("span");
-			t2 = text(/*subheading*/ ctx[1]);
-			t3 = space();
-			ul = element("ul");
+			div0 = element("div");
 
 			for (let i = 0; i < each_blocks.length; i += 1) {
 				each_blocks[i].c();
@@ -4000,54 +3902,45 @@ function create_fragment$3(ctx) {
 			this.h();
 		},
 		l(nodes) {
-			div = claim_element(nodes, "DIV", { class: true, id: true });
-			var div_nodes = children(div);
-			section = claim_element(div_nodes, "SECTION", { class: true });
+			div1 = claim_element(nodes, "DIV", { class: true, id: true });
+			var div1_nodes = children(div1);
+			section = claim_element(div1_nodes, "SECTION", { class: true });
 			var section_nodes = children(section);
 			h2 = claim_element(section_nodes, "H2", { class: true });
 			var h2_nodes = children(h2);
 			t0 = claim_text(h2_nodes, /*heading*/ ctx[0]);
 			h2_nodes.forEach(detach);
 			t1 = claim_space(section_nodes);
-			span = claim_element(section_nodes, "SPAN", { class: true });
-			var span_nodes = children(span);
-			t2 = claim_text(span_nodes, /*subheading*/ ctx[1]);
-			span_nodes.forEach(detach);
-			t3 = claim_space(section_nodes);
-			ul = claim_element(section_nodes, "UL", { class: true });
-			var ul_nodes = children(ul);
+			div0 = claim_element(section_nodes, "DIV", { class: true });
+			var div0_nodes = children(div0);
 
 			for (let i = 0; i < each_blocks.length; i += 1) {
-				each_blocks[i].l(ul_nodes);
+				each_blocks[i].l(div0_nodes);
 			}
 
-			ul_nodes.forEach(detach);
+			div0_nodes.forEach(detach);
 			section_nodes.forEach(detach);
-			div_nodes.forEach(detach);
+			div1_nodes.forEach(detach);
 			this.h();
 		},
 		h() {
-			attr(h2, "class", "heading svelte-1eqlbb8");
-			attr(span, "class", "subheading svelte-1eqlbb8");
-			attr(ul, "class", "cards svelte-1eqlbb8");
-			attr(section, "class", "section-container svelte-1eqlbb8");
-			attr(div, "class", "section");
-			attr(div, "id", "section-4ba96f8e");
+			attr(h2, "class", "heading svelte-kan08r");
+			attr(div0, "class", "accordion svelte-kan08r");
+			attr(section, "class", "section-container svelte-kan08r");
+			attr(div1, "class", "section");
+			attr(div1, "id", "section-bddbbd11");
 		},
 		m(target, anchor) {
-			insert_hydration(target, div, anchor);
-			append_hydration(div, section);
+			insert_hydration(target, div1, anchor);
+			append_hydration(div1, section);
 			append_hydration(section, h2);
 			append_hydration(h2, t0);
 			append_hydration(section, t1);
-			append_hydration(section, span);
-			append_hydration(span, t2);
-			append_hydration(section, t3);
-			append_hydration(section, ul);
+			append_hydration(section, div0);
 
 			for (let i = 0; i < each_blocks.length; i += 1) {
 				if (each_blocks[i]) {
-					each_blocks[i].m(ul, null);
+					each_blocks[i].m(div0, null);
 				}
 			}
 
@@ -4055,32 +3948,11 @@ function create_fragment$3(ctx) {
 		},
 		p(ctx, [dirty]) {
 			if (!current || dirty & /*heading*/ 1) set_data(t0, /*heading*/ ctx[0]);
-			if (!current || dirty & /*subheading*/ 2) set_data(t2, /*subheading*/ ctx[1]);
 
-			if (dirty & /*orgs*/ 4) {
-				each_value = /*orgs*/ ctx[2];
-				let i;
-
-				for (i = 0; i < each_value.length; i += 1) {
-					const child_ctx = get_each_context$1(ctx, each_value, i);
-
-					if (each_blocks[i]) {
-						each_blocks[i].p(child_ctx, dirty);
-						transition_in(each_blocks[i], 1);
-					} else {
-						each_blocks[i] = create_each_block$1(child_ctx);
-						each_blocks[i].c();
-						transition_in(each_blocks[i], 1);
-						each_blocks[i].m(ul, null);
-					}
-				}
-
+			if (dirty & /*activeItem, items, setActiveItem*/ 14) {
+				each_value = /*items*/ ctx[1];
 				group_outros();
-
-				for (i = each_value.length; i < each_blocks.length; i += 1) {
-					out(i);
-				}
-
+				each_blocks = update_keyed_each(each_blocks, dirty, get_key, 1, ctx, each_value, each_1_lookup, div0, outro_and_destroy_block, create_each_block$1, null, get_each_context$1);
 				check_outros();
 			}
 		},
@@ -4094,8 +3966,6 @@ function create_fragment$3(ctx) {
 			current = true;
 		},
 		o(local) {
-			each_blocks = each_blocks.filter(Boolean);
-
 			for (let i = 0; i < each_blocks.length; i += 1) {
 				transition_out(each_blocks[i]);
 			}
@@ -4103,30 +3973,38 @@ function create_fragment$3(ctx) {
 			current = false;
 		},
 		d(detaching) {
-			if (detaching) detach(div);
-			destroy_each(each_blocks, detaching);
+			if (detaching) detach(div1);
+
+			for (let i = 0; i < each_blocks.length; i += 1) {
+				each_blocks[i].d();
+			}
 		}
 	};
 }
 
 function instance$2($$self, $$props, $$invalidate) {
 	let { heading } = $$props;
-	let { subheading } = $$props;
-	let { orgs } = $$props;
+	let { items } = $$props;
+	let activeItem = 0;
+
+	function setActiveItem(i) {
+		$$invalidate(2, activeItem = activeItem === i ? null : i);
+	}
+
+	const click_handler = i => setActiveItem(i);
 
 	$$self.$$set = $$props => {
 		if ('heading' in $$props) $$invalidate(0, heading = $$props.heading);
-		if ('subheading' in $$props) $$invalidate(1, subheading = $$props.subheading);
-		if ('orgs' in $$props) $$invalidate(2, orgs = $$props.orgs);
+		if ('items' in $$props) $$invalidate(1, items = $$props.items);
 	};
 
-	return [heading, subheading, orgs];
+	return [heading, items, activeItem, setActiveItem, click_handler];
 }
 
 class Component$3 extends SvelteComponent {
 	constructor(options) {
 		super();
-		init(this, options, instance$2, create_fragment$3, safe_not_equal, { heading: 0, subheading: 1, orgs: 2 });
+		init(this, options, instance$2, create_fragment$3, safe_not_equal, { heading: 0, items: 1 });
 	}
 }
 
@@ -4403,7 +4281,7 @@ function create_fragment$4(ctx) {
 			attr(div0, "class", "accordion svelte-kan08r");
 			attr(section, "class", "section-container svelte-kan08r");
 			attr(div1, "class", "section");
-			attr(div1, "id", "section-bddbbd11");
+			attr(div1, "id", "section-c5cea428");
 		},
 		m(target, anchor) {
 			insert_hydration(target, div1, anchor);
@@ -4487,241 +4365,339 @@ class Component$4 extends SvelteComponent {
 
 function get_each_context$3(ctx, list, i) {
 	const child_ctx = ctx.slice();
-	child_ctx[5] = list[i];
-	child_ctx[7] = i;
+	child_ctx[3] = list[i];
 	return child_ctx;
 }
 
-// (86:6) {#if activeItem === i}
+function get_each_context_1$1(ctx, list, i) {
+	const child_ctx = ctx.slice();
+	child_ctx[6] = list[i].link;
+	child_ctx[7] = list[i].icon;
+	return child_ctx;
+}
+
+// (105:6) {#if org.image.url}
 function create_if_block$4(ctx) {
-	let div;
-	let raw_value = /*item*/ ctx[5].description.html + "";
-	let div_transition;
-	let current;
+	let figure;
+	let img;
+	let img_alt_value;
+	let img_src_value;
 
 	return {
 		c() {
-			div = element("div");
+			figure = element("figure");
+			img = element("img");
 			this.h();
 		},
 		l(nodes) {
-			div = claim_element(nodes, "DIV", { class: true });
-			var div_nodes = children(div);
-			div_nodes.forEach(detach);
+			figure = claim_element(nodes, "FIGURE", { class: true });
+			var figure_nodes = children(figure);
+			img = claim_element(figure_nodes, "IMG", { alt: true, src: true, class: true });
+			figure_nodes.forEach(detach);
 			this.h();
 		},
 		h() {
-			attr(div, "class", "description content svelte-kan08r");
+			attr(img, "alt", img_alt_value = /*org*/ ctx[3].image.alt);
+			if (!src_url_equal(img.src, img_src_value = /*org*/ ctx[3].image.url)) attr(img, "src", img_src_value);
+			attr(img, "class", "svelte-1eqlbb8");
+			attr(figure, "class", "svelte-1eqlbb8");
 		},
 		m(target, anchor) {
-			insert_hydration(target, div, anchor);
-			div.innerHTML = raw_value;
-			current = true;
+			insert_hydration(target, figure, anchor);
+			append_hydration(figure, img);
 		},
 		p(ctx, dirty) {
-			if ((!current || dirty & /*items*/ 2) && raw_value !== (raw_value = /*item*/ ctx[5].description.html + "")) div.innerHTML = raw_value;		},
-		i(local) {
-			if (current) return;
+			if (dirty & /*orgs*/ 4 && img_alt_value !== (img_alt_value = /*org*/ ctx[3].image.alt)) {
+				attr(img, "alt", img_alt_value);
+			}
 
-			add_render_callback(() => {
-				if (!current) return;
-				if (!div_transition) div_transition = create_bidirectional_transition(div, slide, {}, true);
-				div_transition.run(1);
-			});
-
-			current = true;
-		},
-		o(local) {
-			if (!div_transition) div_transition = create_bidirectional_transition(div, slide, {}, false);
-			div_transition.run(0);
-			current = false;
+			if (dirty & /*orgs*/ 4 && !src_url_equal(img.src, img_src_value = /*org*/ ctx[3].image.url)) {
+				attr(img, "src", img_src_value);
+			}
 		},
 		d(detaching) {
-			if (detaching) detach(div);
-			if (detaching && div_transition) div_transition.end();
+			if (detaching) detach(figure);
 		}
 	};
 }
 
-// (78:4) {#each items as item, i (i)}
-function create_each_block$3(key_1, ctx) {
-	let div1;
-	let button;
-	let span0;
-	let t0_value = /*i*/ ctx[7] + 1 + "";
-	let t0;
-	let t1;
-	let t2_value = /*item*/ ctx[5].title + "";
-	let t2;
-	let t3;
-	let span1;
+// (115:10) {#each org.social_links as {link, icon}}
+function create_each_block_1$1(ctx) {
+	let a;
 	let icon;
-	let t4;
-	let t5;
-	let t6;
+	let t;
+	let a_href_value;
+	let a_aria_label_value;
 	let current;
-	let mounted;
-	let dispose;
-	icon = new Component$1({ props: { icon: "ph:caret-down-bold" } });
-
-	function click_handler() {
-		return /*click_handler*/ ctx[4](/*i*/ ctx[7]);
-	}
-
-	let if_block = /*activeItem*/ ctx[2] === /*i*/ ctx[7] && create_if_block$4(ctx);
+	icon = new Component$1({ props: { icon: /*icon*/ ctx[7] } });
 
 	return {
-		key: key_1,
-		first: null,
 		c() {
-			div1 = element("div");
-			button = element("button");
-			span0 = element("span");
-			t0 = text(t0_value);
-			t1 = text(". ");
-			t2 = text(t2_value);
-			t3 = space();
-			span1 = element("span");
+			a = element("a");
 			create_component(icon.$$.fragment);
-			t4 = space();
-			if (if_block) if_block.c();
-			t5 = space();
-			t6 = space();
+			t = space();
 			this.h();
 		},
 		l(nodes) {
-			div1 = claim_element(nodes, "DIV", { class: true });
-			var div1_nodes = children(div1);
-			button = claim_element(div1_nodes, "BUTTON", { class: true });
-			var button_nodes = children(button);
-			span0 = claim_element(button_nodes, "SPAN", { class: true });
-			var span0_nodes = children(span0);
-			t0 = claim_text(span0_nodes, t0_value);
-			t1 = claim_text(span0_nodes, ". ");
-			t2 = claim_text(span0_nodes, t2_value);
-			span0_nodes.forEach(detach);
-			t3 = claim_space(button_nodes);
-			span1 = claim_element(button_nodes, "SPAN", { class: true });
-			var span1_nodes = children(span1);
-			claim_component(icon.$$.fragment, span1_nodes);
-			span1_nodes.forEach(detach);
-			button_nodes.forEach(detach);
-			t4 = claim_space(div1_nodes);
-			if (if_block) if_block.l(div1_nodes);
-			t5 = claim_space(div1_nodes);
-			t6 = claim_space(div1_nodes);
-			div1_nodes.forEach(detach);
+			a = claim_element(nodes, "A", {
+				href: true,
+				"aria-label": true,
+				class: true
+			});
+
+			var a_nodes = children(a);
+			claim_component(icon.$$.fragment, a_nodes);
+			t = claim_space(a_nodes);
+			a_nodes.forEach(detach);
 			this.h();
 		},
 		h() {
-			attr(span0, "class", "svelte-kan08r");
-			attr(span1, "class", "icon svelte-kan08r");
-			attr(button, "class", "svelte-kan08r");
-			attr(div1, "class", "item svelte-kan08r");
-			toggle_class(div1, "active", /*activeItem*/ ctx[2] === /*i*/ ctx[7]);
-			this.first = div1;
+			attr(a, "href", a_href_value = /*link*/ ctx[6].url);
+			attr(a, "aria-label", a_aria_label_value = /*link*/ ctx[6].label);
+			attr(a, "class", "svelte-1eqlbb8");
 		},
 		m(target, anchor) {
-			insert_hydration(target, div1, anchor);
-			append_hydration(div1, button);
-			append_hydration(button, span0);
-			append_hydration(span0, t0);
-			append_hydration(span0, t1);
-			append_hydration(span0, t2);
-			append_hydration(button, t3);
-			append_hydration(button, span1);
-			mount_component(icon, span1, null);
-			append_hydration(div1, t4);
-			if (if_block) if_block.m(div1, null);
-			append_hydration(div1, t5);
-			append_hydration(div1, t6);
+			insert_hydration(target, a, anchor);
+			mount_component(icon, a, null);
+			append_hydration(a, t);
 			current = true;
-
-			if (!mounted) {
-				dispose = listen(button, "click", click_handler);
-				mounted = true;
-			}
 		},
-		p(new_ctx, dirty) {
-			ctx = new_ctx;
-			if ((!current || dirty & /*items*/ 2) && t0_value !== (t0_value = /*i*/ ctx[7] + 1 + "")) set_data(t0, t0_value);
-			if ((!current || dirty & /*items*/ 2) && t2_value !== (t2_value = /*item*/ ctx[5].title + "")) set_data(t2, t2_value);
+		p(ctx, dirty) {
+			const icon_changes = {};
+			if (dirty & /*orgs*/ 4) icon_changes.icon = /*icon*/ ctx[7];
+			icon.$set(icon_changes);
 
-			if (/*activeItem*/ ctx[2] === /*i*/ ctx[7]) {
-				if (if_block) {
-					if_block.p(ctx, dirty);
-
-					if (dirty & /*activeItem, items*/ 6) {
-						transition_in(if_block, 1);
-					}
-				} else {
-					if_block = create_if_block$4(ctx);
-					if_block.c();
-					transition_in(if_block, 1);
-					if_block.m(div1, t5);
-				}
-			} else if (if_block) {
-				group_outros();
-
-				transition_out(if_block, 1, 1, () => {
-					if_block = null;
-				});
-
-				check_outros();
+			if (!current || dirty & /*orgs*/ 4 && a_href_value !== (a_href_value = /*link*/ ctx[6].url)) {
+				attr(a, "href", a_href_value);
 			}
 
-			if (!current || dirty & /*activeItem, items*/ 6) {
-				toggle_class(div1, "active", /*activeItem*/ ctx[2] === /*i*/ ctx[7]);
+			if (!current || dirty & /*orgs*/ 4 && a_aria_label_value !== (a_aria_label_value = /*link*/ ctx[6].label)) {
+				attr(a, "aria-label", a_aria_label_value);
 			}
 		},
 		i(local) {
 			if (current) return;
 			transition_in(icon.$$.fragment, local);
-			transition_in(if_block);
 			current = true;
 		},
 		o(local) {
 			transition_out(icon.$$.fragment, local);
-			transition_out(if_block);
 			current = false;
 		},
 		d(detaching) {
-			if (detaching) detach(div1);
+			if (detaching) detach(a);
 			destroy_component(icon);
+		}
+	};
+}
+
+// (103:4) {#each orgs as org}
+function create_each_block$3(ctx) {
+	let li;
+	let t0;
+	let div2;
+	let div0;
+	let span;
+	let t1_value = /*org*/ ctx[3].name + "";
+	let t1;
+	let t2;
+	let div1;
+	let t3;
+	let li_onclick_value;
+	let current;
+	let if_block = /*org*/ ctx[3].image.url && create_if_block$4(ctx);
+	let each_value_1 = /*org*/ ctx[3].social_links;
+	let each_blocks = [];
+
+	for (let i = 0; i < each_value_1.length; i += 1) {
+		each_blocks[i] = create_each_block_1$1(get_each_context_1$1(ctx, each_value_1, i));
+	}
+
+	const out = i => transition_out(each_blocks[i], 1, 1, () => {
+		each_blocks[i] = null;
+	});
+
+	return {
+		c() {
+			li = element("li");
+			if (if_block) if_block.c();
+			t0 = space();
+			div2 = element("div");
+			div0 = element("div");
+			span = element("span");
+			t1 = text(t1_value);
+			t2 = space();
+			div1 = element("div");
+
+			for (let i = 0; i < each_blocks.length; i += 1) {
+				each_blocks[i].c();
+			}
+
+			t3 = space();
+			this.h();
+		},
+		l(nodes) {
+			li = claim_element(nodes, "LI", { onclick: true, class: true });
+			var li_nodes = children(li);
+			if (if_block) if_block.l(li_nodes);
+			t0 = claim_space(li_nodes);
+			div2 = claim_element(li_nodes, "DIV", { class: true });
+			var div2_nodes = children(div2);
+			div0 = claim_element(div2_nodes, "DIV", { class: true });
+			var div0_nodes = children(div0);
+			span = claim_element(div0_nodes, "SPAN", { class: true });
+			var span_nodes = children(span);
+			t1 = claim_text(span_nodes, t1_value);
+			span_nodes.forEach(detach);
+			div0_nodes.forEach(detach);
+			t2 = claim_space(div2_nodes);
+			div1 = claim_element(div2_nodes, "DIV", { class: true });
+			var div1_nodes = children(div1);
+
+			for (let i = 0; i < each_blocks.length; i += 1) {
+				each_blocks[i].l(div1_nodes);
+			}
+
+			div1_nodes.forEach(detach);
+			div2_nodes.forEach(detach);
+			t3 = claim_space(li_nodes);
+			li_nodes.forEach(detach);
+			this.h();
+		},
+		h() {
+			attr(span, "class", "name svelte-1eqlbb8");
+			attr(div0, "class", "details svelte-1eqlbb8");
+			attr(div1, "class", "social svelte-1eqlbb8");
+			attr(div2, "class", "info");
+			attr(li, "onclick", li_onclick_value = "window.open('" + /*org*/ ctx[3].link + "', '_blank')");
+			attr(li, "class", "svelte-1eqlbb8");
+		},
+		m(target, anchor) {
+			insert_hydration(target, li, anchor);
+			if (if_block) if_block.m(li, null);
+			append_hydration(li, t0);
+			append_hydration(li, div2);
+			append_hydration(div2, div0);
+			append_hydration(div0, span);
+			append_hydration(span, t1);
+			append_hydration(div2, t2);
+			append_hydration(div2, div1);
+
+			for (let i = 0; i < each_blocks.length; i += 1) {
+				if (each_blocks[i]) {
+					each_blocks[i].m(div1, null);
+				}
+			}
+
+			append_hydration(li, t3);
+			current = true;
+		},
+		p(ctx, dirty) {
+			if (/*org*/ ctx[3].image.url) {
+				if (if_block) {
+					if_block.p(ctx, dirty);
+				} else {
+					if_block = create_if_block$4(ctx);
+					if_block.c();
+					if_block.m(li, t0);
+				}
+			} else if (if_block) {
+				if_block.d(1);
+				if_block = null;
+			}
+
+			if ((!current || dirty & /*orgs*/ 4) && t1_value !== (t1_value = /*org*/ ctx[3].name + "")) set_data(t1, t1_value);
+
+			if (dirty & /*orgs*/ 4) {
+				each_value_1 = /*org*/ ctx[3].social_links;
+				let i;
+
+				for (i = 0; i < each_value_1.length; i += 1) {
+					const child_ctx = get_each_context_1$1(ctx, each_value_1, i);
+
+					if (each_blocks[i]) {
+						each_blocks[i].p(child_ctx, dirty);
+						transition_in(each_blocks[i], 1);
+					} else {
+						each_blocks[i] = create_each_block_1$1(child_ctx);
+						each_blocks[i].c();
+						transition_in(each_blocks[i], 1);
+						each_blocks[i].m(div1, null);
+					}
+				}
+
+				group_outros();
+
+				for (i = each_value_1.length; i < each_blocks.length; i += 1) {
+					out(i);
+				}
+
+				check_outros();
+			}
+
+			if (!current || dirty & /*orgs*/ 4 && li_onclick_value !== (li_onclick_value = "window.open('" + /*org*/ ctx[3].link + "', '_blank')")) {
+				attr(li, "onclick", li_onclick_value);
+			}
+		},
+		i(local) {
+			if (current) return;
+
+			for (let i = 0; i < each_value_1.length; i += 1) {
+				transition_in(each_blocks[i]);
+			}
+
+			current = true;
+		},
+		o(local) {
+			each_blocks = each_blocks.filter(Boolean);
+
+			for (let i = 0; i < each_blocks.length; i += 1) {
+				transition_out(each_blocks[i]);
+			}
+
+			current = false;
+		},
+		d(detaching) {
+			if (detaching) detach(li);
 			if (if_block) if_block.d();
-			mounted = false;
-			dispose();
+			destroy_each(each_blocks, detaching);
 		}
 	};
 }
 
 function create_fragment$5(ctx) {
-	let div1;
+	let div;
 	let section;
 	let h2;
 	let t0;
 	let t1;
-	let div0;
-	let each_blocks = [];
-	let each_1_lookup = new Map();
+	let span;
+	let t2;
+	let t3;
+	let ul;
 	let current;
-	let each_value = /*items*/ ctx[1];
-	const get_key = ctx => /*i*/ ctx[7];
+	let each_value = /*orgs*/ ctx[2];
+	let each_blocks = [];
 
 	for (let i = 0; i < each_value.length; i += 1) {
-		let child_ctx = get_each_context$3(ctx, each_value, i);
-		let key = get_key(child_ctx);
-		each_1_lookup.set(key, each_blocks[i] = create_each_block$3(key, child_ctx));
+		each_blocks[i] = create_each_block$3(get_each_context$3(ctx, each_value, i));
 	}
+
+	const out = i => transition_out(each_blocks[i], 1, 1, () => {
+		each_blocks[i] = null;
+	});
 
 	return {
 		c() {
-			div1 = element("div");
+			div = element("div");
 			section = element("section");
 			h2 = element("h2");
 			t0 = text(/*heading*/ ctx[0]);
 			t1 = space();
-			div0 = element("div");
+			span = element("span");
+			t2 = text(/*subheading*/ ctx[1]);
+			t3 = space();
+			ul = element("ul");
 
 			for (let i = 0; i < each_blocks.length; i += 1) {
 				each_blocks[i].c();
@@ -4730,45 +4706,54 @@ function create_fragment$5(ctx) {
 			this.h();
 		},
 		l(nodes) {
-			div1 = claim_element(nodes, "DIV", { class: true, id: true });
-			var div1_nodes = children(div1);
-			section = claim_element(div1_nodes, "SECTION", { class: true });
+			div = claim_element(nodes, "DIV", { class: true, id: true });
+			var div_nodes = children(div);
+			section = claim_element(div_nodes, "SECTION", { class: true });
 			var section_nodes = children(section);
 			h2 = claim_element(section_nodes, "H2", { class: true });
 			var h2_nodes = children(h2);
 			t0 = claim_text(h2_nodes, /*heading*/ ctx[0]);
 			h2_nodes.forEach(detach);
 			t1 = claim_space(section_nodes);
-			div0 = claim_element(section_nodes, "DIV", { class: true });
-			var div0_nodes = children(div0);
+			span = claim_element(section_nodes, "SPAN", { class: true });
+			var span_nodes = children(span);
+			t2 = claim_text(span_nodes, /*subheading*/ ctx[1]);
+			span_nodes.forEach(detach);
+			t3 = claim_space(section_nodes);
+			ul = claim_element(section_nodes, "UL", { class: true });
+			var ul_nodes = children(ul);
 
 			for (let i = 0; i < each_blocks.length; i += 1) {
-				each_blocks[i].l(div0_nodes);
+				each_blocks[i].l(ul_nodes);
 			}
 
-			div0_nodes.forEach(detach);
+			ul_nodes.forEach(detach);
 			section_nodes.forEach(detach);
-			div1_nodes.forEach(detach);
+			div_nodes.forEach(detach);
 			this.h();
 		},
 		h() {
-			attr(h2, "class", "heading svelte-kan08r");
-			attr(div0, "class", "accordion svelte-kan08r");
-			attr(section, "class", "section-container svelte-kan08r");
-			attr(div1, "class", "section");
-			attr(div1, "id", "section-c5cea428");
+			attr(h2, "class", "heading svelte-1eqlbb8");
+			attr(span, "class", "subheading svelte-1eqlbb8");
+			attr(ul, "class", "cards svelte-1eqlbb8");
+			attr(section, "class", "section-container svelte-1eqlbb8");
+			attr(div, "class", "section");
+			attr(div, "id", "section-4ba96f8e");
 		},
 		m(target, anchor) {
-			insert_hydration(target, div1, anchor);
-			append_hydration(div1, section);
+			insert_hydration(target, div, anchor);
+			append_hydration(div, section);
 			append_hydration(section, h2);
 			append_hydration(h2, t0);
 			append_hydration(section, t1);
-			append_hydration(section, div0);
+			append_hydration(section, span);
+			append_hydration(span, t2);
+			append_hydration(section, t3);
+			append_hydration(section, ul);
 
 			for (let i = 0; i < each_blocks.length; i += 1) {
 				if (each_blocks[i]) {
-					each_blocks[i].m(div0, null);
+					each_blocks[i].m(ul, null);
 				}
 			}
 
@@ -4776,11 +4761,32 @@ function create_fragment$5(ctx) {
 		},
 		p(ctx, [dirty]) {
 			if (!current || dirty & /*heading*/ 1) set_data(t0, /*heading*/ ctx[0]);
+			if (!current || dirty & /*subheading*/ 2) set_data(t2, /*subheading*/ ctx[1]);
 
-			if (dirty & /*activeItem, items, setActiveItem*/ 14) {
-				each_value = /*items*/ ctx[1];
+			if (dirty & /*orgs*/ 4) {
+				each_value = /*orgs*/ ctx[2];
+				let i;
+
+				for (i = 0; i < each_value.length; i += 1) {
+					const child_ctx = get_each_context$3(ctx, each_value, i);
+
+					if (each_blocks[i]) {
+						each_blocks[i].p(child_ctx, dirty);
+						transition_in(each_blocks[i], 1);
+					} else {
+						each_blocks[i] = create_each_block$3(child_ctx);
+						each_blocks[i].c();
+						transition_in(each_blocks[i], 1);
+						each_blocks[i].m(ul, null);
+					}
+				}
+
 				group_outros();
-				each_blocks = update_keyed_each(each_blocks, dirty, get_key, 1, ctx, each_value, each_1_lookup, div0, outro_and_destroy_block, create_each_block$3, null, get_each_context$3);
+
+				for (i = each_value.length; i < each_blocks.length; i += 1) {
+					out(i);
+				}
+
 				check_outros();
 			}
 		},
@@ -4794,6 +4800,8 @@ function create_fragment$5(ctx) {
 			current = true;
 		},
 		o(local) {
+			each_blocks = each_blocks.filter(Boolean);
+
 			for (let i = 0; i < each_blocks.length; i += 1) {
 				transition_out(each_blocks[i]);
 			}
@@ -4801,38 +4809,30 @@ function create_fragment$5(ctx) {
 			current = false;
 		},
 		d(detaching) {
-			if (detaching) detach(div1);
-
-			for (let i = 0; i < each_blocks.length; i += 1) {
-				each_blocks[i].d();
-			}
+			if (detaching) detach(div);
+			destroy_each(each_blocks, detaching);
 		}
 	};
 }
 
 function instance$4($$self, $$props, $$invalidate) {
 	let { heading } = $$props;
-	let { items } = $$props;
-	let activeItem = 0;
-
-	function setActiveItem(i) {
-		$$invalidate(2, activeItem = activeItem === i ? null : i);
-	}
-
-	const click_handler = i => setActiveItem(i);
+	let { subheading } = $$props;
+	let { orgs } = $$props;
 
 	$$self.$$set = $$props => {
 		if ('heading' in $$props) $$invalidate(0, heading = $$props.heading);
-		if ('items' in $$props) $$invalidate(1, items = $$props.items);
+		if ('subheading' in $$props) $$invalidate(1, subheading = $$props.subheading);
+		if ('orgs' in $$props) $$invalidate(2, orgs = $$props.orgs);
 	};
 
-	return [heading, items, activeItem, setActiveItem, click_handler];
+	return [heading, subheading, orgs];
 }
 
 class Component$5 extends SvelteComponent {
 	constructor(options) {
 		super();
-		init(this, options, instance$4, create_fragment$5, safe_not_equal, { heading: 0, items: 1 });
+		init(this, options, instance$4, create_fragment$5, safe_not_equal, { heading: 0, subheading: 1, orgs: 2 });
 	}
 }
 
@@ -5219,6 +5219,99 @@ function create_fragment$7(ctx) {
 
 	component_2 = new Component$3({
 			props: {
+				heading: "The Facts",
+				items: [
+					{
+						"title": "Canada's housing shortage is a leading cause of our affordability crisis.",
+						"description": {
+							"html": "<p>Canada built more homes in the mid 1970s than it has <em>any</em> time <strong>since</strong>, even though our population has <a href=\"https://dashboard.mailerlite.com/dashboard\">doubled</a>.</p>",
+							"markdown": "Canada built more homes in the mid 1970s than it has *any* time **since**, even though our population has [doubled](<https://dashboard.mailerlite.com/dashboard>).\n\n"
+						}
+					},
+					{
+						"title": "Municipal regulations have strangled Canada’s housing supply.",
+						"description": {
+							"html": "<p>Our housing shortage is the result of undemocratic regulatory capture by the few against the interests of the many.</p>\n<p>In most Canadian cities, apartments are illegal on most residential land. Construction of apartment buildings used to expand organically from our downtowns as cities grew. Since the introduction of zoning about 100 years ago, the boundaries between predominantly single-family detached house-only zones and apartment zones have barely changed.</p>\n<p>Subjective, discretionary approval processes inhibit housing production, reduce transparency and increase perceived corruption in local government.\nPublic consultation is not representative of populations, nor does it deal holistically in addressing our housing shortage (it is often focused on individual buildings), nor does it weight the needs of the many appropriately versus the aesthetic preferences of the few.</p>",
+							"markdown": " Our housing shortage is the result of undemocratic regulatory capture by the few against the interests of the many.\n\nIn most Canadian cities, apartments are illegal on most residential land. Construction of apartment buildings used to expand organically from our downtowns as cities grew. Since the introduction of zoning about 100 years ago, the boundaries between predominantly single-family detached house-only zones and apartment zones have barely changed.\n\nSubjective, discretionary approval processes inhibit housing production, reduce transparency and increase perceived corruption in local government.\nPublic consultation is not representative of populations, nor does it deal holistically in addressing our housing shortage (it is often focused on individual buildings), nor does it weight the needs of the many appropriately versus the aesthetic preferences of the few.\n"
+						}
+					},
+					{
+						"title": "Building more market rate housing reduces housing costs and is crucial for broad affordability",
+						"description": {
+							"html": "<p>Today’s new “luxury” housing will form our future affordable housing stock.\nThrough filtering, even expensive new homes reduce housing costs across the spectrum, both in the near term and in the future.</p>\n<p>According to studies of vacancy chains, new market-rate housing helps lower income households as higher income households move from existing homes to new homes.  (Example: previously affordable used car prices exploded during Covid supply chain disruptions, and fell after supply chains for new cars were restored)</p>\n<p>This is not trickle-down. Allowing more market housing does not cost municipalities anything and creates physical vacancies.\nExamples from Auckland and Minnesota</p>",
+							"markdown": "Today’s new “luxury” housing will form our future affordable housing stock.\nThrough filtering, even expensive new homes reduce housing costs across the spectrum, both in the near term and in the future.\n\n According to studies of vacancy chains, new market-rate housing helps lower income households as higher income households move from existing homes to new homes.  (Example: previously affordable used car prices exploded during Covid supply chain disruptions, and fell after supply chains for new cars were restored)\n\nThis is not trickle-down. Allowing more market housing does not cost municipalities anything and creates physical vacancies.\nExamples from Auckland and Minnesota"
+						}
+					},
+					{
+						"title": "Urban sprawl is harmful to the environment and our long term fiscal sustainability.",
+						"description": {
+							"html": "<p>Big metros have been getting less dense on average and growing in car-dependent suburbs and exurbs.\nApartment buildings are inherently more energy-efficient than houses and are a key part of reducing car-dependence and the overall energy intensity of our cities.</p>",
+							"markdown": " Big metros have been getting less dense on average and growing in car-dependent suburbs and exurbs.\nApartment buildings are inherently more energy-efficient than houses and are a key part of reducing car-dependence and the overall energy intensity of our cities.\n"
+						}
+					}
+				]
+			}
+		});
+
+	component_3 = new Component$4({
+			props: {
+				heading: "Our Goals ",
+				items: [
+					{
+						"title": "Row houses, multiplexes, lodging homes and low-rise apartments should be permitted in all neighbourhoods as of right.",
+						"description": {
+							"html": "<p>Canada built more homes in the mid 1970s than it has any time since, even though our population has doubled.</p>",
+							"markdown": "Canada built more homes in the mid 1970s than it has any time since, even though our population has doubled.\n\n"
+						}
+					},
+					{
+						"title": "Mid-rise and high-rise apartments should be permitted as of right within walking distance of frequent transit and within active transit-distance of major job centres.",
+						"description": {
+							"html": "<p>Requiring long and arduous rezoning processes inflates land costs and adds significant delays to building new housing projects.</p>\n<p>It is unjust to restrict multifamily housing to land adjacent to major roads with poor air quality and harmful levels of noise pollution.</p>",
+							"markdown": "Requiring long and arduous rezoning processes inflates land costs and adds significant delays to building new housing projects.\n\nIt is unjust to restrict multifamily housing to land adjacent to major roads with poor air quality and harmful levels of noise pollution.\n"
+						}
+					},
+					{
+						"title": "Restrictions on setbacks, floorplate need to be relaxed and parking minimums abolished.",
+						"description": {
+							"html": "<p>Parking minimums increase costs substantially since <a href=\"https://www.canadianrealestatemagazine.ca/news/greenlighting-new-toronto-parking-space-requirement-policy-was-right-move-334978.aspx\">each underground stall can add upwards of $100k to construction costs</a>. </p>\n<p>Setbacks, floor space maximums and angular plane requirements make dense housing unfeasible even when it’s nominally permitted.</p>",
+							"markdown": "Parking minimums increase costs substantially since [each underground stall can add upwards of $100k to construction costs](https://www.canadianrealestatemagazine.ca/news/greenlighting-new-toronto-parking-space-requirement-policy-was-right-move-334978.aspx). \n\nSetbacks, floor space maximums and angular plane requirements make dense housing unfeasible even when it’s nominally permitted."
+						}
+					},
+					{
+						"title": "Municipalities should not charge onerous fees on new high-density housing.",
+						"description": {
+							"html": "<p>New, dense housing generates disproportionately more tax revenue and will cost less to maintain in the long run.; As suchas such, it is not reasonable or fair to make new housing pay for increased public infrastructure and services up-front when they will be paying full property taxes thereafter.</p>\n<p>Fees should be consistent and predictable, both between similar projects within a specific city but also across cities within a province.</p>",
+							"markdown": "New, dense housing generates disproportionately more tax revenue and will cost less to maintain in the long run.; As suchas such, it is not reasonable or fair to make new housing pay for increased public infrastructure and services up-front when they will be paying full property taxes thereafter.\n\n Fees should be consistent and predictable, both between similar projects within a specific city but also across cities within a province.\n"
+						}
+					},
+					{
+						"title": "Higher orders of government need to step in and intervene as municipalities are not making necessary reforms in a timely manner.",
+						"description": {
+							"html": "<p>Federal and Provincial governments must set adequate targets for adding net housing and divide these targets among municipalities.</p>",
+							"markdown": "Federal and Provincial governments must set adequate targets for adding net housing and divide these targets among municipalities."
+						}
+					},
+					{
+						"title": "We need more deeply affordable housing, but to achieve sufficient scale requires funding from provincial and federal governments. ",
+						"description": {
+							"html": "<p>It is unlikely that the private market will provide adequate housing for all needs, even with (realistic) subsidies. </p>\n<p>Housing is becoming unaffordable even for professionals making median salaries. Building subsidized housing for middle income earners is not scalable and will most likely function as a lottery for a few lucky winners.</p>\n<p>The need for social housing does not arise from building market-rate housing; it is a societal responsibility and should be paid for from general revenues, such as property taxes, not pushed onto newcomers and the young.</p>",
+							"markdown": "It is unlikely that the private market will provide adequate housing for all needs, even with (realistic) subsidies. \n\nHousing is becoming unaffordable even for professionals making median salaries. Building subsidized housing for middle income earners is not scalable and will most likely function as a lottery for a few lucky winners.\n\nThe need for social housing does not arise from building market-rate housing; it is a societal responsibility and should be paid for from general revenues, such as property taxes, not pushed onto newcomers and the young."
+						}
+					},
+					{
+						"title": "Reform public consultation. ",
+						"description": {
+							"html": "<p>Aim for strong, clear rules to reduce the need for long negotiations about individual sites and arbitrary decision-making. </p>\n<p>The vast majority of consultation should be part of proactive community planning. Resulting community plans should provide clear, reliable requirements for anyone who wants to build, with no arbitrary decision-making and as few discretionary parameters as possible. The consultation process should be additive, with less focus on density and more on quality placemaking, services and infrastructure. Where consultation is needed, governments should assess demographics and adjust methods to ensure that the voices being heard represent the whole community and future residents.</p>",
+							"markdown": "Aim for strong, clear rules to reduce the need for long negotiations about individual sites and arbitrary decision-making. \n\nThe vast majority of consultation should be part of proactive community planning. Resulting community plans should provide clear, reliable requirements for anyone who wants to build, with no arbitrary decision-making and as few discretionary parameters as possible. The consultation process should be additive, with less focus on density and more on quality placemaking, services and infrastructure. Where consultation is needed, governments should assess demographics and adjust methods to ensure that the voices being heard represent the whole community and future residents."
+						}
+					}
+				]
+			}
+		});
+
+	component_4 = new Component$5({
+			props: {
 				heading: "Who We Are",
 				subheading: "More Homes Canada is a coalition of local housing advocacy groups. Together, we are fighting to end Canada’s housing shortage. ",
 				orgs: [
@@ -5325,99 +5418,6 @@ function create_fragment$7(ctx) {
 							"size": null
 						},
 						"social_links": []
-					}
-				]
-			}
-		});
-
-	component_3 = new Component$4({
-			props: {
-				heading: "The Facts",
-				items: [
-					{
-						"title": "Canada's housing shortage is a leading cause of our affordability crisis.",
-						"description": {
-							"html": "<p>Canada built more homes in the mid 1970s than it has <em>any</em> time <strong>since</strong>, even though our population has <a href=\"https://dashboard.mailerlite.com/dashboard\">doubled</a>.</p>",
-							"markdown": "Canada built more homes in the mid 1970s than it has *any* time **since**, even though our population has [doubled](<https://dashboard.mailerlite.com/dashboard>).\n\n"
-						}
-					},
-					{
-						"title": "Municipal regulations have strangled Canada’s housing supply.",
-						"description": {
-							"html": "<p>Our housing shortage is the result of undemocratic regulatory capture by the few against the interests of the many.</p>\n<p>In most Canadian cities, apartments are illegal on most residential land. Construction of apartment buildings used to expand organically from our downtowns as cities grew. Since the introduction of zoning about 100 years ago, the boundaries between predominantly single-family detached house-only zones and apartment zones have barely changed.</p>\n<p>Subjective, discretionary approval processes inhibit housing production, reduce transparency and increase perceived corruption in local government.\nPublic consultation is not representative of populations, nor does it deal holistically in addressing our housing shortage (it is often focused on individual buildings), nor does it weight the needs of the many appropriately versus the aesthetic preferences of the few.</p>",
-							"markdown": " Our housing shortage is the result of undemocratic regulatory capture by the few against the interests of the many.\n\nIn most Canadian cities, apartments are illegal on most residential land. Construction of apartment buildings used to expand organically from our downtowns as cities grew. Since the introduction of zoning about 100 years ago, the boundaries between predominantly single-family detached house-only zones and apartment zones have barely changed.\n\nSubjective, discretionary approval processes inhibit housing production, reduce transparency and increase perceived corruption in local government.\nPublic consultation is not representative of populations, nor does it deal holistically in addressing our housing shortage (it is often focused on individual buildings), nor does it weight the needs of the many appropriately versus the aesthetic preferences of the few.\n"
-						}
-					},
-					{
-						"title": "Building more market rate housing reduces housing costs and is crucial for broad affordability",
-						"description": {
-							"html": "<p>Today’s new “luxury” housing will form our future affordable housing stock.\nThrough filtering, even expensive new homes reduce housing costs across the spectrum, both in the near term and in the future.</p>\n<p>According to studies of vacancy chains, new market-rate housing helps lower income households as higher income households move from existing homes to new homes.  (Example: previously affordable used car prices exploded during Covid supply chain disruptions, and fell after supply chains for new cars were restored)</p>\n<p>This is not trickle-down. Allowing more market housing does not cost municipalities anything and creates physical vacancies.\nExamples from Auckland and Minnesota</p>",
-							"markdown": "Today’s new “luxury” housing will form our future affordable housing stock.\nThrough filtering, even expensive new homes reduce housing costs across the spectrum, both in the near term and in the future.\n\n According to studies of vacancy chains, new market-rate housing helps lower income households as higher income households move from existing homes to new homes.  (Example: previously affordable used car prices exploded during Covid supply chain disruptions, and fell after supply chains for new cars were restored)\n\nThis is not trickle-down. Allowing more market housing does not cost municipalities anything and creates physical vacancies.\nExamples from Auckland and Minnesota"
-						}
-					},
-					{
-						"title": "Urban sprawl is harmful to the environment and our long term fiscal sustainability.",
-						"description": {
-							"html": "<p>Big metros have been getting less dense on average and growing in car-dependent suburbs and exurbs.\nApartment buildings are inherently more energy-efficient than houses and are a key part of reducing car-dependence and the overall energy intensity of our cities.</p>",
-							"markdown": " Big metros have been getting less dense on average and growing in car-dependent suburbs and exurbs.\nApartment buildings are inherently more energy-efficient than houses and are a key part of reducing car-dependence and the overall energy intensity of our cities.\n"
-						}
-					}
-				]
-			}
-		});
-
-	component_4 = new Component$5({
-			props: {
-				heading: "Our Goals ",
-				items: [
-					{
-						"title": "Row houses, multiplexes, lodging homes and low-rise apartments should be permitted in all neighbourhoods as of right.",
-						"description": {
-							"html": "<p>Canada built more homes in the mid 1970s than it has any time since, even though our population has doubled.</p>",
-							"markdown": "Canada built more homes in the mid 1970s than it has any time since, even though our population has doubled.\n\n"
-						}
-					},
-					{
-						"title": "Mid-rise and high-rise apartments should be permitted as of right within walking distance of frequent transit and within active transit-distance of major job centres.",
-						"description": {
-							"html": "<p>Requiring long and arduous rezoning processes inflates land costs and adds significant delays to building new housing projects.</p>\n<p>It is unjust to restrict multifamily housing to land adjacent to major roads with poor air quality and harmful levels of noise pollution.</p>",
-							"markdown": "Requiring long and arduous rezoning processes inflates land costs and adds significant delays to building new housing projects.\n\nIt is unjust to restrict multifamily housing to land adjacent to major roads with poor air quality and harmful levels of noise pollution.\n"
-						}
-					},
-					{
-						"title": "Restrictions on setbacks, floorplate need to be relaxed and parking minimums abolished.",
-						"description": {
-							"html": "<p>Parking minimums increase costs substantially since <a href=\"https://www.canadianrealestatemagazine.ca/news/greenlighting-new-toronto-parking-space-requirement-policy-was-right-move-334978.aspx\">each underground stall can add upwards of $100k to construction costs</a>. </p>\n<p>Setbacks, floor space maximums and angular plane requirements make dense housing unfeasible even when it’s nominally permitted.</p>",
-							"markdown": "Parking minimums increase costs substantially since [each underground stall can add upwards of $100k to construction costs](https://www.canadianrealestatemagazine.ca/news/greenlighting-new-toronto-parking-space-requirement-policy-was-right-move-334978.aspx). \n\nSetbacks, floor space maximums and angular plane requirements make dense housing unfeasible even when it’s nominally permitted."
-						}
-					},
-					{
-						"title": "Municipalities should not charge onerous fees on new high-density housing.",
-						"description": {
-							"html": "<p>New, dense housing generates disproportionately more tax revenue and will cost less to maintain in the long run.; As suchas such, it is not reasonable or fair to make new housing pay for increased public infrastructure and services up-front when they will be paying full property taxes thereafter.</p>\n<p>Fees should be consistent and predictable, both between similar projects within a specific city but also across cities within a province.</p>",
-							"markdown": "New, dense housing generates disproportionately more tax revenue and will cost less to maintain in the long run.; As suchas such, it is not reasonable or fair to make new housing pay for increased public infrastructure and services up-front when they will be paying full property taxes thereafter.\n\n Fees should be consistent and predictable, both between similar projects within a specific city but also across cities within a province.\n"
-						}
-					},
-					{
-						"title": "Higher orders of government need to step in and intervene as municipalities are not making necessary reforms in a timely manner.",
-						"description": {
-							"html": "<p>Federal and Provincial governments must set adequate targets for adding net housing and divide these targets among municipalities.</p>",
-							"markdown": "Federal and Provincial governments must set adequate targets for adding net housing and divide these targets among municipalities."
-						}
-					},
-					{
-						"title": "We need more deeply affordable housing, but to achieve sufficient scale requires funding from provincial and federal governments. ",
-						"description": {
-							"html": "<p>It is unlikely that the private market will provide adequate housing for all needs, even with (realistic) subsidies. </p>\n<p>Housing is becoming unaffordable even for professionals making median salaries. Building subsidized housing for middle income earners is not scalable and will most likely function as a lottery for a few lucky winners.</p>\n<p>The need for social housing does not arise from building market-rate housing; it is a societal responsibility and should be paid for from general revenues, such as property taxes, not pushed onto newcomers and the young.</p>",
-							"markdown": "It is unlikely that the private market will provide adequate housing for all needs, even with (realistic) subsidies. \n\nHousing is becoming unaffordable even for professionals making median salaries. Building subsidized housing for middle income earners is not scalable and will most likely function as a lottery for a few lucky winners.\n\nThe need for social housing does not arise from building market-rate housing; it is a societal responsibility and should be paid for from general revenues, such as property taxes, not pushed onto newcomers and the young."
-						}
-					},
-					{
-						"title": "Reform public consultation. ",
-						"description": {
-							"html": "<p>Aim for strong, clear rules to reduce the need for long negotiations about individual sites and arbitrary decision-making. </p>\n<p>The vast majority of consultation should be part of proactive community planning. Resulting community plans should provide clear, reliable requirements for anyone who wants to build, with no arbitrary decision-making and as few discretionary parameters as possible. The consultation process should be additive, with less focus on density and more on quality placemaking, services and infrastructure. Where consultation is needed, governments should assess demographics and adjust methods to ensure that the voices being heard represent the whole community and future residents.</p>",
-							"markdown": "Aim for strong, clear rules to reduce the need for long negotiations about individual sites and arbitrary decision-making. \n\nThe vast majority of consultation should be part of proactive community planning. Resulting community plans should provide clear, reliable requirements for anyone who wants to build, with no arbitrary decision-making and as few discretionary parameters as possible. The consultation process should be additive, with less focus on density and more on quality placemaking, services and infrastructure. Where consultation is needed, governments should assess demographics and adjust methods to ensure that the voices being heard represent the whole community and future residents."
-						}
 					}
 				]
 			}
