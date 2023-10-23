@@ -1004,15 +1004,15 @@ function create_fragment(ctx) {
 		c() {
 			meta = element("meta");
 			style = element("style");
-			t = text("@import url(\"https://unpkg.com/@primo-app/primo@1.3.64/reset.css\");\n@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');\n\n#page {\n  --max-width: 740px;\n  font-family: lexend, system-ui, sans-serif;\n  color: var(--color);\n  line-height: 1.6; \n  font-size: 1rem;\n  background: var(--background);\n}\n\n.section-container {\n  max-width: var(--max-width, 1000px);\n  margin: 0 auto;\n  padding: 3rem var(--padding, 1rem); \n}\n\n.heading {\n  font-size: 3rem;\n  line-height: 1;\n  font-weight: 700;\n  margin: 0;\n}\n\n.button {\n  background: inherit;\n    border: 2px solid var(--color-accent, rebeccapurple);\n    color: var(--color, #222);\n  border-radius: 5px;\n  padding: 8px 20px;\n  transition: var(--transition);\n}\n\n.button:hover {\n    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);\n  }\n\n.button.inverted {\n    background: transparent; \n    color: var(--color-accent); \n    border: 2px solid var(--color-accent);\n  }");
+			t = text("@import url(\"https://unpkg.com/@primo-app/primo@1.3.64/reset.css\");\n@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');\n\n#page {\n  --max-width: 740px;\n  --color-accent: rebeccapurple;\n  font-family: lexend, system-ui, sans-serif;\n  color: var(--color);\n  line-height: 1.6; \n  font-size: 1rem;\n  background: var(--background);\n}\n\n.section-container {\n  max-width: var(--max-width, 1000px);\n  margin: 0 auto;\n  padding: 3rem var(--padding, 1rem); \n}\n\n.heading {\n  font-size: 3rem;\n  line-height: 1;\n  font-weight: 700;\n  margin: 0;\n}\n\n.button {\n  color: white;\n  background: var(--color-accent);\n  border-radius: 5px;\n  padding: 8px 20px;\n  transition: var(--transition);\n\n  /* vertically center */\n  display: inline-flex;\n  align-items: center;\n}\n\n.button:hover {\n    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);\n  }\n\n.button.inverted {\n    background: transparent; \n    color: var(--color-accent); \n    border: 2px solid var(--color-accent);\n  }");
 			this.h();
 		},
 		l(nodes) {
-			const head_nodes = head_selector('svelte-1wh9lf9', document.head);
+			const head_nodes = head_selector('svelte-1ycwkj6', document.head);
 			meta = claim_element(head_nodes, "META", { name: true, content: true });
 			style = claim_element(head_nodes, "STYLE", {});
 			var style_nodes = children(style);
-			t = claim_text(style_nodes, "@import url(\"https://unpkg.com/@primo-app/primo@1.3.64/reset.css\");\n@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');\n\n#page {\n  --max-width: 740px;\n  font-family: lexend, system-ui, sans-serif;\n  color: var(--color);\n  line-height: 1.6; \n  font-size: 1rem;\n  background: var(--background);\n}\n\n.section-container {\n  max-width: var(--max-width, 1000px);\n  margin: 0 auto;\n  padding: 3rem var(--padding, 1rem); \n}\n\n.heading {\n  font-size: 3rem;\n  line-height: 1;\n  font-weight: 700;\n  margin: 0;\n}\n\n.button {\n  background: inherit;\n    border: 2px solid var(--color-accent, rebeccapurple);\n    color: var(--color, #222);\n  border-radius: 5px;\n  padding: 8px 20px;\n  transition: var(--transition);\n}\n\n.button:hover {\n    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);\n  }\n\n.button.inverted {\n    background: transparent; \n    color: var(--color-accent); \n    border: 2px solid var(--color-accent);\n  }");
+			t = claim_text(style_nodes, "@import url(\"https://unpkg.com/@primo-app/primo@1.3.64/reset.css\");\n@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');\n\n#page {\n  --max-width: 740px;\n  --color-accent: rebeccapurple;\n  font-family: lexend, system-ui, sans-serif;\n  color: var(--color);\n  line-height: 1.6; \n  font-size: 1rem;\n  background: var(--background);\n}\n\n.section-container {\n  max-width: var(--max-width, 1000px);\n  margin: 0 auto;\n  padding: 3rem var(--padding, 1rem); \n}\n\n.heading {\n  font-size: 3rem;\n  line-height: 1;\n  font-weight: 700;\n  margin: 0;\n}\n\n.button {\n  color: white;\n  background: var(--color-accent);\n  border-radius: 5px;\n  padding: 8px 20px;\n  transition: var(--transition);\n\n  /* vertically center */\n  display: inline-flex;\n  align-items: center;\n}\n\n.button:hover {\n    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);\n  }\n\n.button.inverted {\n    background: transparent; \n    color: var(--color-accent); \n    border: 2px solid var(--color-accent);\n  }");
 			style_nodes.forEach(detach);
 			head_nodes.forEach(detach);
 			this.h();
@@ -3624,6 +3624,7 @@ function create_each_block$1(ctx) {
 	let a;
 	let t_value = /*button*/ ctx[3].link.label + "";
 	let t;
+	let a_class_value;
 	let a_href_value;
 
 	return {
@@ -3640,7 +3641,7 @@ function create_each_block$1(ctx) {
 			this.h();
 		},
 		h() {
-			attr(a, "class", "button");
+			attr(a, "class", a_class_value = "button " + (/*i*/ ctx[5] % 2 === 1 && 'inverted') + " svelte-1w258x5");
 			attr(a, "href", a_href_value = /*button*/ ctx[3].link.url);
 		},
 		m(target, anchor) {
@@ -3666,9 +3667,9 @@ function create_fragment$3(ctx) {
 	let h1;
 	let t0;
 	let t1;
-	let span;
+	let p;
+	let raw_value = /*subheading*/ ctx[1].html + "";
 	let t2;
-	let t3;
 	let if_block = /*buttons*/ ctx[2].length > 0 && create_if_block$2(ctx);
 
 	return {
@@ -3678,9 +3679,8 @@ function create_fragment$3(ctx) {
 			h1 = element("h1");
 			t0 = text(/*heading*/ ctx[0]);
 			t1 = space();
-			span = element("span");
-			t2 = text(/*subheading*/ ctx[1]);
-			t3 = space();
+			p = element("p");
+			t2 = space();
 			if (if_block) if_block.c();
 			this.h();
 		},
@@ -3694,11 +3694,10 @@ function create_fragment$3(ctx) {
 			t0 = claim_text(h1_nodes, /*heading*/ ctx[0]);
 			h1_nodes.forEach(detach);
 			t1 = claim_space(header_nodes);
-			span = claim_element(header_nodes, "SPAN", { class: true });
-			var span_nodes = children(span);
-			t2 = claim_text(span_nodes, /*subheading*/ ctx[1]);
-			span_nodes.forEach(detach);
-			t3 = claim_space(header_nodes);
+			p = claim_element(header_nodes, "P", { class: true });
+			var p_nodes = children(p);
+			p_nodes.forEach(detach);
+			t2 = claim_space(header_nodes);
 			if (if_block) if_block.l(header_nodes);
 			header_nodes.forEach(detach);
 			div_nodes.forEach(detach);
@@ -3706,7 +3705,7 @@ function create_fragment$3(ctx) {
 		},
 		h() {
 			attr(h1, "class", "heading svelte-1w258x5");
-			attr(span, "class", "subheading svelte-1w258x5");
+			attr(p, "class", "subheading svelte-1w258x5");
 			attr(header, "class", "section-container svelte-1w258x5");
 			attr(div, "class", "section");
 			attr(div, "id", "section-9be0ea08");
@@ -3717,15 +3716,14 @@ function create_fragment$3(ctx) {
 			append_hydration(header, h1);
 			append_hydration(h1, t0);
 			append_hydration(header, t1);
-			append_hydration(header, span);
-			append_hydration(span, t2);
-			append_hydration(header, t3);
+			append_hydration(header, p);
+			p.innerHTML = raw_value;
+			append_hydration(header, t2);
 			if (if_block) if_block.m(header, null);
 		},
 		p(ctx, [dirty]) {
 			if (dirty & /*heading*/ 1) set_data(t0, /*heading*/ ctx[0]);
-			if (dirty & /*subheading*/ 2) set_data(t2, /*subheading*/ ctx[1]);
-
+			if (dirty & /*subheading*/ 2 && raw_value !== (raw_value = /*subheading*/ ctx[1].html + "")) p.innerHTML = raw_value;
 			if (/*buttons*/ ctx[2].length > 0) {
 				if (if_block) {
 					if_block.p(ctx, dirty);
@@ -3784,7 +3782,7 @@ function get_each_context_1$1(ctx, list, i) {
 	return child_ctx;
 }
 
-// (108:6) {#if org.image.url}
+// (105:6) {#if org.image.url}
 function create_if_block$3(ctx) {
 	let figure;
 	let img;
@@ -3807,8 +3805,8 @@ function create_if_block$3(ctx) {
 		h() {
 			attr(img, "alt", img_alt_value = /*org*/ ctx[3].image.alt);
 			if (!src_url_equal(img.src, img_src_value = /*org*/ ctx[3].image.url)) attr(img, "src", img_src_value);
-			attr(img, "class", "svelte-45eaa6");
-			attr(figure, "class", "svelte-45eaa6");
+			attr(img, "class", "svelte-1k7idgs");
+			attr(figure, "class", "svelte-1k7idgs");
 		},
 		m(target, anchor) {
 			insert_hydration(target, figure, anchor);
@@ -3829,7 +3827,7 @@ function create_if_block$3(ctx) {
 	};
 }
 
-// (118:10) {#each org.social_links as {link, icon}}
+// (115:10) {#each org.social_links as {link, icon}}
 function create_each_block_1$1(ctx) {
 	let a;
 	let icon;
@@ -3862,7 +3860,7 @@ function create_each_block_1$1(ctx) {
 		h() {
 			attr(a, "href", a_href_value = /*link*/ ctx[6].url);
 			attr(a, "aria-label", a_aria_label_value = /*link*/ ctx[6].label);
-			attr(a, "class", "svelte-45eaa6");
+			attr(a, "class", "svelte-1k7idgs");
 		},
 		m(target, anchor) {
 			insert_hydration(target, a, anchor);
@@ -3899,7 +3897,7 @@ function create_each_block_1$1(ctx) {
 	};
 }
 
-// (106:4) {#each orgs as org}
+// (103:4) {#each orgs as org}
 function create_each_block$2(ctx) {
 	let li;
 	let t0;
@@ -3972,11 +3970,11 @@ function create_each_block$2(ctx) {
 			this.h();
 		},
 		h() {
-			attr(span, "class", "name svelte-45eaa6");
-			attr(div0, "class", "details svelte-45eaa6");
-			attr(div1, "class", "social svelte-45eaa6");
+			attr(span, "class", "name svelte-1k7idgs");
+			attr(div0, "class", "details svelte-1k7idgs");
+			attr(div1, "class", "social svelte-1k7idgs");
 			attr(div2, "class", "info");
-			attr(li, "class", "svelte-45eaa6");
+			attr(li, "class", "svelte-1k7idgs");
 		},
 		m(target, anchor) {
 			insert_hydration(target, li, anchor);
@@ -4135,10 +4133,10 @@ function create_fragment$4(ctx) {
 			this.h();
 		},
 		h() {
-			attr(h2, "class", "heading svelte-45eaa6");
-			attr(span, "class", "subheading svelte-45eaa6");
-			attr(ul, "class", "cards svelte-45eaa6");
-			attr(section, "class", "section-container svelte-45eaa6");
+			attr(h2, "class", "heading svelte-1k7idgs");
+			attr(span, "class", "subheading svelte-1k7idgs");
+			attr(ul, "class", "cards svelte-1k7idgs");
+			attr(section, "class", "section-container svelte-1k7idgs");
 			attr(div, "class", "section");
 			attr(div, "id", "section-a71ed389");
 		},
@@ -4615,7 +4613,10 @@ function create_fragment$6(ctx) {
 	component_2 = new Component$3({
 			props: {
 				heading: "It's time to legalize housing.",
-				subheading: "Across Canada, municipalities have strangled our housing supply by making higher density housing extremely difficult to build.",
+				subheading: {
+					"html": "<p>Across Canada, municipalities have strangled our housing supply by making higher density housing extremely difficult to build.&nbsp;</p>",
+					"markdown": "Across Canada, municipalities have strangled our housing supply by making higher density housing extremely difficult to build.\n\n"
+				},
 				buttons: [
 					{
 						"link": { "url": "/", "label": "Learn More" }
