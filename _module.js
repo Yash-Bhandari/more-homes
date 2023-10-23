@@ -4047,7 +4047,7 @@ function get_each_context_1$1(ctx, list, i) {
 	return child_ctx;
 }
 
-// (105:6) {#if org.image.url}
+// (106:6) {#if org.image.url}
 function create_if_block$3(ctx) {
 	let figure;
 	let img;
@@ -4070,8 +4070,8 @@ function create_if_block$3(ctx) {
 		h() {
 			attr(img, "alt", img_alt_value = /*org*/ ctx[3].image.alt);
 			if (!src_url_equal(img.src, img_src_value = /*org*/ ctx[3].image.url)) attr(img, "src", img_src_value);
-			attr(img, "class", "svelte-1k7idgs");
-			attr(figure, "class", "svelte-1k7idgs");
+			attr(img, "class", "svelte-1x273ky");
+			attr(figure, "class", "svelte-1x273ky");
 		},
 		m(target, anchor) {
 			insert_hydration(target, figure, anchor);
@@ -4092,7 +4092,7 @@ function create_if_block$3(ctx) {
 	};
 }
 
-// (115:10) {#each org.social_links as {link, icon}}
+// (116:10) {#each org.social_links as {link, icon}}
 function create_each_block_1$1(ctx) {
 	let a;
 	let icon;
@@ -4125,7 +4125,7 @@ function create_each_block_1$1(ctx) {
 		h() {
 			attr(a, "href", a_href_value = /*link*/ ctx[6].url);
 			attr(a, "aria-label", a_aria_label_value = /*link*/ ctx[6].label);
-			attr(a, "class", "svelte-1k7idgs");
+			attr(a, "class", "svelte-1x273ky");
 		},
 		m(target, anchor) {
 			insert_hydration(target, a, anchor);
@@ -4162,7 +4162,7 @@ function create_each_block_1$1(ctx) {
 	};
 }
 
-// (103:4) {#each orgs as org}
+// (104:4) {#each orgs as org}
 function create_each_block$3(ctx) {
 	let li;
 	let t0;
@@ -4174,6 +4174,7 @@ function create_each_block$3(ctx) {
 	let t2;
 	let div1;
 	let t3;
+	let li_onclick_value;
 	let current;
 	let if_block = /*org*/ ctx[3].image.url && create_if_block$3(ctx);
 	let each_value_1 = /*org*/ ctx[3].social_links;
@@ -4207,7 +4208,7 @@ function create_each_block$3(ctx) {
 			this.h();
 		},
 		l(nodes) {
-			li = claim_element(nodes, "LI", { class: true });
+			li = claim_element(nodes, "LI", { onclick: true, class: true });
 			var li_nodes = children(li);
 			if (if_block) if_block.l(li_nodes);
 			t0 = claim_space(li_nodes);
@@ -4235,11 +4236,12 @@ function create_each_block$3(ctx) {
 			this.h();
 		},
 		h() {
-			attr(span, "class", "name svelte-1k7idgs");
-			attr(div0, "class", "details svelte-1k7idgs");
-			attr(div1, "class", "social svelte-1k7idgs");
+			attr(span, "class", "name svelte-1x273ky");
+			attr(div0, "class", "details svelte-1x273ky");
+			attr(div1, "class", "social svelte-1x273ky");
 			attr(div2, "class", "info");
-			attr(li, "class", "svelte-1k7idgs");
+			attr(li, "onclick", li_onclick_value = "window.open(" + /*org*/ ctx[3].link + ", '_blank')");
+			attr(li, "class", "svelte-1x273ky");
 		},
 		m(target, anchor) {
 			insert_hydration(target, li, anchor);
@@ -4302,6 +4304,10 @@ function create_each_block$3(ctx) {
 				}
 
 				check_outros();
+			}
+
+			if (!current || dirty & /*orgs*/ 4 && li_onclick_value !== (li_onclick_value = "window.open(" + /*org*/ ctx[3].link + ", '_blank')")) {
+				attr(li, "onclick", li_onclick_value);
 			}
 		},
 		i(local) {
@@ -4398,10 +4404,10 @@ function create_fragment$5(ctx) {
 			this.h();
 		},
 		h() {
-			attr(h2, "class", "heading svelte-1k7idgs");
-			attr(span, "class", "subheading svelte-1k7idgs");
-			attr(ul, "class", "cards svelte-1k7idgs");
-			attr(section, "class", "section-container svelte-1k7idgs");
+			attr(h2, "class", "heading svelte-1x273ky");
+			attr(span, "class", "subheading svelte-1x273ky");
+			attr(ul, "class", "cards svelte-1x273ky");
+			attr(section, "class", "section-container svelte-1x273ky");
 			attr(div, "class", "section");
 			attr(div, "id", "section-a71ed389");
 		},
@@ -5270,7 +5276,8 @@ function create_fragment$8(ctx) {
 							"alt": "",
 							"url": "https://www.morehomescanada.ca/wp-content/uploads/2023/10/cnQXVXBm_400x400-e1696806204733.jpg"
 						},
-						"social_links": []
+						"social_links": [],
+						"link": "https://www.moreneighbours.ca/"
 					},
 					{
 						"name": "Abundant Housing Vancouver",
@@ -5278,7 +5285,8 @@ function create_fragment$8(ctx) {
 							"alt": "",
 							"url": "https://www.morehomescanada.ca/wp-content/uploads/2023/10/jLq5H3ZI_400x400.jpg"
 						},
-						"social_links": []
+						"social_links": [],
+						"link": "https://www.abundanthousingvancouver.com/"
 					},
 					{
 						"name": "Grow Together Edmonton",
@@ -5286,7 +5294,8 @@ function create_fragment$8(ctx) {
 							"alt": "",
 							"url": "https://www.morehomescanada.ca/wp-content/uploads/2023/10/gtyeg_logo_no_text_darker.png"
 						},
-						"social_links": []
+						"social_links": [],
+						"link": "https://www.growtogetheryeg.com/"
 					},
 					{
 						"name": "More Neighbours Calgary",
@@ -5296,16 +5305,8 @@ function create_fragment$8(ctx) {
 							"url": "https://www.morehomescanada.ca/wp-content/uploads/elementor/thumbs/MoreNeighbours_Logo_SecondaryLightVersion-qdky434a1oiwmx7z0aqdx4srrf40m5vy9rq58sn400.png",
 							"size": null
 						},
-						"social_links": [
-							{
-								"icon": "Est laborum ad",
-								"link": { "url": "/", "label": "elit" }
-							},
-							{
-								"icon": "Exercitation eiusmod laborum",
-								"link": { "url": "/", "label": "consequat" }
-							}
-						]
+						"social_links": [],
+						"link": "https://www.moreneighbourscalgary.ca/"
 					},
 					{
 						"name": "Homes for Living Victoria",
@@ -5315,16 +5316,8 @@ function create_fragment$8(ctx) {
 							"url": "https://www.morehomescanada.ca/wp-content/uploads/elementor/thumbs/6HgyYV1u_400x400-qdkyqjhhb79hzklrw05jhgt6msfohv140wrpyrcjcw.png",
 							"size": null
 						},
-						"social_links": [
-							{
-								"icon": "Occaecat mollit lorem",
-								"link": { "url": "/", "label": "nisi" }
-							},
-							{
-								"icon": "Non irure magna",
-								"link": { "url": "/", "label": "culpa" }
-							}
-						]
+						"social_links": [],
+						"link": "https://www.homesforliving.ca/"
 					},
 					{
 						"name": "Make Housing Affordable Ottawa",
@@ -5334,16 +5327,8 @@ function create_fragment$8(ctx) {
 							"url": "https://www.morehomescanada.ca/wp-content/uploads/elementor/thumbs/MHA-OG-qdkz0o6uyx4r49w0qdsscws14ai3gf8yr1w464bsao.png",
 							"size": null
 						},
-						"social_links": [
-							{
-								"icon": "Consequat proident culpa",
-								"link": { "url": "/", "label": "ad" }
-							},
-							{
-								"icon": "Incididunt incididunt laboris",
-								"link": { "url": "/", "label": "cupidatat" }
-							}
-						]
+						"social_links": [],
+						"link": "https://makehousingaffordable.ca/"
 					},
 					{
 						"name": "Waterloo Region YIMBY",
@@ -5353,16 +5338,8 @@ function create_fragment$8(ctx) {
 							"url": "https://www.morehomescanada.ca/wp-content/uploads/elementor/thumbs/download-qdkyw6imbezfnceuyfwyg1kqy0myohf4stolmizi0w.jpg",
 							"size": null
 						},
-						"social_links": [
-							{
-								"icon": "Ullamco proident aliquip",
-								"link": { "url": "/", "label": "eu" }
-							},
-							{
-								"icon": "Aute irure consequat",
-								"link": { "url": "/", "label": "consequat" }
-							}
-						]
+						"social_links": [],
+						"link": "https://www.wryimby.com/"
 					},
 					{
 						"name": "More Homes Halifax",
@@ -5372,16 +5349,8 @@ function create_fragment$8(ctx) {
 							"url": "https://www.morehomescanada.ca/wp-content/uploads/elementor/thumbs/UHiWph4e_400x400-qdkyxo3f4z0s14919l2ow620szavv8bu06v9zas268.jpg",
 							"size": null
 						},
-						"social_links": [
-							{
-								"icon": "Non adipisicing officia",
-								"link": { "url": "/", "label": "mollit" }
-							},
-							{
-								"icon": "Eiusmod voluptate aliquip",
-								"link": { "url": "/", "label": "adipisicing" }
-							}
-						]
+						"social_links": [],
+						"link": "https://twitter.com/MoreHomesHRM"
 					},
 					{
 						"name": "YIMBY Winnipeg",
@@ -5391,16 +5360,8 @@ function create_fragment$8(ctx) {
 							"url": "https://www.morehomescanada.ca/wp-content/uploads/elementor/thumbs/download-1-qdkz3kiy1j3kwzogt4wdjog7227u6tr65eb0fu1340.png",
 							"size": null
 						},
-						"social_links": [
-							{
-								"icon": "Ea nulla qui",
-								"link": { "url": "/", "label": "in" }
-							},
-							{
-								"icon": "Elit eiusmod quis",
-								"link": { "url": "/", "label": "ullamco" }
-							}
-						]
+						"social_links": [],
+						"link": "https://www.yesinwpg.com/"
 					},
 					{
 						"name": "Strong Towns Nanaimo",
@@ -5410,16 +5371,8 @@ function create_fragment$8(ctx) {
 							"url": "https://www.morehomescanada.ca/wp-content/uploads/elementor/thumbs/logo-small-qdkz5ms71fx8e6olrizwinplzi1u2wxyrludcoyzgg.png",
 							"size": null
 						},
-						"social_links": [
-							{
-								"icon": "Culpa do esse",
-								"link": { "url": "/", "label": "enim" }
-							},
-							{
-								"icon": "Voluptate minim laboris",
-								"link": { "url": "/", "label": "aliquip" }
-							}
-						]
+						"social_links": [],
+						"link": "https://www.beautifulnanaimo.ca/"
 					}
 				]
 			}
