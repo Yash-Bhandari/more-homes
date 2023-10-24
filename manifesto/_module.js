@@ -5243,7 +5243,7 @@ function create_fragment$7(ctx) {
 						}
 					},
 					{
-						"title": "Urban sprawl is harmful to the environment and our long term fiscal sustainability.",
+						"title": "Urban sprawl is fiscally and environmentally unsustainable.",
 						"description": {
 							"html": "<p>Big metros have been getting less dense on average and growing in car-dependent suburbs and exurbs.\nApartment buildings are inherently more energy-efficient than houses and are a key part of reducing car-dependence and the overall energy intensity of our cities.</p>",
 							"markdown": " Big metros have been getting less dense on average and growing in car-dependent suburbs and exurbs.\nApartment buildings are inherently more energy-efficient than houses and are a key part of reducing car-dependence and the overall energy intensity of our cities.\n"
