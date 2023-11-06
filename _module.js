@@ -5190,8 +5190,8 @@ function create_fragment$8(ctx) {
 					},
 					{
 						"link": {
-							"url": "/manifesto",
-							"label": "Manifesto"
+							"url": "/Policy Document",
+							"label": "Policy Document"
 						}
 					},
 					{
