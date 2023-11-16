@@ -5205,8 +5205,8 @@ function create_fragment$8(ctx) {
 			props: {
 				heading: "It's time to legalize housing.",
 				subheading: {
-					"html": "<p>Across Canada, municipal governments have made it incredibly difficult to build higher density housing. We'll need a lot of new homes to end the housing crisis, and the first step is to get out of our own way.</p>",
-					"markdown": "Across Canada, municipal governments have made it incredibly difficult to build higher density housing. We'll need a lot of new homes to end the housing crisis, and the first step is to get out of our own way.\n\n"
+					"html": "<p>Across Canada, municipal governments have made it incredibly difficult to build higher density housing. We'll need a lot of new homes to end the housing crisis and the first step is to get out of our own way.</p>",
+					"markdown": "Across Canada, municipal governments have made it incredibly difficult to build higher density housing. We'll need a lot of new homes to end the housing crisis and the first step is to get out of our own way.\n\n"
 				},
 				buttons: [
 					{
