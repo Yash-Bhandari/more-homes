@@ -5230,32 +5230,32 @@ function create_fragment$8(ctx) {
 						"icon": "material-symbols:check-circle-rounded",
 						"title": "Density as-of-right",
 						"description": {
-							"html": "<p>Homes are a necessity, not a nuisance. Townhouses, multiplexes and apartments should be allowed in far more places without a gauntlet rezoning process.</p>",
-							"markdown": "Homes are a necessity, not a nuisance. Townhouses, multiplexes and apartments should be allowed in far more places without a gauntlet rezoning process.\n\n"
+							"html": "<p>Homes are a necessity, not a nuisance. Townhouses, multiplexes and apartments should be allowed in far more places without a long and risky rezoning.</p>",
+							"markdown": "Homes are a necessity, not a nuisance. Townhouses, multiplexes and apartments should be allowed in far more places without a long and risky rezoning.\n\n"
 						}
 					},
 					{
 						"icon": "material-symbols:cut",
 						"title": "Less red tape",
 						"description": {
-							"html": "<p>Setbacks, floorplate restrictions and parking minimums drive up building costs and kill new housing projects. Market, subsidized and co-op housing are all impacted.</p>",
-							"markdown": "Setbacks, floorplate restrictions and parking minimums drive up building costs and kill new housing projects. Market, subsidized and co-op housing are all impacted.\n\n"
+							"html": "<p>Setbacks, floorplate restrictions and parking minimums drive up building costs and kill new housing projects. Easing these regulations will help market and non-market housing. </p>",
+							"markdown": "Setbacks, floorplate restrictions and parking minimums drive up building costs and kill new housing projects. Easing these regulations will help market and non-market housing.\n\n"
 						}
 					},
 					{
 						"icon": "material-symbols:gavel",
 						"title": "Reform consultation and appeals",
 						"description": {
-							"html": "<p>There are too many veto rights on new housing. Local concerns should be heard but they do not trump the need for housing.</p>",
-							"markdown": "There are too many veto rights on new housing. Local concerns should be heard but they do not trump the need for housing.\n\n"
+							"html": "<p>There are too many veto rights on new housing. Local concerns are important but they do not trump the need for housing.</p>",
+							"markdown": "There are too many veto rights on new housing. Local concerns are important but they do not trump the need for housing.\n\n"
 						}
 					},
 					{
 						"icon": "material-symbols:payments",
 						"title": "Funding for subsidized housing",
 						"description": {
-							"html": "<p>Federal and provincial governments need to step and fund deeply affordable housing.</p>",
-							"markdown": "Federal and provincial governments need to step and fund deeply affordable housing.\n\n"
+							"html": "<p>Federal and provincial governments need to step up and provide funding for deeply affordable housing..</p>",
+							"markdown": "Federal and provincial governments need to step up and provide funding for deeply affordable housing..\n\n"
 						}
 					}
 				]
