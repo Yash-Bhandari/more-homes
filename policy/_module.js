@@ -5218,8 +5218,8 @@ function create_fragment$7(ctx) {
 					{
 						"title": "Canada's housing shortage is a leading cause of our affordability crisis.",
 						"description": {
-							"html": "<ul>\n<li><p>Housing starts in Canada <a href=\"https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=3410012601\">peaked in the 1970s</a>, even though our population has doubled since then.</p></li>\n<li><p>The rental vacancy rate across the country is at <a href=\"https://www.cmhc-schl.gc.ca/-/media/sites/cmhc/professional/housing-markets-data-and-research/market-reports/rental-market-report/rental-market-report-2022-en.ashx#:~:text=%E2%80%9CNational%20rental%20market%20conditions%20tightened,demand%20surging%20in%20many%20markets.%E2%80%9D&text=Growth%20in%20demand%20outpaced%20strong,rate's%20lowest%20level%20since%202001.\">a record low of 1.9%</a> and it’s even lower in the most expensive cities.</p></li>\n<li><p>Low vacancy rates <a href=\"https://doodles.mountainmath.ca/blog/2018/11/28/vacancy-rate-and-rent-change/\">drive large rent hikes</a>.</p></li>\n<li><p><a href=\"https://doodles.mountainmath.ca/blog/2019/08/19/running-on-empties/\">There isn't some massive secret supply of vacant homes</a>.</p></li>\n</ul>",
-							"markdown": "- Housing starts in Canada [peaked in the 1970s](<https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=3410012601>), even though our population has doubled since then.\n\n- The rental vacancy rate across the country is at [a record low of 1.9%](<https://www.cmhc-schl.gc.ca/-/media/sites/cmhc/professional/housing-markets-data-and-research/market-reports/rental-market-report/rental-market-report-2022-en.ashx#:~:text=%E2%80%9CNational%20rental%20market%20conditions%20tightened,demand%20surging%20in%20many%20markets.%E2%80%9D&text=Growth%20in%20demand%20outpaced%20strong,rate's%20lowest%20level%20since%202001.>) and it’s even lower in the most expensive cities.\n\n- Low vacancy rates [drive large rent hikes](<https://doodles.mountainmath.ca/blog/2018/11/28/vacancy-rate-and-rent-change/>).\n\n- [There isn't some massive secret supply of vacant homes](<https://doodles.mountainmath.ca/blog/2019/08/19/running-on-empties/>)."
+							"html": "<ul>\n<li><p>Housing starts in Canada <a href=\"https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=3410012601\">peaked in the 1970s</a>, even though our population has doubled since then.</p></li>\n<li><p>The rental vacancy rate across the country is at <a href=\"https://www.cmhc-schl.gc.ca/-/media/sites/cmhc/professional/housing-markets-data-and-research/market-reports/rental-market-report/rental-market-report-2022-en.ashx#:~:text=%E2%80%9CNational%20rental%20market%20conditions%20tightened,demand%20surging%20in%20many%20markets.%E2%80%9D&text=Growth%20in%20demand%20outpaced%20strong,rate's%20lowest%20level%20since%202001.\">a record low of 1.9%</a>—it’s even lower in the most expensive cities.</p></li>\n<li><p>Low vacancy rates <a href=\"https://doodles.mountainmath.ca/blog/2018/11/28/vacancy-rate-and-rent-change/\">drive large rent hikes</a>. When vacancy rates are high, rent hikes slow down or even reverse.</p></li>\n<li><p>There is <a href=\"https://doodles.mountainmath.ca/blog/2019/08/19/running-on-empties/\">no massive secret supply of vacant homes</a>. In fact, Canada has <a href=\"https://businesscouncilab.com/insights-category/economic-insights/weekly-econ-minute-canada-housing-shortage/#:~:text=In%20fact%2C%20Canada%20has%20the,480%20dwellings%20per%201%2C000%20residents\">the fewest homes per person</a> in the entire G7.</p></li>\n</ul>",
+							"markdown": "- Housing starts in Canada [peaked in the 1970s](<https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=3410012601>), even though our population has doubled since then.\n\n- The rental vacancy rate across the country is at [a record low of 1.9%](<https://www.cmhc-schl.gc.ca/-/media/sites/cmhc/professional/housing-markets-data-and-research/market-reports/rental-market-report/rental-market-report-2022-en.ashx#:~:text=%E2%80%9CNational%20rental%20market%20conditions%20tightened,demand%20surging%20in%20many%20markets.%E2%80%9D&text=Growth%20in%20demand%20outpaced%20strong,rate's%20lowest%20level%20since%202001.>)—it’s even lower in the most expensive cities.\n\n- Low vacancy rates [drive large rent hikes](<https://doodles.mountainmath.ca/blog/2018/11/28/vacancy-rate-and-rent-change/>). When vacancy rates are high, rent hikes slow down or even reverse.\n\n- There is [no massive secret supply of vacant homes](<https://doodles.mountainmath.ca/blog/2019/08/19/running-on-empties/>). In fact, Canada has [the fewest homes per person](https://businesscouncilab.com/insights-category/economic-insights/weekly-econ-minute-canada-housing-shortage/#:~:text=In%20fact%2C%20Canada%20has%20the,480%20dwellings%20per%201%2C000%20residents) in the entire G7."
 						}
 					},
 					{
@@ -5239,8 +5239,8 @@ function create_fragment$7(ctx) {
 					{
 						"title": "Urban sprawl is fiscally and environmentally unsustainable.",
 						"description": {
-							"html": "<p>Big metros have been getting less dense on average and growing in car-dependent suburbs and exurbs.\nApartment buildings are inherently more energy-efficient than houses and are a key part of reducing car-dependence and the overall energy intensity of our cities.</p>",
-							"markdown": " Big metros have been getting less dense on average and growing in car-dependent suburbs and exurbs.\nApartment buildings are inherently more energy-efficient than houses and are a key part of reducing car-dependence and the overall energy intensity of our cities.\n"
+							"html": "<ul>\n<li>Per capita emissions in low-density suburbs are up to 3 times higher than in urban </li>\n<li>Outward sprawl destroys irreplaceable natural habitats and farmland</li>\n<li>Apartment buildings are inherently much more energy efficient than low density homes</li>\n</ul>",
+							"markdown": "* Per capita emissions in low-density suburbs are up to 3 times higher than in urban \n* Outward sprawl destroys irreplaceable natural habitats and farmland\n* Apartment buildings are inherently much more energy efficient than low density homes\n\n"
 						}
 					}
 				]
@@ -5254,7 +5254,7 @@ function create_fragment$7(ctx) {
 					{
 						"title": "Row houses, multiplexes, lodging homes and low-rise apartments should be permitted in all neighbourhoods as of right.",
 						"description": {
-							"html": "<ul><li><p>\"Missing Middle\" housing projects are often killed by slow, expensive and risky rezoning processes.</p></li><li><p>Affordable housing projects are impacted the most and often face significant pushback at public hearings.</p></li></ul>",
+							"html": "<ul>\n<li><p>\"Missing Middle\" housing projects are often killed by slow, expensive and risky rezoning processes.</p></li>\n<li><p>Affordable housing projects are impacted the most and often face significant pushback at public hearings.</p></li>\n</ul>\n<!-- -->",
 							"markdown": "- \"Missing Middle\" housing projects are often killed by slow, expensive and risky rezoning processes.\n\n- Affordable housing projects are impacted the most and often face significant pushback at public hearings.\n\n\n<!-- -->\n\n"
 						}
 					},
@@ -5275,8 +5275,8 @@ function create_fragment$7(ctx) {
 					{
 						"title": "Municipalities should not charge onerous fees on new high-density housing.",
 						"description": {
-							"html": "<ul>\n<li><p>Charging high fees on new homes increases the cost of housing. </p></li>\n<li><p>New high-density housing generates far more tax revenue than it costs to maintain in the long run. As such, it is not reasonable or fair to make new residents pay for increased public infrastructure and services up-front when they will be paying full property taxes thereafter.</p></li>\n<li><p>Fees should be consistent and predictable, both between similar projects within a specific city but also across cities within a province.</p></li>\n</ul>",
-							"markdown": "* Charging high fees on new homes increases the cost of housing. \n\n* New high-density housing generates far more tax revenue than it costs to maintain in the long run. As such, it is not reasonable or fair to make new residents pay for increased public infrastructure and services up-front when they will be paying full property taxes thereafter.\n\n* Fees should be consistent and predictable, both between similar projects within a specific city but also across cities within a province.\n"
+							"html": "<ul>\n<li><p>Charging high fees on new homes increases the cost of housing. </p></li>\n<li><p>New high-density housing generates far more tax revenue than it costs to service in the long run. As such, it is not reasonable or fair to make new residents pay for increased public infrastructure and services up-front when they will be paying full property taxes thereafter.</p></li>\n<li><p>Fees should be consistent and predictable, both between similar projects within a specific city but also across cities within a province.</p></li>\n<li><p>Development fees should not be used to avoid property tax increases.</p></li>\n</ul>",
+							"markdown": "* Charging high fees on new homes increases the cost of housing. \n\n* New high-density housing generates far more tax revenue than it costs to service in the long run. As such, it is not reasonable or fair to make new residents pay for increased public infrastructure and services up-front when they will be paying full property taxes thereafter.\n\n* Fees should be consistent and predictable, both between similar projects within a specific city but also across cities within a province.\n\n* Development fees should not be used to avoid property tax increases.\n"
 						}
 					},
 					{
@@ -5310,57 +5310,58 @@ function create_fragment$7(ctx) {
 				subheading: "More Homes Canada is a coalition of housing advocacy groups from across the country. Together, we are fighting to end Canada’s housing shortage.",
 				orgs: [
 					{
+						"link": "https://www.moreneighbours.ca/",
 						"name": "More Neighbours Toronto",
 						"image": {
 							"alt": "",
 							"url": "https://res.cloudinary.com/dbnijop5c/image/upload/v1700527328/mnto_vaize2.png"
 						},
-						"social_links": [],
-						"link": "https://www.moreneighbours.ca/"
+						"social_links": []
 					},
 					{
+						"link": "https://www.abundanthousingvancouver.com/",
 						"name": "Abundant Housing Vancouver",
 						"image": {
 							"alt": "",
-							"url": "https://res.cloudinary.com/dbnijop5c/image/upload/v1700528184/More%20Homes%20Canada/vancouver_sjf85y.jpg",
 							"src": "https://res.cloudinary.com/dbnijop5c/image/upload/v1700528184/More%20Homes%20Canada/vancouver_sjf85y.jpg",
+							"url": "https://res.cloudinary.com/dbnijop5c/image/upload/v1700528184/More%20Homes%20Canada/vancouver_sjf85y.jpg",
 							"size": null
 						},
-						"social_links": [],
-						"link": "https://www.abundanthousingvancouver.com/"
+						"social_links": []
 					},
 					{
+						"link": "https://www.growtogetheryeg.com/",
 						"name": "Grow Together Edmonton",
 						"image": {
 							"alt": "",
-							"url": "https://res.cloudinary.com/dbnijop5c/image/upload/v1700528186/More%20Homes%20Canada/edmonton_x53wtv.png",
 							"src": "https://res.cloudinary.com/dbnijop5c/image/upload/v1700528186/More%20Homes%20Canada/edmonton_x53wtv.png",
+							"url": "https://res.cloudinary.com/dbnijop5c/image/upload/v1700528186/More%20Homes%20Canada/edmonton_x53wtv.png",
 							"size": null
 						},
-						"social_links": [],
-						"link": "https://www.growtogetheryeg.com/"
+						"social_links": []
 					},
 					{
+						"link": "/",
 						"name": "Construisons Montréal",
 						"image": {
-							"url": "https://res.cloudinary.com/dbnijop5c/image/upload/v1700528186/More%20Homes%20Canada/montreal_ejn4pg.png",
-							"src": "https://res.cloudinary.com/dbnijop5c/image/upload/v1700528186/More%20Homes%20Canada/montreal_ejn4pg.png",
 							"alt": "",
+							"src": "https://res.cloudinary.com/dbnijop5c/image/upload/v1700528186/More%20Homes%20Canada/montreal_ejn4pg.png",
+							"url": "https://res.cloudinary.com/dbnijop5c/image/upload/v1700528186/More%20Homes%20Canada/montreal_ejn4pg.png",
 							"size": null
 						},
 						"social_links": [
 							{
-								"link": { "label": "quis", "url": "/" },
-								"icon": "Laborum excepteur laborum"
+								"icon": "Laborum excepteur laborum",
+								"link": { "url": "/", "label": "quis" }
 							},
 							{
-								"link": { "label": "culpa", "url": "/" },
-								"icon": "Nulla aliquip pariatur"
+								"icon": "Nulla aliquip pariatur",
+								"link": { "url": "/", "label": "culpa" }
 							}
-						],
-						"link": "/"
+						]
 					},
 					{
+						"link": "https://www.moreneighbourscalgary.ca/",
 						"name": "More Neighbours Calgary",
 						"image": {
 							"alt": "",
@@ -5368,10 +5369,10 @@ function create_fragment$7(ctx) {
 							"url": "https://res.cloudinary.com/dbnijop5c/image/upload/v1700528186/More%20Homes%20Canada/calgary_b9krf6.png",
 							"size": null
 						},
-						"social_links": [],
-						"link": "https://www.moreneighbourscalgary.ca/"
+						"social_links": []
 					},
 					{
+						"link": "https://www.homesforliving.ca/",
 						"name": "Homes for Living Victoria",
 						"image": {
 							"alt": "",
@@ -5379,10 +5380,10 @@ function create_fragment$7(ctx) {
 							"url": "https://res.cloudinary.com/dbnijop5c/image/upload/v1700528184/More%20Homes%20Canada/victoria_n879ey.png",
 							"size": null
 						},
-						"social_links": [],
-						"link": "https://www.homesforliving.ca/"
+						"social_links": []
 					},
 					{
+						"link": "https://makehousingaffordable.ca/",
 						"name": "Make Housing Affordable Ottawa",
 						"image": {
 							"alt": "",
@@ -5390,10 +5391,10 @@ function create_fragment$7(ctx) {
 							"url": "https://res.cloudinary.com/dbnijop5c/image/upload/v1700528183/More%20Homes%20Canada/ottawa_civxsq.png",
 							"size": null
 						},
-						"social_links": [],
-						"link": "https://makehousingaffordable.ca/"
+						"social_links": []
 					},
 					{
+						"link": "https://www.wryimby.com/",
 						"name": "Waterloo Region YIMBY",
 						"image": {
 							"alt": "",
@@ -5401,19 +5402,19 @@ function create_fragment$7(ctx) {
 							"url": "https://res.cloudinary.com/dbnijop5c/image/upload/v1700528185/More%20Homes%20Canada/waterloo_llha5v.jpg",
 							"size": null
 						},
-						"social_links": [],
-						"link": "https://www.wryimby.com/"
+						"social_links": []
 					},
 					{
+						"link": "https://twitter.com/MoreHomesHRM",
 						"name": "More Homes Halifax",
 						"image": {
-							"url": "https://res.cloudinary.com/dbnijop5c/image/upload/v1700528187/More%20Homes%20Canada/halifax_epvtfq.jpg",
-							"alt": ""
+							"alt": "",
+							"url": "https://res.cloudinary.com/dbnijop5c/image/upload/v1700528187/More%20Homes%20Canada/halifax_epvtfq.jpg"
 						},
-						"social_links": [],
-						"link": "https://twitter.com/MoreHomesHRM"
+						"social_links": []
 					},
 					{
+						"link": "https://www.yesinwpg.com/",
 						"name": "YIMBY Winnipeg",
 						"image": {
 							"alt": "",
@@ -5421,10 +5422,10 @@ function create_fragment$7(ctx) {
 							"url": "https://res.cloudinary.com/dbnijop5c/image/upload/v1700528184/More%20Homes%20Canada/winnipeg_uvkpdu.png",
 							"size": null
 						},
-						"social_links": [],
-						"link": "https://www.yesinwpg.com/"
+						"social_links": []
 					},
 					{
+						"link": "https://www.beautifulnanaimo.ca/",
 						"name": "Strong Towns Nanaimo",
 						"image": {
 							"alt": "",
@@ -5432,8 +5433,7 @@ function create_fragment$7(ctx) {
 							"url": "https://res.cloudinary.com/dbnijop5c/image/upload/v1700528183/More%20Homes%20Canada/nanaimo_dnm0vl.png",
 							"size": null
 						},
-						"social_links": [],
-						"link": "https://www.beautifulnanaimo.ca/"
+						"social_links": []
 					}
 				]
 			}
