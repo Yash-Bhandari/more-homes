@@ -4436,6 +4436,7 @@ function create_each_block_1$1(ctx) {
 			a = claim_element(nodes, "A", {
 				href: true,
 				"aria-label": true,
+				target: true,
 				class: true
 			});
 
@@ -4448,6 +4449,7 @@ function create_each_block_1$1(ctx) {
 		h() {
 			attr(a, "href", a_href_value = /*link*/ ctx[6].url);
 			attr(a, "aria-label", a_aria_label_value = /*link*/ ctx[6].label);
+			attr(a, "target", "_blank");
 			attr(a, "class", "svelte-1eqlbb8");
 		},
 		m(target, anchor) {
@@ -5310,15 +5312,16 @@ function create_fragment$7(ctx) {
 				subheading: "More Homes Canada is a coalition of housing advocacy groups from across the country. Together, we are fighting to end Canada’s housing shortage.",
 				orgs: [
 					{
+						"link": "https://www.moreneighbours.ca/",
 						"name": "More Neighbours Toronto",
 						"image": {
 							"alt": "",
 							"url": "https://res.cloudinary.com/dbnijop5c/image/upload/v1700527328/mnto_vaize2.png"
 						},
-						"social_links": [],
-						"link": "https://www.moreneighbours.ca/"
+						"social_links": []
 					},
 					{
+						"link": "https://www.abundanthousingvancouver.com/",
 						"name": "Abundant Housing Vancouver",
 						"image": {
 							"alt": "",
@@ -5326,10 +5329,10 @@ function create_fragment$7(ctx) {
 							"url": "https://res.cloudinary.com/dbnijop5c/image/upload/v1700528184/More%20Homes%20Canada/vancouver_sjf85y.jpg",
 							"size": null
 						},
-						"social_links": [],
-						"link": "https://www.abundanthousingvancouver.com/"
+						"social_links": []
 					},
 					{
+						"link": "https://www.growtogetheryeg.com/",
 						"name": "Grow Together Edmonton",
 						"image": {
 							"alt": "",
@@ -5337,10 +5340,10 @@ function create_fragment$7(ctx) {
 							"url": "https://res.cloudinary.com/dbnijop5c/image/upload/v1700528186/More%20Homes%20Canada/edmonton_x53wtv.png",
 							"size": null
 						},
-						"social_links": [],
-						"link": "https://www.growtogetheryeg.com/"
+						"social_links": []
 					},
 					{
+						"link": "https://construisonsmtl.ca/en/",
 						"name": "Construisons Montréal",
 						"image": {
 							"alt": "",
@@ -5348,19 +5351,10 @@ function create_fragment$7(ctx) {
 							"url": "https://res.cloudinary.com/dbnijop5c/image/upload/v1700528186/More%20Homes%20Canada/montreal_ejn4pg.png",
 							"size": null
 						},
-						"social_links": [
-							{
-								"icon": "Laborum excepteur laborum",
-								"link": { "url": "/", "label": "quis" }
-							},
-							{
-								"icon": "Nulla aliquip pariatur",
-								"link": { "url": "/", "label": "culpa" }
-							}
-						],
-						"link": "https://construisonsmtl.ca/en/"
+						"social_links": []
 					},
 					{
+						"link": "https://www.moreneighbourscalgary.ca/",
 						"name": "More Neighbours Calgary",
 						"image": {
 							"alt": "",
@@ -5368,10 +5362,10 @@ function create_fragment$7(ctx) {
 							"url": "https://res.cloudinary.com/dbnijop5c/image/upload/v1700528186/More%20Homes%20Canada/calgary_b9krf6.png",
 							"size": null
 						},
-						"social_links": [],
-						"link": "https://www.moreneighbourscalgary.ca/"
+						"social_links": []
 					},
 					{
+						"link": "https://www.homesforliving.ca/",
 						"name": "Homes for Living Victoria",
 						"image": {
 							"alt": "",
@@ -5379,10 +5373,10 @@ function create_fragment$7(ctx) {
 							"url": "https://res.cloudinary.com/dbnijop5c/image/upload/v1700528184/More%20Homes%20Canada/victoria_n879ey.png",
 							"size": null
 						},
-						"social_links": [],
-						"link": "https://www.homesforliving.ca/"
+						"social_links": []
 					},
 					{
+						"link": "https://makehousingaffordable.ca/",
 						"name": "Make Housing Affordable Ottawa",
 						"image": {
 							"alt": "",
@@ -5390,10 +5384,10 @@ function create_fragment$7(ctx) {
 							"url": "https://res.cloudinary.com/dbnijop5c/image/upload/v1700528183/More%20Homes%20Canada/ottawa_civxsq.png",
 							"size": null
 						},
-						"social_links": [],
-						"link": "https://makehousingaffordable.ca/"
+						"social_links": []
 					},
 					{
+						"link": "https://www.wryimby.com/",
 						"name": "Waterloo Region YIMBY",
 						"image": {
 							"alt": "",
@@ -5401,19 +5395,19 @@ function create_fragment$7(ctx) {
 							"url": "https://res.cloudinary.com/dbnijop5c/image/upload/v1700528185/More%20Homes%20Canada/waterloo_llha5v.jpg",
 							"size": null
 						},
-						"social_links": [],
-						"link": "https://www.wryimby.com/"
+						"social_links": []
 					},
 					{
+						"link": "https://twitter.com/MoreHomesHRM",
 						"name": "More Homes Halifax",
 						"image": {
 							"alt": "",
 							"url": "https://res.cloudinary.com/dbnijop5c/image/upload/v1700528187/More%20Homes%20Canada/halifax_epvtfq.jpg"
 						},
-						"social_links": [],
-						"link": "https://twitter.com/MoreHomesHRM"
+						"social_links": []
 					},
 					{
+						"link": "https://www.yesinwpg.com/",
 						"name": "YIMBY Winnipeg",
 						"image": {
 							"alt": "",
@@ -5421,10 +5415,10 @@ function create_fragment$7(ctx) {
 							"url": "https://res.cloudinary.com/dbnijop5c/image/upload/v1700528184/More%20Homes%20Canada/winnipeg_uvkpdu.png",
 							"size": null
 						},
-						"social_links": [],
-						"link": "https://www.yesinwpg.com/"
+						"social_links": []
 					},
 					{
+						"link": "https://www.beautifulnanaimo.ca/",
 						"name": "Strong Towns Nanaimo",
 						"image": {
 							"alt": "",
@@ -5432,8 +5426,7 @@ function create_fragment$7(ctx) {
 							"url": "https://res.cloudinary.com/dbnijop5c/image/upload/v1700528183/More%20Homes%20Canada/nanaimo_dnm0vl.png",
 							"size": null
 						},
-						"social_links": [],
-						"link": "https://www.beautifulnanaimo.ca/"
+						"social_links": []
 					}
 				]
 			}
