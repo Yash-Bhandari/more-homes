@@ -999,19 +999,23 @@ function create_fragment(ctx) {
 	let link;
 	let link_href_value;
 	let meta;
+	let script;
+	let t0;
 	let style;
-	let t;
+	let t1;
 
 	return {
 		c() {
 			link = element("link");
 			meta = element("meta");
+			script = element("script");
+			t0 = text("(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])\n    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,\n    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})\n    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');\n    ml('account', '714042');\n");
 			style = element("style");
-			t = text("@import url(\"https://unpkg.com/@primo-app/primo@1.3.64/reset.css\");\n@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');\n\n#page {\n  --max-width: 740px;\n  /* --color-accent: #FF0000; Beware, we look like the LPC with a red theme on*/ \n  --color-accent: rebeccapurple;\n  font-family: lexend, system-ui, sans-serif;\n  color: var(--color);\n  line-height: 1.6; \n  font-size: 1rem;\n  background: var(--background);\n}\n\n.section-container {\n  max-width: var(--max-width, 1000px);\n  margin: 0 auto;\n  padding: 3rem var(--padding, 1rem); \n}\n\n.heading {\n  font-size: 3rem;\n  line-height: 1;\n  font-weight: 700;\n  margin: 0;\n}\n\na {\n  color: var(--color-accent);\n}\n\n.link {\n  color: var(--color-accent);\n}\n\na:hover {\n  text-decoration: underline;\n  font-weight: bold;\n}\n\n.button {\n  color: white;\n  background: var(--color-accent);\n  border-radius: 5px;\n  padding: 8px 20px;\n  transition: var(--transition);\n\n  /* vertically center */\n  display: inline-flex;\n  align-items: center;\n}\n\n.button:hover {\n    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);\n  }\n\n.button.inverted {\n    background: transparent; \n    color: var(--color-accent); \n    border: 2px solid var(--color-accent);\n  }\n\n/* Markdown styling */\n.content :global(img) {\n    width: 100%;\n    margin: 2rem 0;\n    box-shadow: var(--box-shadow);\n    border-radius: var(--border-radius);\n  }\n.content :global(p) {\n    padding: 0.5rem 0;\n    line-height: 1.5;\n  }\n.content :global(a) {\n    text-decoration: underline;\n  }\n.content :global(h1) {\n    font-size: 2.5rem;\n    font-weight: 600;\n    line-height: 1.2;\n    margin-bottom: 0.5rem;\n  }\n.content :global(h2) {\n    font-size: 2rem;\n    font-weight: 600;\n    margin-bottom: 0.25rem;\n    line-height: 1.2;\n  }\n.content :global(h3) {\n    font-size: 1.5rem;\n    font-weight: 600;\n    line-height: 1.2;\n    margin-top: .5rem;\n  }\n.content :global(ul) {\n    list-style: disc;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content :global(ol) {\n    list-style: decimal;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content :global(blockquote) {\n    padding: 2rem;\n    box-shadow: var(--box-shadow);\n    border-radius: var(--border-radius);\n  }");
+			t1 = text("@import url(\"https://unpkg.com/@primo-app/primo@1.3.64/reset.css\");\n@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');\n\n#page {\n  --max-width: 740px;\n  /* --color-accent: #FF0000; Beware, we look like the LPC with a red theme on*/ \n  --color-accent: rebeccapurple;\n  font-family: lexend, system-ui, sans-serif;\n  color: var(--color);\n  line-height: 1.6; \n  font-size: 1rem;\n  background: var(--background);\n}\n\n.section-container {\n  max-width: var(--max-width, 1000px);\n  margin: 0 auto;\n  padding: 3rem var(--padding, 1rem); \n}\n\n.heading {\n  font-size: 3rem;\n  line-height: 1;\n  font-weight: 700;\n  margin: 0;\n}\n\na {\n  color: var(--color-accent);\n}\n\n.link {\n  color: var(--color-accent);\n}\n\na:hover {\n  text-decoration: underline;\n  font-weight: bold;\n}\n\n.button {\n  color: white;\n  background: var(--color-accent);\n  border-radius: 5px;\n  padding: 8px 20px;\n  transition: var(--transition);\n\n  /* vertically center */\n  display: inline-flex;\n  align-items: center;\n}\n\n.button:hover {\n    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);\n  }\n\n.button.inverted {\n    background: transparent; \n    color: var(--color-accent); \n    border: 2px solid var(--color-accent);\n  }\n\n/* Markdown styling */\n.content :global(img) {\n    width: 100%;\n    margin: 2rem 0;\n    box-shadow: var(--box-shadow);\n    border-radius: var(--border-radius);\n  }\n.content :global(p) {\n    padding: 0.5rem 0;\n    line-height: 1.5;\n  }\n.content :global(a) {\n    text-decoration: underline;\n  }\n.content :global(h1) {\n    font-size: 2.5rem;\n    font-weight: 600;\n    line-height: 1.2;\n    margin-bottom: 0.5rem;\n  }\n.content :global(h2) {\n    font-size: 2rem;\n    font-weight: 600;\n    margin-bottom: 0.25rem;\n    line-height: 1.2;\n  }\n.content :global(h3) {\n    font-size: 1.5rem;\n    font-weight: 600;\n    line-height: 1.2;\n    margin-top: .5rem;\n  }\n.content :global(ul) {\n    list-style: disc;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content :global(ol) {\n    list-style: decimal;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content :global(blockquote) {\n    padding: 2rem;\n    box-shadow: var(--box-shadow);\n    border-radius: var(--border-radius);\n  }");
 			this.h();
 		},
 		l(nodes) {
-			const head_nodes = head_selector('svelte-1yzl1ne', document.head);
+			const head_nodes = head_selector('svelte-1gj703', document.head);
 
 			link = claim_element(head_nodes, "LINK", {
 				rel: true,
@@ -1021,9 +1025,13 @@ function create_fragment(ctx) {
 			});
 
 			meta = claim_element(head_nodes, "META", { name: true, content: true });
+			script = claim_element(head_nodes, "SCRIPT", {});
+			var script_nodes = children(script);
+			t0 = claim_text(script_nodes, "(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])\n    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,\n    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})\n    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');\n    ml('account', '714042');\n");
+			script_nodes.forEach(detach);
 			style = claim_element(head_nodes, "STYLE", {});
 			var style_nodes = children(style);
-			t = claim_text(style_nodes, "@import url(\"https://unpkg.com/@primo-app/primo@1.3.64/reset.css\");\n@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');\n\n#page {\n  --max-width: 740px;\n  /* --color-accent: #FF0000; Beware, we look like the LPC with a red theme on*/ \n  --color-accent: rebeccapurple;\n  font-family: lexend, system-ui, sans-serif;\n  color: var(--color);\n  line-height: 1.6; \n  font-size: 1rem;\n  background: var(--background);\n}\n\n.section-container {\n  max-width: var(--max-width, 1000px);\n  margin: 0 auto;\n  padding: 3rem var(--padding, 1rem); \n}\n\n.heading {\n  font-size: 3rem;\n  line-height: 1;\n  font-weight: 700;\n  margin: 0;\n}\n\na {\n  color: var(--color-accent);\n}\n\n.link {\n  color: var(--color-accent);\n}\n\na:hover {\n  text-decoration: underline;\n  font-weight: bold;\n}\n\n.button {\n  color: white;\n  background: var(--color-accent);\n  border-radius: 5px;\n  padding: 8px 20px;\n  transition: var(--transition);\n\n  /* vertically center */\n  display: inline-flex;\n  align-items: center;\n}\n\n.button:hover {\n    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);\n  }\n\n.button.inverted {\n    background: transparent; \n    color: var(--color-accent); \n    border: 2px solid var(--color-accent);\n  }\n\n/* Markdown styling */\n.content :global(img) {\n    width: 100%;\n    margin: 2rem 0;\n    box-shadow: var(--box-shadow);\n    border-radius: var(--border-radius);\n  }\n.content :global(p) {\n    padding: 0.5rem 0;\n    line-height: 1.5;\n  }\n.content :global(a) {\n    text-decoration: underline;\n  }\n.content :global(h1) {\n    font-size: 2.5rem;\n    font-weight: 600;\n    line-height: 1.2;\n    margin-bottom: 0.5rem;\n  }\n.content :global(h2) {\n    font-size: 2rem;\n    font-weight: 600;\n    margin-bottom: 0.25rem;\n    line-height: 1.2;\n  }\n.content :global(h3) {\n    font-size: 1.5rem;\n    font-weight: 600;\n    line-height: 1.2;\n    margin-top: .5rem;\n  }\n.content :global(ul) {\n    list-style: disc;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content :global(ol) {\n    list-style: decimal;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content :global(blockquote) {\n    padding: 2rem;\n    box-shadow: var(--box-shadow);\n    border-radius: var(--border-radius);\n  }");
+			t1 = claim_text(style_nodes, "@import url(\"https://unpkg.com/@primo-app/primo@1.3.64/reset.css\");\n@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');\n\n#page {\n  --max-width: 740px;\n  /* --color-accent: #FF0000; Beware, we look like the LPC with a red theme on*/ \n  --color-accent: rebeccapurple;\n  font-family: lexend, system-ui, sans-serif;\n  color: var(--color);\n  line-height: 1.6; \n  font-size: 1rem;\n  background: var(--background);\n}\n\n.section-container {\n  max-width: var(--max-width, 1000px);\n  margin: 0 auto;\n  padding: 3rem var(--padding, 1rem); \n}\n\n.heading {\n  font-size: 3rem;\n  line-height: 1;\n  font-weight: 700;\n  margin: 0;\n}\n\na {\n  color: var(--color-accent);\n}\n\n.link {\n  color: var(--color-accent);\n}\n\na:hover {\n  text-decoration: underline;\n  font-weight: bold;\n}\n\n.button {\n  color: white;\n  background: var(--color-accent);\n  border-radius: 5px;\n  padding: 8px 20px;\n  transition: var(--transition);\n\n  /* vertically center */\n  display: inline-flex;\n  align-items: center;\n}\n\n.button:hover {\n    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);\n  }\n\n.button.inverted {\n    background: transparent; \n    color: var(--color-accent); \n    border: 2px solid var(--color-accent);\n  }\n\n/* Markdown styling */\n.content :global(img) {\n    width: 100%;\n    margin: 2rem 0;\n    box-shadow: var(--box-shadow);\n    border-radius: var(--border-radius);\n  }\n.content :global(p) {\n    padding: 0.5rem 0;\n    line-height: 1.5;\n  }\n.content :global(a) {\n    text-decoration: underline;\n  }\n.content :global(h1) {\n    font-size: 2.5rem;\n    font-weight: 600;\n    line-height: 1.2;\n    margin-bottom: 0.5rem;\n  }\n.content :global(h2) {\n    font-size: 2rem;\n    font-weight: 600;\n    margin-bottom: 0.25rem;\n    line-height: 1.2;\n  }\n.content :global(h3) {\n    font-size: 1.5rem;\n    font-weight: 600;\n    line-height: 1.2;\n    margin-top: .5rem;\n  }\n.content :global(ul) {\n    list-style: disc;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content :global(ol) {\n    list-style: decimal;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content :global(blockquote) {\n    padding: 2rem;\n    box-shadow: var(--box-shadow);\n    border-radius: var(--border-radius);\n  }");
 			style_nodes.forEach(detach);
 			head_nodes.forEach(detach);
 			this.h();
@@ -1039,8 +1047,10 @@ function create_fragment(ctx) {
 		m(target, anchor) {
 			append_hydration(document.head, link);
 			append_hydration(document.head, meta);
+			append_hydration(document.head, script);
+			append_hydration(script, t0);
 			append_hydration(document.head, style);
-			append_hydration(style, t);
+			append_hydration(style, t1);
 		},
 		p(ctx, [dirty]) {
 			if (dirty & /*favicon*/ 1 && link_href_value !== (link_href_value = /*favicon*/ ctx[0].url)) {
@@ -1052,6 +1062,7 @@ function create_fragment(ctx) {
 		d(detaching) {
 			detach(link);
 			detach(meta);
+			detach(script);
 			detach(style);
 		}
 	};
