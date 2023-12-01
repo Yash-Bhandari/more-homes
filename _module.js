@@ -3592,9 +3592,6 @@ function get_each_context$1(ctx, list, i) {
 // (45:2) {#if buttons.length > 0}
 function create_if_block$2(ctx) {
 	let div;
-	let t0;
-	let button;
-	let t1;
 	let each_value = /*buttons*/ ctx[2];
 	let each_blocks = [];
 
@@ -3610,9 +3607,6 @@ function create_if_block$2(ctx) {
 				each_blocks[i].c();
 			}
 
-			t0 = space();
-			button = element("button");
-			t1 = text("Join Newsletter");
 			this.h();
 		},
 		l(nodes) {
@@ -3623,17 +3617,10 @@ function create_if_block$2(ctx) {
 				each_blocks[i].l(div_nodes);
 			}
 
-			t0 = claim_space(div_nodes);
-			button = claim_element(div_nodes, "BUTTON", { class: true, onclick: true });
-			var button_nodes = children(button);
-			t1 = claim_text(button_nodes, "Join Newsletter");
-			button_nodes.forEach(detach);
 			div_nodes.forEach(detach);
 			this.h();
 		},
 		h() {
-			attr(button, "class", "ml-onclick-form button inverted");
-			attr(button, "onclick", "ml('show', 'HNUOrj', true)");
 			attr(div, "class", "buttons svelte-1w258x5");
 		},
 		m(target, anchor) {
@@ -3644,10 +3631,6 @@ function create_if_block$2(ctx) {
 					each_blocks[i].m(div, null);
 				}
 			}
-
-			append_hydration(div, t0);
-			append_hydration(div, button);
-			append_hydration(button, t1);
 		},
 		p(ctx, dirty) {
 			if (dirty & /*buttons*/ 4) {
@@ -3662,7 +3645,7 @@ function create_if_block$2(ctx) {
 					} else {
 						each_blocks[i] = create_each_block$1(child_ctx);
 						each_blocks[i].c();
-						each_blocks[i].m(div, t0);
+						each_blocks[i].m(div, null);
 					}
 				}
 
