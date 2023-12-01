@@ -3592,6 +3592,9 @@ function get_each_context$1(ctx, list, i) {
 // (45:2) {#if buttons.length > 0}
 function create_if_block$2(ctx) {
 	let div;
+	let t0;
+	let button;
+	let t1;
 	let each_value = /*buttons*/ ctx[2];
 	let each_blocks = [];
 
@@ -3607,6 +3610,9 @@ function create_if_block$2(ctx) {
 				each_blocks[i].c();
 			}
 
+			t0 = space();
+			button = element("button");
+			t1 = text("Join Newsletter");
 			this.h();
 		},
 		l(nodes) {
@@ -3617,10 +3623,17 @@ function create_if_block$2(ctx) {
 				each_blocks[i].l(div_nodes);
 			}
 
+			t0 = claim_space(div_nodes);
+			button = claim_element(div_nodes, "BUTTON", { class: true, onclick: true });
+			var button_nodes = children(button);
+			t1 = claim_text(button_nodes, "Join Newsletter");
+			button_nodes.forEach(detach);
 			div_nodes.forEach(detach);
 			this.h();
 		},
 		h() {
+			attr(button, "class", "ml-onclick-form button inverted");
+			attr(button, "onclick", "ml('show', 'HNUOrj', true)");
 			attr(div, "class", "buttons svelte-1w258x5");
 		},
 		m(target, anchor) {
@@ -3631,6 +3644,10 @@ function create_if_block$2(ctx) {
 					each_blocks[i].m(div, null);
 				}
 			}
+
+			append_hydration(div, t0);
+			append_hydration(div, button);
+			append_hydration(button, t1);
 		},
 		p(ctx, dirty) {
 			if (dirty & /*buttons*/ 4) {
@@ -3645,7 +3662,7 @@ function create_if_block$2(ctx) {
 					} else {
 						each_blocks[i] = create_each_block$1(child_ctx);
 						each_blocks[i].c();
-						each_blocks[i].m(div, null);
+						each_blocks[i].m(div, t0);
 					}
 				}
 
@@ -5255,9 +5272,9 @@ function create_fragment$8(ctx) {
 	component_0 = new Component({
 			props: {
 				favicon: {
-					"url": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
-					"src": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
 					"alt": "house favicon",
+					"src": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
+					"url": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
 					"size": 1
 				}
 			}
@@ -5266,9 +5283,9 @@ function create_fragment$8(ctx) {
 	component_1 = new Component$2({
 			props: {
 				favicon: {
-					"url": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
-					"src": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
 					"alt": "house favicon",
+					"src": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
+					"url": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
 					"size": 1
 				},
 				logo: {
@@ -5304,9 +5321,9 @@ function create_fragment$8(ctx) {
 	component_2 = new Component$3({
 			props: {
 				favicon: {
-					"url": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
-					"src": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
 					"alt": "house favicon",
+					"src": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
+					"url": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
 					"size": 1
 				},
 				heading: "It's time to legalize housing.",
@@ -5331,9 +5348,9 @@ function create_fragment$8(ctx) {
 	component_3 = new Component$4({
 			props: {
 				favicon: {
-					"url": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
-					"src": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
 					"alt": "house favicon",
+					"src": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
+					"url": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
 					"size": 1
 				},
 				heading: "What We Want",
@@ -5377,9 +5394,9 @@ function create_fragment$8(ctx) {
 	component_4 = new Component$5({
 			props: {
 				favicon: {
-					"url": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
-					"src": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
 					"alt": "house favicon",
+					"src": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
+					"url": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
 					"size": 1
 				},
 				heading: "Who We Are",
@@ -5509,9 +5526,9 @@ function create_fragment$8(ctx) {
 	component_5 = new Component$6({
 			props: {
 				favicon: {
-					"url": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
-					"src": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
 					"alt": "house favicon",
+					"src": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
+					"url": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
 					"size": 1
 				},
 				heading: "Contact Us",
@@ -5536,9 +5553,9 @@ function create_fragment$8(ctx) {
 	component_6 = new Component$7({
 			props: {
 				favicon: {
-					"url": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
-					"src": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
 					"alt": "house favicon",
+					"src": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
+					"url": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
 					"size": 1
 				},
 				nav: [
@@ -5568,9 +5585,9 @@ function create_fragment$8(ctx) {
 	component_7 = new Component$8({
 			props: {
 				favicon: {
-					"url": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
-					"src": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
 					"alt": "house favicon",
+					"src": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
+					"url": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
 					"size": 1
 				}
 			}

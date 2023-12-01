@@ -5251,9 +5251,9 @@ function create_fragment$7(ctx) {
 	component_0 = new Component({
 			props: {
 				favicon: {
-					"url": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
-					"src": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
 					"alt": "house favicon",
+					"src": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
+					"url": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
 					"size": 1
 				}
 			}
@@ -5262,9 +5262,9 @@ function create_fragment$7(ctx) {
 	component_1 = new Component$2({
 			props: {
 				favicon: {
-					"url": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
-					"src": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
 					"alt": "house favicon",
+					"src": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
+					"url": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
 					"size": 1
 				},
 				logo: {
@@ -5300,9 +5300,9 @@ function create_fragment$7(ctx) {
 	component_2 = new Component$3({
 			props: {
 				favicon: {
-					"url": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
-					"src": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
 					"alt": "house favicon",
+					"src": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
+					"url": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
 					"size": 1
 				},
 				heading: "Background",
@@ -5342,9 +5342,9 @@ function create_fragment$7(ctx) {
 	component_3 = new Component$4({
 			props: {
 				favicon: {
-					"url": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
-					"src": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
 					"alt": "house favicon",
+					"src": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
+					"url": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
 					"size": 1
 				},
 				heading: "Our Goals ",
@@ -5405,9 +5405,9 @@ function create_fragment$7(ctx) {
 	component_4 = new Component$5({
 			props: {
 				favicon: {
-					"url": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
-					"src": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
 					"alt": "house favicon",
+					"src": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
+					"url": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
 					"size": 1
 				},
 				heading: "Who We Are",
@@ -5537,9 +5537,9 @@ function create_fragment$7(ctx) {
 	component_5 = new Component$6({
 			props: {
 				favicon: {
-					"url": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
-					"src": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
 					"alt": "house favicon",
+					"src": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
+					"url": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
 					"size": 1
 				},
 				nav: [
@@ -5569,9 +5569,9 @@ function create_fragment$7(ctx) {
 	component_6 = new Component$7({
 			props: {
 				favicon: {
-					"url": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
-					"src": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
 					"alt": "house favicon",
+					"src": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
+					"url": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
 					"size": 1
 				}
 			}
