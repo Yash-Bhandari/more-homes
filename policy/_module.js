@@ -5286,7 +5286,7 @@ function create_fragment$7(ctx) {
 					},
 					{
 						"link": {
-							"url": "/Policy Document",
+							"url": "/policy",
 							"label": "Policy Document"
 						}
 					},

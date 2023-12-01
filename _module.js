@@ -4743,7 +4743,7 @@ function create_fragment$6(ctx) {
 			var div1_nodes = children(div1);
 			section = claim_element(div1_nodes, "SECTION", { class: true });
 			var section_nodes = children(section);
-			div0 = claim_element(section_nodes, "DIV", { class: true });
+			div0 = claim_element(section_nodes, "DIV", { class: true, id: true });
 			var div0_nodes = children(div0);
 			h2 = claim_element(div0_nodes, "H2", { class: true });
 			var h2_nodes = children(h2);
@@ -4769,6 +4769,7 @@ function create_fragment$6(ctx) {
 			attr(h2, "class", "heading svelte-14i3sqd");
 			attr(ul, "class", "svelte-14i3sqd");
 			attr(div0, "class", "card svelte-14i3sqd");
+			attr(div0, "id", "contact");
 			attr(section, "class", "section-container svelte-14i3sqd");
 			attr(div1, "class", "section");
 			attr(div1, "id", "section-bc4f81c6");
@@ -5290,7 +5291,7 @@ function create_fragment$8(ctx) {
 					},
 					{
 						"link": {
-							"url": "/Policy Document",
+							"url": "/policy",
 							"label": "Policy Document"
 						}
 					},
