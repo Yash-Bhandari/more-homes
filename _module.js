@@ -5416,8 +5416,8 @@ function create_fragment$8(ctx) {
 						"icon": "material-symbols:payments",
 						"title": "Funding for subsidized housing",
 						"description": {
-							"html": "<p>Deeply affordable housing requires deep subsidies. Federal and provincial governments need to step up to provide this funding.</p>",
-							"markdown": "Deeply affordable housing requires deep subsidies. Federal and provincial governments need to step up to provide this funding.\n\n"
+							"html": "<p>Deeply affordable housing requires deep subsidies. Federal and provincial governments need to step up and provide this funding.</p>",
+							"markdown": "Deeply affordable housing requires deep subsidies. Federal and provincial governments need to step up and provide this funding.\n\n"
 						}
 					}
 				]
