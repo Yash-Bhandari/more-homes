@@ -5596,11 +5596,11 @@ function create_fragment$8(ctx) {
 						"link": "https://www.yesinwpg.com/"
 					},
 					{
-						"name": "More Homes Missisauga",
+						"name": "More Homes Mississauga",
 						"image": {
-							"url": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1702327165142mhm.jpg",
-							"src": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1702327165142mhm.jpg",
 							"alt": "",
+							"src": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1702327165142mhm.jpg",
+							"url": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1702327165142mhm.jpg",
 							"size": 16
 						},
 						"social_links": [],
