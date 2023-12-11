@@ -1084,11 +1084,13 @@ class SvelteComponent {
 function create_fragment(ctx) {
 	let link;
 	let link_href_value;
+	let title_value;
 	let meta;
 	let script;
 	let t0;
 	let style;
 	let t1;
+	document.title = title_value = /*title*/ ctx[1];
 
 	return {
 		c() {
@@ -1101,7 +1103,7 @@ function create_fragment(ctx) {
 			this.h();
 		},
 		l(nodes) {
-			const head_nodes = head_selector('svelte-1gj703', document.head);
+			const head_nodes = head_selector('svelte-1113ihm', document.head);
 
 			link = claim_element(head_nodes, "LINK", {
 				rel: true,
@@ -1142,6 +1144,10 @@ function create_fragment(ctx) {
 			if (dirty & /*favicon*/ 1 && link_href_value !== (link_href_value = /*favicon*/ ctx[0].url)) {
 				attr(link, "href", link_href_value);
 			}
+
+			if (dirty & /*title*/ 2 && title_value !== (title_value = /*title*/ ctx[1])) {
+				document.title = title_value;
+			}
 		},
 		i: noop,
 		o: noop,
@@ -1156,18 +1162,20 @@ function create_fragment(ctx) {
 
 function instance($$self, $$props, $$invalidate) {
 	let { favicon } = $$props;
+	let { title } = $$props;
 
 	$$self.$$set = $$props => {
 		if ('favicon' in $$props) $$invalidate(0, favicon = $$props.favicon);
+		if ('title' in $$props) $$invalidate(1, title = $$props.title);
 	};
 
-	return [favicon];
+	return [favicon, title];
 }
 
 class Component extends SvelteComponent {
 	constructor(options) {
 		super();
-		init(this, options, instance, create_fragment, safe_not_equal, { favicon: 0 });
+		init(this, options, instance, create_fragment, safe_not_equal, { favicon: 0, title: 1 });
 	}
 }
 
@@ -3069,17 +3077,17 @@ class Component$1 extends SvelteComponent {
 
 function get_each_context(ctx, list, i) {
 	const child_ctx = ctx.slice();
-	child_ctx[7] = list[i].link;
+	child_ctx[8] = list[i].link;
 	return child_ctx;
 }
 
 function get_each_context_1(ctx, list, i) {
 	const child_ctx = ctx.slice();
-	child_ctx[7] = list[i].link;
+	child_ctx[8] = list[i].link;
 	return child_ctx;
 }
 
-// (104:31) 
+// (105:31) 
 function create_if_block_4(ctx) {
 	let img;
 	let img_src_value;
@@ -3116,7 +3124,7 @@ function create_if_block_4(ctx) {
 	};
 }
 
-// (102:6) {#if logo.title}
+// (103:6) {#if logo.title}
 function create_if_block_3(ctx) {
 	let t_value = /*logo*/ ctx[0].title + "";
 	let t;
@@ -3140,10 +3148,10 @@ function create_if_block_3(ctx) {
 	};
 }
 
-// (109:6) {#each site_nav as { link }}
+// (110:6) {#each site_nav as { link }}
 function create_each_block_1(ctx) {
 	let a;
-	let t_value = /*link*/ ctx[7].label + "";
+	let t_value = /*link*/ ctx[8].label + "";
 	let t;
 	let a_href_value;
 
@@ -3162,16 +3170,16 @@ function create_each_block_1(ctx) {
 		},
 		h() {
 			attr(a, "class", "link svelte-1grguq5");
-			attr(a, "href", a_href_value = /*link*/ ctx[7].url);
+			attr(a, "href", a_href_value = /*link*/ ctx[8].url);
 		},
 		m(target, anchor) {
 			insert_hydration(target, a, anchor);
 			append_hydration(a, t);
 		},
 		p(ctx, dirty) {
-			if (dirty & /*site_nav*/ 2 && t_value !== (t_value = /*link*/ ctx[7].label + "")) set_data(t, t_value);
+			if (dirty & /*site_nav*/ 2 && t_value !== (t_value = /*link*/ ctx[8].label + "")) set_data(t, t_value);
 
-			if (dirty & /*site_nav*/ 2 && a_href_value !== (a_href_value = /*link*/ ctx[7].url)) {
+			if (dirty & /*site_nav*/ 2 && a_href_value !== (a_href_value = /*link*/ ctx[8].url)) {
 				attr(a, "href", a_href_value);
 			}
 		},
@@ -3181,7 +3189,7 @@ function create_each_block_1(ctx) {
 	};
 }
 
-// (118:31) 
+// (119:31) 
 function create_if_block_2(ctx) {
 	let img;
 	let img_src_value;
@@ -3218,7 +3226,7 @@ function create_if_block_2(ctx) {
 	};
 }
 
-// (116:6) {#if logo.title}
+// (117:6) {#if logo.title}
 function create_if_block_1$1(ctx) {
 	let t_value = /*logo*/ ctx[0].title + "";
 	let t;
@@ -3242,7 +3250,7 @@ function create_if_block_1$1(ctx) {
 	};
 }
 
-// (128:4) {#if mobileNavOpen}
+// (129:4) {#if mobileNavOpen}
 function create_if_block$1(ctx) {
 	let nav;
 	let t;
@@ -3318,7 +3326,7 @@ function create_if_block$1(ctx) {
 			current = true;
 
 			if (!mounted) {
-				dispose = listen(button, "click", /*click_handler_1*/ ctx[5]);
+				dispose = listen(button, "click", /*click_handler_1*/ ctx[6]);
 				mounted = true;
 			}
 		},
@@ -3375,10 +3383,10 @@ function create_if_block$1(ctx) {
 	};
 }
 
-// (130:8) {#each site_nav as { link }}
+// (131:8) {#each site_nav as { link }}
 function create_each_block(ctx) {
 	let a;
-	let t_value = /*link*/ ctx[7].label + "";
+	let t_value = /*link*/ ctx[8].label + "";
 	let t;
 	let a_href_value;
 
@@ -3396,16 +3404,16 @@ function create_each_block(ctx) {
 			this.h();
 		},
 		h() {
-			attr(a, "href", a_href_value = /*link*/ ctx[7].url);
+			attr(a, "href", a_href_value = /*link*/ ctx[8].url);
 		},
 		m(target, anchor) {
 			insert_hydration(target, a, anchor);
 			append_hydration(a, t);
 		},
 		p(ctx, dirty) {
-			if (dirty & /*site_nav*/ 2 && t_value !== (t_value = /*link*/ ctx[7].label + "")) set_data(t, t_value);
+			if (dirty & /*site_nav*/ 2 && t_value !== (t_value = /*link*/ ctx[8].label + "")) set_data(t, t_value);
 
-			if (dirty & /*site_nav*/ 2 && a_href_value !== (a_href_value = /*link*/ ctx[7].url)) {
+			if (dirty & /*site_nav*/ 2 && a_href_value !== (a_href_value = /*link*/ ctx[8].url)) {
 				attr(a, "href", a_href_value);
 			}
 		},
@@ -3567,7 +3575,7 @@ function create_fragment$2(ctx) {
 			current = true;
 
 			if (!mounted) {
-				dispose = listen(button, "click", /*click_handler*/ ctx[4]);
+				dispose = listen(button, "click", /*click_handler*/ ctx[5]);
 				mounted = true;
 			}
 		},
@@ -3676,6 +3684,7 @@ function create_fragment$2(ctx) {
 
 function instance$2($$self, $$props, $$invalidate) {
 	let { favicon } = $$props;
+	let { title } = $$props;
 	let { logo } = $$props;
 	let { site_nav } = $$props;
 	let mobileNavOpen = false;
@@ -3685,17 +3694,24 @@ function instance$2($$self, $$props, $$invalidate) {
 
 	$$self.$$set = $$props => {
 		if ('favicon' in $$props) $$invalidate(3, favicon = $$props.favicon);
+		if ('title' in $$props) $$invalidate(4, title = $$props.title);
 		if ('logo' in $$props) $$invalidate(0, logo = $$props.logo);
 		if ('site_nav' in $$props) $$invalidate(1, site_nav = $$props.site_nav);
 	};
 
-	return [logo, site_nav, mobileNavOpen, favicon, click_handler, click_handler_1];
+	return [logo, site_nav, mobileNavOpen, favicon, title, click_handler, click_handler_1];
 }
 
 class Component$2 extends SvelteComponent {
 	constructor(options) {
 		super();
-		init(this, options, instance$2, create_fragment$2, safe_not_equal, { favicon: 3, logo: 0, site_nav: 1 });
+
+		init(this, options, instance$2, create_fragment$2, safe_not_equal, {
+			favicon: 3,
+			title: 4,
+			logo: 0,
+			site_nav: 1
+		});
 	}
 }
 
@@ -3703,15 +3719,15 @@ class Component$2 extends SvelteComponent {
 
 function get_each_context$1(ctx, list, i) {
 	const child_ctx = ctx.slice();
-	child_ctx[7] = list[i];
-	child_ctx[9] = i;
+	child_ctx[8] = list[i];
+	child_ctx[10] = i;
 	return child_ctx;
 }
 
-// (145:6) {#if isActive[i]}
+// (146:6) {#if isActive[i]}
 function create_if_block$2(ctx) {
 	let div;
-	let raw_value = /*item*/ ctx[7].description.html + "";
+	let raw_value = /*item*/ ctx[8].description.html + "";
 	let div_transition;
 	let current;
 
@@ -3735,7 +3751,7 @@ function create_if_block$2(ctx) {
 			current = true;
 		},
 		p(ctx, dirty) {
-			if ((!current || dirty & /*items*/ 2) && raw_value !== (raw_value = /*item*/ ctx[7].description.html + "")) div.innerHTML = raw_value;		},
+			if ((!current || dirty & /*items*/ 2) && raw_value !== (raw_value = /*item*/ ctx[8].description.html + "")) div.innerHTML = raw_value;		},
 		i(local) {
 			if (current) return;
 
@@ -3759,15 +3775,15 @@ function create_if_block$2(ctx) {
 	};
 }
 
-// (137:4) {#each items as item, i (i)}
+// (138:4) {#each items as item, i (i)}
 function create_each_block$1(key_1, ctx) {
 	let div;
 	let button;
 	let span0;
-	let t0_value = /*i*/ ctx[9] + 1 + "";
+	let t0_value = /*i*/ ctx[10] + 1 + "";
 	let t0;
 	let t1;
-	let t2_value = /*item*/ ctx[7].title + "";
+	let t2_value = /*item*/ ctx[8].title + "";
 	let t2;
 	let t3;
 	let span1;
@@ -3780,10 +3796,10 @@ function create_each_block$1(key_1, ctx) {
 	icon = new Component$1({ props: { icon: "ph:caret-down-bold" } });
 
 	function click_handler() {
-		return /*click_handler*/ ctx[5](/*i*/ ctx[9]);
+		return /*click_handler*/ ctx[6](/*i*/ ctx[10]);
 	}
 
-	let if_block = /*isActive*/ ctx[2][/*i*/ ctx[9]] && create_if_block$2(ctx);
+	let if_block = /*isActive*/ ctx[2][/*i*/ ctx[10]] && create_if_block$2(ctx);
 
 	return {
 		key: key_1,
@@ -3831,7 +3847,7 @@ function create_each_block$1(key_1, ctx) {
 			attr(span1, "class", "icon svelte-12ft0zk");
 			attr(button, "class", "svelte-12ft0zk");
 			attr(div, "class", "item svelte-12ft0zk");
-			toggle_class(div, "active", /*isActive*/ ctx[2][/*i*/ ctx[9]]);
+			toggle_class(div, "active", /*isActive*/ ctx[2][/*i*/ ctx[10]]);
 			this.first = div;
 		},
 		m(target, anchor) {
@@ -3856,10 +3872,10 @@ function create_each_block$1(key_1, ctx) {
 		},
 		p(new_ctx, dirty) {
 			ctx = new_ctx;
-			if ((!current || dirty & /*items*/ 2) && t0_value !== (t0_value = /*i*/ ctx[9] + 1 + "")) set_data(t0, t0_value);
-			if ((!current || dirty & /*items*/ 2) && t2_value !== (t2_value = /*item*/ ctx[7].title + "")) set_data(t2, t2_value);
+			if ((!current || dirty & /*items*/ 2) && t0_value !== (t0_value = /*i*/ ctx[10] + 1 + "")) set_data(t0, t0_value);
+			if ((!current || dirty & /*items*/ 2) && t2_value !== (t2_value = /*item*/ ctx[8].title + "")) set_data(t2, t2_value);
 
-			if (/*isActive*/ ctx[2][/*i*/ ctx[9]]) {
+			if (/*isActive*/ ctx[2][/*i*/ ctx[10]]) {
 				if (if_block) {
 					if_block.p(ctx, dirty);
 
@@ -3883,7 +3899,7 @@ function create_each_block$1(key_1, ctx) {
 			}
 
 			if (!current || dirty & /*isActive, items*/ 6) {
-				toggle_class(div, "active", /*isActive*/ ctx[2][/*i*/ ctx[9]]);
+				toggle_class(div, "active", /*isActive*/ ctx[2][/*i*/ ctx[10]]);
 			}
 		},
 		i(local) {
@@ -3918,7 +3934,7 @@ function create_fragment$3(ctx) {
 	let each_1_lookup = new Map();
 	let current;
 	let each_value = /*items*/ ctx[1];
-	const get_key = ctx => /*i*/ ctx[9];
+	const get_key = ctx => /*i*/ ctx[10];
 
 	for (let i = 0; i < each_value.length; i += 1) {
 		let child_ctx = get_each_context$1(ctx, each_value, i);
@@ -4024,6 +4040,7 @@ function create_fragment$3(ctx) {
 
 function instance$3($$self, $$props, $$invalidate) {
 	let { favicon } = $$props;
+	let { title } = $$props;
 	let { heading } = $$props;
 	let { items } = $$props;
 	const isActive = items.map(i => false);
@@ -4036,17 +4053,24 @@ function instance$3($$self, $$props, $$invalidate) {
 
 	$$self.$$set = $$props => {
 		if ('favicon' in $$props) $$invalidate(4, favicon = $$props.favicon);
+		if ('title' in $$props) $$invalidate(5, title = $$props.title);
 		if ('heading' in $$props) $$invalidate(0, heading = $$props.heading);
 		if ('items' in $$props) $$invalidate(1, items = $$props.items);
 	};
 
-	return [heading, items, isActive, toggleItem, favicon, click_handler];
+	return [heading, items, isActive, toggleItem, favicon, title, click_handler];
 }
 
 class Component$3 extends SvelteComponent {
 	constructor(options) {
 		super();
-		init(this, options, instance$3, create_fragment$3, safe_not_equal, { favicon: 4, heading: 0, items: 1 });
+
+		init(this, options, instance$3, create_fragment$3, safe_not_equal, {
+			favicon: 4,
+			title: 5,
+			heading: 0,
+			items: 1
+		});
 	}
 }
 
@@ -4054,15 +4078,15 @@ class Component$3 extends SvelteComponent {
 
 function get_each_context$2(ctx, list, i) {
 	const child_ctx = ctx.slice();
-	child_ctx[7] = list[i];
-	child_ctx[9] = i;
+	child_ctx[8] = list[i];
+	child_ctx[10] = i;
 	return child_ctx;
 }
 
-// (145:6) {#if isActive[i]}
+// (146:6) {#if isActive[i]}
 function create_if_block$3(ctx) {
 	let div;
-	let raw_value = /*item*/ ctx[7].description.html + "";
+	let raw_value = /*item*/ ctx[8].description.html + "";
 	let div_transition;
 	let current;
 
@@ -4086,7 +4110,7 @@ function create_if_block$3(ctx) {
 			current = true;
 		},
 		p(ctx, dirty) {
-			if ((!current || dirty & /*items*/ 2) && raw_value !== (raw_value = /*item*/ ctx[7].description.html + "")) div.innerHTML = raw_value;		},
+			if ((!current || dirty & /*items*/ 2) && raw_value !== (raw_value = /*item*/ ctx[8].description.html + "")) div.innerHTML = raw_value;		},
 		i(local) {
 			if (current) return;
 
@@ -4110,15 +4134,15 @@ function create_if_block$3(ctx) {
 	};
 }
 
-// (137:4) {#each items as item, i (i)}
+// (138:4) {#each items as item, i (i)}
 function create_each_block$2(key_1, ctx) {
 	let div;
 	let button;
 	let span0;
-	let t0_value = /*i*/ ctx[9] + 1 + "";
+	let t0_value = /*i*/ ctx[10] + 1 + "";
 	let t0;
 	let t1;
-	let t2_value = /*item*/ ctx[7].title + "";
+	let t2_value = /*item*/ ctx[8].title + "";
 	let t2;
 	let t3;
 	let span1;
@@ -4131,10 +4155,10 @@ function create_each_block$2(key_1, ctx) {
 	icon = new Component$1({ props: { icon: "ph:caret-down-bold" } });
 
 	function click_handler() {
-		return /*click_handler*/ ctx[5](/*i*/ ctx[9]);
+		return /*click_handler*/ ctx[6](/*i*/ ctx[10]);
 	}
 
-	let if_block = /*isActive*/ ctx[2][/*i*/ ctx[9]] && create_if_block$3(ctx);
+	let if_block = /*isActive*/ ctx[2][/*i*/ ctx[10]] && create_if_block$3(ctx);
 
 	return {
 		key: key_1,
@@ -4182,7 +4206,7 @@ function create_each_block$2(key_1, ctx) {
 			attr(span1, "class", "icon svelte-12ft0zk");
 			attr(button, "class", "svelte-12ft0zk");
 			attr(div, "class", "item svelte-12ft0zk");
-			toggle_class(div, "active", /*isActive*/ ctx[2][/*i*/ ctx[9]]);
+			toggle_class(div, "active", /*isActive*/ ctx[2][/*i*/ ctx[10]]);
 			this.first = div;
 		},
 		m(target, anchor) {
@@ -4207,10 +4231,10 @@ function create_each_block$2(key_1, ctx) {
 		},
 		p(new_ctx, dirty) {
 			ctx = new_ctx;
-			if ((!current || dirty & /*items*/ 2) && t0_value !== (t0_value = /*i*/ ctx[9] + 1 + "")) set_data(t0, t0_value);
-			if ((!current || dirty & /*items*/ 2) && t2_value !== (t2_value = /*item*/ ctx[7].title + "")) set_data(t2, t2_value);
+			if ((!current || dirty & /*items*/ 2) && t0_value !== (t0_value = /*i*/ ctx[10] + 1 + "")) set_data(t0, t0_value);
+			if ((!current || dirty & /*items*/ 2) && t2_value !== (t2_value = /*item*/ ctx[8].title + "")) set_data(t2, t2_value);
 
-			if (/*isActive*/ ctx[2][/*i*/ ctx[9]]) {
+			if (/*isActive*/ ctx[2][/*i*/ ctx[10]]) {
 				if (if_block) {
 					if_block.p(ctx, dirty);
 
@@ -4234,7 +4258,7 @@ function create_each_block$2(key_1, ctx) {
 			}
 
 			if (!current || dirty & /*isActive, items*/ 6) {
-				toggle_class(div, "active", /*isActive*/ ctx[2][/*i*/ ctx[9]]);
+				toggle_class(div, "active", /*isActive*/ ctx[2][/*i*/ ctx[10]]);
 			}
 		},
 		i(local) {
@@ -4269,7 +4293,7 @@ function create_fragment$4(ctx) {
 	let each_1_lookup = new Map();
 	let current;
 	let each_value = /*items*/ ctx[1];
-	const get_key = ctx => /*i*/ ctx[9];
+	const get_key = ctx => /*i*/ ctx[10];
 
 	for (let i = 0; i < each_value.length; i += 1) {
 		let child_ctx = get_each_context$2(ctx, each_value, i);
@@ -4375,6 +4399,7 @@ function create_fragment$4(ctx) {
 
 function instance$4($$self, $$props, $$invalidate) {
 	let { favicon } = $$props;
+	let { title } = $$props;
 	let { heading } = $$props;
 	let { items } = $$props;
 	const isActive = items.map(i => false);
@@ -4387,17 +4412,24 @@ function instance$4($$self, $$props, $$invalidate) {
 
 	$$self.$$set = $$props => {
 		if ('favicon' in $$props) $$invalidate(4, favicon = $$props.favicon);
+		if ('title' in $$props) $$invalidate(5, title = $$props.title);
 		if ('heading' in $$props) $$invalidate(0, heading = $$props.heading);
 		if ('items' in $$props) $$invalidate(1, items = $$props.items);
 	};
 
-	return [heading, items, isActive, toggleItem, favicon, click_handler];
+	return [heading, items, isActive, toggleItem, favicon, title, click_handler];
 }
 
 class Component$4 extends SvelteComponent {
 	constructor(options) {
 		super();
-		init(this, options, instance$4, create_fragment$4, safe_not_equal, { favicon: 4, heading: 0, items: 1 });
+
+		init(this, options, instance$4, create_fragment$4, safe_not_equal, {
+			favicon: 4,
+			title: 5,
+			heading: 0,
+			items: 1
+		});
 	}
 }
 
@@ -4405,18 +4437,18 @@ class Component$4 extends SvelteComponent {
 
 function get_each_context$3(ctx, list, i) {
 	const child_ctx = ctx.slice();
-	child_ctx[4] = list[i];
+	child_ctx[5] = list[i];
 	return child_ctx;
 }
 
 function get_each_context_1$1(ctx, list, i) {
 	const child_ctx = ctx.slice();
-	child_ctx[7] = list[i].link;
-	child_ctx[8] = list[i].icon;
+	child_ctx[8] = list[i].link;
+	child_ctx[9] = list[i].icon;
 	return child_ctx;
 }
 
-// (106:6) {#if org.image.url}
+// (107:6) {#if org.image.url}
 function create_if_block$4(ctx) {
 	let figure;
 	let img;
@@ -4437,8 +4469,8 @@ function create_if_block$4(ctx) {
 			this.h();
 		},
 		h() {
-			attr(img, "alt", img_alt_value = /*org*/ ctx[4].image.alt);
-			if (!src_url_equal(img.src, img_src_value = /*org*/ ctx[4].image.url)) attr(img, "src", img_src_value);
+			attr(img, "alt", img_alt_value = /*org*/ ctx[5].image.alt);
+			if (!src_url_equal(img.src, img_src_value = /*org*/ ctx[5].image.url)) attr(img, "src", img_src_value);
 			attr(img, "class", "svelte-1eqlbb8");
 			attr(figure, "class", "svelte-1eqlbb8");
 		},
@@ -4447,11 +4479,11 @@ function create_if_block$4(ctx) {
 			append_hydration(figure, img);
 		},
 		p(ctx, dirty) {
-			if (dirty & /*orgs*/ 4 && img_alt_value !== (img_alt_value = /*org*/ ctx[4].image.alt)) {
+			if (dirty & /*orgs*/ 4 && img_alt_value !== (img_alt_value = /*org*/ ctx[5].image.alt)) {
 				attr(img, "alt", img_alt_value);
 			}
 
-			if (dirty & /*orgs*/ 4 && !src_url_equal(img.src, img_src_value = /*org*/ ctx[4].image.url)) {
+			if (dirty & /*orgs*/ 4 && !src_url_equal(img.src, img_src_value = /*org*/ ctx[5].image.url)) {
 				attr(img, "src", img_src_value);
 			}
 		},
@@ -4461,7 +4493,7 @@ function create_if_block$4(ctx) {
 	};
 }
 
-// (116:10) {#each org.social_links as {link, icon}}
+// (117:10) {#each org.social_links as {link, icon}}
 function create_each_block_1$1(ctx) {
 	let a;
 	let icon;
@@ -4469,7 +4501,7 @@ function create_each_block_1$1(ctx) {
 	let a_href_value;
 	let a_aria_label_value;
 	let current;
-	icon = new Component$1({ props: { icon: /*icon*/ ctx[8] } });
+	icon = new Component$1({ props: { icon: /*icon*/ ctx[9] } });
 
 	return {
 		c() {
@@ -4493,8 +4525,8 @@ function create_each_block_1$1(ctx) {
 			this.h();
 		},
 		h() {
-			attr(a, "href", a_href_value = /*link*/ ctx[7].url);
-			attr(a, "aria-label", a_aria_label_value = /*link*/ ctx[7].label);
+			attr(a, "href", a_href_value = /*link*/ ctx[8].url);
+			attr(a, "aria-label", a_aria_label_value = /*link*/ ctx[8].label);
 			attr(a, "target", "_blank");
 			attr(a, "class", "svelte-1eqlbb8");
 		},
@@ -4506,14 +4538,14 @@ function create_each_block_1$1(ctx) {
 		},
 		p(ctx, dirty) {
 			const icon_changes = {};
-			if (dirty & /*orgs*/ 4) icon_changes.icon = /*icon*/ ctx[8];
+			if (dirty & /*orgs*/ 4) icon_changes.icon = /*icon*/ ctx[9];
 			icon.$set(icon_changes);
 
-			if (!current || dirty & /*orgs*/ 4 && a_href_value !== (a_href_value = /*link*/ ctx[7].url)) {
+			if (!current || dirty & /*orgs*/ 4 && a_href_value !== (a_href_value = /*link*/ ctx[8].url)) {
 				attr(a, "href", a_href_value);
 			}
 
-			if (!current || dirty & /*orgs*/ 4 && a_aria_label_value !== (a_aria_label_value = /*link*/ ctx[7].label)) {
+			if (!current || dirty & /*orgs*/ 4 && a_aria_label_value !== (a_aria_label_value = /*link*/ ctx[8].label)) {
 				attr(a, "aria-label", a_aria_label_value);
 			}
 		},
@@ -4533,22 +4565,22 @@ function create_each_block_1$1(ctx) {
 	};
 }
 
-// (104:4) {#each orgs as org}
+// (105:4) {#each orgs as org}
 function create_each_block$3(ctx) {
 	let li;
 	let t0;
 	let div2;
 	let div0;
 	let span;
-	let t1_value = /*org*/ ctx[4].name + "";
+	let t1_value = /*org*/ ctx[5].name + "";
 	let t1;
 	let t2;
 	let div1;
 	let t3;
 	let li_onclick_value;
 	let current;
-	let if_block = /*org*/ ctx[4].image.url && create_if_block$4(ctx);
-	let each_value_1 = /*org*/ ctx[4].social_links;
+	let if_block = /*org*/ ctx[5].image.url && create_if_block$4(ctx);
+	let each_value_1 = /*org*/ ctx[5].social_links;
 	let each_blocks = [];
 
 	for (let i = 0; i < each_value_1.length; i += 1) {
@@ -4611,7 +4643,7 @@ function create_each_block$3(ctx) {
 			attr(div0, "class", "details svelte-1eqlbb8");
 			attr(div1, "class", "social svelte-1eqlbb8");
 			attr(div2, "class", "info");
-			attr(li, "onclick", li_onclick_value = "window.open('" + /*org*/ ctx[4].link + "', '_blank')");
+			attr(li, "onclick", li_onclick_value = "window.open('" + /*org*/ ctx[5].link + "', '_blank')");
 			attr(li, "class", "svelte-1eqlbb8");
 		},
 		m(target, anchor) {
@@ -4635,7 +4667,7 @@ function create_each_block$3(ctx) {
 			current = true;
 		},
 		p(ctx, dirty) {
-			if (/*org*/ ctx[4].image.url) {
+			if (/*org*/ ctx[5].image.url) {
 				if (if_block) {
 					if_block.p(ctx, dirty);
 				} else {
@@ -4648,10 +4680,10 @@ function create_each_block$3(ctx) {
 				if_block = null;
 			}
 
-			if ((!current || dirty & /*orgs*/ 4) && t1_value !== (t1_value = /*org*/ ctx[4].name + "")) set_data(t1, t1_value);
+			if ((!current || dirty & /*orgs*/ 4) && t1_value !== (t1_value = /*org*/ ctx[5].name + "")) set_data(t1, t1_value);
 
 			if (dirty & /*orgs*/ 4) {
-				each_value_1 = /*org*/ ctx[4].social_links;
+				each_value_1 = /*org*/ ctx[5].social_links;
 				let i;
 
 				for (i = 0; i < each_value_1.length; i += 1) {
@@ -4677,7 +4709,7 @@ function create_each_block$3(ctx) {
 				check_outros();
 			}
 
-			if (!current || dirty & /*orgs*/ 4 && li_onclick_value !== (li_onclick_value = "window.open('" + /*org*/ ctx[4].link + "', '_blank')")) {
+			if (!current || dirty & /*orgs*/ 4 && li_onclick_value !== (li_onclick_value = "window.open('" + /*org*/ ctx[5].link + "', '_blank')")) {
 				attr(li, "onclick", li_onclick_value);
 			}
 		},
@@ -4860,18 +4892,20 @@ function create_fragment$5(ctx) {
 
 function instance$5($$self, $$props, $$invalidate) {
 	let { favicon } = $$props;
+	let { title } = $$props;
 	let { heading } = $$props;
 	let { subheading } = $$props;
 	let { orgs } = $$props;
 
 	$$self.$$set = $$props => {
 		if ('favicon' in $$props) $$invalidate(3, favicon = $$props.favicon);
+		if ('title' in $$props) $$invalidate(4, title = $$props.title);
 		if ('heading' in $$props) $$invalidate(0, heading = $$props.heading);
 		if ('subheading' in $$props) $$invalidate(1, subheading = $$props.subheading);
 		if ('orgs' in $$props) $$invalidate(2, orgs = $$props.orgs);
 	};
 
-	return [heading, subheading, orgs, favicon];
+	return [heading, subheading, orgs, favicon, title];
 }
 
 class Component$5 extends SvelteComponent {
@@ -4880,6 +4914,7 @@ class Component$5 extends SvelteComponent {
 
 		init(this, options, instance$5, create_fragment$5, safe_not_equal, {
 			favicon: 3,
+			title: 4,
 			heading: 0,
 			subheading: 1,
 			orgs: 2
@@ -4891,21 +4926,21 @@ class Component$5 extends SvelteComponent {
 
 function get_each_context$4(ctx, list, i) {
 	const child_ctx = ctx.slice();
-	child_ctx[3] = list[i].link;
-	child_ctx[4] = list[i].icon;
+	child_ctx[4] = list[i].link;
+	child_ctx[5] = list[i].icon;
 	return child_ctx;
 }
 
 function get_each_context_1$2(ctx, list, i) {
 	const child_ctx = ctx.slice();
-	child_ctx[3] = list[i].link;
+	child_ctx[4] = list[i].link;
 	return child_ctx;
 }
 
-// (65:4) {#each nav as { link }}
+// (66:4) {#each nav as { link }}
 function create_each_block_1$2(ctx) {
 	let a;
-	let t_value = /*link*/ ctx[3].label + "";
+	let t_value = /*link*/ ctx[4].label + "";
 	let t;
 	let a_href_value;
 
@@ -4924,16 +4959,16 @@ function create_each_block_1$2(ctx) {
 		},
 		h() {
 			attr(a, "class", "link svelte-i9k4w2");
-			attr(a, "href", a_href_value = /*link*/ ctx[3].url);
+			attr(a, "href", a_href_value = /*link*/ ctx[4].url);
 		},
 		m(target, anchor) {
 			insert_hydration(target, a, anchor);
 			append_hydration(a, t);
 		},
 		p(ctx, dirty) {
-			if (dirty & /*nav*/ 1 && t_value !== (t_value = /*link*/ ctx[3].label + "")) set_data(t, t_value);
+			if (dirty & /*nav*/ 1 && t_value !== (t_value = /*link*/ ctx[4].label + "")) set_data(t, t_value);
 
-			if (dirty & /*nav*/ 1 && a_href_value !== (a_href_value = /*link*/ ctx[3].url)) {
+			if (dirty & /*nav*/ 1 && a_href_value !== (a_href_value = /*link*/ ctx[4].url)) {
 				attr(a, "href", a_href_value);
 			}
 		},
@@ -4943,7 +4978,7 @@ function create_each_block_1$2(ctx) {
 	};
 }
 
-// (70:4) {#each social as { link, icon }}
+// (71:4) {#each social as { link, icon }}
 function create_each_block$4(ctx) {
 	let a;
 	let icon;
@@ -4951,7 +4986,7 @@ function create_each_block$4(ctx) {
 	let a_href_value;
 	let a_aria_label_value;
 	let current;
-	icon = new Component$1({ props: { icon: /*icon*/ ctx[4] } });
+	icon = new Component$1({ props: { icon: /*icon*/ ctx[5] } });
 
 	return {
 		c() {
@@ -4974,8 +5009,8 @@ function create_each_block$4(ctx) {
 			this.h();
 		},
 		h() {
-			attr(a, "href", a_href_value = /*link*/ ctx[3].url);
-			attr(a, "aria-label", a_aria_label_value = /*link*/ ctx[3].label);
+			attr(a, "href", a_href_value = /*link*/ ctx[4].url);
+			attr(a, "aria-label", a_aria_label_value = /*link*/ ctx[4].label);
 			attr(a, "class", "svelte-i9k4w2");
 		},
 		m(target, anchor) {
@@ -4986,14 +5021,14 @@ function create_each_block$4(ctx) {
 		},
 		p(ctx, dirty) {
 			const icon_changes = {};
-			if (dirty & /*social*/ 2) icon_changes.icon = /*icon*/ ctx[4];
+			if (dirty & /*social*/ 2) icon_changes.icon = /*icon*/ ctx[5];
 			icon.$set(icon_changes);
 
-			if (!current || dirty & /*social*/ 2 && a_href_value !== (a_href_value = /*link*/ ctx[3].url)) {
+			if (!current || dirty & /*social*/ 2 && a_href_value !== (a_href_value = /*link*/ ctx[4].url)) {
 				attr(a, "href", a_href_value);
 			}
 
-			if (!current || dirty & /*social*/ 2 && a_aria_label_value !== (a_aria_label_value = /*link*/ ctx[3].label)) {
+			if (!current || dirty & /*social*/ 2 && a_aria_label_value !== (a_aria_label_value = /*link*/ ctx[4].label)) {
 				attr(a, "aria-label", a_aria_label_value);
 			}
 		},
@@ -5191,22 +5226,24 @@ function create_fragment$6(ctx) {
 
 function instance$6($$self, $$props, $$invalidate) {
 	let { favicon } = $$props;
+	let { title } = $$props;
 	let { nav } = $$props;
 	let { social } = $$props;
 
 	$$self.$$set = $$props => {
 		if ('favicon' in $$props) $$invalidate(2, favicon = $$props.favicon);
+		if ('title' in $$props) $$invalidate(3, title = $$props.title);
 		if ('nav' in $$props) $$invalidate(0, nav = $$props.nav);
 		if ('social' in $$props) $$invalidate(1, social = $$props.social);
 	};
 
-	return [nav, social, favicon];
+	return [nav, social, favicon, title];
 }
 
 class Component$6 extends SvelteComponent {
 	constructor(options) {
 		super();
-		init(this, options, instance$6, create_fragment$6, safe_not_equal, { favicon: 2, nav: 0, social: 1 });
+		init(this, options, instance$6, create_fragment$6, safe_not_equal, { favicon: 2, title: 3, nav: 0, social: 1 });
 	}
 }
 
@@ -5214,18 +5251,20 @@ class Component$6 extends SvelteComponent {
 
 function instance$7($$self, $$props, $$invalidate) {
 	let { favicon } = $$props;
+	let { title } = $$props;
 
 	$$self.$$set = $$props => {
 		if ('favicon' in $$props) $$invalidate(0, favicon = $$props.favicon);
+		if ('title' in $$props) $$invalidate(1, title = $$props.title);
 	};
 
-	return [favicon];
+	return [favicon, title];
 }
 
 class Component$7 extends SvelteComponent {
 	constructor(options) {
 		super();
-		init(this, options, instance$7, null, safe_not_equal, { favicon: 0 });
+		init(this, options, instance$7, null, safe_not_equal, { favicon: 0, title: 1 });
 	}
 }
 
@@ -5254,7 +5293,8 @@ function create_fragment$7(ctx) {
 					"src": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
 					"url": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
 					"size": 1
-				}
+				},
+				title: "More Homes Canada"
 			}
 		});
 
@@ -5266,6 +5306,7 @@ function create_fragment$7(ctx) {
 					"url": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
 					"size": 1
 				},
+				title: "More Homes Canada",
 				logo: {
 					"image": {
 						"alt": "",
@@ -5300,6 +5341,7 @@ function create_fragment$7(ctx) {
 					"url": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
 					"size": 1
 				},
+				title: "More Homes Canada",
 				heading: "Background",
 				items: [
 					{
@@ -5342,6 +5384,7 @@ function create_fragment$7(ctx) {
 					"url": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
 					"size": 1
 				},
+				title: "More Homes Canada",
 				heading: "Our Goals ",
 				items: [
 					{
@@ -5405,6 +5448,7 @@ function create_fragment$7(ctx) {
 					"url": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
 					"size": 1
 				},
+				title: "More Homes Canada",
 				heading: "Who We Are",
 				subheading: "More Homes Canada is a coalition of housing advocacy groups from across the country. Together, we are fighting to end Canada’s housing shortage.",
 				orgs: [
@@ -5553,6 +5597,7 @@ function create_fragment$7(ctx) {
 					"url": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
 					"size": 1
 				},
+				title: "More Homes Canada",
 				nav: [
 					{
 						"link": { "url": "/", "label": "More Homes Canada" }
@@ -5584,7 +5629,8 @@ function create_fragment$7(ctx) {
 					"src": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
 					"url": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
 					"size": 1
-				}
+				},
+				title: "More Homes Canada"
 			}
 		});
 
