@@ -4435,7 +4435,7 @@ function create_fragment$5(ctx) {
 		l(nodes) {
 			div = claim_element(nodes, "DIV", { class: true, id: true });
 			var div_nodes = children(div);
-			section = claim_element(div_nodes, "SECTION", { class: true });
+			section = claim_element(div_nodes, "SECTION", { class: true, id: true });
 			var section_nodes = children(section);
 			h2 = claim_element(section_nodes, "H2", { class: true });
 			var h2_nodes = children(h2);
@@ -4464,6 +4464,7 @@ function create_fragment$5(ctx) {
 			attr(span, "class", "subheading svelte-1eqlbb8");
 			attr(ul, "class", "cards svelte-1eqlbb8");
 			attr(section, "class", "section-container svelte-1eqlbb8");
+			attr(section, "id", "about");
 			attr(div, "class", "section");
 			attr(div, "id", "section-a71ed389");
 		},
@@ -5283,11 +5284,7 @@ function create_fragment$8(ctx) {
 				},
 				site_nav: [
 					{
-						"link": {
-							"url": "/",
-							"label": "About Us",
-							"active": false
-						}
+						"link": { "url": "/#about", "label": "About Us" }
 					},
 					{
 						"link": {
@@ -5387,15 +5384,16 @@ function create_fragment$8(ctx) {
 				subheading: "More Homes Canada is a coalition of housing advocacy groups from across the country. Together, we are fighting to end Canada’s housing shortage.",
 				orgs: [
 					{
+						"link": "https://www.moreneighbours.ca/",
 						"name": "More Neighbours Toronto",
 						"image": {
 							"alt": "",
 							"url": "https://res.cloudinary.com/dbnijop5c/image/upload/v1700527328/mnto_vaize2.png"
 						},
-						"social_links": [],
-						"link": "https://www.moreneighbours.ca/"
+						"social_links": []
 					},
 					{
+						"link": "https://www.abundanthousingvancouver.com/",
 						"name": "Abundant Housing Vancouver",
 						"image": {
 							"alt": "",
@@ -5403,10 +5401,10 @@ function create_fragment$8(ctx) {
 							"url": "https://res.cloudinary.com/dbnijop5c/image/upload/v1700528184/More%20Homes%20Canada/vancouver_sjf85y.jpg",
 							"size": null
 						},
-						"social_links": [],
-						"link": "https://www.abundanthousingvancouver.com/"
+						"social_links": []
 					},
 					{
+						"link": "https://www.growtogetheryeg.com/",
 						"name": "Grow Together Edmonton",
 						"image": {
 							"alt": "",
@@ -5414,10 +5412,10 @@ function create_fragment$8(ctx) {
 							"url": "https://res.cloudinary.com/dbnijop5c/image/upload/v1700528186/More%20Homes%20Canada/edmonton_x53wtv.png",
 							"size": null
 						},
-						"social_links": [],
-						"link": "https://www.growtogetheryeg.com/"
+						"social_links": []
 					},
 					{
+						"link": "https://construisonsmtl.ca/en/",
 						"name": "Construisons Montréal",
 						"image": {
 							"alt": "",
@@ -5425,10 +5423,10 @@ function create_fragment$8(ctx) {
 							"url": "https://res.cloudinary.com/dbnijop5c/image/upload/v1700528186/More%20Homes%20Canada/montreal_ejn4pg.png",
 							"size": null
 						},
-						"social_links": [],
-						"link": "https://construisonsmtl.ca/en/"
+						"social_links": []
 					},
 					{
+						"link": "https://www.moreneighbourscalgary.ca/",
 						"name": "More Neighbours Calgary",
 						"image": {
 							"alt": "",
@@ -5436,10 +5434,10 @@ function create_fragment$8(ctx) {
 							"url": "https://res.cloudinary.com/dbnijop5c/image/upload/v1700528186/More%20Homes%20Canada/calgary_b9krf6.png",
 							"size": null
 						},
-						"social_links": [],
-						"link": "https://www.moreneighbourscalgary.ca/"
+						"social_links": []
 					},
 					{
+						"link": "https://www.homesforliving.ca/",
 						"name": "Homes for Living Victoria",
 						"image": {
 							"alt": "",
@@ -5447,10 +5445,10 @@ function create_fragment$8(ctx) {
 							"url": "https://res.cloudinary.com/dbnijop5c/image/upload/v1700528184/More%20Homes%20Canada/victoria_n879ey.png",
 							"size": null
 						},
-						"social_links": [],
-						"link": "https://www.homesforliving.ca/"
+						"social_links": []
 					},
 					{
+						"link": "https://makehousingaffordable.ca/",
 						"name": "Make Housing Affordable Ottawa",
 						"image": {
 							"alt": "",
@@ -5458,10 +5456,10 @@ function create_fragment$8(ctx) {
 							"url": "https://res.cloudinary.com/dbnijop5c/image/upload/v1700528183/More%20Homes%20Canada/ottawa_civxsq.png",
 							"size": null
 						},
-						"social_links": [],
-						"link": "https://makehousingaffordable.ca/"
+						"social_links": []
 					},
 					{
+						"link": "https://www.wryimby.com/",
 						"name": "Waterloo Region YIMBY",
 						"image": {
 							"alt": "",
@@ -5469,19 +5467,19 @@ function create_fragment$8(ctx) {
 							"url": "https://res.cloudinary.com/dbnijop5c/image/upload/v1700528185/More%20Homes%20Canada/waterloo_llha5v.jpg",
 							"size": null
 						},
-						"social_links": [],
-						"link": "https://www.wryimby.com/"
+						"social_links": []
 					},
 					{
+						"link": "https://twitter.com/MoreHomesHRM",
 						"name": "More Homes Halifax",
 						"image": {
 							"alt": "",
 							"url": "https://res.cloudinary.com/dbnijop5c/image/upload/v1700528187/More%20Homes%20Canada/halifax_epvtfq.jpg"
 						},
-						"social_links": [],
-						"link": "https://twitter.com/MoreHomesHRM"
+						"social_links": []
 					},
 					{
+						"link": "https://www.yesinwpg.com/",
 						"name": "YIMBY Winnipeg",
 						"image": {
 							"alt": "",
@@ -5489,10 +5487,10 @@ function create_fragment$8(ctx) {
 							"url": "https://res.cloudinary.com/dbnijop5c/image/upload/v1700528184/More%20Homes%20Canada/winnipeg_uvkpdu.png",
 							"size": null
 						},
-						"social_links": [],
-						"link": "https://www.yesinwpg.com/"
+						"social_links": []
 					},
 					{
+						"link": "https://www.beautifulnanaimo.ca/",
 						"name": "Strong Towns Nanaimo",
 						"image": {
 							"alt": "",
@@ -5500,24 +5498,23 @@ function create_fragment$8(ctx) {
 							"url": "https://res.cloudinary.com/dbnijop5c/image/upload/v1700528183/More%20Homes%20Canada/nanaimo_dnm0vl.png",
 							"size": null
 						},
-						"social_links": [],
-						"link": "https://www.beautifulnanaimo.ca/"
+						"social_links": []
 					},
 					{
+						"link": "https://www.strongtownslangley.org/",
 						"name": "Strong Towns Langley",
 						"image": {
-							"url": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1702261260112download%20(1).png",
-							"src": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1702261260112download%20(1).png",
 							"alt": "",
+							"src": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1702261260112download%20(1).png",
+							"url": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1702261260112download%20(1).png",
 							"size": 7
 						},
 						"social_links": [
 							{
-								"link": { "label": "reprehenderit", "url": "/" },
-								"icon": "Tempor deserunt deserunt"
+								"icon": "Tempor deserunt deserunt",
+								"link": { "url": "/", "label": "reprehenderit" }
 							}
-						],
-						"link": "https://www.strongtownslangley.org/"
+						]
 					}
 				]
 			}
