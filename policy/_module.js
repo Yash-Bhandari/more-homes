@@ -3703,15 +3703,15 @@ class Component$2 extends SvelteComponent {
 
 function get_each_context$1(ctx, list, i) {
 	const child_ctx = ctx.slice();
-	child_ctx[9] = list[i];
-	child_ctx[11] = i;
+	child_ctx[7] = list[i];
+	child_ctx[9] = i;
 	return child_ctx;
 }
 
-// (151:6) {#if isActive[i]}
+// (145:6) {#if isActive[i]}
 function create_if_block$2(ctx) {
 	let div;
-	let raw_value = /*item*/ ctx[9].description.html + "";
+	let raw_value = /*item*/ ctx[7].description.html + "";
 	let div_transition;
 	let current;
 
@@ -3735,7 +3735,7 @@ function create_if_block$2(ctx) {
 			current = true;
 		},
 		p(ctx, dirty) {
-			if ((!current || dirty & /*items*/ 2) && raw_value !== (raw_value = /*item*/ ctx[9].description.html + "")) div.innerHTML = raw_value;		},
+			if ((!current || dirty & /*items*/ 2) && raw_value !== (raw_value = /*item*/ ctx[7].description.html + "")) div.innerHTML = raw_value;		},
 		i(local) {
 			if (current) return;
 
@@ -3759,15 +3759,15 @@ function create_if_block$2(ctx) {
 	};
 }
 
-// (143:4) {#each items as item, i (i)}
+// (137:4) {#each items as item, i (i)}
 function create_each_block$1(key_1, ctx) {
 	let div;
 	let button;
 	let span0;
-	let t0_value = /*i*/ ctx[11] + 1 + "";
+	let t0_value = /*i*/ ctx[9] + 1 + "";
 	let t0;
 	let t1;
-	let t2_value = /*item*/ ctx[9].title + "";
+	let t2_value = /*item*/ ctx[7].title + "";
 	let t2;
 	let t3;
 	let span1;
@@ -3780,10 +3780,10 @@ function create_each_block$1(key_1, ctx) {
 	icon = new Component$1({ props: { icon: "ph:caret-down-bold" } });
 
 	function click_handler() {
-		return /*click_handler*/ ctx[5](/*i*/ ctx[11]);
+		return /*click_handler*/ ctx[5](/*i*/ ctx[9]);
 	}
 
-	let if_block = /*isActive*/ ctx[2][/*i*/ ctx[11]] && create_if_block$2(ctx);
+	let if_block = /*isActive*/ ctx[2][/*i*/ ctx[9]] && create_if_block$2(ctx);
 
 	return {
 		key: key_1,
@@ -3831,7 +3831,7 @@ function create_each_block$1(key_1, ctx) {
 			attr(span1, "class", "icon svelte-12ft0zk");
 			attr(button, "class", "svelte-12ft0zk");
 			attr(div, "class", "item svelte-12ft0zk");
-			toggle_class(div, "active", /*isActive*/ ctx[2][/*i*/ ctx[11]]);
+			toggle_class(div, "active", /*isActive*/ ctx[2][/*i*/ ctx[9]]);
 			this.first = div;
 		},
 		m(target, anchor) {
@@ -3856,10 +3856,10 @@ function create_each_block$1(key_1, ctx) {
 		},
 		p(new_ctx, dirty) {
 			ctx = new_ctx;
-			if ((!current || dirty & /*items*/ 2) && t0_value !== (t0_value = /*i*/ ctx[11] + 1 + "")) set_data(t0, t0_value);
-			if ((!current || dirty & /*items*/ 2) && t2_value !== (t2_value = /*item*/ ctx[9].title + "")) set_data(t2, t2_value);
+			if ((!current || dirty & /*items*/ 2) && t0_value !== (t0_value = /*i*/ ctx[9] + 1 + "")) set_data(t0, t0_value);
+			if ((!current || dirty & /*items*/ 2) && t2_value !== (t2_value = /*item*/ ctx[7].title + "")) set_data(t2, t2_value);
 
-			if (/*isActive*/ ctx[2][/*i*/ ctx[11]]) {
+			if (/*isActive*/ ctx[2][/*i*/ ctx[9]]) {
 				if (if_block) {
 					if_block.p(ctx, dirty);
 
@@ -3883,7 +3883,7 @@ function create_each_block$1(key_1, ctx) {
 			}
 
 			if (!current || dirty & /*isActive, items*/ 6) {
-				toggle_class(div, "active", /*isActive*/ ctx[2][/*i*/ ctx[11]]);
+				toggle_class(div, "active", /*isActive*/ ctx[2][/*i*/ ctx[9]]);
 			}
 		},
 		i(local) {
@@ -3918,7 +3918,7 @@ function create_fragment$3(ctx) {
 	let each_1_lookup = new Map();
 	let current;
 	let each_value = /*items*/ ctx[1];
-	const get_key = ctx => /*i*/ ctx[11];
+	const get_key = ctx => /*i*/ ctx[9];
 
 	for (let i = 0; i < each_value.length; i += 1) {
 		let child_ctx = get_each_context$1(ctx, each_value, i);
@@ -4027,7 +4027,6 @@ function instance$3($$self, $$props, $$invalidate) {
 	let { heading } = $$props;
 	let { items } = $$props;
 	const isActive = items.map(i => false);
-	isActive[0] = true;
 
 	const toggleItem = i => {
 		$$invalidate(2, isActive[i] = !isActive[i], isActive);
@@ -4055,15 +4054,15 @@ class Component$3 extends SvelteComponent {
 
 function get_each_context$2(ctx, list, i) {
 	const child_ctx = ctx.slice();
-	child_ctx[9] = list[i];
-	child_ctx[11] = i;
+	child_ctx[7] = list[i];
+	child_ctx[9] = i;
 	return child_ctx;
 }
 
-// (151:6) {#if isActive[i]}
+// (145:6) {#if isActive[i]}
 function create_if_block$3(ctx) {
 	let div;
-	let raw_value = /*item*/ ctx[9].description.html + "";
+	let raw_value = /*item*/ ctx[7].description.html + "";
 	let div_transition;
 	let current;
 
@@ -4087,7 +4086,7 @@ function create_if_block$3(ctx) {
 			current = true;
 		},
 		p(ctx, dirty) {
-			if ((!current || dirty & /*items*/ 2) && raw_value !== (raw_value = /*item*/ ctx[9].description.html + "")) div.innerHTML = raw_value;		},
+			if ((!current || dirty & /*items*/ 2) && raw_value !== (raw_value = /*item*/ ctx[7].description.html + "")) div.innerHTML = raw_value;		},
 		i(local) {
 			if (current) return;
 
@@ -4111,15 +4110,15 @@ function create_if_block$3(ctx) {
 	};
 }
 
-// (143:4) {#each items as item, i (i)}
+// (137:4) {#each items as item, i (i)}
 function create_each_block$2(key_1, ctx) {
 	let div;
 	let button;
 	let span0;
-	let t0_value = /*i*/ ctx[11] + 1 + "";
+	let t0_value = /*i*/ ctx[9] + 1 + "";
 	let t0;
 	let t1;
-	let t2_value = /*item*/ ctx[9].title + "";
+	let t2_value = /*item*/ ctx[7].title + "";
 	let t2;
 	let t3;
 	let span1;
@@ -4132,10 +4131,10 @@ function create_each_block$2(key_1, ctx) {
 	icon = new Component$1({ props: { icon: "ph:caret-down-bold" } });
 
 	function click_handler() {
-		return /*click_handler*/ ctx[5](/*i*/ ctx[11]);
+		return /*click_handler*/ ctx[5](/*i*/ ctx[9]);
 	}
 
-	let if_block = /*isActive*/ ctx[2][/*i*/ ctx[11]] && create_if_block$3(ctx);
+	let if_block = /*isActive*/ ctx[2][/*i*/ ctx[9]] && create_if_block$3(ctx);
 
 	return {
 		key: key_1,
@@ -4183,7 +4182,7 @@ function create_each_block$2(key_1, ctx) {
 			attr(span1, "class", "icon svelte-12ft0zk");
 			attr(button, "class", "svelte-12ft0zk");
 			attr(div, "class", "item svelte-12ft0zk");
-			toggle_class(div, "active", /*isActive*/ ctx[2][/*i*/ ctx[11]]);
+			toggle_class(div, "active", /*isActive*/ ctx[2][/*i*/ ctx[9]]);
 			this.first = div;
 		},
 		m(target, anchor) {
@@ -4208,10 +4207,10 @@ function create_each_block$2(key_1, ctx) {
 		},
 		p(new_ctx, dirty) {
 			ctx = new_ctx;
-			if ((!current || dirty & /*items*/ 2) && t0_value !== (t0_value = /*i*/ ctx[11] + 1 + "")) set_data(t0, t0_value);
-			if ((!current || dirty & /*items*/ 2) && t2_value !== (t2_value = /*item*/ ctx[9].title + "")) set_data(t2, t2_value);
+			if ((!current || dirty & /*items*/ 2) && t0_value !== (t0_value = /*i*/ ctx[9] + 1 + "")) set_data(t0, t0_value);
+			if ((!current || dirty & /*items*/ 2) && t2_value !== (t2_value = /*item*/ ctx[7].title + "")) set_data(t2, t2_value);
 
-			if (/*isActive*/ ctx[2][/*i*/ ctx[11]]) {
+			if (/*isActive*/ ctx[2][/*i*/ ctx[9]]) {
 				if (if_block) {
 					if_block.p(ctx, dirty);
 
@@ -4235,7 +4234,7 @@ function create_each_block$2(key_1, ctx) {
 			}
 
 			if (!current || dirty & /*isActive, items*/ 6) {
-				toggle_class(div, "active", /*isActive*/ ctx[2][/*i*/ ctx[11]]);
+				toggle_class(div, "active", /*isActive*/ ctx[2][/*i*/ ctx[9]]);
 			}
 		},
 		i(local) {
@@ -4270,7 +4269,7 @@ function create_fragment$4(ctx) {
 	let each_1_lookup = new Map();
 	let current;
 	let each_value = /*items*/ ctx[1];
-	const get_key = ctx => /*i*/ ctx[11];
+	const get_key = ctx => /*i*/ ctx[9];
 
 	for (let i = 0; i < each_value.length; i += 1) {
 		let child_ctx = get_each_context$2(ctx, each_value, i);
@@ -4379,7 +4378,6 @@ function instance$4($$self, $$props, $$invalidate) {
 	let { heading } = $$props;
 	let { items } = $$props;
 	const isActive = items.map(i => false);
-	isActive[0] = true;
 
 	const toggleItem = i => {
 		$$invalidate(2, isActive[i] = !isActive[i], isActive);
@@ -5321,8 +5319,8 @@ function create_fragment$7(ctx) {
 					{
 						"title": "Building more market rate housing reduces housing costs and is crucial for broad affordability",
 						"description": {
-							"html": "<ul>\n<li><p>Even expensive new housing helps with broad affordability by creating chains of vacancies throughout the housing market. People who move into a \"luxury condos\" are opening vacancies in more affordable home elsewhere.</p></li>\n<li><p>Today’s new “luxury” housing will form our future affordable housing stock. The affordable apartments we have today were expensive when they were first built.</p></li>\n<li><p>This is not trickle-down economics. Allowing more market housing does not cost municipalities anything (in fact, it generates revenue).</p></li>\n</ul>",
-							"markdown": "* Even expensive new housing helps with broad affordability by creating chains of vacancies throughout the housing market. People who move into a \"luxury condos\" are opening vacancies in more affordable home elsewhere.\n\n* Today’s new “luxury” housing will form our future affordable housing stock. The affordable apartments we have today were expensive when they were first built.\n\n* This is not trickle-down economics. Allowing more market housing does not cost municipalities anything (in fact, it generates revenue)."
+							"html": "<ul>\n<li><p>Even expensive new housing helps with broad affordability by creating chains of vacancies throughout the housing market. People who move into a \"luxury condos\" are opening up vacancies in more affordable homes elsewhere.</p></li>\n<li><p>Today’s new “luxury” housing will form our future affordable housing stock. The affordable apartments we have today were expensive when they were first built.</p></li>\n<li><p>This is not trickle-down economics. Allowing more market housing does not cost municipalities anything (in fact, it generates revenue).</p></li>\n</ul>",
+							"markdown": "* Even expensive new housing helps with broad affordability by creating chains of vacancies throughout the housing market. People who move into a \"luxury condos\" are opening up vacancies in more affordable homes elsewhere.\n\n* Today’s new “luxury” housing will form our future affordable housing stock. The affordable apartments we have today were expensive when they were first built.\n\n* This is not trickle-down economics. Allowing more market housing does not cost municipalities anything (in fact, it generates revenue)."
 						}
 					},
 					{
