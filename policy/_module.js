@@ -1092,7 +1092,7 @@ function create_fragment(ctx) {
 	let t0;
 	let style;
 	let t1;
-	document.title = title_value = /*title*/ ctx[1];
+	document.title = title_value = /*title*/ ctx[0];
 
 	return {
 		c() {
@@ -1134,7 +1134,7 @@ function create_fragment(ctx) {
 			attr(link, "rel", "icon");
 			attr(link, "type", "image/png");
 			attr(link, "sizes", "32x32");
-			attr(link, "href", link_href_value = /*favicon*/ ctx[0].url);
+			attr(link, "href", link_href_value = /*favicon*/ ctx[1].url);
 			attr(meta, "name", "viewport");
 			attr(meta, "content", "width=device-width, initial-scale=1.0");
 			script0.async = true;
@@ -1151,11 +1151,11 @@ function create_fragment(ctx) {
 			append_hydration(style, t1);
 		},
 		p(ctx, [dirty]) {
-			if (dirty & /*favicon*/ 1 && link_href_value !== (link_href_value = /*favicon*/ ctx[0].url)) {
+			if (dirty & /*favicon*/ 2 && link_href_value !== (link_href_value = /*favicon*/ ctx[1].url)) {
 				attr(link, "href", link_href_value);
 			}
 
-			if (dirty & /*title*/ 2 && title_value !== (title_value = /*title*/ ctx[1])) {
+			if (dirty & /*title*/ 1 && title_value !== (title_value = /*title*/ ctx[0])) {
 				document.title = title_value;
 			}
 		},
@@ -1172,21 +1172,21 @@ function create_fragment(ctx) {
 }
 
 function instance($$self, $$props, $$invalidate) {
-	let { favicon } = $$props;
 	let { title } = $$props;
+	let { favicon } = $$props;
 
 	$$self.$$set = $$props => {
-		if ('favicon' in $$props) $$invalidate(0, favicon = $$props.favicon);
-		if ('title' in $$props) $$invalidate(1, title = $$props.title);
+		if ('title' in $$props) $$invalidate(0, title = $$props.title);
+		if ('favicon' in $$props) $$invalidate(1, favicon = $$props.favicon);
 	};
 
-	return [favicon, title];
+	return [title, favicon];
 }
 
 class Component extends SvelteComponent {
 	constructor(options) {
 		super();
-		init(this, options, instance, create_fragment, safe_not_equal, { favicon: 0, title: 1 });
+		init(this, options, instance, create_fragment, safe_not_equal, { title: 0, favicon: 1 });
 	}
 }
 
@@ -3694,8 +3694,8 @@ function create_fragment$2(ctx) {
 }
 
 function instance$2($$self, $$props, $$invalidate) {
-	let { favicon } = $$props;
 	let { title } = $$props;
+	let { favicon } = $$props;
 	let { logo } = $$props;
 	let { site_nav } = $$props;
 	let mobileNavOpen = false;
@@ -3704,13 +3704,13 @@ function instance$2($$self, $$props, $$invalidate) {
 	const click_handler_1 = () => $$invalidate(2, mobileNavOpen = false);
 
 	$$self.$$set = $$props => {
-		if ('favicon' in $$props) $$invalidate(3, favicon = $$props.favicon);
-		if ('title' in $$props) $$invalidate(4, title = $$props.title);
+		if ('title' in $$props) $$invalidate(3, title = $$props.title);
+		if ('favicon' in $$props) $$invalidate(4, favicon = $$props.favicon);
 		if ('logo' in $$props) $$invalidate(0, logo = $$props.logo);
 		if ('site_nav' in $$props) $$invalidate(1, site_nav = $$props.site_nav);
 	};
 
-	return [logo, site_nav, mobileNavOpen, favicon, title, click_handler, click_handler_1];
+	return [logo, site_nav, mobileNavOpen, title, favicon, click_handler, click_handler_1];
 }
 
 class Component$2 extends SvelteComponent {
@@ -3718,8 +3718,8 @@ class Component$2 extends SvelteComponent {
 		super();
 
 		init(this, options, instance$2, create_fragment$2, safe_not_equal, {
-			favicon: 3,
-			title: 4,
+			title: 3,
+			favicon: 4,
 			logo: 0,
 			site_nav: 1
 		});
@@ -4050,8 +4050,8 @@ function create_fragment$3(ctx) {
 }
 
 function instance$3($$self, $$props, $$invalidate) {
-	let { favicon } = $$props;
 	let { title } = $$props;
+	let { favicon } = $$props;
 	let { heading } = $$props;
 	let { items } = $$props;
 	const isActive = items.map(i => false);
@@ -4063,13 +4063,13 @@ function instance$3($$self, $$props, $$invalidate) {
 	const click_handler = i => toggleItem(i);
 
 	$$self.$$set = $$props => {
-		if ('favicon' in $$props) $$invalidate(4, favicon = $$props.favicon);
-		if ('title' in $$props) $$invalidate(5, title = $$props.title);
+		if ('title' in $$props) $$invalidate(4, title = $$props.title);
+		if ('favicon' in $$props) $$invalidate(5, favicon = $$props.favicon);
 		if ('heading' in $$props) $$invalidate(0, heading = $$props.heading);
 		if ('items' in $$props) $$invalidate(1, items = $$props.items);
 	};
 
-	return [heading, items, isActive, toggleItem, favicon, title, click_handler];
+	return [heading, items, isActive, toggleItem, title, favicon, click_handler];
 }
 
 class Component$3 extends SvelteComponent {
@@ -4077,8 +4077,8 @@ class Component$3 extends SvelteComponent {
 		super();
 
 		init(this, options, instance$3, create_fragment$3, safe_not_equal, {
-			favicon: 4,
-			title: 5,
+			title: 4,
+			favicon: 5,
 			heading: 0,
 			items: 1
 		});
@@ -4409,8 +4409,8 @@ function create_fragment$4(ctx) {
 }
 
 function instance$4($$self, $$props, $$invalidate) {
-	let { favicon } = $$props;
 	let { title } = $$props;
+	let { favicon } = $$props;
 	let { heading } = $$props;
 	let { items } = $$props;
 	const isActive = items.map(i => false);
@@ -4422,13 +4422,13 @@ function instance$4($$self, $$props, $$invalidate) {
 	const click_handler = i => toggleItem(i);
 
 	$$self.$$set = $$props => {
-		if ('favicon' in $$props) $$invalidate(4, favicon = $$props.favicon);
-		if ('title' in $$props) $$invalidate(5, title = $$props.title);
+		if ('title' in $$props) $$invalidate(4, title = $$props.title);
+		if ('favicon' in $$props) $$invalidate(5, favicon = $$props.favicon);
 		if ('heading' in $$props) $$invalidate(0, heading = $$props.heading);
 		if ('items' in $$props) $$invalidate(1, items = $$props.items);
 	};
 
-	return [heading, items, isActive, toggleItem, favicon, title, click_handler];
+	return [heading, items, isActive, toggleItem, title, favicon, click_handler];
 }
 
 class Component$4 extends SvelteComponent {
@@ -4436,8 +4436,8 @@ class Component$4 extends SvelteComponent {
 		super();
 
 		init(this, options, instance$4, create_fragment$4, safe_not_equal, {
-			favicon: 4,
-			title: 5,
+			title: 4,
+			favicon: 5,
 			heading: 0,
 			items: 1
 		});
@@ -4902,21 +4902,21 @@ function create_fragment$5(ctx) {
 }
 
 function instance$5($$self, $$props, $$invalidate) {
-	let { favicon } = $$props;
 	let { title } = $$props;
+	let { favicon } = $$props;
 	let { heading } = $$props;
 	let { subheading } = $$props;
 	let { orgs } = $$props;
 
 	$$self.$$set = $$props => {
-		if ('favicon' in $$props) $$invalidate(3, favicon = $$props.favicon);
-		if ('title' in $$props) $$invalidate(4, title = $$props.title);
+		if ('title' in $$props) $$invalidate(3, title = $$props.title);
+		if ('favicon' in $$props) $$invalidate(4, favicon = $$props.favicon);
 		if ('heading' in $$props) $$invalidate(0, heading = $$props.heading);
 		if ('subheading' in $$props) $$invalidate(1, subheading = $$props.subheading);
 		if ('orgs' in $$props) $$invalidate(2, orgs = $$props.orgs);
 	};
 
-	return [heading, subheading, orgs, favicon, title];
+	return [heading, subheading, orgs, title, favicon];
 }
 
 class Component$5 extends SvelteComponent {
@@ -4924,8 +4924,8 @@ class Component$5 extends SvelteComponent {
 		super();
 
 		init(this, options, instance$5, create_fragment$5, safe_not_equal, {
-			favicon: 3,
-			title: 4,
+			title: 3,
+			favicon: 4,
 			heading: 0,
 			subheading: 1,
 			orgs: 2
@@ -5236,46 +5236,46 @@ function create_fragment$6(ctx) {
 }
 
 function instance$6($$self, $$props, $$invalidate) {
-	let { favicon } = $$props;
 	let { title } = $$props;
+	let { favicon } = $$props;
 	let { nav } = $$props;
 	let { social } = $$props;
 
 	$$self.$$set = $$props => {
-		if ('favicon' in $$props) $$invalidate(2, favicon = $$props.favicon);
-		if ('title' in $$props) $$invalidate(3, title = $$props.title);
+		if ('title' in $$props) $$invalidate(2, title = $$props.title);
+		if ('favicon' in $$props) $$invalidate(3, favicon = $$props.favicon);
 		if ('nav' in $$props) $$invalidate(0, nav = $$props.nav);
 		if ('social' in $$props) $$invalidate(1, social = $$props.social);
 	};
 
-	return [nav, social, favicon, title];
+	return [nav, social, title, favicon];
 }
 
 class Component$6 extends SvelteComponent {
 	constructor(options) {
 		super();
-		init(this, options, instance$6, create_fragment$6, safe_not_equal, { favicon: 2, title: 3, nav: 0, social: 1 });
+		init(this, options, instance$6, create_fragment$6, safe_not_equal, { title: 2, favicon: 3, nav: 0, social: 1 });
 	}
 }
 
 /* generated by Svelte v3.58.0 */
 
 function instance$7($$self, $$props, $$invalidate) {
-	let { favicon } = $$props;
 	let { title } = $$props;
+	let { favicon } = $$props;
 
 	$$self.$$set = $$props => {
-		if ('favicon' in $$props) $$invalidate(0, favicon = $$props.favicon);
-		if ('title' in $$props) $$invalidate(1, title = $$props.title);
+		if ('title' in $$props) $$invalidate(0, title = $$props.title);
+		if ('favicon' in $$props) $$invalidate(1, favicon = $$props.favicon);
 	};
 
-	return [favicon, title];
+	return [title, favicon];
 }
 
 class Component$7 extends SvelteComponent {
 	constructor(options) {
 		super();
-		init(this, options, instance$7, null, safe_not_equal, { favicon: 0, title: 1 });
+		init(this, options, instance$7, null, safe_not_equal, { title: 0, favicon: 1 });
 	}
 }
 
@@ -5299,25 +5299,25 @@ function create_fragment$7(ctx) {
 
 	component_0 = new Component({
 			props: {
+				title: "More Homes Canada",
 				favicon: {
 					"alt": "house favicon",
 					"src": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
 					"url": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
 					"size": 1
-				},
-				title: "More Homes Canada"
+				}
 			}
 		});
 
 	component_1 = new Component$2({
 			props: {
+				title: "More Homes Canada",
 				favicon: {
 					"alt": "house favicon",
 					"src": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
 					"url": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
 					"size": 1
 				},
-				title: "More Homes Canada",
 				logo: {
 					"image": {
 						"alt": "",
@@ -5346,20 +5346,20 @@ function create_fragment$7(ctx) {
 
 	component_2 = new Component$3({
 			props: {
+				title: "More Homes Canada",
 				favicon: {
 					"alt": "house favicon",
 					"src": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
 					"url": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
 					"size": 1
 				},
-				title: "More Homes Canada",
 				heading: "Background",
 				items: [
 					{
 						"title": "Canada's housing shortage is a leading cause of our affordability crisis.",
 						"description": {
-							"html": "<ul>\n<li><p>Housing starts in Canada <a href=\"https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=3410012601\">peaked in the 1970s</a>, even though our population has doubled since then.</p></li>\n<li><p>The rental vacancy rate across the country is at <a href=\"https://www.cmhc-schl.gc.ca/-/media/sites/cmhc/professional/housing-markets-data-and-research/market-reports/rental-market-report/rental-market-report-2022-en.ashx#:~:text=%E2%80%9CNational%20rental%20market%20conditions%20tightened,demand%20surging%20in%20many%20markets.%E2%80%9D&text=Growth%20in%20demand%20outpaced%20strong,rate's%20lowest%20level%20since%202001.\">a record low of 1.9%</a>—it’s even lower in the most expensive cities.</p></li>\n<li><p>Low vacancy rates <a href=\"https://doodles.mountainmath.ca/blog/2018/11/28/vacancy-rate-and-rent-change/\">drive large rent hikes</a>. When vacancy rates are high, rent hikes slow down or even reverse.</p></li>\n<li><p>There is <a href=\"https://doodles.mountainmath.ca/blog/2019/08/19/running-on-empties/\">no massive secret supply of vacant homes</a>. In fact, Canada has <a href=\"https://businesscouncilab.com/insights-category/economic-insights/weekly-econ-minute-canada-housing-shortage/#:~:text=In%20fact%2C%20Canada%20has%20the,480%20dwellings%20per%201%2C000%20residents\">the fewest homes per person</a> in the entire G7.</p></li>\n</ul>",
-							"markdown": "- Housing starts in Canada [peaked in the 1970s](<https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=3410012601>), even though our population has doubled since then.\n\n- The rental vacancy rate across the country is at [a record low of 1.9%](<https://www.cmhc-schl.gc.ca/-/media/sites/cmhc/professional/housing-markets-data-and-research/market-reports/rental-market-report/rental-market-report-2022-en.ashx#:~:text=%E2%80%9CNational%20rental%20market%20conditions%20tightened,demand%20surging%20in%20many%20markets.%E2%80%9D&text=Growth%20in%20demand%20outpaced%20strong,rate's%20lowest%20level%20since%202001.>)—it’s even lower in the most expensive cities.\n\n- Low vacancy rates [drive large rent hikes](<https://doodles.mountainmath.ca/blog/2018/11/28/vacancy-rate-and-rent-change/>). When vacancy rates are high, rent hikes slow down or even reverse.\n\n- There is [no massive secret supply of vacant homes](<https://doodles.mountainmath.ca/blog/2019/08/19/running-on-empties/>). In fact, Canada has [the fewest homes per person](https://businesscouncilab.com/insights-category/economic-insights/weekly-econ-minute-canada-housing-shortage/#:~:text=In%20fact%2C%20Canada%20has%20the,480%20dwellings%20per%201%2C000%20residents) in the entire G7."
+							"html": "<ul>\n<li><p>Housing starts in Canada <a href=\"https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=3410012601\">peaked in the 1970s</a>, even though our population has doubled since then.</p></li>\n<li><p>The rental vacancy rate across the country is at <a href=\"https://www.cmhc-schl.gc.ca/-/media/sites/cmhc/professional/housing-markets-data-and-research/market-reports/rental-market-report/rental-market-report-2022-en.ashx#:~:text=%E2%80%9CNational%20rental%20market%20conditions%20tightened,demand%20surging%20in%20many%20markets.%E2%80%9D&text=Growth%20in%20demand%20outpaced%20strong,rate's%20lowest%20level%20since%202001.\">a record low of 1.9%</a>—it’s even lower in the most expensive cities.</p></li>\n<li><p>Low vacancy rates <a href=\"https://doodles.mountainmath.ca/blog/2018/11/28/vacancy-rate-and-rent-change/\">drive large rent increases</a>. When vacancy rates are high, rent hikes slow down or even reverse.</p></li>\n<li><p>There is <a href=\"https://doodles.mountainmath.ca/blog/2019/08/19/running-on-empties/\">no massive secret supply of vacant homes</a>. In fact, Canada has <a href=\"https://businesscouncilab.com/insights-category/economic-insights/weekly-econ-minute-canada-housing-shortage/#:~:text=In%20fact%2C%20Canada%20has%20the,480%20dwellings%20per%201%2C000%20residents\">the fewest homes per person</a> in the entire G7.</p></li>\n</ul>",
+							"markdown": "- Housing starts in Canada [peaked in the 1970s](<https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=3410012601>), even though our population has doubled since then.\n\n- The rental vacancy rate across the country is at [a record low of 1.9%](<https://www.cmhc-schl.gc.ca/-/media/sites/cmhc/professional/housing-markets-data-and-research/market-reports/rental-market-report/rental-market-report-2022-en.ashx#:~:text=%E2%80%9CNational%20rental%20market%20conditions%20tightened,demand%20surging%20in%20many%20markets.%E2%80%9D&text=Growth%20in%20demand%20outpaced%20strong,rate's%20lowest%20level%20since%202001.>)—it’s even lower in the most expensive cities.\n\n- Low vacancy rates [drive large rent increases](<https://doodles.mountainmath.ca/blog/2018/11/28/vacancy-rate-and-rent-change/>). When vacancy rates are high, rent hikes slow down or even reverse.\n\n- There is [no massive secret supply of vacant homes](<https://doodles.mountainmath.ca/blog/2019/08/19/running-on-empties/>). In fact, Canada has [the fewest homes per person](https://businesscouncilab.com/insights-category/economic-insights/weekly-econ-minute-canada-housing-shortage/#:~:text=In%20fact%2C%20Canada%20has%20the,480%20dwellings%20per%201%2C000%20residents) in the entire G7."
 						}
 					},
 					{
@@ -5389,13 +5389,13 @@ function create_fragment$7(ctx) {
 
 	component_3 = new Component$4({
 			props: {
+				title: "More Homes Canada",
 				favicon: {
 					"alt": "house favicon",
 					"src": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
 					"url": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
 					"size": 1
 				},
-				title: "More Homes Canada",
 				heading: "Our Goals ",
 				items: [
 					{
@@ -5453,13 +5453,13 @@ function create_fragment$7(ctx) {
 
 	component_4 = new Component$5({
 			props: {
+				title: "More Homes Canada",
 				favicon: {
 					"alt": "house favicon",
 					"src": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
 					"url": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
 					"size": 1
 				},
-				title: "More Homes Canada",
 				heading: "Who We Are",
 				subheading: "More Homes Canada is a coalition of housing advocacy groups from across the country. Together, we are fighting to end Canada’s housing shortage.",
 				orgs: [
@@ -5602,13 +5602,13 @@ function create_fragment$7(ctx) {
 
 	component_5 = new Component$6({
 			props: {
+				title: "More Homes Canada",
 				favicon: {
 					"alt": "house favicon",
 					"src": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
 					"url": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
 					"size": 1
 				},
-				title: "More Homes Canada",
 				nav: [
 					{
 						"link": { "url": "/", "label": "More Homes Canada" }
@@ -5635,13 +5635,13 @@ function create_fragment$7(ctx) {
 
 	component_6 = new Component$7({
 			props: {
+				title: "More Homes Canada",
 				favicon: {
 					"alt": "house favicon",
 					"src": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
 					"url": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png",
 					"size": 1
-				},
-				title: "More Homes Canada"
+				}
 			}
 		});
 
