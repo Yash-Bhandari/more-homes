@@ -5296,7 +5296,7 @@ function create_fragment$8(ctx) {
 						}
 					},
 					{
-						"link": { "url": "/", "label": "Contact" }
+						"link": { "url": "/#contact", "label": "Contact" }
 					}
 				]
 			}
