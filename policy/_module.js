@@ -5408,8 +5408,8 @@ function create_fragment$7(ctx) {
 					{
 						"title": "Mid-rise and high-rise apartments should be permitted as-of-right within walking distance of frequent transit and within active transit distance of major job centres.",
 						"description": {
-							"html": "<ul>\n<li><p>Long and expensive rezoning processes inflate land costs and adds significant delays to building new housing projects.</p></li>\n<li><p>It is unjust to restrict multifamily housing to land adjacent to major roads with poor air quality and harmful levels of noise pollution.</p></li>\n</ul>",
-							"markdown": "* Long and expensive rezoning processes inflate land costs and adds significant delays to building new housing projects.\n\n* It is unjust to restrict multifamily housing to land adjacent to major roads with poor air quality and harmful levels of noise pollution.\n"
+							"html": "<ul>\n<li><p>Long and expensive rezoning processes inflate land costs and adds significant delays to building new housing projects.</p></li>\n<li><p>It is unjust to restrict multifamily housing to land adjacent to major roads with poor air quality and harmful levels of noise pollution.</p></li>\n<li><p><a href=\"https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3149272\">A 2016 study in Sydney</a> found that zoning restrictions increased the marginal cost of supplying units in high-rise buildings by a whopping 85%.</p></li>\n</ul>",
+							"markdown": "* Long and expensive rezoning processes inflate land costs and adds significant delays to building new housing projects.\n\n* It is unjust to restrict multifamily housing to land adjacent to major roads with poor air quality and harmful levels of noise pollution.\n\n* [A 2016 study in Sydney](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3149272) found that zoning restrictions increased the marginal cost of supplying units in high-rise buildings by a whopping 85%."
 						}
 					},
 					{
