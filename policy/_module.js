@@ -5399,14 +5399,14 @@ function create_fragment$7(ctx) {
 				heading: "Our Goals ",
 				items: [
 					{
-						"title": "Row houses, multiplexes, lodging homes and low-rise apartments should be permitted in all neighbourhoods as of right.",
+						"title": "Row houses, multiplexes and low-rise apartments should be permitted in all neighbourhoods as-of-right.",
 						"description": {
 							"html": "<ul>\n<li><p>\"Missing Middle\" housing projects are often killed by slow, expensive and risky rezoning processes.</p></li>\n<li><p>Affordable housing projects are impacted the most and often face significant pushback at public hearings.</p></li>\n</ul>\n<!-- -->",
 							"markdown": "- \"Missing Middle\" housing projects are often killed by slow, expensive and risky rezoning processes.\n\n- Affordable housing projects are impacted the most and often face significant pushback at public hearings.\n\n\n<!-- -->\n\n"
 						}
 					},
 					{
-						"title": "Mid-rise and high-rise apartments should be permitted as of right within walking distance of frequent transit and within active transit-distance of major job centres.",
+						"title": "Mid-rise and high-rise apartments should be permitted as-of-right within walking distance of frequent transit and within active transit distance of major job centres.",
 						"description": {
 							"html": "<ul>\n<li><p>Long and expensive rezoning processes inflate land costs and adds significant delays to building new housing projects.</p></li>\n<li><p>It is unjust to restrict multifamily housing to land adjacent to major roads with poor air quality and harmful levels of noise pollution.</p></li>\n</ul>",
 							"markdown": "* Long and expensive rezoning processes inflate land costs and adds significant delays to building new housing projects.\n\n* It is unjust to restrict multifamily housing to land adjacent to major roads with poor air quality and harmful levels of noise pollution.\n"
@@ -5415,8 +5415,8 @@ function create_fragment$7(ctx) {
 					{
 						"title": "Restrictions on setbacks, floorplate need to be relaxed and parking minimums abolished.",
 						"description": {
-							"html": "<ul>\n<li><p>Even when apartments are technically permitted, municipalities employ a suite of “poison pills” that make them far more expensive to build than they need to be.</p></li>\n<li><p>Parking minimums add significant expense to new housing, with each underground stall adding upwards of $100k to construction costs.</p></li>\n<li><p>Overzealous setbacks, floor space maximums and angular plane requirements substantially reduce the number of homes that can be built. They also result in inefficient and awkward layouts, prioritizing aesthetic preferences over the quality of life of future residents.</p></li>\n</ul>\n<!-- -->",
-							"markdown": "- Even when apartments are technically permitted, municipalities employ a suite of “poison pills” that make them far more expensive to build than they need to be.\n\n- Parking minimums add significant expense to new housing, with each underground stall adding upwards of $100k to construction costs.\n\n- Overzealous setbacks, floor space maximums and angular plane requirements substantially reduce the number of homes that can be built. They also result in inefficient and awkward layouts, prioritizing aesthetic preferences over the quality of life of future residents.\n\n\n<!-- -->\n\n"
+							"html": "<ul>\n<li><p>Even when apartments are technically permitted, municipalities employ a suite of “poison pills” that make them far more expensive to build than they need to be.</p></li>\n<li><p>Parking minimums add significant expense to new housing, as each underground stall adding can add upwards of $100k to construction costs.</p></li>\n<li><p>Overzealous setbacks, floor space maximums and angular plane requirements substantially reduce the number of homes that can be built. They also result in inefficient and awkward layouts, prioritizing aesthetic preferences over the quality of life of future residents.</p></li>\n</ul>\n<!-- -->",
+							"markdown": "- Even when apartments are technically permitted, municipalities employ a suite of “poison pills” that make them far more expensive to build than they need to be.\n\n- Parking minimums add significant expense to new housing, as each underground stall adding can add upwards of $100k to construction costs.\n\n- Overzealous setbacks, floor space maximums and angular plane requirements substantially reduce the number of homes that can be built. They also result in inefficient and awkward layouts, prioritizing aesthetic preferences over the quality of life of future residents.\n\n\n<!-- -->\n\n"
 						}
 					},
 					{
@@ -5464,15 +5464,16 @@ function create_fragment$7(ctx) {
 				subheading: "More Homes Canada is a coalition of housing advocacy groups from across the country. Together, we are fighting to end Canada’s housing shortage.",
 				orgs: [
 					{
+						"link": "https://www.moreneighbours.ca/",
 						"name": "More Neighbours Toronto",
 						"image": {
 							"alt": "",
 							"url": "https://res.cloudinary.com/dbnijop5c/image/upload/v1700527328/mnto_vaize2.png"
 						},
-						"social_links": [],
-						"link": "https://www.moreneighbours.ca/"
+						"social_links": []
 					},
 					{
+						"link": "https://www.abundanthousingvancouver.com/",
 						"name": "Abundant Housing Vancouver",
 						"image": {
 							"alt": "",
@@ -5480,10 +5481,10 @@ function create_fragment$7(ctx) {
 							"url": "https://res.cloudinary.com/dbnijop5c/image/upload/v1700528184/More%20Homes%20Canada/vancouver_sjf85y.jpg",
 							"size": null
 						},
-						"social_links": [],
-						"link": "https://www.abundanthousingvancouver.com/"
+						"social_links": []
 					},
 					{
+						"link": "https://www.growtogetheryeg.com/",
 						"name": "Grow Together Edmonton",
 						"image": {
 							"alt": "",
@@ -5491,10 +5492,10 @@ function create_fragment$7(ctx) {
 							"url": "https://res.cloudinary.com/dbnijop5c/image/upload/v1700528186/More%20Homes%20Canada/edmonton_x53wtv.png",
 							"size": null
 						},
-						"social_links": [],
-						"link": "https://www.growtogetheryeg.com/"
+						"social_links": []
 					},
 					{
+						"link": "https://construisonsmtl.ca/en/",
 						"name": "Construisons Montréal",
 						"image": {
 							"alt": "",
@@ -5502,10 +5503,10 @@ function create_fragment$7(ctx) {
 							"url": "https://res.cloudinary.com/dbnijop5c/image/upload/v1700528186/More%20Homes%20Canada/montreal_ejn4pg.png",
 							"size": null
 						},
-						"social_links": [],
-						"link": "https://construisonsmtl.ca/en/"
+						"social_links": []
 					},
 					{
+						"link": "https://www.moreneighbourscalgary.ca/",
 						"name": "More Neighbours Calgary",
 						"image": {
 							"alt": "",
@@ -5513,10 +5514,10 @@ function create_fragment$7(ctx) {
 							"url": "https://res.cloudinary.com/dbnijop5c/image/upload/v1700528186/More%20Homes%20Canada/calgary_b9krf6.png",
 							"size": null
 						},
-						"social_links": [],
-						"link": "https://www.moreneighbourscalgary.ca/"
+						"social_links": []
 					},
 					{
+						"link": "https://www.homesforliving.ca/",
 						"name": "Homes for Living Victoria",
 						"image": {
 							"alt": "",
@@ -5524,10 +5525,10 @@ function create_fragment$7(ctx) {
 							"url": "https://res.cloudinary.com/dbnijop5c/image/upload/v1700528184/More%20Homes%20Canada/victoria_n879ey.png",
 							"size": null
 						},
-						"social_links": [],
-						"link": "https://www.homesforliving.ca/"
+						"social_links": []
 					},
 					{
+						"link": "https://makehousingaffordable.ca/",
 						"name": "Make Housing Affordable Ottawa",
 						"image": {
 							"alt": "",
@@ -5535,10 +5536,10 @@ function create_fragment$7(ctx) {
 							"url": "https://res.cloudinary.com/dbnijop5c/image/upload/v1700528183/More%20Homes%20Canada/ottawa_civxsq.png",
 							"size": null
 						},
-						"social_links": [],
-						"link": "https://makehousingaffordable.ca/"
+						"social_links": []
 					},
 					{
+						"link": "https://www.wryimby.com/",
 						"name": "Waterloo Region YIMBY",
 						"image": {
 							"alt": "",
@@ -5546,19 +5547,19 @@ function create_fragment$7(ctx) {
 							"url": "https://res.cloudinary.com/dbnijop5c/image/upload/v1700528185/More%20Homes%20Canada/waterloo_llha5v.jpg",
 							"size": null
 						},
-						"social_links": [],
-						"link": "https://www.wryimby.com/"
+						"social_links": []
 					},
 					{
+						"link": "https://twitter.com/MoreHomesHRM",
 						"name": "More Homes Halifax",
 						"image": {
 							"alt": "",
 							"url": "https://res.cloudinary.com/dbnijop5c/image/upload/v1700528187/More%20Homes%20Canada/halifax_epvtfq.jpg"
 						},
-						"social_links": [],
-						"link": "https://twitter.com/MoreHomesHRM"
+						"social_links": []
 					},
 					{
+						"link": "https://www.yesinwpg.com/",
 						"name": "YIMBY Winnipeg",
 						"image": {
 							"alt": "",
@@ -5566,10 +5567,10 @@ function create_fragment$7(ctx) {
 							"url": "https://res.cloudinary.com/dbnijop5c/image/upload/v1700528184/More%20Homes%20Canada/winnipeg_uvkpdu.png",
 							"size": null
 						},
-						"social_links": [],
-						"link": "https://www.yesinwpg.com/"
+						"social_links": []
 					},
 					{
+						"link": "https://twitter.com/MoreHomesSauga",
 						"name": "More Homes Mississauga",
 						"image": {
 							"alt": "",
@@ -5577,10 +5578,10 @@ function create_fragment$7(ctx) {
 							"url": "https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1702327165142mhm.jpg",
 							"size": 16
 						},
-						"social_links": [],
-						"link": "https://twitter.com/MoreHomesSauga"
+						"social_links": []
 					},
 					{
+						"link": "https://www.beautifulnanaimo.ca/",
 						"name": "Strong Towns Nanaimo",
 						"image": {
 							"alt": "",
@@ -5588,10 +5589,10 @@ function create_fragment$7(ctx) {
 							"url": "https://res.cloudinary.com/dbnijop5c/image/upload/v1700528183/More%20Homes%20Canada/nanaimo_dnm0vl.png",
 							"size": null
 						},
-						"social_links": [],
-						"link": "https://www.beautifulnanaimo.ca/"
+						"social_links": []
 					},
 					{
+						"link": "https://www.strongtownslangley.org/",
 						"name": "Strong Towns Langley",
 						"image": {
 							"alt": "",
@@ -5604,8 +5605,7 @@ function create_fragment$7(ctx) {
 								"icon": "Tempor deserunt deserunt",
 								"link": { "url": "/", "label": "reprehenderit" }
 							}
-						],
-						"link": "https://www.strongtownslangley.org/"
+						]
 					}
 				]
 			}
