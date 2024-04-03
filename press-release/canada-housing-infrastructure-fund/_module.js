@@ -1000,11 +1000,11 @@ function create_fragment(ctx) {
 	let link_href_value;
 	let title_value;
 	let meta0;
+	let meta1;
 	let script0;
 	let script0_src_value;
 	let script1;
 	let t0;
-	let meta1;
 	let meta2;
 	let meta3;
 	let meta4;
@@ -1014,6 +1014,7 @@ function create_fragment(ctx) {
 	let meta8;
 	let meta9;
 	let meta10;
+	let meta11;
 	let style;
 	let t1;
 	document.title = title_value = /*title*/ ctx[0];
@@ -1022,10 +1023,10 @@ function create_fragment(ctx) {
 		c() {
 			link = element("link");
 			meta0 = element("meta");
+			meta1 = element("meta");
 			script0 = element("script");
 			script1 = element("script");
 			t0 = text("(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])\n    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,\n    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})\n    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');\n    ml('account', '714042');\n");
-			meta1 = element("meta");
 			meta2 = element("meta");
 			meta3 = element("meta");
 			meta4 = element("meta");
@@ -1035,12 +1036,13 @@ function create_fragment(ctx) {
 			meta8 = element("meta");
 			meta9 = element("meta");
 			meta10 = element("meta");
+			meta11 = element("meta");
 			style = element("style");
 			t1 = text("@import url(\"https://unpkg.com/@primo-app/primo@1.3.64/reset.css\");\n@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');\n\n#page {\n  --max-width: 740px;\n  /* --color-accent: #FF0000; Beware, we look like the LPC with a red theme on*/ \n  --color-accent: rebeccapurple;\n  font-family: lexend, system-ui, sans-serif;\n  color: var(--color);\n  line-height: 1.6; \n  font-size: 1rem;\n  background: var(--background);\n}\n\n.section-container {\n  max-width: var(--max-width, 1000px);\n  margin: 0 auto;\n  padding: 3rem var(--padding, 1rem); \n}\n\n.heading {\n  font-size: 3rem;\n  line-height: 1;\n  font-weight: 700;\n  margin: 0;\n}\n\na {\n  color: var(--color-accent);\n}\n\n.link {\n  color: var(--color-accent);\n}\n\na:hover {\n  text-decoration: underline;\n  font-weight: bold;\n}\n\n.button {\n  color: white;\n  background: var(--color-accent);\n  border-radius: 5px;\n  padding: 8px 20px;\n  transition: var(--transition);\n\n  /* vertically center */\n  display: inline-flex;\n  align-items: center;\n}\n\n.button:hover {\n    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);\n  }\n\n.button.inverted {\n    background: transparent; \n    color: var(--color-accent); \n    border: 2px solid var(--color-accent);\n  }\n\n/* Markdown styling */\n.content :global(img) {\n    width: 100%;\n    margin: 2rem 0;\n    box-shadow: var(--box-shadow);\n    border-radius: var(--border-radius);\n  }\n.content :global(p) {\n    padding: 0.5rem 0;\n    line-height: 1.5;\n  }\n.content :global(a) {\n    text-decoration: underline;\n  }\n.content :global(h1) {\n    font-size: 2.5rem;\n    font-weight: 600;\n    line-height: 1.2;\n    margin-bottom: 0.5rem;\n  }\n.content :global(h2) {\n    font-size: 2rem;\n    font-weight: 600;\n    margin-bottom: 0.25rem;\n    line-height: 1.2;\n  }\n.content :global(h3) {\n    font-size: 1.5rem;\n    font-weight: 600;\n    line-height: 1.2;\n    margin-top: .5rem;\n  }\n.content :global(ul) {\n    list-style: disc;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content :global(ol) {\n    list-style: decimal;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content :global(blockquote) {\n    padding: 2rem;\n    box-shadow: var(--box-shadow);\n    border-radius: var(--border-radius);\n  }");
 			this.h();
 		},
 		l(nodes) {
-			const head_nodes = head_selector('svelte-1qkf02o', document.head);
+			const head_nodes = head_selector('svelte-1383och', document.head);
 
 			link = claim_element(head_nodes, "LINK", {
 				rel: true,
@@ -1050,6 +1052,7 @@ function create_fragment(ctx) {
 			});
 
 			meta0 = claim_element(head_nodes, "META", { name: true, content: true });
+			meta1 = claim_element(head_nodes, "META", { property: true, content: true });
 			script0 = claim_element(head_nodes, "SCRIPT", { src: true, "data-website-id": true });
 			var script0_nodes = children(script0);
 			script0_nodes.forEach(detach);
@@ -1057,16 +1060,16 @@ function create_fragment(ctx) {
 			var script1_nodes = children(script1);
 			t0 = claim_text(script1_nodes, "(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])\n    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,\n    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})\n    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');\n    ml('account', '714042');\n");
 			script1_nodes.forEach(detach);
-			meta1 = claim_element(head_nodes, "META", { name: true, content: true });
-			meta2 = claim_element(head_nodes, "META", { property: true, content: true });
+			meta2 = claim_element(head_nodes, "META", { name: true, content: true });
 			meta3 = claim_element(head_nodes, "META", { property: true, content: true });
 			meta4 = claim_element(head_nodes, "META", { property: true, content: true });
-			meta5 = claim_element(head_nodes, "META", { name: true, content: true });
-			meta6 = claim_element(head_nodes, "META", { property: true, content: true });
+			meta5 = claim_element(head_nodes, "META", { property: true, content: true });
+			meta6 = claim_element(head_nodes, "META", { name: true, content: true });
 			meta7 = claim_element(head_nodes, "META", { property: true, content: true });
-			meta8 = claim_element(head_nodes, "META", { name: true, content: true });
+			meta8 = claim_element(head_nodes, "META", { property: true, content: true });
 			meta9 = claim_element(head_nodes, "META", { name: true, content: true });
 			meta10 = claim_element(head_nodes, "META", { name: true, content: true });
+			meta11 = claim_element(head_nodes, "META", { name: true, content: true });
 			style = claim_element(head_nodes, "STYLE", {});
 			var style_nodes = children(style);
 			t1 = claim_text(style_nodes, "@import url(\"https://unpkg.com/@primo-app/primo@1.3.64/reset.css\");\n@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');\n\n#page {\n  --max-width: 740px;\n  /* --color-accent: #FF0000; Beware, we look like the LPC with a red theme on*/ \n  --color-accent: rebeccapurple;\n  font-family: lexend, system-ui, sans-serif;\n  color: var(--color);\n  line-height: 1.6; \n  font-size: 1rem;\n  background: var(--background);\n}\n\n.section-container {\n  max-width: var(--max-width, 1000px);\n  margin: 0 auto;\n  padding: 3rem var(--padding, 1rem); \n}\n\n.heading {\n  font-size: 3rem;\n  line-height: 1;\n  font-weight: 700;\n  margin: 0;\n}\n\na {\n  color: var(--color-accent);\n}\n\n.link {\n  color: var(--color-accent);\n}\n\na:hover {\n  text-decoration: underline;\n  font-weight: bold;\n}\n\n.button {\n  color: white;\n  background: var(--color-accent);\n  border-radius: 5px;\n  padding: 8px 20px;\n  transition: var(--transition);\n\n  /* vertically center */\n  display: inline-flex;\n  align-items: center;\n}\n\n.button:hover {\n    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);\n  }\n\n.button.inverted {\n    background: transparent; \n    color: var(--color-accent); \n    border: 2px solid var(--color-accent);\n  }\n\n/* Markdown styling */\n.content :global(img) {\n    width: 100%;\n    margin: 2rem 0;\n    box-shadow: var(--box-shadow);\n    border-radius: var(--border-radius);\n  }\n.content :global(p) {\n    padding: 0.5rem 0;\n    line-height: 1.5;\n  }\n.content :global(a) {\n    text-decoration: underline;\n  }\n.content :global(h1) {\n    font-size: 2.5rem;\n    font-weight: 600;\n    line-height: 1.2;\n    margin-bottom: 0.5rem;\n  }\n.content :global(h2) {\n    font-size: 2rem;\n    font-weight: 600;\n    margin-bottom: 0.25rem;\n    line-height: 1.2;\n  }\n.content :global(h3) {\n    font-size: 1.5rem;\n    font-weight: 600;\n    line-height: 1.2;\n    margin-top: .5rem;\n  }\n.content :global(ul) {\n    list-style: disc;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content :global(ol) {\n    list-style: decimal;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content :global(blockquote) {\n    padding: 2rem;\n    box-shadow: var(--box-shadow);\n    border-radius: var(--border-radius);\n  }");
@@ -1081,37 +1084,39 @@ function create_fragment(ctx) {
 			attr(link, "href", link_href_value = /*favicon*/ ctx[1].url);
 			attr(meta0, "name", "viewport");
 			attr(meta0, "content", "width=device-width, initial-scale=1.0");
+			attr(meta1, "property", "og:image");
+			attr(meta1, "content", "https://res.cloudinary.com/dbnijop5c/image/upload/v1712114616/MHC_Logo_temp_nkyfvj.png");
 			script0.async = true;
 			if (!src_url_equal(script0.src, script0_src_value = "https://eu.umami.is/script.js")) attr(script0, "src", script0_src_value);
 			attr(script0, "data-website-id", "85a9067f-bd5a-4cdb-b6ac-e7caecf88793");
-			attr(meta1, "name", "description");
-			attr(meta1, "content", /*description*/ ctx[2]);
-			attr(meta2, "property", "og:title");
-			attr(meta2, "content", "PRESS RELEASE: Federal infrastructure funding will boost home building, put onus on provinces to cut red tape");
-			attr(meta3, "property", "og:description");
-			attr(meta3, "content", "More Homes Canada, a coalition of pro-housing groups from across the country, is pleased to see the announcement of a $6B federal infrastructure fund designed to support housing construction and cut back on harmful red tape.");
-			attr(meta4, "property", "og:image");
-			attr(meta4, "content", "https://res.cloudinary.com/dbnijop5c/image/upload/v1712114098/MHC_Logo_temp_yrecnh.png");
-			attr(meta5, "name", "twitter:card");
-			attr(meta5, "content", "summary_large_image");
-			attr(meta6, "property", "twitter:domain");
-			attr(meta6, "content", "morehomescanada.ca");
-			attr(meta7, "property", "twitter:url");
-			attr(meta7, "content", "https://www.morehomescanada.ca/press-release/canada-housing-infrastructure-fund");
-			attr(meta8, "name", "twitter:title");
-			attr(meta8, "content", "PRESS RELEASE: Federal infrastructure funding will boost home building, put onus on provinces to cut red tape");
-			attr(meta9, "name", "twitter:description");
-			attr(meta9, "content", "More Homes Canada, a coalition of pro-housing groups from across the country, is pleased to see the announcement of a $6B federal infrastructure fund designed to support housing construction and cut back on harmful red tape.");
-			attr(meta10, "name", "twitter:image");
-			attr(meta10, "content", "https://res.cloudinary.com/dbnijop5c/image/upload/v1712114098/MHC_Logo_temp_yrecnh.png");
+			attr(meta2, "name", "description");
+			attr(meta2, "content", /*description*/ ctx[2]);
+			attr(meta3, "property", "og:title");
+			attr(meta3, "content", "PRESS RELEASE: Federal infrastructure funding will boost home building, put onus on provinces to cut red tape");
+			attr(meta4, "property", "og:description");
+			attr(meta4, "content", "More Homes Canada, a coalition of pro-housing groups from across the country, is pleased to see the announcement of a $6B federal infrastructure fund designed to support housing construction and cut back on harmful red tape.");
+			attr(meta5, "property", "og:image");
+			attr(meta5, "content", "https://res.cloudinary.com/dbnijop5c/image/upload/v1712114616/MHC_Logo_temp_nkyfvj.png");
+			attr(meta6, "name", "twitter:card");
+			attr(meta6, "content", "summary_large_image");
+			attr(meta7, "property", "twitter:domain");
+			attr(meta7, "content", "morehomescanada.ca");
+			attr(meta8, "property", "twitter:url");
+			attr(meta8, "content", "https://www.morehomescanada.ca/press-release/canada-housing-infrastructure-fund");
+			attr(meta9, "name", "twitter:title");
+			attr(meta9, "content", "PRESS RELEASE: Federal infrastructure funding will boost home building, put onus on provinces to cut red tape");
+			attr(meta10, "name", "twitter:description");
+			attr(meta10, "content", "More Homes Canada, a coalition of pro-housing groups from across the country, is pleased to see the announcement of a $6B federal infrastructure fund designed to support housing construction and cut back on harmful red tape.");
+			attr(meta11, "name", "twitter:image");
+			attr(meta11, "content", "https://res.cloudinary.com/dbnijop5c/image/upload/v1712114616/MHC_Logo_temp_nkyfvj.png");
 		},
 		m(target, anchor) {
 			append_hydration(document.head, link);
 			append_hydration(document.head, meta0);
+			append_hydration(document.head, meta1);
 			append_hydration(document.head, script0);
 			append_hydration(document.head, script1);
 			append_hydration(script1, t0);
-			append_hydration(document.head, meta1);
 			append_hydration(document.head, meta2);
 			append_hydration(document.head, meta3);
 			append_hydration(document.head, meta4);
@@ -1121,6 +1126,7 @@ function create_fragment(ctx) {
 			append_hydration(document.head, meta8);
 			append_hydration(document.head, meta9);
 			append_hydration(document.head, meta10);
+			append_hydration(document.head, meta11);
 			append_hydration(document.head, style);
 			append_hydration(style, t1);
 		},
@@ -1134,7 +1140,7 @@ function create_fragment(ctx) {
 			}
 
 			if (dirty & /*description*/ 4) {
-				attr(meta1, "content", /*description*/ ctx[2]);
+				attr(meta2, "content", /*description*/ ctx[2]);
 			}
 		},
 		i: noop,
@@ -1142,9 +1148,9 @@ function create_fragment(ctx) {
 		d(detaching) {
 			detach(link);
 			detach(meta0);
+			detach(meta1);
 			detach(script0);
 			detach(script1);
-			detach(meta1);
 			detach(meta2);
 			detach(meta3);
 			detach(meta4);
@@ -1154,6 +1160,7 @@ function create_fragment(ctx) {
 			detach(meta8);
 			detach(meta9);
 			detach(meta10);
+			detach(meta11);
 			detach(style);
 		}
 	};

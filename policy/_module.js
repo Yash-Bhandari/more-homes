@@ -1085,7 +1085,8 @@ function create_fragment(ctx) {
 	let link;
 	let link_href_value;
 	let title_value;
-	let meta;
+	let meta0;
+	let meta1;
 	let script0;
 	let script0_src_value;
 	let script1;
@@ -1097,7 +1098,8 @@ function create_fragment(ctx) {
 	return {
 		c() {
 			link = element("link");
-			meta = element("meta");
+			meta0 = element("meta");
+			meta1 = element("meta");
 			script0 = element("script");
 			script1 = element("script");
 			t0 = text("(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])\n    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,\n    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})\n    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');\n    ml('account', '714042');\n");
@@ -1106,7 +1108,7 @@ function create_fragment(ctx) {
 			this.h();
 		},
 		l(nodes) {
-			const head_nodes = head_selector('svelte-ginz5n', document.head);
+			const head_nodes = head_selector('svelte-v5lwg0', document.head);
 
 			link = claim_element(head_nodes, "LINK", {
 				rel: true,
@@ -1115,7 +1117,8 @@ function create_fragment(ctx) {
 				href: true
 			});
 
-			meta = claim_element(head_nodes, "META", { name: true, content: true });
+			meta0 = claim_element(head_nodes, "META", { name: true, content: true });
+			meta1 = claim_element(head_nodes, "META", { property: true, content: true });
 			script0 = claim_element(head_nodes, "SCRIPT", { src: true, "data-website-id": true });
 			var script0_nodes = children(script0);
 			script0_nodes.forEach(detach);
@@ -1135,15 +1138,18 @@ function create_fragment(ctx) {
 			attr(link, "type", "image/png");
 			attr(link, "sizes", "32x32");
 			attr(link, "href", link_href_value = /*favicon*/ ctx[1].url);
-			attr(meta, "name", "viewport");
-			attr(meta, "content", "width=device-width, initial-scale=1.0");
+			attr(meta0, "name", "viewport");
+			attr(meta0, "content", "width=device-width, initial-scale=1.0");
+			attr(meta1, "property", "og:image");
+			attr(meta1, "content", "https://res.cloudinary.com/dbnijop5c/image/upload/v1712114616/MHC_Logo_temp_nkyfvj.png");
 			script0.async = true;
 			if (!src_url_equal(script0.src, script0_src_value = "https://eu.umami.is/script.js")) attr(script0, "src", script0_src_value);
 			attr(script0, "data-website-id", "85a9067f-bd5a-4cdb-b6ac-e7caecf88793");
 		},
 		m(target, anchor) {
 			append_hydration(document.head, link);
-			append_hydration(document.head, meta);
+			append_hydration(document.head, meta0);
+			append_hydration(document.head, meta1);
 			append_hydration(document.head, script0);
 			append_hydration(document.head, script1);
 			append_hydration(script1, t0);
@@ -1163,7 +1169,8 @@ function create_fragment(ctx) {
 		o: noop,
 		d(detaching) {
 			detach(link);
-			detach(meta);
+			detach(meta0);
+			detach(meta1);
 			detach(script0);
 			detach(script1);
 			detach(style);
