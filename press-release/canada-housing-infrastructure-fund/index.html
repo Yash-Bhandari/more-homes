@@ -1,399 +1,194 @@
-<!DOCTYPE html>
-<html lang="en">
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta name="generator" content="Primo" />
+      <title>More Homes Canada</title><!-- HEAD_svelte-ph7jo4_START --><link rel="icon" type="image/png" sizes="32x32" href="https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="og:image" content="https://res.cloudinary.com/dbnijop5c/image/upload/v1712114616/MHC_Logo_temp_nkyfvj.png"><script async src="https://eu.umami.is/script.js" data-website-id="85a9067f-bd5a-4cdb-b6ac-e7caecf88793"></script><script>(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '714042');
+</script><meta name="description" content="More Homes Canada is a coalition of housing advocacy groups from across the country. Together, we are fighting to end Canada’s housing shortage."><meta property="og:title" content="PRESS RELEASE: Federal infrastructure funding will boost home building, put onus on provinces to cut red tape"><meta property="og:description" content="More Homes Canada, a coalition of pro-housing groups from across the country, is pleased to see the announcement of a $6B federal infrastructure fund designed to support housing construction and cut back on harmful red tape."><meta property="og:image" content="https://res.cloudinary.com/dbnijop5c/image/upload/v1712114616/MHC_Logo_temp_nkyfvj.png"><meta name="twitter:card" content="summary_large_image"><meta property="twitter:domain" content="morehomescanada.ca"><meta property="twitter:url" content="https://www.morehomescanada.ca/press-release/canada-housing-infrastructure-fund"><meta name="twitter:title" content="PRESS RELEASE: Federal infrastructure funding will boost home building, put onus on provinces to cut red tape"><meta name="twitter:description" content="More Homes Canada, a coalition of pro-housing groups from across the country, is pleased to see the announcement of a $6B federal infrastructure fund designed to support housing construction and cut back on harmful red tape."><meta name="twitter:image" content="https://res.cloudinary.com/dbnijop5c/image/upload/v1712114616/MHC_Logo_temp_nkyfvj.png"><style>@import url("https://unpkg.com/@primo-app/primo@1.3.64/reset.css");
+@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
 
-<head>
-    <meta name="generator" content="Primo" />
-    <title>More Homes Canada</title><!-- HEAD_svelte-1383och_START -->
-    <link rel="icon" type="image/png" sizes="32x32" href="https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:image" content="https://res.cloudinary.com/dbnijop5c/image/upload/v1712114616/MHC_Logo_temp_nkyfvj.png">
-    <script async src="https://eu.umami.is/script.js" data-website-id="85a9067f-bd5a-4cdb-b6ac-e7caecf88793"></script>
-    <script>
-        (function(w, d, e, u, f, l, n) {
-            w[f] = w[f] || function() {
-                    (w[f].q = w[f].q || [])
-                    .push(arguments);
-                }, l = d.createElement(e), l.async = 1, l.src = u,
-                n = d.getElementsByTagName(e)[0], n.parentNode.insertBefore(l, n);
-        })
-        (window, document, 'script', 'https://assets.mailerlite.com/js/universal.js', 'ml');
-        ml('account', '714042');
+#page {
+  --max-width: 740px;
+  /* --color-accent: #FF0000; Beware, we look like the LPC with a red theme on*/ 
+  --color-accent: #FF3622;
+  --color-mid: #dd1400;
+  --color-dark: #750000;
+  --alternate-background: #FFCDD2;
+  font-family: lexend, system-ui, sans-serif;
+  color: var(--color);
+  line-height: 1.6; 
+  font-size: 1rem;
+  background: var(--background);
+}
+
+.section-container {
+  max-width: var(--max-width, 1000px);
+  margin: 0 auto;
+  padding: 3rem var(--padding, 1rem); 
+}
+
+.heading {
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: 700;
+  margin: 0;
+}
+
+a {
+  color: var(--color-mid);
+}
+
+h1, h2 {
+  color: var(--color-accent)
+}
+
+.link {
+  color: var(--color-mid);
+}
+
+a:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.button {
+  color: white;
+  background: var(--color-mid);
+  border-radius: 5px;
+  padding: 8px 20px;
+  transition: var(--transition);
+
+  /* vertically center */
+  display: inline-flex;
+  align-items: center;
+}
+
+.button:hover {
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+  }
+
+.button.inverted {
+    background: transparent; 
+    color: var(--color-accent); 
+    border: 2px solid var(--color-accent);
+  }
+
+/* Markdown styling */
+.content :global(img) {
+    width: 100%;
+    margin: 2rem 0;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+  }
+.content :global(p) {
+    padding: 0.5rem 0;
+    line-height: 1.5;
+  }
+.content :global(a) {
+    text-decoration: underline;
+  }
+.content :global(h1) {
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+.content :global(h2) {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    line-height: 1.2;
+  }
+.content :global(h3) {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-top: .5rem;
+  }
+.content :global(ul) {
+    list-style: disc;
+    padding: 0.5rem 0;
+    padding-left: 1.25rem;
+  }
+.content :global(ol) {
+    list-style: decimal;
+    padding: 0.5rem 0;
+    padding-left: 1.25rem;
+  }
+.content :global(blockquote) {
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+  }
+
+</style><!-- HEAD_svelte-ph7jo4_END -->
+      <style>.section-container.svelte-1grguq5.svelte-1grguq5{display:flex;justify-content:space-between;align-items:center;padding-top:1rem;padding-bottom:1rem}.logo.svelte-1grguq5.svelte-1grguq5{font-size:1.5rem;font-weight:600;line-height:1.2}.desktop-nav.svelte-1grguq5.svelte-1grguq5{display:none;align-items:center;justify-content:space-between;width:100%}.desktop-nav.svelte-1grguq5 nav.svelte-1grguq5{display:flex;gap:2rem}.desktop-nav.svelte-1grguq5 nav a.link.svelte-1grguq5{border-color:transparent;transition:border-color 0.1s;font-size:0.95rem}.desktop-nav.svelte-1grguq5 nav a.link.svelte-1grguq5:hover{border-color:initial}@media(min-width: 800px){.desktop-nav.svelte-1grguq5.svelte-1grguq5{display:flex
+}}.mobile-nav.svelte-1grguq5.svelte-1grguq5{display:flex;align-items:center;justify-content:space-between;width:100%;font-weight:500}@media(min-width: 800px){.mobile-nav.svelte-1grguq5.svelte-1grguq5{display:none
+}}#popup.svelte-1grguq5.svelte-1grguq5{font-size:1.25rem;display:grid;gap:1rem;position:absolute;text-align:center;background-color:var(--background-color, white);box-shadow:var(--box-shadow, 0px 4px 30px rgba(0, 0, 0, 0.1));border-radius:var(--border-radius);inset:0.5rem;bottom:initial;padding:2rem;z-index:1}#popup.svelte-1grguq5 button#close.svelte-1grguq5{position:absolute;right:1rem;top:1rem}
+.content.svelte-z64qd0 img{width:100%;margin:2rem 0;box-shadow:var(--box-shadow);border-radius:var(--border-radius)}.content.svelte-z64qd0 p{padding:0.5rem 0;line-height:1.5}.content.svelte-z64qd0 a{text-decoration:underline}.content.svelte-z64qd0 h1{font-size:2.5rem;font-weight:600;line-height:1.2;margin-bottom:0.5rem}.content.svelte-z64qd0 h2{font-size:2rem;font-weight:600;margin-bottom:0.25rem;line-height:1.2}.content.svelte-z64qd0 h3{font-size:1.5rem;font-weight:600;line-height:1.2;margin-top:.5rem}.content.svelte-z64qd0 ul{list-style:disc;padding:0.5rem 0;padding-left:1.25rem}.content.svelte-z64qd0 ol{list-style:decimal;padding:0.5rem 0;padding-left:1.25rem}.content.svelte-z64qd0 blockquote{padding:2rem;box-shadow:var(--box-shadow);border-radius:var(--border-radius)}
+.section-container.svelte-i9k4w2.svelte-i9k4w2{display:flex;justify-content:space-between;flex-direction:column;align-items:center;gap:1rem;padding-top:1rem;padding-bottom:1rem}@media(min-width: 600px){.section-container.svelte-i9k4w2.svelte-i9k4w2{flex-direction:row
+}}nav.svelte-i9k4w2.svelte-i9k4w2{display:flex;gap:1rem;font-size:.875rem}nav.svelte-i9k4w2 .link.svelte-i9k4w2{border-color:transparent}nav.svelte-i9k4w2 .link.svelte-i9k4w2:hover{border-color:initial}.social-links.svelte-i9k4w2.svelte-i9k4w2{display:flex;gap:1.5rem;font-size:1.5rem}.social-links.svelte-i9k4w2 a.svelte-i9k4w2{color:var(--color-accent, rebeccapurple);transition:var(--transition, 0.1s transform)}.social-links.svelte-i9k4w2 a.svelte-i9k4w2:hover{transform:scale(1.1)}</style>
+    </head>
+    <body id="page">
+       
+<div class="section" id="section-513dbd3f"><header class="section-container svelte-1grguq5"><div class="desktop-nav svelte-1grguq5"><a href="/" class="logo svelte-1grguq5"><img src="https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1743656491741undefined.webp" alt=""></a>
+    <nav class="svelte-1grguq5"><a class="link svelte-1grguq5" href="/#about">About Us</a><a class="link svelte-1grguq5" href="/policy">Policy Document</a><a class="link svelte-1grguq5" href="/#contact">Contact</a></nav></div>
+  <div class="mobile-nav svelte-1grguq5"><a href="/" class="logo svelte-1grguq5"><img src="https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1743656491741undefined.webp" alt=""></a>
+    <button id="open" aria-label="Open mobile navigation"></button>
+    </div></header></div> 
+<div class="section" id="section-350e5eb2"><div class="section"><div class="section-container content svelte-z64qd0"><!-- HTML_TAG_START --><h2 id="pressreleasefederalinfrastructurefundingwillboosthomebuildingputonusonprovincestocutredtape"><strong>PRESS RELEASE: Federal infrastructure funding will boost home building, put onus on provinces to cut red tape</strong></h2>
+<p>April 2, 2024</p>
+<hr>
+<p><strong>More Homes Canada,</strong> a coalition of pro-housing groups from across the country, is pleased to see the announcement of a $6B federal infrastructure fund designed to support housing construction and cut back on harmful red tape.</p>
+<p>The Canada Housing Infrastructure Fund will finance critical infrastructure upgrades that communities need in order to accommodate more homes. Crucially, it earmarks $5 billion for provinces and territories that commit to reforming planning rules that stifle housing construction.</p>
+<p>“The onus is now on provincial and municipal governments to legalize housing forms we desperately need and unlock federal infrastructure dollars in the process,” said Yash Bhandari of More Homes Canada. In most Canadian cities, zoning rules currently prohibit multiplexes and apartments on the vast majority of residential land.</p>
+<p>The announcement should serve as a wake up call for provinces like Ontario, whose government recently announced that they would not legalize fourplexes provincewide.</p>
+<p>“We need every region to commit to reforms or else the crisis will only spread and worsen in new areas,” said Colleen Bailey of More Neighbours Toronto. “This should be a signal for Premiers leaning toward NIMBY [Not In My Backyard] policies to re-evaluate and commit to building strong municipalities with a variety of housing types that welcome new residents.”</p>
+<p>The fund will make the most of the upcoming Housing Design Catalogue by rewarding municipalities who allow designs to be constructed as-of-right, bypassing a rezoning process that can often take years.</p>
+<p>“Canada has some of the longest approval times in the world. Standardized designs improve construction speed and costs, but making municipal approvals as-of-right is vital to addressing the housing shortage quickly,” said Russil Wvong of Abundant Housing Vancouver.</p>
+<p>The announcement also ties transit funding to high-density housing and the removal of parking minimums near high-frequency transit.</p>
+<p>“This is the action that we’ve been waiting for from the federal government,” said Willem Klumpenhouwer of More Neighbours Calgary. “We need to make the most of our public investments to allow young people, new families and seniors to find suitable housing where they need it. With this federal funding, it is now time for provincial and municipal governments to step up.”</p>
+<hr>
+<p>For more information, please contact:</p>
+<p>More Homes Canada<br />
+<a href="mailto:info@morehomescanada.ca">info@morehomescanada.ca</a><br />
+<a href="https://www.morehomescanada.ca/">https://www.morehomescanada.ca/</a></p>
+<p><br></p><!-- HTML_TAG_END --></div></div></div> 
+<div class="section" id="section-2b7b9686"><footer class="section-container svelte-i9k4w2"><nav class="svelte-i9k4w2"><a class="link svelte-i9k4w2" href="/">More Homes Canada</a></nav>
+  <div class="social-links svelte-i9k4w2"><a href="https://twitter.com/MoreHomesCanada" aria-label="Twitter" class="svelte-i9k4w2">
+      </a><a href="https://www.instagram.com/morehomescanada/" aria-label="Instagram" class="svelte-i9k4w2">
+      </a></div></footer></div> 
+
+      <script type="module">
+      import('/_symbols/bae62166-8e83-404f-8fa0-0901f9ce721e.js')
+      .then(({default:App}) => {
+        
+            new App({
+              target: document.querySelector('#section-2b7b9686'),
+              hydrate: true,
+              props: {"nav":[{"link":{"url":"/","label":"More Homes Canada"}}],"social":[{"icon":"mdi:twitter","link":{"url":"https://twitter.com/MoreHomesCanada","label":"Twitter"}},{"icon":"mdi:instagram","link":{"url":"https://www.instagram.com/morehomescanada/","label":"Instagram"}}]}
+            })
+          
+      })
+      .catch(e => console.error(e))
+    
+
+      import('/_symbols/d0bd3e6e-dc93-4d3c-b965-f4f8b9643774.js')
+      .then(({default:App}) => {
+        
+            new App({
+              target: document.querySelector('#section-513dbd3f'),
+              hydrate: true,
+              props: {"logo":{"image":{"alt":"","url":"https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1743656491741undefined.webp"},"title":""},"site_nav":[{"link":{"url":"/#about","label":"About Us"}},{"link":{"url":"/policy","label":"Policy Document"}},{"link":{"url":"/#contact","label":"Contact"}}]}
+            })
+          
+      })
+      .catch(e => console.error(e))
     </script>
-    <meta name="description" content="More Homes Canada is a coalition of housing advocacy groups from across the country. Together, we are fighting to end Canada’s housing shortage.">
-    <meta property="og:title" content="PRESS RELEASE: Federal infrastructure funding will boost home building, put onus on provinces to cut red tape">
-    <meta property="og:description" content="More Homes Canada, a coalition of pro-housing groups from across the country, is pleased to see the announcement of a $6B federal infrastructure fund designed to support housing construction and cut back on harmful red tape.">
-    <meta property="og:image" content="https://res.cloudinary.com/dbnijop5c/image/upload/v1712114616/MHC_Logo_temp_nkyfvj.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta property="twitter:domain" content="morehomescanada.ca">
-    <meta property="twitter:url" content="https://www.morehomescanada.ca/press-release/canada-housing-infrastructure-fund">
-    <meta name="twitter:title" content="PRESS RELEASE: Federal infrastructure funding will boost home building, put onus on provinces to cut red tape">
-    <meta name="twitter:description" content="More Homes Canada, a coalition of pro-housing groups from across the country, is pleased to see the announcement of a $6B federal infrastructure fund designed to support housing construction and cut back on harmful red tape.">
-    <meta name="twitter:image" content="https://res.cloudinary.com/dbnijop5c/image/upload/v1712114616/MHC_Logo_temp_nkyfvj.png">
-    <style>
-        @import url("https://unpkg.com/@primo-app/primo@1.3.64/reset.css");
-        @import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
-
-        #page {
-            --max-width: 740px;
-            /* --color-accent: #FF0000; Beware, we look like the LPC with a red theme on*/
-            --color-accent: rebeccapurple;
-            font-family: lexend, system-ui, sans-serif;
-            color: var(--color);
-            line-height: 1.6;
-            font-size: 1rem;
-            background: var(--background);
-        }
-
-        .section-container {
-            max-width: var(--max-width, 1000px);
-            margin: 0 auto;
-            padding: 3rem var(--padding, 1rem);
-        }
-
-        .heading {
-            font-size: 3rem;
-            line-height: 1;
-            font-weight: 700;
-            margin: 0;
-        }
-
-        a {
-            color: var(--color-accent);
-        }
-
-        .link {
-            color: var(--color-accent);
-        }
-
-        a:hover {
-            text-decoration: underline;
-            font-weight: bold;
-        }
-
-        .button {
-            color: white;
-            background: var(--color-accent);
-            border-radius: 5px;
-            padding: 8px 20px;
-            transition: var(--transition);
-
-            /* vertically center */
-            display: inline-flex;
-            align-items: center;
-        }
-
-        .button:hover {
-            box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .button.inverted {
-            background: transparent;
-            color: var(--color-accent);
-            border: 2px solid var(--color-accent);
-        }
-
-        /* Markdown styling */
-        .content :global(img) {
-            width: 100%;
-            margin: 2rem 0;
-            box-shadow: var(--box-shadow);
-            border-radius: var(--border-radius);
-        }
-
-        .content :global(p) {
-            padding: 0.5rem 0;
-            line-height: 1.5;
-        }
-
-        .content :global(a) {
-            text-decoration: underline;
-        }
-
-        .content :global(h1) {
-            font-size: 2.5rem;
-            font-weight: 600;
-            line-height: 1.2;
-            margin-bottom: 0.5rem;
-        }
-
-        .content :global(h2) {
-            font-size: 2rem;
-            font-weight: 600;
-            margin-bottom: 0.25rem;
-            line-height: 1.2;
-        }
-
-        .content :global(h3) {
-            font-size: 1.5rem;
-            font-weight: 600;
-            line-height: 1.2;
-            margin-top: .5rem;
-        }
-
-        .content :global(ul) {
-            list-style: disc;
-            padding: 0.5rem 0;
-            padding-left: 1.25rem;
-        }
-
-        .content :global(ol) {
-            list-style: decimal;
-            padding: 0.5rem 0;
-            padding-left: 1.25rem;
-        }
-
-        .content :global(blockquote) {
-            padding: 2rem;
-            box-shadow: var(--box-shadow);
-            border-radius: var(--border-radius);
-        }
-    </style><!-- HEAD_svelte-1383och_END -->
-    <style>
-        .section-container.svelte-1grguq5.svelte-1grguq5 {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 1rem;
-            padding-bottom: 1rem
-        }
-
-        .logo.svelte-1grguq5.svelte-1grguq5 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            line-height: 1.2
-        }
-
-        .desktop-nav.svelte-1grguq5.svelte-1grguq5 {
-            display: none;
-            align-items: center;
-            justify-content: space-between;
-            width: 100%
-        }
-
-        .desktop-nav.svelte-1grguq5 nav.svelte-1grguq5 {
-            display: flex;
-            gap: 2rem
-        }
-
-        .desktop-nav.svelte-1grguq5 nav a.link.svelte-1grguq5 {
-            border-color: transparent;
-            transition: border-color 0.1s;
-            font-size: 0.95rem
-        }
-
-        .desktop-nav.svelte-1grguq5 nav a.link.svelte-1grguq5:hover {
-            border-color: initial
-        }
-
-        @media(min-width: 800px) {
-            .desktop-nav.svelte-1grguq5.svelte-1grguq5 {
-                display: flex
-            }
-        }
-
-        .mobile-nav.svelte-1grguq5.svelte-1grguq5 {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            width: 100%;
-            font-weight: 500
-        }
-
-        @media(min-width: 800px) {
-            .mobile-nav.svelte-1grguq5.svelte-1grguq5 {
-                display: none
-            }
-        }
-
-        #popup.svelte-1grguq5.svelte-1grguq5 {
-            font-size: 1.25rem;
-            display: grid;
-            gap: 1rem;
-            position: absolute;
-            text-align: center;
-            background-color: var(--background-color, white);
-            box-shadow: var(--box-shadow, 0px 4px 30px rgba(0, 0, 0, 0.1));
-            border-radius: var(--border-radius);
-            inset: 0.5rem;
-            bottom: initial;
-            padding: 2rem;
-            z-index: 1
-        }
-
-        #popup.svelte-1grguq5 button#close.svelte-1grguq5 {
-            position: absolute;
-            right: 1rem;
-            top: 1rem
-        }
-
-        .content.svelte-z64qd0 img {
-            width: 100%;
-            margin: 2rem 0;
-            box-shadow: var(--box-shadow);
-            border-radius: var(--border-radius)
-        }
-
-        .content.svelte-z64qd0 p {
-            padding: 0.5rem 0;
-            line-height: 1.5
-        }
-
-        .content.svelte-z64qd0 a {
-            text-decoration: underline
-        }
-
-        .content.svelte-z64qd0 h1 {
-            font-size: 2.5rem;
-            font-weight: 600;
-            line-height: 1.2;
-            margin-bottom: 0.5rem
-        }
-
-        .content.svelte-z64qd0 h2 {
-            font-size: 2rem;
-            font-weight: 600;
-            margin-bottom: 0.25rem;
-            line-height: 1.2
-        }
-
-        .content.svelte-z64qd0 h3 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            line-height: 1.2;
-            margin-top: .5rem
-        }
-
-        .content.svelte-z64qd0 ul {
-            list-style: disc;
-            padding: 0.5rem 0;
-            padding-left: 1.25rem
-        }
-
-        .content.svelte-z64qd0 ol {
-            list-style: decimal;
-            padding: 0.5rem 0;
-            padding-left: 1.25rem
-        }
-
-        .content.svelte-z64qd0 blockquote {
-            padding: 2rem;
-            box-shadow: var(--box-shadow);
-            border-radius: var(--border-radius)
-        }
-
-        .section-container.svelte-i9k4w2.svelte-i9k4w2 {
-            display: flex;
-            justify-content: space-between;
-            flex-direction: column;
-            align-items: center;
-            gap: 1rem;
-            padding-top: 1rem;
-            padding-bottom: 1rem
-        }
-
-        @media(min-width: 600px) {
-            .section-container.svelte-i9k4w2.svelte-i9k4w2 {
-                flex-direction: row
-            }
-        }
-
-        nav.svelte-i9k4w2.svelte-i9k4w2 {
-            display: flex;
-            gap: 1rem;
-            font-size: .875rem
-        }
-
-        nav.svelte-i9k4w2 .link.svelte-i9k4w2 {
-            border-color: transparent
-        }
-
-        nav.svelte-i9k4w2 .link.svelte-i9k4w2:hover {
-            border-color: initial
-        }
-
-        .social-links.svelte-i9k4w2.svelte-i9k4w2 {
-            display: flex;
-            gap: 1.5rem;
-            font-size: 1.5rem
-        }
-
-        .social-links.svelte-i9k4w2 a.svelte-i9k4w2 {
-            color: var(--color-accent, rebeccapurple);
-            transition: var(--transition, 0.1s transform)
-        }
-
-        .social-links.svelte-i9k4w2 a.svelte-i9k4w2:hover {
-            transform: scale(1.1)
-        }
-    </style>
-</head>
-
-<body id="page">
-
-    <div class="section" id="section-513dbd3f">
-        <header class="section-container svelte-1grguq5">
-            <div class="desktop-nav svelte-1grguq5"><a href="/" class="logo svelte-1grguq5">MORE HOMES CANADA</a>
-                <nav class="svelte-1grguq5"><a class="link svelte-1grguq5" href="/#about">About Us</a><a class="link svelte-1grguq5" href="/policy">Policy Document</a><a class="link svelte-1grguq5" href="/#contact">Contact</a></nav>
-            </div>
-            <div class="mobile-nav svelte-1grguq5"><a href="/" class="logo svelte-1grguq5">MORE HOMES CANADA</a>
-                <button id="open" aria-label="Open mobile navigation"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="30" height="30" viewBox="0 0 24 24" class="iconify iconify--eva"><!-- HTML_TAG_START -->
-                        <rect width="18" height="2" x="3" y="11" fill="currentColor" rx=".95" ry=".95" />
-                        <rect width="18" height="2" x="3" y="16" fill="currentColor" rx=".95" ry=".95" />
-                        <rect width="18" height="2" x="3" y="6" fill="currentColor" rx=".95" ry=".95" /><!-- HTML_TAG_END -->
-                    </svg></button>
-            </div>
-        </header>
-    </div>
-    <div class="section" id="section-350e5eb2">
-        <div class="section">
-            <div class="section-container content svelte-z64qd0"><!-- HTML_TAG_START -->
-                <h2 id="pressreleasefederalinfrastructurefundingwillboosthomebuildingputonusonprovincestocutredtape"><strong>PRESS RELEASE: Federal infrastructure funding will boost home building, put onus on provinces to cut red tape</strong></h2>
-                <p>April 2, 2024</p>
-                <hr>
-                <p><strong>More Homes Canada,</strong> a coalition of pro-housing groups from across the country, is pleased to see the announcement of a $6B federal infrastructure fund designed to support housing construction and cut back on harmful red tape.</p>
-                <p>The Canada Housing Infrastructure Fund will finance critical infrastructure upgrades that communities need in order to accommodate more homes. Crucially, it earmarks $5 billion for provinces and territories that commit to reforming planning rules that stifle housing construction.</p>
-                <p>“The onus is now on provincial and municipal governments to legalize housing forms we desperately need and unlock federal infrastructure dollars in the process,” said Yash Bhandari of More Homes Canada. In most Canadian cities, zoning rules currently prohibit multiplexes and apartments on the vast majority of residential land.</p>
-                <p>The announcement should serve as a wake up call for provinces like Ontario, whose government recently announced that they would not legalize fourplexes provincewide.</p>
-                <p>“We need every region to commit to reforms or else the crisis will only spread and worsen in new areas,” said Colleen Bailey of More Neighbours Toronto. “This should be a signal for Premiers leaning toward NIMBY [Not In My Backyard] policies to re-evaluate and commit to building strong municipalities with a variety of housing types that welcome new residents.”</p>
-                <p>The fund will make the most of the upcoming Housing Design Catalogue by rewarding municipalities who allow designs to be constructed as-of-right, bypassing a rezoning process that can often take years.</p>
-                <p>“Canada has some of the longest approval times in the world. Standardized designs improve construction speed and costs, but making municipal approvals as-of-right is vital to addressing the housing shortage quickly,” said Russil Wvong of Abundant Housing Vancouver.</p>
-                <p>The announcement also ties transit funding to high-density housing and the removal of parking minimums near high-frequency transit.</p>
-                <p>“This is the action that we’ve been waiting for from the federal government,” said Willem Klumpenhouwer of More Neighbours Calgary. “We need to make the most of our public investments to allow young people, new families and seniors to find suitable housing where they need it. With this federal funding, it is now time for provincial and municipal governments to step up.”</p>
-                <hr>
-                <p>For more information, please contact:</p>
-                <p>More Homes Canada<br />
-                    <a href="mailto:info@morehomescanada.ca">info@morehomescanada.ca</a><br />
-                    <a href="https://www.morehomescanada.ca/">https://www.morehomescanada.ca/</a>
-                </p>
-                <p><br></p><!-- HTML_TAG_END -->
-            </div>
-        </div>
-    </div>
-    <div class="section" id="section-2b7b9686">
-        <footer class="section-container svelte-i9k4w2">
-            <nav class="svelte-i9k4w2"><a class="link svelte-i9k4w2" href="/">More Homes Canada</a></nav>
-            <div class="social-links svelte-i9k4w2"><a href="https://twitter.com/MoreHomesCanada" aria-label="Twitter" class="svelte-i9k4w2"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 24 24" class="iconify iconify--mdi"><!-- HTML_TAG_START -->
-                        <path fill="currentColor" d="M22.46 6c-.77.35-1.6.58-2.46.69c.88-.53 1.56-1.37 1.88-2.38c-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29c0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15c0 1.49.75 2.81 1.91 3.56c-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.2 4.2 0 0 1-1.93.07a4.28 4.28 0 0 0 4 2.98a8.52 8.52 0 0 1-5.33 1.84q-.51 0-1.02-.06C3.44 20.29 5.7 21 8.12 21C16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56c.84-.6 1.56-1.36 2.14-2.23" /><!-- HTML_TAG_END -->
-                    </svg>
-                </a><a href="https://www.instagram.com/morehomescanada/" aria-label="Instagram" class="svelte-i9k4w2"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 24 24" class="iconify iconify--mdi"><!-- HTML_TAG_START -->
-                        <path fill="currentColor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3" /><!-- HTML_TAG_END -->
-                    </svg>
-                </a></div>
-        </footer>
-    </div>
-
-    <script type="module">
-        const path = window.location.pathname === '/' ? '' : window.location.pathname
-        const [{
-            default: App
-        }] = await Promise.all([
-            import(path + '/_module.js')
-        ]).catch(e => console.error(e))
-        new App({
-            target: document.querySelector('body'),
-            hydrate: true,
-        })
-    </script>
-</body>
-
-</html>
+    </body>
+  </html>
+  

@@ -1,731 +1,314 @@
-<!DOCTYPE html>
-<html lang="en">
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta name="generator" content="Primo" />
+      <title>More Homes Canada</title><!-- HEAD_svelte-5das6o_START --><link rel="icon" type="image/png" sizes="32x32" href="https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="og:image" content="https://res.cloudinary.com/dbnijop5c/image/upload/v1712114616/MHC_Logo_temp_nkyfvj.png"><script async src="https://eu.umami.is/script.js" data-website-id="85a9067f-bd5a-4cdb-b6ac-e7caecf88793"></script><script>(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '714042');
+</script><meta name="description" content="More Homes Canada is a coalition of housing advocacy groups from across the country. Together, we are fighting to end Canada’s housing shortage."><style>@import url("https://unpkg.com/@primo-app/primo@1.3.64/reset.css");
+@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
 
-<head>
-    <meta name="generator" content="Primo" />
-    <title>More Homes Canada</title><!-- HEAD_svelte-16t25u7_START -->
-    <link rel="icon" type="image/png" sizes="32x32" href="https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1701390612420favicon-32x32.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:image" content="https://res.cloudinary.com/dbnijop5c/image/upload/v1712114616/MHC_Logo_temp_nkyfvj.png">
-    <script async src="https://eu.umami.is/script.js" data-website-id="85a9067f-bd5a-4cdb-b6ac-e7caecf88793"></script>
-    <script>
-        (function(w, d, e, u, f, l, n) {
-            w[f] = w[f] || function() {
-                    (w[f].q = w[f].q || [])
-                    .push(arguments);
-                }, l = d.createElement(e), l.async = 1, l.src = u,
-                n = d.getElementsByTagName(e)[0], n.parentNode.insertBefore(l, n);
-        })
-        (window, document, 'script', 'https://assets.mailerlite.com/js/universal.js', 'ml');
-        ml('account', '714042');
+#page {
+  --max-width: 740px;
+  /* --color-accent: #FF0000; Beware, we look like the LPC with a red theme on*/ 
+  --color-accent: #FF3622;
+  --color-mid: #dd1400;
+  --color-dark: #750000;
+  --alternate-background: #FFCDD2;
+  font-family: lexend, system-ui, sans-serif;
+  color: var(--color);
+  line-height: 1.6; 
+  font-size: 1rem;
+  background: var(--background);
+}
+
+.section-container {
+  max-width: var(--max-width, 1000px);
+  margin: 0 auto;
+  padding: 3rem var(--padding, 1rem); 
+}
+
+.heading {
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: 700;
+  margin: 0;
+}
+
+a {
+  color: var(--color-mid);
+}
+
+h1, h2 {
+  color: var(--color-accent)
+}
+
+.link {
+  color: var(--color-mid);
+}
+
+a:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.button {
+  color: white;
+  background: var(--color-mid);
+  border-radius: 5px;
+  padding: 8px 20px;
+  transition: var(--transition);
+
+  /* vertically center */
+  display: inline-flex;
+  align-items: center;
+}
+
+.button:hover {
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+  }
+
+.button.inverted {
+    background: transparent; 
+    color: var(--color-accent); 
+    border: 2px solid var(--color-accent);
+  }
+
+/* Markdown styling */
+.content :global(img) {
+    width: 100%;
+    margin: 2rem 0;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+  }
+.content :global(p) {
+    padding: 0.5rem 0;
+    line-height: 1.5;
+  }
+.content :global(a) {
+    text-decoration: underline;
+  }
+.content :global(h1) {
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+.content :global(h2) {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    line-height: 1.2;
+  }
+.content :global(h3) {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-top: .5rem;
+  }
+.content :global(ul) {
+    list-style: disc;
+    padding: 0.5rem 0;
+    padding-left: 1.25rem;
+  }
+.content :global(ol) {
+    list-style: decimal;
+    padding: 0.5rem 0;
+    padding-left: 1.25rem;
+  }
+.content :global(blockquote) {
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+  }
+
+</style><!-- HEAD_svelte-5das6o_END -->
+      <style>.section-container.svelte-1grguq5.svelte-1grguq5{display:flex;justify-content:space-between;align-items:center;padding-top:1rem;padding-bottom:1rem}.logo.svelte-1grguq5.svelte-1grguq5{font-size:1.5rem;font-weight:600;line-height:1.2}.desktop-nav.svelte-1grguq5.svelte-1grguq5{display:none;align-items:center;justify-content:space-between;width:100%}.desktop-nav.svelte-1grguq5 nav.svelte-1grguq5{display:flex;gap:2rem}.desktop-nav.svelte-1grguq5 nav a.link.svelte-1grguq5{border-color:transparent;transition:border-color 0.1s;font-size:0.95rem}.desktop-nav.svelte-1grguq5 nav a.link.svelte-1grguq5:hover{border-color:initial}@media(min-width: 800px){.desktop-nav.svelte-1grguq5.svelte-1grguq5{display:flex
+}}.mobile-nav.svelte-1grguq5.svelte-1grguq5{display:flex;align-items:center;justify-content:space-between;width:100%;font-weight:500}@media(min-width: 800px){.mobile-nav.svelte-1grguq5.svelte-1grguq5{display:none
+}}#popup.svelte-1grguq5.svelte-1grguq5{font-size:1.25rem;display:grid;gap:1rem;position:absolute;text-align:center;background-color:var(--background-color, white);box-shadow:var(--box-shadow, 0px 4px 30px rgba(0, 0, 0, 0.1));border-radius:var(--border-radius);inset:0.5rem;bottom:initial;padding:2rem;z-index:1}#popup.svelte-1grguq5 button#close.svelte-1grguq5{position:absolute;right:1rem;top:1rem}
+.section-container.svelte-1w258x5{display:grid;place-items:center;text-align:center}.heading.svelte-1w258x5{font-size:3rem;font-weight:700;line-height:1.25;margin-bottom:1.5rem}@media(min-width: 700px){.heading.svelte-1w258x5{font-size:3rem
+}}.subheading.svelte-1w258x5{font-size:1.25rem;margin-bottom:2rem}.buttons.svelte-1w258x5{margin-top:0.5rem;display:flex;flex-wrap:wrap;gap:1rem}
+.section-container.svelte-pgvw4a.svelte-pgvw4a{display:flex;flex-direction:column;gap:2rem}.heading.svelte-pgvw4a.svelte-pgvw4a{text-align:center}ul.svelte-pgvw4a.svelte-pgvw4a{display:grid;grid-template-columns:repeat(auto-fit, minmax(15rem, 1fr));gap:1.75rem}ul.svelte-pgvw4a li.svelte-pgvw4a{display:flex;flex-direction:column;gap:1rem;border:1px solid var(--border-color, #eee);border-radius:var(--border-radius);padding:1.5rem}ul.svelte-pgvw4a li .title.svelte-pgvw4a{display:flex;gap:0.5rem;font-size:1.25rem;font-weight:bold;align-items:flex-start}ul.svelte-pgvw4a li .title .label.svelte-pgvw4a{line-height:1.1;font-weight:600}
+.section-container.svelte-1eqlbb8.svelte-1eqlbb8{display:flex;flex-direction:column;text-align:center}.heading.svelte-1eqlbb8.svelte-1eqlbb8{text-align:center;margin-bottom:3rem}.subheading.svelte-1eqlbb8.svelte-1eqlbb8{font-size:1.25rem;margin-bottom:2rem}ul.cards.svelte-1eqlbb8.svelte-1eqlbb8{display:grid;place-items:center;margin-top:2rem;gap:2rem}ul.cards.svelte-1eqlbb8 li.svelte-1eqlbb8{cursor:pointer;max-width:400px;padding:1.5rem;border:1px solid var(--border-color, #eee);border-radius:var(--border-radius)}ul.cards.svelte-1eqlbb8 li figure.svelte-1eqlbb8{display:grid;place-items:center}ul.cards.svelte-1eqlbb8 li figure img.svelte-1eqlbb8{padding:2rem;aspect-ratio:1 / 1;-o-object-fit:cover;object-fit:cover;width:100%}ul.cards.svelte-1eqlbb8 li .info .details.svelte-1eqlbb8{display:grid;gap:.25rem;text-align:center;margin-bottom:1rem}ul.cards.svelte-1eqlbb8 li .info .details span.name.svelte-1eqlbb8{font-weight:600}ul.cards.svelte-1eqlbb8 li .info .social.svelte-1eqlbb8{display:flex;justify-content:center;gap:1.25rem;font-size:1.5rem;color:var(--color-accent, rebeccapurple)}ul.cards.svelte-1eqlbb8 li .info .social a.svelte-1eqlbb8{transition:var(--transition, 0.1s transform)}ul.cards.svelte-1eqlbb8 li .info .social a.svelte-1eqlbb8:hover{transform:scale(1.1)}ul.cards.svelte-1eqlbb8.svelte-1eqlbb8{grid-template-columns:1fr 1fr}@media(min-width: 600px){ul.cards.svelte-1eqlbb8.svelte-1eqlbb8{grid-template-columns:1fr 1fr 1fr
+}}
+.section-container.svelte-7xj9ed.svelte-7xj9ed{display:grid;justify-content:center}a.svelte-7xj9ed.svelte-7xj9ed{color:white}a.link.svelte-7xj9ed.svelte-7xj9ed{color:var(--color-accent)
+}.card.svelte-7xj9ed.svelte-7xj9ed{max-width:640px;border:1px solid var(--border-color, #eee);border-radius:var(--border-radius);padding:3.5rem 2.75rem;text-align:center;display:grid;place-items:center;gap:2rem}@media(min-width: 600px){.card.svelte-7xj9ed.svelte-7xj9ed{padding:4.5rem 7rem
+}}.link.svelte-7xj9ed.svelte-7xj9ed{font-weight:500;border-color:transparent;color:white;transition:var(--transition, 0.1s border)}.link.svelte-7xj9ed.svelte-7xj9ed:hover{border-color:initial}ul.svelte-7xj9ed.svelte-7xj9ed{display:flex;flex-wrap:wrap;justify-content:center;gap:1.5rem}ul.svelte-7xj9ed li.svelte-7xj9ed{color:white;background:var(--color-mid, rebeccapurple);font-size:1.5rem;display:flex;align-items:center;justify-content:center;border-radius:50%;transition:0.1s transform}ul.svelte-7xj9ed li.svelte-7xj9ed:hover{transform:scale(1.1)}ul.svelte-7xj9ed li a.svelte-7xj9ed{font-size:1.5rem;padding:0.75rem}
+.section-container.svelte-i9k4w2.svelte-i9k4w2{display:flex;justify-content:space-between;flex-direction:column;align-items:center;gap:1rem;padding-top:1rem;padding-bottom:1rem}@media(min-width: 600px){.section-container.svelte-i9k4w2.svelte-i9k4w2{flex-direction:row
+}}nav.svelte-i9k4w2.svelte-i9k4w2{display:flex;gap:1rem;font-size:.875rem}nav.svelte-i9k4w2 .link.svelte-i9k4w2{border-color:transparent}nav.svelte-i9k4w2 .link.svelte-i9k4w2:hover{border-color:initial}.social-links.svelte-i9k4w2.svelte-i9k4w2{display:flex;gap:1.5rem;font-size:1.5rem}.social-links.svelte-i9k4w2 a.svelte-i9k4w2{color:var(--color-accent, rebeccapurple);transition:var(--transition, 0.1s transform)}.social-links.svelte-i9k4w2 a.svelte-i9k4w2:hover{transform:scale(1.1)}</style>
+    </head>
+    <body id="page">
+       
+<div class="section" id="section-8f6f992c"><header class="section-container svelte-1grguq5"><div class="desktop-nav svelte-1grguq5"><a href="/" class="logo svelte-1grguq5"><img src="https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1743656491741undefined.webp" alt=""></a>
+    <nav class="svelte-1grguq5"><a class="link svelte-1grguq5" href="/#about">About Us</a><a class="link svelte-1grguq5" href="/policy">Policy Document</a><a class="link svelte-1grguq5" href="/#contact">Contact</a></nav></div>
+  <div class="mobile-nav svelte-1grguq5"><a href="/" class="logo svelte-1grguq5"><img src="https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1743656491741undefined.webp" alt=""></a>
+    <button id="open" aria-label="Open mobile navigation"></button>
+    </div></header></div> 
+<div class="section" id="section-9be0ea08"><header class="section-container svelte-1w258x5"><h1 class="heading svelte-1w258x5">It's time to legalize housing.</h1>
+  <p class="subheading svelte-1w258x5"><!-- HTML_TAG_START --><p>Municipal regulations have strangled housing construction across Canada for decades. To end the housing crisis, we need to eliminate the regressive policies at its root.</p><!-- HTML_TAG_END --></p>
+  <div class="buttons svelte-1w258x5"><a class="button false svelte-1w258x5" href="/policy">Learn More</a><a class="button inverted svelte-1w258x5" href="https://discord.gg/EWFcsaVKNE">Join Our Discord</a></div></header></div> 
+<div class="section" id="section-a106f23c"><section class="section-container svelte-pgvw4a"><h2 class="heading svelte-pgvw4a">What We Want</h2>
+  <ul class="svelte-pgvw4a"><li class="svelte-pgvw4a"><h3 class="title svelte-pgvw4a"><span></span>
+          <span class="label svelte-pgvw4a">Density as-of-right</span></h3>
+        <div class="description"><!-- HTML_TAG_START --><p>Homes are a necessity, not a nuisance. Townhouses, multiplexes and apartments should be allowed in far more places without a long and risky rezoning.</p><!-- HTML_TAG_END --></div>
+      </li><li class="svelte-pgvw4a"><h3 class="title svelte-pgvw4a"><span></span>
+          <span class="label svelte-pgvw4a">Less red tape</span></h3>
+        <div class="description"><!-- HTML_TAG_START --><p>Setbacks, floorplate restrictions and parking minimums drive up building costs and kill new housing projects. Easing these regulations will help market and non-market housing.</p><!-- HTML_TAG_END --></div>
+      </li><li class="svelte-pgvw4a"><h3 class="title svelte-pgvw4a"><span></span>
+          <span class="label svelte-pgvw4a">Reform consultation and appeals</span></h3>
+        <div class="description"><!-- HTML_TAG_START --><p>There are too many veto rights on new housing. Local concerns are important but they do not trump the need for housing.</p><!-- HTML_TAG_END --></div>
+      </li><li class="svelte-pgvw4a"><h3 class="title svelte-pgvw4a"><span></span>
+          <span class="label svelte-pgvw4a">Funding for subsidized housing</span></h3>
+        <div class="description"><!-- HTML_TAG_START --><p>Deeply affordable housing requires deep subsidies. Federal and provincial governments need to step up and provide this funding.</p><!-- HTML_TAG_END --></div>
+      </li></ul></section></div> 
+<div class="section" id="section-a71ed389"><section class="section-container svelte-1eqlbb8" id="about"><h2 class="heading svelte-1eqlbb8">Who We Are</h2>
+  <span class="subheading svelte-1eqlbb8">More Homes Canada is a coalition of housing advocacy groups from across the country. Together, we are fighting to end Canada’s housing shortage.</span>
+  <ul class="cards svelte-1eqlbb8"><li onclick="window.open('https://www.moreneighbours.ca/', '_blank')" class="svelte-1eqlbb8"><figure class="svelte-1eqlbb8"><img alt="" src="https://res.cloudinary.com/dbnijop5c/image/upload/v1700527328/mnto_vaize2.png" class="svelte-1eqlbb8">
+        </figure>
+      <div class="info"><div class="details svelte-1eqlbb8"><span class="name svelte-1eqlbb8">More Neighbours Toronto</span></div>
+        <div class="social svelte-1eqlbb8">
+        </div></div>
+    </li><li onclick="window.open('https://www.abundanthousingvancouver.com/', '_blank')" class="svelte-1eqlbb8"><figure class="svelte-1eqlbb8"><img alt="" src="https://res.cloudinary.com/dbnijop5c/image/upload/v1700528184/More%20Homes%20Canada/vancouver_sjf85y.jpg" class="svelte-1eqlbb8">
+        </figure>
+      <div class="info"><div class="details svelte-1eqlbb8"><span class="name svelte-1eqlbb8">Abundant Housing Vancouver</span></div>
+        <div class="social svelte-1eqlbb8">
+        </div></div>
+    </li><li onclick="window.open('https://www.growtogetheryeg.com/', '_blank')" class="svelte-1eqlbb8"><figure class="svelte-1eqlbb8"><img alt="" src="https://res.cloudinary.com/dbnijop5c/image/upload/v1700528186/More%20Homes%20Canada/edmonton_x53wtv.png" class="svelte-1eqlbb8">
+        </figure>
+      <div class="info"><div class="details svelte-1eqlbb8"><span class="name svelte-1eqlbb8">Grow Together Edmonton</span></div>
+        <div class="social svelte-1eqlbb8">
+        </div></div>
+    </li><li onclick="window.open('https://construisonsmtl.ca/en/', '_blank')" class="svelte-1eqlbb8"><figure class="svelte-1eqlbb8"><img alt="" src="https://res.cloudinary.com/dbnijop5c/image/upload/v1700528186/More%20Homes%20Canada/montreal_ejn4pg.png" class="svelte-1eqlbb8">
+        </figure>
+      <div class="info"><div class="details svelte-1eqlbb8"><span class="name svelte-1eqlbb8">Construisons Montréal</span></div>
+        <div class="social svelte-1eqlbb8">
+        </div></div>
+    </li><li onclick="window.open('https://www.moreneighbourscalgary.ca/', '_blank')" class="svelte-1eqlbb8"><figure class="svelte-1eqlbb8"><img alt="" src="https://res.cloudinary.com/dbnijop5c/image/upload/v1700528186/More%20Homes%20Canada/calgary_b9krf6.png" class="svelte-1eqlbb8">
+        </figure>
+      <div class="info"><div class="details svelte-1eqlbb8"><span class="name svelte-1eqlbb8">More Neighbours Calgary</span></div>
+        <div class="social svelte-1eqlbb8">
+        </div></div>
+    </li><li onclick="window.open('https://www.homesforliving.ca/', '_blank')" class="svelte-1eqlbb8"><figure class="svelte-1eqlbb8"><img alt="" src="https://res.cloudinary.com/dbnijop5c/image/upload/v1700528184/More%20Homes%20Canada/victoria_n879ey.png" class="svelte-1eqlbb8">
+        </figure>
+      <div class="info"><div class="details svelte-1eqlbb8"><span class="name svelte-1eqlbb8">Homes for Living Victoria</span></div>
+        <div class="social svelte-1eqlbb8">
+        </div></div>
+    </li><li onclick="window.open('https://makehousingaffordable.ca/', '_blank')" class="svelte-1eqlbb8"><figure class="svelte-1eqlbb8"><img alt="" src="https://res.cloudinary.com/dbnijop5c/image/upload/v1700528183/More%20Homes%20Canada/ottawa_civxsq.png" class="svelte-1eqlbb8">
+        </figure>
+      <div class="info"><div class="details svelte-1eqlbb8"><span class="name svelte-1eqlbb8">Make Housing Affordable Ottawa</span></div>
+        <div class="social svelte-1eqlbb8">
+        </div></div>
+    </li><li onclick="window.open('https://www.wryimby.com/', '_blank')" class="svelte-1eqlbb8"><figure class="svelte-1eqlbb8"><img alt="" src="https://res.cloudinary.com/dbnijop5c/image/upload/v1700528185/More%20Homes%20Canada/waterloo_llha5v.jpg" class="svelte-1eqlbb8">
+        </figure>
+      <div class="info"><div class="details svelte-1eqlbb8"><span class="name svelte-1eqlbb8">Waterloo Region YIMBY</span></div>
+        <div class="social svelte-1eqlbb8">
+        </div></div>
+    </li><li onclick="window.open('https://twitter.com/MoreHomesHRM', '_blank')" class="svelte-1eqlbb8"><figure class="svelte-1eqlbb8"><img alt="" src="https://res.cloudinary.com/dbnijop5c/image/upload/v1700528187/More%20Homes%20Canada/halifax_epvtfq.jpg" class="svelte-1eqlbb8">
+        </figure>
+      <div class="info"><div class="details svelte-1eqlbb8"><span class="name svelte-1eqlbb8">More Homes Halifax</span></div>
+        <div class="social svelte-1eqlbb8">
+        </div></div>
+    </li><li onclick="window.open('https://www.yesinwpg.com/', '_blank')" class="svelte-1eqlbb8"><figure class="svelte-1eqlbb8"><img alt="" src="https://res.cloudinary.com/dbnijop5c/image/upload/v1700528184/More%20Homes%20Canada/winnipeg_uvkpdu.png" class="svelte-1eqlbb8">
+        </figure>
+      <div class="info"><div class="details svelte-1eqlbb8"><span class="name svelte-1eqlbb8">YIMBY Winnipeg</span></div>
+        <div class="social svelte-1eqlbb8">
+        </div></div>
+    </li><li onclick="window.open('https://twitter.com/MoreHomesSauga', '_blank')" class="svelte-1eqlbb8"><figure class="svelte-1eqlbb8"><img alt="" src="https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1702327165142mhm.jpg" class="svelte-1eqlbb8">
+        </figure>
+      <div class="info"><div class="details svelte-1eqlbb8"><span class="name svelte-1eqlbb8">More Homes Mississauga</span></div>
+        <div class="social svelte-1eqlbb8">
+        </div></div>
+    </li><li onclick="window.open('https://www.beautifulnanaimo.ca/', '_blank')" class="svelte-1eqlbb8"><figure class="svelte-1eqlbb8"><img alt="" src="https://res.cloudinary.com/dbnijop5c/image/upload/v1700528183/More%20Homes%20Canada/nanaimo_dnm0vl.png" class="svelte-1eqlbb8">
+        </figure>
+      <div class="info"><div class="details svelte-1eqlbb8"><span class="name svelte-1eqlbb8">Strong Towns Nanaimo</span></div>
+        <div class="social svelte-1eqlbb8">
+        </div></div>
+    </li><li onclick="window.open('https://www.strongtownslangley.org/', '_blank')" class="svelte-1eqlbb8"><figure class="svelte-1eqlbb8"><img alt="" src="https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1702261260112download%20(1).png" class="svelte-1eqlbb8">
+        </figure>
+      <div class="info"><div class="details svelte-1eqlbb8"><span class="name svelte-1eqlbb8">Strong Towns Langley</span></div>
+        <div class="social svelte-1eqlbb8"><a href="/" aria-label="reprehenderit" target="_blank" class="svelte-1eqlbb8"> 
+            </a>
+        </div></div>
+    </li></ul></section></div> 
+<div class="section" id="section-bc4f81c6"><section class="section-container svelte-7xj9ed"><div class="card svelte-7xj9ed" id="contact"><h2 class="heading svelte-7xj9ed">Contact Us</h2>
+    <a class="link svelte-7xj9ed" href="mailto:info@morehomescanada.ca">info@morehomescanada.ca</a>
+    <ul class="svelte-7xj9ed"><li class="svelte-7xj9ed"><a href="/" aria-label="Twitter" class="svelte-7xj9ed"></a>
+      </li><li class="svelte-7xj9ed"><a href="/" aria-label="Instagram" class="svelte-7xj9ed"></a>
+      </li><li class="svelte-7xj9ed"><a href="/" aria-label="Discord" class="svelte-7xj9ed"></a>
+      </li></ul></div></section></div> 
+<div class="section" id="section-62aa596c"><footer class="section-container svelte-i9k4w2"><nav class="svelte-i9k4w2"><a class="link svelte-i9k4w2" href="/">More Homes Canada</a></nav>
+  <div class="social-links svelte-i9k4w2"><a href="https://twitter.com/MoreHomesCanada" aria-label="Twitter" class="svelte-i9k4w2">
+      </a><a href="https://www.instagram.com/morehomescanada/" aria-label="Instagram" class="svelte-i9k4w2">
+      </a></div></footer></div> 
+
+      <script type="module">
+      import('/_symbols/4a9932f6-cadc-471e-8f8a-8f3eed570d46.js')
+      .then(({default:App}) => {
+        
+            new App({
+              target: document.querySelector('#section-bc4f81c6'),
+              hydrate: true,
+              props: {"heading":"Contact Us","email":"info@morehomescanada.ca","social":[{"icon":"mdi:twitter","link":{"url":"/","label":"Twitter"}},{"icon":"mdi:instagram","link":{"url":"/","label":"Instagram"}},{"icon":"mdi:discord","link":{"url":"/","label":"Discord"}}]}
+            })
+          
+      })
+      .catch(e => console.error(e))
+    
+
+      import('/_symbols/bae62166-8e83-404f-8fa0-0901f9ce721e.js')
+      .then(({default:App}) => {
+        
+            new App({
+              target: document.querySelector('#section-62aa596c'),
+              hydrate: true,
+              props: {"nav":[{"link":{"url":"/","label":"More Homes Canada"}}],"social":[{"icon":"mdi:twitter","link":{"url":"https://twitter.com/MoreHomesCanada","label":"Twitter"}},{"icon":"mdi:instagram","link":{"url":"https://www.instagram.com/morehomescanada/","label":"Instagram"}}]}
+            })
+          
+      })
+      .catch(e => console.error(e))
+    
+
+      import('/_symbols/b1b27e9b-7b54-47fe-8d4e-def3e7fd6679.js')
+      .then(({default:App}) => {
+        
+            new App({
+              target: document.querySelector('#section-a71ed389'),
+              hydrate: true,
+              props: {"heading":"Who We Are","subheading":"More Homes Canada is a coalition of housing advocacy groups from across the country. Together, we are fighting to end Canada’s housing shortage.","orgs":[{"link":"https://www.moreneighbours.ca/","name":"More Neighbours Toronto","image":{"alt":"","url":"https://res.cloudinary.com/dbnijop5c/image/upload/v1700527328/mnto_vaize2.png"},"social_links":[]},{"link":"https://www.abundanthousingvancouver.com/","name":"Abundant Housing Vancouver","image":{"alt":"","src":"https://res.cloudinary.com/dbnijop5c/image/upload/v1700528184/More%20Homes%20Canada/vancouver_sjf85y.jpg","url":"https://res.cloudinary.com/dbnijop5c/image/upload/v1700528184/More%20Homes%20Canada/vancouver_sjf85y.jpg","size":null},"social_links":[]},{"link":"https://www.growtogetheryeg.com/","name":"Grow Together Edmonton","image":{"alt":"","src":"https://res.cloudinary.com/dbnijop5c/image/upload/v1700528186/More%20Homes%20Canada/edmonton_x53wtv.png","url":"https://res.cloudinary.com/dbnijop5c/image/upload/v1700528186/More%20Homes%20Canada/edmonton_x53wtv.png","size":null},"social_links":[]},{"link":"https://construisonsmtl.ca/en/","name":"Construisons Montréal","image":{"alt":"","src":"https://res.cloudinary.com/dbnijop5c/image/upload/v1700528186/More%20Homes%20Canada/montreal_ejn4pg.png","url":"https://res.cloudinary.com/dbnijop5c/image/upload/v1700528186/More%20Homes%20Canada/montreal_ejn4pg.png","size":null},"social_links":[]},{"link":"https://www.moreneighbourscalgary.ca/","name":"More Neighbours Calgary","image":{"alt":"","src":"https://res.cloudinary.com/dbnijop5c/image/upload/v1700528186/More%20Homes%20Canada/calgary_b9krf6.png","url":"https://res.cloudinary.com/dbnijop5c/image/upload/v1700528186/More%20Homes%20Canada/calgary_b9krf6.png","size":null},"social_links":[]},{"link":"https://www.homesforliving.ca/","name":"Homes for Living Victoria","image":{"alt":"","src":"https://res.cloudinary.com/dbnijop5c/image/upload/v1700528184/More%20Homes%20Canada/victoria_n879ey.png","url":"https://res.cloudinary.com/dbnijop5c/image/upload/v1700528184/More%20Homes%20Canada/victoria_n879ey.png","size":null},"social_links":[]},{"link":"https://makehousingaffordable.ca/","name":"Make Housing Affordable Ottawa","image":{"alt":"","src":"https://res.cloudinary.com/dbnijop5c/image/upload/v1700528183/More%20Homes%20Canada/ottawa_civxsq.png","url":"https://res.cloudinary.com/dbnijop5c/image/upload/v1700528183/More%20Homes%20Canada/ottawa_civxsq.png","size":null},"social_links":[]},{"link":"https://www.wryimby.com/","name":"Waterloo Region YIMBY","image":{"alt":"","src":"https://res.cloudinary.com/dbnijop5c/image/upload/v1700528185/More%20Homes%20Canada/waterloo_llha5v.jpg","url":"https://res.cloudinary.com/dbnijop5c/image/upload/v1700528185/More%20Homes%20Canada/waterloo_llha5v.jpg","size":null},"social_links":[]},{"link":"https://twitter.com/MoreHomesHRM","name":"More Homes Halifax","image":{"alt":"","url":"https://res.cloudinary.com/dbnijop5c/image/upload/v1700528187/More%20Homes%20Canada/halifax_epvtfq.jpg"},"social_links":[]},{"link":"https://www.yesinwpg.com/","name":"YIMBY Winnipeg","image":{"alt":"","src":"https://res.cloudinary.com/dbnijop5c/image/upload/v1700528184/More%20Homes%20Canada/winnipeg_uvkpdu.png","url":"https://res.cloudinary.com/dbnijop5c/image/upload/v1700528184/More%20Homes%20Canada/winnipeg_uvkpdu.png","size":null},"social_links":[]},{"link":"https://twitter.com/MoreHomesSauga","name":"More Homes Mississauga","image":{"alt":"","src":"https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1702327165142mhm.jpg","url":"https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1702327165142mhm.jpg","size":16},"social_links":[]},{"link":"https://www.beautifulnanaimo.ca/","name":"Strong Towns Nanaimo","image":{"alt":"","src":"https://res.cloudinary.com/dbnijop5c/image/upload/v1700528183/More%20Homes%20Canada/nanaimo_dnm0vl.png","url":"https://res.cloudinary.com/dbnijop5c/image/upload/v1700528183/More%20Homes%20Canada/nanaimo_dnm0vl.png","size":null},"social_links":[]},{"link":"https://www.strongtownslangley.org/","name":"Strong Towns Langley","image":{"alt":"","src":"https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1702261260112download%20(1).png","url":"https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1702261260112download%20(1).png","size":7},"social_links":[{"icon":"Tempor deserunt deserunt","link":{"url":"/","label":"reprehenderit"}}]}]}
+            })
+          
+      })
+      .catch(e => console.error(e))
+    
+
+      import('/_symbols/77071e31-9b4f-4021-815f-c75789b22c44.js')
+      .then(({default:App}) => {
+        
+            new App({
+              target: document.querySelector('#section-a106f23c'),
+              hydrate: true,
+              props: {"heading":"What We Want","cards":[{"icon":"material-symbols:check-circle-rounded","title":"Density as-of-right","description":{"html":"<p>Homes are a necessity, not a nuisance. Townhouses, multiplexes and apartments should be allowed in far more places without a long and risky rezoning.</p>","markdown":"Homes are a necessity, not a nuisance. Townhouses, multiplexes and apartments should be allowed in far more places without a long and risky rezoning.\n\n"}},{"icon":"material-symbols:cut","title":"Less red tape","description":{"html":"<p>Setbacks, floorplate restrictions and parking minimums drive up building costs and kill new housing projects. Easing these regulations will help market and non-market housing.</p>","markdown":"Setbacks, floorplate restrictions and parking minimums drive up building costs and kill new housing projects. Easing these regulations will help market and non-market housing.\n\n"}},{"icon":"material-symbols:gavel","title":"Reform consultation and appeals","description":{"html":"<p>There are too many veto rights on new housing. Local concerns are important but they do not trump the need for housing.</p>","markdown":"There are too many veto rights on new housing. Local concerns are important but they do not trump the need for housing.\n\n"}},{"icon":"material-symbols:payments","title":"Funding for subsidized housing","description":{"html":"<p>Deeply affordable housing requires deep subsidies. Federal and provincial governments need to step up and provide this funding.</p>","markdown":"Deeply affordable housing requires deep subsidies. Federal and provincial governments need to step up and provide this funding.\n\n"}}]}
+            })
+          
+      })
+      .catch(e => console.error(e))
+    
+
+      import('/_symbols/d0bd3e6e-dc93-4d3c-b965-f4f8b9643774.js')
+      .then(({default:App}) => {
+        
+            new App({
+              target: document.querySelector('#section-8f6f992c'),
+              hydrate: true,
+              props: {"logo":{"image":{"alt":"","url":"https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1743656491741undefined.webp"},"title":""},"site_nav":[{"link":{"url":"/#about","label":"About Us"}},{"link":{"url":"/policy","label":"Policy Document"}},{"link":{"url":"/#contact","label":"Contact"}}]}
+            })
+          
+      })
+      .catch(e => console.error(e))
     </script>
-    <meta name="description" content="More Homes Canada is a coalition of housing advocacy groups from across the country. Together, we are fighting to end Canada’s housing shortage.">
-    <style>
-        @import url("https://unpkg.com/@primo-app/primo@1.3.64/reset.css");
-        @import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
-
-        #page {
-            --max-width: 740px;
-            /* --color-accent: #FF0000; Beware, we look like the LPC with a red theme on*/
-            --color-accent: rebeccapurple;
-            font-family: lexend, system-ui, sans-serif;
-            color: var(--color);
-            line-height: 1.6;
-            font-size: 1rem;
-            background: var(--background);
-        }
-
-        .section-container {
-            max-width: var(--max-width, 1000px);
-            margin: 0 auto;
-            padding: 3rem var(--padding, 1rem);
-        }
-
-        .heading {
-            font-size: 3rem;
-            line-height: 1;
-            font-weight: 700;
-            margin: 0;
-        }
-
-        a {
-            color: var(--color-accent);
-        }
-
-        .link {
-            color: var(--color-accent);
-        }
-
-        a:hover {
-            text-decoration: underline;
-            font-weight: bold;
-        }
-
-        .button {
-            color: white;
-            background: var(--color-accent);
-            border-radius: 5px;
-            padding: 8px 20px;
-            transition: var(--transition);
-
-            /* vertically center */
-            display: inline-flex;
-            align-items: center;
-        }
-
-        .button:hover {
-            box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .button.inverted {
-            background: transparent;
-            color: var(--color-accent);
-            border: 2px solid var(--color-accent);
-        }
-
-        /* Markdown styling */
-        .content :global(img) {
-            width: 100%;
-            margin: 2rem 0;
-            box-shadow: var(--box-shadow);
-            border-radius: var(--border-radius);
-        }
-
-        .content :global(p) {
-            padding: 0.5rem 0;
-            line-height: 1.5;
-        }
-
-        .content :global(a) {
-            text-decoration: underline;
-        }
-
-        .content :global(h1) {
-            font-size: 2.5rem;
-            font-weight: 600;
-            line-height: 1.2;
-            margin-bottom: 0.5rem;
-        }
-
-        .content :global(h2) {
-            font-size: 2rem;
-            font-weight: 600;
-            margin-bottom: 0.25rem;
-            line-height: 1.2;
-        }
-
-        .content :global(h3) {
-            font-size: 1.5rem;
-            font-weight: 600;
-            line-height: 1.2;
-            margin-top: .5rem;
-        }
-
-        .content :global(ul) {
-            list-style: disc;
-            padding: 0.5rem 0;
-            padding-left: 1.25rem;
-        }
-
-        .content :global(ol) {
-            list-style: decimal;
-            padding: 0.5rem 0;
-            padding-left: 1.25rem;
-        }
-
-        .content :global(blockquote) {
-            padding: 2rem;
-            box-shadow: var(--box-shadow);
-            border-radius: var(--border-radius);
-        }
-    </style><!-- HEAD_svelte-16t25u7_END -->
-    <style>
-        .section-container.svelte-1grguq5.svelte-1grguq5 {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 1rem;
-            padding-bottom: 1rem
-        }
-
-        .logo.svelte-1grguq5.svelte-1grguq5 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            line-height: 1.2
-        }
-
-        .desktop-nav.svelte-1grguq5.svelte-1grguq5 {
-            display: none;
-            align-items: center;
-            justify-content: space-between;
-            width: 100%
-        }
-
-        .desktop-nav.svelte-1grguq5 nav.svelte-1grguq5 {
-            display: flex;
-            gap: 2rem
-        }
-
-        .desktop-nav.svelte-1grguq5 nav a.link.svelte-1grguq5 {
-            border-color: transparent;
-            transition: border-color 0.1s;
-            font-size: 0.95rem
-        }
-
-        .desktop-nav.svelte-1grguq5 nav a.link.svelte-1grguq5:hover {
-            border-color: initial
-        }
-
-        @media(min-width: 800px) {
-            .desktop-nav.svelte-1grguq5.svelte-1grguq5 {
-                display: flex
-            }
-        }
-
-        .mobile-nav.svelte-1grguq5.svelte-1grguq5 {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            width: 100%;
-            font-weight: 500
-        }
-
-        @media(min-width: 800px) {
-            .mobile-nav.svelte-1grguq5.svelte-1grguq5 {
-                display: none
-            }
-        }
-
-        #popup.svelte-1grguq5.svelte-1grguq5 {
-            font-size: 1.25rem;
-            display: grid;
-            gap: 1rem;
-            position: absolute;
-            text-align: center;
-            background-color: var(--background-color, white);
-            box-shadow: var(--box-shadow, 0px 4px 30px rgba(0, 0, 0, 0.1));
-            border-radius: var(--border-radius);
-            inset: 0.5rem;
-            bottom: initial;
-            padding: 2rem;
-            z-index: 1
-        }
-
-        #popup.svelte-1grguq5 button#close.svelte-1grguq5 {
-            position: absolute;
-            right: 1rem;
-            top: 1rem
-        }
-
-        .section-container.svelte-1w258x5 {
-            display: grid;
-            place-items: center;
-            text-align: center
-        }
-
-        .heading.svelte-1w258x5 {
-            font-size: 3rem;
-            font-weight: 700;
-            line-height: 1.25;
-            margin-bottom: 1.5rem
-        }
-
-        @media(min-width: 700px) {
-            .heading.svelte-1w258x5 {
-                font-size: 3rem
-            }
-        }
-
-        .subheading.svelte-1w258x5 {
-            font-size: 1.25rem;
-            margin-bottom: 2rem
-        }
-
-        .buttons.svelte-1w258x5 {
-            margin-top: 0.5rem;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem
-        }
-
-        .section-container.svelte-13ipoh0.svelte-13ipoh0 {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem
-        }
-
-        .heading.svelte-13ipoh0.svelte-13ipoh0 {
-            text-align: center
-        }
-
-        ul.svelte-13ipoh0.svelte-13ipoh0 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-            gap: 1.75rem
-        }
-
-        ul.svelte-13ipoh0 li.svelte-13ipoh0 {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            border: 1px solid var(--border-color, #eee);
-            border-radius: var(--border-radius);
-            padding: 1.5rem
-        }
-
-        ul.svelte-13ipoh0 li .title.svelte-13ipoh0 {
-            display: flex;
-            gap: 0.5rem;
-            font-size: 1.25rem;
-            font-weight: bold;
-            align-items: flex-start
-        }
-
-        ul.svelte-13ipoh0 li .title .label.svelte-13ipoh0 {
-            line-height: 1.1;
-            font-weight: 600
-        }
-
-        .section-container.svelte-1eqlbb8.svelte-1eqlbb8 {
-            display: flex;
-            flex-direction: column;
-            text-align: center
-        }
-
-        .heading.svelte-1eqlbb8.svelte-1eqlbb8 {
-            text-align: center;
-            margin-bottom: 3rem
-        }
-
-        .subheading.svelte-1eqlbb8.svelte-1eqlbb8 {
-            font-size: 1.25rem;
-            margin-bottom: 2rem
-        }
-
-        ul.cards.svelte-1eqlbb8.svelte-1eqlbb8 {
-            display: grid;
-            place-items: center;
-            margin-top: 2rem;
-            gap: 2rem
-        }
-
-        ul.cards.svelte-1eqlbb8 li.svelte-1eqlbb8 {
-            cursor: pointer;
-            max-width: 400px;
-            padding: 1.5rem;
-            border: 1px solid var(--border-color, #eee);
-            border-radius: var(--border-radius)
-        }
-
-        ul.cards.svelte-1eqlbb8 li figure.svelte-1eqlbb8 {
-            display: grid;
-            place-items: center
-        }
-
-        ul.cards.svelte-1eqlbb8 li figure img.svelte-1eqlbb8 {
-            padding: 2rem;
-            aspect-ratio: 1 / 1;
-            -o-object-fit: cover;
-            object-fit: cover;
-            width: 100%
-        }
-
-        ul.cards.svelte-1eqlbb8 li .info .details.svelte-1eqlbb8 {
-            display: grid;
-            gap: .25rem;
-            text-align: center;
-            margin-bottom: 1rem
-        }
-
-        ul.cards.svelte-1eqlbb8 li .info .details span.name.svelte-1eqlbb8 {
-            font-weight: 600
-        }
-
-        ul.cards.svelte-1eqlbb8 li .info .social.svelte-1eqlbb8 {
-            display: flex;
-            justify-content: center;
-            gap: 1.25rem;
-            font-size: 1.5rem;
-            color: var(--color-accent, rebeccapurple)
-        }
-
-        ul.cards.svelte-1eqlbb8 li .info .social a.svelte-1eqlbb8 {
-            transition: var(--transition, 0.1s transform)
-        }
-
-        ul.cards.svelte-1eqlbb8 li .info .social a.svelte-1eqlbb8:hover {
-            transform: scale(1.1)
-        }
-
-        ul.cards.svelte-1eqlbb8.svelte-1eqlbb8 {
-            grid-template-columns: 1fr 1fr
-        }
-
-        @media(min-width: 600px) {
-            ul.cards.svelte-1eqlbb8.svelte-1eqlbb8 {
-                grid-template-columns: 1fr 1fr 1fr
-            }
-        }
-
-        .section-container.svelte-14i3sqd.svelte-14i3sqd {
-            display: grid;
-            justify-content: center
-        }
-
-        a.svelte-14i3sqd.svelte-14i3sqd {
-            color: white
-        }
-
-        a.link.svelte-14i3sqd.svelte-14i3sqd {
-            color: var(--color-accent)
-        }
-
-        .card.svelte-14i3sqd.svelte-14i3sqd {
-            max-width: 640px;
-            border: 1px solid var(--border-color, #eee);
-            border-radius: var(--border-radius);
-            padding: 3.5rem 2.75rem;
-            text-align: center;
-            display: grid;
-            place-items: center;
-            gap: 2rem
-        }
-
-        @media(min-width: 600px) {
-            .card.svelte-14i3sqd.svelte-14i3sqd {
-                padding: 4.5rem 7rem
-            }
-        }
-
-        .link.svelte-14i3sqd.svelte-14i3sqd {
-            font-weight: 500;
-            border-color: transparent;
-            color: white;
-            transition: var(--transition, 0.1s border)
-        }
-
-        .link.svelte-14i3sqd.svelte-14i3sqd:hover {
-            border-color: initial
-        }
-
-        ul.svelte-14i3sqd.svelte-14i3sqd {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1.5rem
-        }
-
-        ul.svelte-14i3sqd li.svelte-14i3sqd {
-            color: white;
-            background: var(--color-accent, rebeccapurple);
-            font-size: 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            transition: 0.1s transform
-        }
-
-        ul.svelte-14i3sqd li.svelte-14i3sqd:hover {
-            transform: scale(1.1)
-        }
-
-        ul.svelte-14i3sqd li a.svelte-14i3sqd {
-            font-size: 1.5rem;
-            padding: 0.75rem
-        }
-
-        .section-container.svelte-i9k4w2.svelte-i9k4w2 {
-            display: flex;
-            justify-content: space-between;
-            flex-direction: column;
-            align-items: center;
-            gap: 1rem;
-            padding-top: 1rem;
-            padding-bottom: 1rem
-        }
-
-        @media(min-width: 600px) {
-            .section-container.svelte-i9k4w2.svelte-i9k4w2 {
-                flex-direction: row
-            }
-        }
-
-        nav.svelte-i9k4w2.svelte-i9k4w2 {
-            display: flex;
-            gap: 1rem;
-            font-size: .875rem
-        }
-
-        nav.svelte-i9k4w2 .link.svelte-i9k4w2 {
-            border-color: transparent
-        }
-
-        nav.svelte-i9k4w2 .link.svelte-i9k4w2:hover {
-            border-color: initial
-        }
-
-        .social-links.svelte-i9k4w2.svelte-i9k4w2 {
-            display: flex;
-            gap: 1.5rem;
-            font-size: 1.5rem
-        }
-
-        .social-links.svelte-i9k4w2 a.svelte-i9k4w2 {
-            color: var(--color-accent, rebeccapurple);
-            transition: var(--transition, 0.1s transform)
-        }
-
-        .social-links.svelte-i9k4w2 a.svelte-i9k4w2:hover {
-            transform: scale(1.1)
-        }
-    </style>
-</head>
-
-<body id="page">
-
-    <div class="section" id="section-8f6f992c">
-        <header class="section-container svelte-1grguq5">
-            <div class="desktop-nav svelte-1grguq5"><a href="/" class="logo svelte-1grguq5">MORE HOMES CANADA</a>
-                <nav class="svelte-1grguq5"><a class="link svelte-1grguq5" href="/#about">About Us</a><a class="link svelte-1grguq5" href="/policy">Policy Document</a><a class="link svelte-1grguq5" href="/#contact">Contact</a></nav>
-            </div>
-            <div class="mobile-nav svelte-1grguq5"><a href="/" class="logo svelte-1grguq5">MORE HOMES CANADA</a>
-                <button id="open" aria-label="Open mobile navigation"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="30" height="30" viewBox="0 0 24 24" class="iconify iconify--eva"><!-- HTML_TAG_START -->
-                        <rect width="18" height="2" x="3" y="11" fill="currentColor" rx=".95" ry=".95" />
-                        <rect width="18" height="2" x="3" y="16" fill="currentColor" rx=".95" ry=".95" />
-                        <rect width="18" height="2" x="3" y="6" fill="currentColor" rx=".95" ry=".95" /><!-- HTML_TAG_END -->
-                    </svg></button>
-            </div>
-        </header>
-    </div>
-    <div class="section" id="section-9be0ea08">
-        <header class="section-container svelte-1w258x5">
-            <h1 class="heading svelte-1w258x5">It's time to legalize housing.</h1>
-            <p class="subheading svelte-1w258x5"><!-- HTML_TAG_START -->
-            <p>Municipal regulations have strangled housing construction across Canada for decades. To end the housing crisis, we need to eliminate the regressive policies at its root.</p><!-- HTML_TAG_END --></p>
-            <div class="buttons svelte-1w258x5"><a class="button false svelte-1w258x5" href="/policy">Learn More</a><a class="button inverted svelte-1w258x5" href="https://discord.gg/EWFcsaVKNE">Join Our Discord</a></div>
-        </header>
-    </div>
-    <div class="section" id="section-a106f23c">
-        <section class="section-container svelte-13ipoh0">
-            <h2 class="heading svelte-13ipoh0">What We Want</h2>
-            <ul class="svelte-13ipoh0">
-                <li class="svelte-13ipoh0">
-                    <h3 class="title svelte-13ipoh0"><span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="22" height="22" viewBox="0 0 24 24" style="color: var(--color-accent, rebeccapurple)" class="iconify iconify--material-symbols"><!-- HTML_TAG_START -->
-                                <path fill="currentColor" d="m10.6 13.8l-2.15-2.15q-.275-.275-.7-.275t-.7.275t-.275.7t.275.7L9.9 15.9q.3.3.7.3t.7-.3l5.65-5.65q.275-.275.275-.7t-.275-.7t-.7-.275t-.7.275zM12 22q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22" /><!-- HTML_TAG_END -->
-                            </svg></span>
-                        <span class="label svelte-13ipoh0">Density as-of-right</span>
-                    </h3>
-                    <div class="description"><!-- HTML_TAG_START -->
-                        <p>Homes are a necessity, not a nuisance. Townhouses, multiplexes and apartments should be allowed in far more places without a long and risky rezoning.</p><!-- HTML_TAG_END -->
-                    </div>
-                </li>
-                <li class="svelte-13ipoh0">
-                    <h3 class="title svelte-13ipoh0"><span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="22" height="22" viewBox="0 0 24 24" style="color: var(--color-accent, rebeccapurple)" class="iconify iconify--material-symbols"><!-- HTML_TAG_START -->
-                                <path fill="currentColor" d="m19 21l-7-7l-2.35 2.35q.2.375.275.8T10 18q0 1.65-1.175 2.825T6 22t-2.825-1.175T2 18t1.175-2.825T6 14q.425 0 .85.075t.8.275L10 12L7.65 9.65q-.375.2-.8.275T6 10q-1.65 0-2.825-1.175T2 6t1.175-2.825T6 2t2.825 1.175T10 6q0 .425-.075.85t-.275.8L22 20v1zm-4-10l-2-2l6-6h3v1zM6 8q.825 0 1.413-.587T8 6t-.587-1.412T6 4t-1.412.588T4 6t.588 1.413T6 8m6 4.5q.2 0 .35-.15t.15-.35t-.15-.35t-.35-.15t-.35.15t-.15.35t.15.35t.35.15M6 20q.825 0 1.413-.587T8 18t-.587-1.412T6 16t-1.412.588T4 18t.588 1.413T6 20" /><!-- HTML_TAG_END -->
-                            </svg></span>
-                        <span class="label svelte-13ipoh0">Less red tape</span>
-                    </h3>
-                    <div class="description"><!-- HTML_TAG_START -->
-                        <p>Setbacks, floorplate restrictions and parking minimums drive up building costs and kill new housing projects. Easing these regulations will help market and non-market housing. </p><!-- HTML_TAG_END -->
-                    </div>
-                </li>
-                <li class="svelte-13ipoh0">
-                    <h3 class="title svelte-13ipoh0"><span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="22" height="22" viewBox="0 0 24 24" style="color: var(--color-accent, rebeccapurple)" class="iconify iconify--material-symbols"><!-- HTML_TAG_START -->
-                                <path fill="currentColor" d="M4 21v-2h12v2zm5.65-4.85L4 10.5l2.1-2.15L11.8 14zM16 9.8l-5.65-5.7L12.5 2l5.65 5.65zM20.6 20L7.55 6.95l1.4-1.4L22 18.6z" /><!-- HTML_TAG_END -->
-                            </svg></span>
-                        <span class="label svelte-13ipoh0">Reform consultation and appeals</span>
-                    </h3>
-                    <div class="description"><!-- HTML_TAG_START -->
-                        <p>There are too many veto rights on new housing. Local concerns are important but they do not trump the need for housing.</p><!-- HTML_TAG_END -->
-                    </div>
-                </li>
-                <li class="svelte-13ipoh0">
-                    <h3 class="title svelte-13ipoh0"><span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="22" height="22" viewBox="0 0 24 24" style="color: var(--color-accent, rebeccapurple)" class="iconify iconify--material-symbols"><!-- HTML_TAG_START -->
-                                <path fill="currentColor" d="M3 20q-.825 0-1.412-.587T1 18V7h2v11h17v2zm4-4q-.825 0-1.412-.587T5 14V6q0-.825.588-1.412T7 4h14q.825 0 1.413.588T23 6v8q0 .825-.587 1.413T21 16zm2-2q0-.825-.587-1.412T7 12v2zm10 0h2v-2q-.825 0-1.412.588T19 14m-5-1q1.25 0 2.125-.875T17 10t-.875-2.125T14 7t-2.125.875T11 10t.875 2.125T14 13M7 8q.825 0 1.413-.587T9 6H7zm14 0V6h-2q0 .825.588 1.413T21 8" /><!-- HTML_TAG_END -->
-                            </svg></span>
-                        <span class="label svelte-13ipoh0">Funding for subsidized housing</span>
-                    </h3>
-                    <div class="description"><!-- HTML_TAG_START -->
-                        <p>Deeply affordable housing requires deep subsidies. Federal and provincial governments need to step up and provide this funding.</p><!-- HTML_TAG_END -->
-                    </div>
-                </li>
-            </ul>
-        </section>
-    </div>
-    <div class="section" id="section-a71ed389">
-        <section class="section-container svelte-1eqlbb8" id="about">
-            <h2 class="heading svelte-1eqlbb8">Who We Are</h2>
-            <span class="subheading svelte-1eqlbb8">More Homes Canada is a coalition of housing advocacy groups from across the country. Together, we are fighting to end Canada’s housing shortage.</span>
-            <ul class="cards svelte-1eqlbb8">
-                <li onclick="window.open('https://www.moreneighbours.ca/', '_blank')" class="svelte-1eqlbb8">
-                    <figure class="svelte-1eqlbb8"><img alt="" src="https://res.cloudinary.com/dbnijop5c/image/upload/v1700527328/mnto_vaize2.png" class="svelte-1eqlbb8">
-                    </figure>
-                    <div class="info">
-                        <div class="details svelte-1eqlbb8"><span class="name svelte-1eqlbb8">More Neighbours Toronto</span></div>
-                        <div class="social svelte-1eqlbb8">
-                        </div>
-                    </div>
-                </li>
-                <li onclick="window.open('https://www.abundanthousingvancouver.com/', '_blank')" class="svelte-1eqlbb8">
-                    <figure class="svelte-1eqlbb8"><img alt="" src="https://res.cloudinary.com/dbnijop5c/image/upload/v1700528184/More%20Homes%20Canada/vancouver_sjf85y.jpg" class="svelte-1eqlbb8">
-                    </figure>
-                    <div class="info">
-                        <div class="details svelte-1eqlbb8"><span class="name svelte-1eqlbb8">Abundant Housing Vancouver</span></div>
-                        <div class="social svelte-1eqlbb8">
-                        </div>
-                    </div>
-                </li>
-                <li onclick="window.open('https://www.growtogetheryeg.com/', '_blank')" class="svelte-1eqlbb8">
-                    <figure class="svelte-1eqlbb8"><img alt="" src="https://res.cloudinary.com/dbnijop5c/image/upload/v1700528186/More%20Homes%20Canada/edmonton_x53wtv.png" class="svelte-1eqlbb8">
-                    </figure>
-                    <div class="info">
-                        <div class="details svelte-1eqlbb8"><span class="name svelte-1eqlbb8">Grow Together Edmonton</span></div>
-                        <div class="social svelte-1eqlbb8">
-                        </div>
-                    </div>
-                </li>
-                <li onclick="window.open('https://construisonsmtl.ca/en/', '_blank')" class="svelte-1eqlbb8">
-                    <figure class="svelte-1eqlbb8"><img alt="" src="https://res.cloudinary.com/dbnijop5c/image/upload/v1700528186/More%20Homes%20Canada/montreal_ejn4pg.png" class="svelte-1eqlbb8">
-                    </figure>
-                    <div class="info">
-                        <div class="details svelte-1eqlbb8"><span class="name svelte-1eqlbb8">Construisons Montréal</span></div>
-                        <div class="social svelte-1eqlbb8">
-                        </div>
-                    </div>
-                </li>
-                <li onclick="window.open('https://www.moreneighbourscalgary.ca/', '_blank')" class="svelte-1eqlbb8">
-                    <figure class="svelte-1eqlbb8"><img alt="" src="https://res.cloudinary.com/dbnijop5c/image/upload/v1700528186/More%20Homes%20Canada/calgary_b9krf6.png" class="svelte-1eqlbb8">
-                    </figure>
-                    <div class="info">
-                        <div class="details svelte-1eqlbb8"><span class="name svelte-1eqlbb8">More Neighbours Calgary</span></div>
-                        <div class="social svelte-1eqlbb8">
-                        </div>
-                    </div>
-                </li>
-                <li onclick="window.open('https://www.homesforliving.ca/', '_blank')" class="svelte-1eqlbb8">
-                    <figure class="svelte-1eqlbb8"><img alt="" src="https://res.cloudinary.com/dbnijop5c/image/upload/v1700528184/More%20Homes%20Canada/victoria_n879ey.png" class="svelte-1eqlbb8">
-                    </figure>
-                    <div class="info">
-                        <div class="details svelte-1eqlbb8"><span class="name svelte-1eqlbb8">Homes for Living Victoria</span></div>
-                        <div class="social svelte-1eqlbb8">
-                        </div>
-                    </div>
-                </li>
-                <li onclick="window.open('https://makehousingaffordable.ca/', '_blank')" class="svelte-1eqlbb8">
-                    <figure class="svelte-1eqlbb8"><img alt="" src="https://res.cloudinary.com/dbnijop5c/image/upload/v1700528183/More%20Homes%20Canada/ottawa_civxsq.png" class="svelte-1eqlbb8">
-                    </figure>
-                    <div class="info">
-                        <div class="details svelte-1eqlbb8"><span class="name svelte-1eqlbb8">Make Housing Affordable Ottawa</span></div>
-                        <div class="social svelte-1eqlbb8">
-                        </div>
-                    </div>
-                </li>
-                <li onclick="window.open('https://www.wryimby.com/', '_blank')" class="svelte-1eqlbb8">
-                    <figure class="svelte-1eqlbb8"><img alt="" src="https://res.cloudinary.com/dbnijop5c/image/upload/v1700528185/More%20Homes%20Canada/waterloo_llha5v.jpg" class="svelte-1eqlbb8">
-                    </figure>
-                    <div class="info">
-                        <div class="details svelte-1eqlbb8"><span class="name svelte-1eqlbb8">Waterloo Region YIMBY</span></div>
-                        <div class="social svelte-1eqlbb8">
-                        </div>
-                    </div>
-                </li>
-                <li onclick="window.open('https://twitter.com/MoreHomesHRM', '_blank')" class="svelte-1eqlbb8">
-                    <figure class="svelte-1eqlbb8"><img alt="" src="https://res.cloudinary.com/dbnijop5c/image/upload/v1700528187/More%20Homes%20Canada/halifax_epvtfq.jpg" class="svelte-1eqlbb8">
-                    </figure>
-                    <div class="info">
-                        <div class="details svelte-1eqlbb8"><span class="name svelte-1eqlbb8">More Homes Halifax</span></div>
-                        <div class="social svelte-1eqlbb8">
-                        </div>
-                    </div>
-                </li>
-                <li onclick="window.open('https://www.yesinwpg.com/', '_blank')" class="svelte-1eqlbb8">
-                    <figure class="svelte-1eqlbb8"><img alt="" src="https://res.cloudinary.com/dbnijop5c/image/upload/v1700528184/More%20Homes%20Canada/winnipeg_uvkpdu.png" class="svelte-1eqlbb8">
-                    </figure>
-                    <div class="info">
-                        <div class="details svelte-1eqlbb8"><span class="name svelte-1eqlbb8">YIMBY Winnipeg</span></div>
-                        <div class="social svelte-1eqlbb8">
-                        </div>
-                    </div>
-                </li>
-                <li onclick="window.open('https://twitter.com/MoreHomesSauga', '_blank')" class="svelte-1eqlbb8">
-                    <figure class="svelte-1eqlbb8"><img alt="" src="https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1702327165142mhm.jpg" class="svelte-1eqlbb8">
-                    </figure>
-                    <div class="info">
-                        <div class="details svelte-1eqlbb8"><span class="name svelte-1eqlbb8">More Homes Mississauga</span></div>
-                        <div class="social svelte-1eqlbb8">
-                        </div>
-                    </div>
-                </li>
-                <li onclick="window.open('https://www.beautifulnanaimo.ca/', '_blank')" class="svelte-1eqlbb8">
-                    <figure class="svelte-1eqlbb8"><img alt="" src="https://res.cloudinary.com/dbnijop5c/image/upload/v1700528183/More%20Homes%20Canada/nanaimo_dnm0vl.png" class="svelte-1eqlbb8">
-                    </figure>
-                    <div class="info">
-                        <div class="details svelte-1eqlbb8"><span class="name svelte-1eqlbb8">Strong Towns Nanaimo</span></div>
-                        <div class="social svelte-1eqlbb8">
-                        </div>
-                    </div>
-                </li>
-                <li onclick="window.open('https://www.strongtownslangley.org/', '_blank')" class="svelte-1eqlbb8">
-                    <figure class="svelte-1eqlbb8"><img alt="" src="https://dpfecbhwrshlsbfgbgzq.supabase.co/storage/v1/object/public/images/7c7fa9c9-29db-4592-99b1-971042386623/1702261260112download%20(1).png" class="svelte-1eqlbb8">
-                    </figure>
-                    <div class="info">
-                        <div class="details svelte-1eqlbb8"><span class="name svelte-1eqlbb8">Strong Towns Langley</span></div>
-                        <div class="social svelte-1eqlbb8"><a href="/" aria-label="reprehenderit" target="_blank" class="svelte-1eqlbb8">
-                            </a>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </section>
-    </div>
-    <div class="section" id="section-bc4f81c6">
-        <section class="section-container svelte-14i3sqd">
-            <div class="card svelte-14i3sqd" id="contact">
-                <h2 class="heading svelte-14i3sqd">Contact Us</h2>
-                <a class="link svelte-14i3sqd" href="mailto:info@morehomescanada.ca">info@morehomescanada.ca</a>
-                <ul class="svelte-14i3sqd">
-                    <li class="svelte-14i3sqd"><a href="/" aria-label="Twitter" class="svelte-14i3sqd"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 24 24" class="iconify iconify--mdi"><!-- HTML_TAG_START -->
-                                <path fill="currentColor" d="M22.46 6c-.77.35-1.6.58-2.46.69c.88-.53 1.56-1.37 1.88-2.38c-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29c0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15c0 1.49.75 2.81 1.91 3.56c-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.2 4.2 0 0 1-1.93.07a4.28 4.28 0 0 0 4 2.98a8.52 8.52 0 0 1-5.33 1.84q-.51 0-1.02-.06C3.44 20.29 5.7 21 8.12 21C16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56c.84-.6 1.56-1.36 2.14-2.23" /><!-- HTML_TAG_END -->
-                            </svg></a>
-                    </li>
-                    <li class="svelte-14i3sqd"><a href="/" aria-label="Instagram" class="svelte-14i3sqd"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 24 24" class="iconify iconify--mdi"><!-- HTML_TAG_START -->
-                                <path fill="currentColor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3" /><!-- HTML_TAG_END -->
-                            </svg></a>
-                    </li>
-                    <li class="svelte-14i3sqd"><a href="/" aria-label="Discord" class="svelte-14i3sqd"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 24 24" class="iconify iconify--mdi"><!-- HTML_TAG_START -->
-                                <path fill="currentColor" d="m22 24l-5.25-5l.63 2H4.5A2.5 2.5 0 0 1 2 18.5v-15A2.5 2.5 0 0 1 4.5 1h15A2.5 2.5 0 0 1 22 3.5V24M12 6.8c-2.68 0-4.56 1.15-4.56 1.15c1.03-.92 2.83-1.45 2.83-1.45l-.17-.17c-1.69.03-3.22 1.2-3.22 1.2c-1.72 3.59-1.61 6.69-1.61 6.69c1.4 1.81 3.48 1.68 3.48 1.68l.71-.9c-1.25-.27-2.04-1.38-2.04-1.38S9.3 14.9 12 14.9s4.58-1.28 4.58-1.28s-.79 1.11-2.04 1.38l.71.9s2.08.13 3.48-1.68c0 0 .11-3.1-1.61-6.69c0 0-1.53-1.17-3.22-1.2l-.17.17s1.8.53 2.83 1.45c0 0-1.88-1.15-4.56-1.15m-2.07 3.79c.65 0 1.18.57 1.17 1.27c0 .69-.52 1.27-1.17 1.27c-.64 0-1.16-.58-1.16-1.27c0-.7.51-1.27 1.16-1.27m4.17 0c.65 0 1.17.57 1.17 1.27c0 .69-.52 1.27-1.17 1.27c-.64 0-1.16-.58-1.16-1.27c0-.7.51-1.27 1.16-1.27Z" /><!-- HTML_TAG_END -->
-                            </svg></a>
-                    </li>
-                </ul>
-            </div>
-        </section>
-    </div>
-    <div class="section" id="section-62aa596c">
-        <footer class="section-container svelte-i9k4w2">
-            <nav class="svelte-i9k4w2"><a class="link svelte-i9k4w2" href="/">More Homes Canada</a></nav>
-            <div class="social-links svelte-i9k4w2"><a href="https://twitter.com/MoreHomesCanada" aria-label="Twitter" class="svelte-i9k4w2"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 24 24" class="iconify iconify--mdi"><!-- HTML_TAG_START -->
-                        <path fill="currentColor" d="M22.46 6c-.77.35-1.6.58-2.46.69c.88-.53 1.56-1.37 1.88-2.38c-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29c0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15c0 1.49.75 2.81 1.91 3.56c-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.2 4.2 0 0 1-1.93.07a4.28 4.28 0 0 0 4 2.98a8.52 8.52 0 0 1-5.33 1.84q-.51 0-1.02-.06C3.44 20.29 5.7 21 8.12 21C16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56c.84-.6 1.56-1.36 2.14-2.23" /><!-- HTML_TAG_END -->
-                    </svg>
-                </a><a href="https://www.instagram.com/morehomescanada/" aria-label="Instagram" class="svelte-i9k4w2"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 24 24" class="iconify iconify--mdi"><!-- HTML_TAG_START -->
-                        <path fill="currentColor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3" /><!-- HTML_TAG_END -->
-                    </svg>
-                </a></div>
-        </footer>
-    </div>
-
-    <script type="module">
-        const path = window.location.pathname === '/' ? '' : window.location.pathname
-        const [{
-            default: App
-        }] = await Promise.all([
-            import(path + '/_module.js')
-        ]).catch(e => console.error(e))
-        new App({
-            target: document.querySelector('body'),
-            hydrate: true,
-        })
-    </script>
-</body>
-
-</html>
+    </body>
+  </html>
+  
